@@ -1,3 +1,303 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 4: Vågutbredning - Radioamatör Utbildning</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">📻</span>
+                <span>RA-Utbildning</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Hem</a></li>
+                <li><a href="../../index.html#kapitel" class="active">Kapitel</a></li>
+                <li><a href="../test/prov.html">Gör Prov</a></li>
+                <li><a href="../profil/statistik.html">Min Statistik</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Öppna meny">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="chapter-page">
+        <div class="chapter-content">
+            <!-- Kapitel Hero -->
+            <div class="chapter-hero">
+                <div class="chapter-badge">Kapitel 4</div>
+                <h1>Vågutbredning</h1>
+                <p>Förstå hur radiovågor färdas runt jorden och ut i rymden</p>
+                <div class="chapter-meta">
+                    <span>⏱️ 2-3 timmar</span>
+                    <span>📝 35 frågor</span>
+                    <span id="chapterProgress">📊 0% genomfört</span>
+                </div>
+            </div>
+
+            <!-- Innehållsförteckning -->
+            <div class="content-section toc">
+                <h2>📑 Innehåll</h2>
+                <ol class="toc-list">
+                    <li><a href="#grundbegrepp">Grundbegrepp</a></li>
+                    <li><a href="#markvag">Markvåg</a></li>
+                    <li><a href="#rymdvag">Rymdvåg och jonosfären</a></li>
+                    <li><a href="#siktlinje">Siktlinjeförbindelse (VHF/UHF)</a></li>
+                    <li><a href="#speciella">Speciella utbredningsfenomen</a></li>
+                    <li><a href="#solflaeckar">Solfläckar och solaktivitet</a></li>
+                </ol>
+            </div>
+
+            <!-- Sektion 1: Grundbegrepp -->
+            <div class="content-section" id="grundbegrepp">
+                <h2>4.1 Grundbegrepp</h2>
+                
+                <h3>Det elektromagnetiska spektrumet</h3>
+                <p>Radiovågor är elektromagnetisk strålning, precis som ljus, men med längre våglängd.</p>
+                
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Beteckning</th>
+                            <th>Frekvensområde</th>
+                            <th>Våglängd</th>
+                            <th>Typisk användning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>VLF</td>
+                            <td>3-30 kHz</td>
+                            <td>100-10 km</td>
+                            <td>Ubåtskommunikation</td>
+                        </tr>
+                        <tr>
+                            <td>LF (Långvåg)</td>
+                            <td>30-300 kHz</td>
+                            <td>10-1 km</td>
+                            <td>Rundradio (LW)</td>
+                        </tr>
+                        <tr>
+                            <td>MF (Mellanvåg)</td>
+                            <td>300 kHz-3 MHz</td>
+                            <td>1000-100 m</td>
+                            <td>Rundradio (MW), 160m</td>
+                        </tr>
+                        <tr>
+                            <td>HF (Kortvåg)</td>
+                            <td>3-30 MHz</td>
+                            <td>100-10 m</td>
+                            <td>Amatörradio, världsradio</td>
+                        </tr>
+                        <tr>
+                            <td>VHF</td>
+                            <td>30-300 MHz</td>
+                            <td>10-1 m</td>
+                            <td>FM-radio, 6m, 2m</td>
+                        </tr>
+                        <tr>
+                            <td>UHF</td>
+                            <td>300 MHz-3 GHz</td>
+                            <td>1 m-10 cm</td>
+                            <td>TV, 70cm, mobiltelefoni</td>
+                        </tr>
+                        <tr>
+                            <td>SHF (Mikrovåg)</td>
+                            <td>3-30 GHz</td>
+                            <td>10-1 cm</td>
+                            <td>Satellit, radar, WiFi</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Utbredningssätt</h3>
+                <p>Radiovågor kan nå mottagaren på flera sätt:</p>
+                <ol>
+                    <li><strong>Markvåg:</strong> Följer jordytan</li>
+                    <li><strong>Rymdvåg:</strong> Reflekteras av jonosfären</li>
+                    <li><strong>Siktlinje:</strong> Direkt väg genom atmosfären</li>
+                    <li><strong>Troposfärisk:</strong> Via nedersta atmosfärlagret</li>
+                </ol>
+            </div>
+
+            <!-- Sektion 2: Markvåg -->
+            <div class="content-section" id="markvag">
+                <h2>4.2 Markvåg</h2>
+                
+                <h3>Hur fungerar markvågen?</h3>
+                <p>Markvågen följer jordytan tack vare diffraktion (böjning). Den fungerar bäst på låga frekvenser.</p>
+                
+                <h3>Faktorer som påverkar markvågen</h3>
+                <ul>
+                    <li><strong>Frekvens:</strong> Lägre frekvens = längre räckvidd</li>
+                    <li><strong>Markens ledningsförmåga:</strong> Saltvatten bäst, berg/sand sämst</li>
+                    <li><strong>Sändareffekt</strong></li>
+                    <li><strong>Antennens polarisation:</strong> Vertikal polarisation bäst för markvåg</li>
+                </ul>
+                
+                <h3>Typiska räckvidder</h3>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Frekvensband</th>
+                            <th>Typisk räckvidd (markvåg)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>160 m (1,8 MHz)</td>
+                            <td>Flera hundra km (natt)</td>
+                        </tr>
+                        <tr>
+                            <td>80 m (3,5 MHz)</td>
+                            <td>100-200 km</td>
+                        </tr>
+                        <tr>
+                            <td>40 m (7 MHz)</td>
+                            <td>50-100 km</td>
+                        </tr>
+                        <tr>
+                            <td>20 m och uppåt</td>
+                            <td>Försumbar</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="info-box tip">
+                    <strong>💡 Praktiskt:</strong> Markvåg används för NVIS (Near Vertical Incidence Skywave) på 80m och 40m för regional kommunikation, och på 160m för lokala kontakter nattetid.
+                </div>
+            </div>
+
+            <!-- Sektion 3: Rymdvåg och jonosfären -->
+            <div class="content-section" id="rymdvag">
+                <h2>4.3 Rymdvåg och Jonosfären</h2>
+                
+                <h3>Jonosfären</h3>
+                <p>Jonosfären är ett skikt av joniserad gas 60-600 km över jordytan. Solens ultravioletta strålning skapar fria elektroner som kan reflektera radiovågor.</p>
+                
+                <h3>Jonosfärens skikt</h3>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Skikt</th>
+                            <th>Höjd</th>
+                            <th>Egenskaper</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>D-skiktet</strong></td>
+                            <td>60-90 km</td>
+                            <td>Finns bara dagtid. Absorberar LF/MF, dämpar lägre HF.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>E-skiktet</strong></td>
+                            <td>90-140 km</td>
+                            <td>Reflekterar MF och lägre HF. Sporadiskt E kan ge VHF-hopp.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>F-skiktet</strong></td>
+                            <td>140-600 km</td>
+                            <td>Viktigast för HF. Delar sig i F1 och F2 dagtid.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Kritisk frekvens och MUF</h3>
+                <p><strong>Kritisk frekvens:</strong> Högsta frekvensen som reflekteras vid vertikal infallsvinkel.</p>
+                <p><strong>MUF (Maximum Usable Frequency):</strong> Högsta användbara frekvensen för en viss sträcka.</p>
+                
+                <div class="formula-box">
+                    MUF ≈ Kritisk frekvens × sekant(infallsvinkel)<br><br>
+                    MUF kan vara 3-4 gånger kritisk frekvens vid långa hopp
+                </div>
+                
+                <div class="info-box important">
+                    <strong>🎯 Tumregel:</strong> Använd en frekvens ca 80-90% av MUF för bästa signalstyrka.
+                </div>
+                
+                <h3>Hoppavstånd och död zon</h3>
+                <ul>
+                    <li><strong>Skip distance (hoppsträcka):</strong> Kortaste avståndet rymdvågen kan nå</li>
+                    <li><strong>Död zon:</strong> Området mellan markvågens räckvidd och skip distance - inga signaler hörs</li>
+                </ul>
+                
+                <h3>Dag och natt</h3>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Band</th>
+                            <th>Dag</th>
+                            <th>Natt</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>160m / 80m</td>
+                            <td>Kort räckvidd, dämpas av D-skiktet</td>
+                            <td>DX möjligt, F-skiktsreflektion</td>
+                        </tr>
+                        <tr>
+                            <td>40m</td>
+                            <td>Europa / 1000-2000 km</td>
+                            <td>DX till andra kontinenter</td>
+                        </tr>
+                        <tr>
+                            <td>20m</td>
+                            <td>Världsomspännande</td>
+                            <td>Ofta stängt</td>
+                        </tr>
+                        <tr>
+                            <td>15m / 10m</td>
+                            <td>Utmärkt vid hög solaktivitet</td>
+                            <td>Oftast stängt</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Fädning (Fading)</h3>
+                <p>Signalstyrkan varierar när flera signalvägar interfererar. Typer:</p>
+                <ul>
+                    <li><strong>Selektiv fädning:</strong> Vissa frekvenser påverkas mer</li>
+                    <li><strong>Flat fädning:</strong> Hela signalen påverkas lika</li>
+                    <li><strong>Flutter:</strong> Snabb fädning, ofta från polarområden</li>
+                </ul>
+            </div>
+
+            <!-- Sektion 4: Siktlinjeförbindelse -->
+            <div class="content-section" id="siktlinje">
+                <h2>4.4 Siktlinjeförbindelse (VHF/UHF)</h2>
+                
+                <h3>Line-of-sight (LoS)</h3>
+                <p>På VHF och högre frekvenser går signalen normalt i rak linje. Räckvidden begränsas av jordkrökningen och terrängen.</p>
+                
+                <div class="formula-box">
+                    <strong>Radiohorisonten:</strong><br>
+                    d (km) ≈ 4,12 × √h (m)<br><br>
+                    där h är antennhöjden
+                </div>
+                
+                <div class="example-box">
+                    <strong>Exempel:</strong> En antenn på 25 meters höjd:
+                    <br>d = 4,12 × √25 = 4,12 × 5 = <strong>20,6 km</strong> till radiohorisonten
+                    <br><br>
+                    Mellan två stationer med 25m antennhöjd blir max-avståndet ca 41 km.
+                </div>
+                
+                <h3>Faktorer som påverkar VHF/UHF</h3>
+                <ul>
+                    <li><strong>Antennhöjd:</strong> Avgörande för räckvidd</li>
+                    <li><strong>Terräng:</strong> Berg blockerar, vatten reflekterar bra</li>
+                    <li><strong>Byggnader:</strong> Kan blockera eller reflektera</li>
+                    <li><strong>Frekvens:</strong> Högre frekvens = mer dämpning</li>
+                </ul>
+                
                 <h3>Frirumsförlust</h3>
                 <p>Signalen försvagas med avståndet även i fri rymd (utan hinder):</p>
                 

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kapitel 3: Antenner - Radioamatör Utbildning</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">📻</span>
+                <span>RA-Utbildning</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Hem</a></li>
+                <li><a href="../../index.html#kapitel" class="active">Kapitel</a></li>
+                <li><a href="../test/prov.html">Gör Prov</a></li>
+                <li><a href="../profil/statistik.html">Min Statistik</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Öppna meny">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="chapter-page">
+        <div class="chapter-content">
+            <!-- Kapitel Hero -->
+            <div class="chapter-hero">
+                <div class="chapter-badge">Kapitel 3</div>
+                <h1>Antenner och Matarledningar</h1>
+                <p>Antennen är radioamatörens viktigaste komponent - lär dig hur den fungerar</p>
+                <div class="chapter-meta">
+                    <span>⏱️ 3-4 timmar</span>
+                    <span>📝 40 frågor</span>
+                    <span id="chapterProgress">📊 0% genomfört</span>
+                </div>
+            </div>
+
+            <!-- Innehållsförteckning -->
+            <div class="content-section toc">
+                <h2>📑 Innehåll</h2>
+                <ol class="toc-list">
+                    <li><a href="#grundprinciper">Grundprinciper</a></li>
+                    <li><a href="#dipol">Dipolantenner</a></li>
+                    <li><a href="#vertikal">Vertikala antenner</a></li>
+                    <li><a href="#riktantenner">Riktantenner</a></li>
+                    <li><a href="#matarledningar">Matarledningar</a></li>
+                    <li><a href="#anpassning">Anpassning och SWR</a></li>
+                    <li><a href="#balun">Balun och mantelströmmar</a></li>
+                    <li><a href="#praktiska">Praktiska antenner</a></li>
+                </ol>
+            </div>
+
+            <!-- Sektion 1: Grundprinciper -->
+            <div class="content-section" id="grundprinciper">
+                <h2>3.1 Grundprinciper</h2>
+                
+                <h3>Vad är en antenn?</h3>
+                <p>En antenn omvandlar elektrisk energi till elektromagnetiska vågor (vid sändning) och vice versa (vid mottagning). Den är gränssnittet mellan radion och "etern".</p>
+                
+                <div class="info-box tip">
+                    <strong>💡 Visste du?</strong> Antennen är ofta den komponent som har störst påverkan på stationens prestanda. En bra antenn och låg effekt slår ofta en dålig antenn och hög effekt!
+                </div>
+                
+                <h3>Våglängd och frekvens</h3>
+                <p>Antenners storlek är direkt relaterad till våglängden:</p>
+                
+                <div class="formula-box">
+                    <strong>λ = c / f</strong><br>
+                    <small>Våglängd = Ljushastighet / Frekvens</small><br><br>
+                    <strong>λ (meter) = 300 / f (MHz)</strong>
+                </div>
+                
+                <div class="example-box">
+                    <strong>Exempel:</strong>
+                    <br>• 80-metersbandet (3,5 MHz): λ = 300/3,5 ≈ 86 m
+                    <br>• 2-metersbandet (145 MHz): λ = 300/145 ≈ 2,07 m
+                    <br>• 70-centimetersbandet (432 MHz): λ = 300/432 ≈ 0,69 m
+                </div>
+                
+                <h3>Antennens impedans</h3>
+                <p>Varje antenn har en matningsimpedans som beror på konstruktion och omgivning. För optimal effektöverföring ska antennens impedans matcha matarledningen.</p>
+                <ul>
+                    <li><strong>Halvvågs dipol:</strong> ca 73 Ω (i fri rymd)</li>
+                    <li><strong>Kvartsvågs vertikal:</strong> ca 36 Ω</li>
+                    <li><strong>Folded dipol:</strong> ca 300 Ω</li>
+                </ul>
+                
+                <h3>Resonans</h3>
+                <p>En antenn är resonant när dess elektriska längd motsvarar ett jämnt antal kvartsvåglängder. Vid resonans är impedansen rent resistiv (ingen reaktans).</p>
+                
+                <h3>Antennvinst</h3>
+                <p>Antennvinst anger hur mycket bättre antennen strålar i en viss riktning jämfört med en referens:</p>
+                <ul>
+                    <li><strong>dBi:</strong> Vinst relativt en isotrop antenn (punktkälla)</li>
+                    <li><strong>dBd:</strong> Vinst relativt en dipol</li>
+                </ul>
+                
+                <div class="formula-box">
+                    dBi = dBd + 2,15
+                </div>
+                
+                <div class="info-box important">
+                    <strong>🎯 Kom ihåg:</strong> En antenn skapar inte energi - den koncentrerar bara energin i vissa riktningar på bekostnad av andra.
+                </div>
+            </div>
+
+            <!-- Sektion 2: Dipolantenner -->
+            <div class="content-section" id="dipol">
+                <h2>3.2 Dipolantenner</h2>
+                
+                <h3>Halvvågsdipol</h3>
+                <p>Den klassiska referensantennen. Består av två element som vardera är λ/4 långa.</p>
+                
+                <div class="formula-box">
+                    <strong>Total längd = λ/2 × k</strong><br>
+                    k ≈ 0,95 (förkortningsfaktor för tråd)<br><br>
+                    <strong>L (meter) = 143 / f (MHz)</strong>
+                </div>
+                
+                <div class="example-box">
+                    <strong>Exempel:</strong> Dipol för 7,1 MHz (40-metersbandet):
+                    <br>L = 143 / 7,1 = <strong>20,1 meter</strong> total längd
+                    <br>Varje halva blir 10,05 meter
+                </div>
+                
+                <h3>Dipolens egenskaper</h3>
+                <ul>
+                    <li><strong>Impedans:</strong> 50-75 Ω (beror på höjd över mark)</li>
+                    <li><strong>Strålningsdiagram:</strong> "Munkform" - max strålning vinkelrätt mot antenntråden</li>
+                    <li><strong>Vinst:</strong> 2,15 dBi (0 dBd per definition)</li>
+                    <li><strong>Polarisation:</strong> Samma som antennens orientering</li>
+                </ul>
+                
+                <h3>Inverterad-V dipol</h3>
+                <p>En dipol där de två halvorna vinklas nedåt från en central upphängningspunkt.</p>
+                <ul>
+                    <li>Kräver bara en hög punkt</li>
+                    <li>Något lägre impedans (ca 50 Ω)</li>
+                    <li>Mer rundstrålande än rak dipol</li>
+                    <li>Optimal vinkel: 90-120° mellan elementen</li>
+                </ul>
+                
+                <h3>Flerbandsdipoler</h3>
+                
+                <h4>Fälldipoler (Trap-dipol)</h4>
+                <p>Parallellresonanskretsar ("trappar") i antennen gör att den fungerar på flera band.</p>
+                
+                <h4>Flertrådsdipol (Fan-dipol)</h4>
+                <p>Flera dipoler för olika band kopplade till samma matningspunkt.</p>
+                
+                <h4>Off-center-fed dipol (OCF/Windom)</h4>
+                <p>Dipol som matas utanför centrum, vilket ger användbar impedans på flera band.</p>
+            </div>
+
+            <!-- Sektion 3: Vertikala antenner -->
+            <div class="content-section" id="vertikal">
+                <h2>3.3 Vertikala Antenner</h2>
+                
+                <h3>Kvartsvågsvertikal</h3>
+                <p>En vertikal antenn som är λ/4 hög och arbetar mot ett jordplan.</p>
+                
+                <div class="formula-box">
+                    <strong>Höjd (meter) = 71,5 / f (MHz)</strong>
+                </div>
+                
+                <h3>Jordplanets betydelse</h3>
+                <p>En vertikal antenn kräver ett bra jordplan för att fungera väl:</p>
+                <ul>
+                    <li><strong>Radialer:</strong> Minst 4-8 st, helst fler</li>
+                    <li><strong>Längd:</strong> λ/4 vardera</li>
+                    <li><strong>Markledningsförmåga:</strong> Påverkar strålningsvinkeln</li>
+                </ul>
+                
+                <div class="info-box tip">
+                    <strong>💡 Tips:</strong> Fler och kortare radialer är ofta bättre än få och långa. 16 radialer ger bra resultat.
+                </div>
+                
+                <h3>Vertikalens egenskaper</h3>
+                <ul>
+                    <li><strong>Impedans:</strong> ca 36 Ω (med perfekt jordplan)</li>
+                    <li><strong>Strålningsdiagram:</strong> Rundstrålande horisontellt</li>
+                    <li><strong>Låg utstrålningsvinkel:</strong> Bra för DX på HF</li>
+                    <li><strong>Tar liten plats horisontellt</strong></li>
+                </ul>
+                
+                <h3>5/8-dels vertikal</h3>
+                <p>Populär på VHF/UHF. Ger mer vinst och lägre utstrålningsvinkel än λ/4.</p>
+                <ul>
+                    <li>Kräver anpassning vid matningspunkten</li>
+                    <li>Vinst: ca 3-4 dBd</li>
+                </ul>
+                
+                <h3>Ground plane-antenn</h3>
+                <p>Kvartsvågsvertikal med radialer vinklade nedåt (ofta 45°). Ger högre impedans, närmare 50 Ω.</p>
+            </div>
+
+            <!-- Sektion 4: Riktantenner -->
+            <div class="content-section" id="riktantenner">
+                <h2>3.4 Riktantenner</h2>
+                
+                <h3>Yagi-Uda-antenn</h3>
+                <p>Den vanligaste riktantennen. Består av:</p>
+                <ul>
+                    <li><strong>Reflektor:</strong> Ca 5% längre än driven element, bakom</li>
+                    <li><strong>Driven element:</strong> Dipolen som matas</li>
+                    <li><strong>Direktorer:</strong> Ca 5% kortare, framför</li>
+                </ul>
+                
+                <h3>Yagi-antennens egenskaper</h3>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Antal element</th>
+                            <th>Ungefärlig vinst</th>
+                            <th>Typisk längd</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2 (dipol + reflektor)</td>
+                            <td>3-4 dBd</td>
+                            <td>0,2 λ</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>5-6 dBd</td>
+                            <td>0,3 λ</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>6-7 dBd</td>
+                            <td>0,5 λ</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>7-8 dBd</td>
+                            <td>0,8 λ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <h3>Quad-antenn</h3>
+                <p>Riktantenn med fyrkantiga element (1 λ omkrets vardera).</p>
+                <ul>
+                    <li>Något högre vinst än Yagi med samma antal element</li>
+                    <li>Bredare bandbredd</li>
+                    <li>Mekaniskt mer komplicerad</li>
+                </ul>
+                
+                <h3>Log-periodisk antenn</h3>
+                <p>Bredbandig riktantenn som fungerar över ett stort frekvensområde.</p>
+                <ul>
+                    <li>Lägre vinst än Yagi på enskild frekvens</li>
+                    <li>Fungerar utan avstämning över hela bandet</li>
+                    <li>Populär för TV-mottagning och viss amatöranvändning</li>
+                </ul>
+                
+                <h3>Fram/back-förhållande</h3>
+                <p>Anger hur mycket bättre antennen strålar framåt jämfört med bakåt. Mäts i dB. Typiskt 15-25 dB för en Yagi.</p>
+            </div>
+
+            <!-- Sektion 5: Matarledningar -->
+            <div class="content-section" id="matarledningar">
+                <h2>3.5 Matarledningar</h2>
+                
+                <h3>Koaxialkabel</h3>
+                <p>Den vanligaste matarledningen. Består av en innerledare omgiven av isolering, skärm och ytterhölje.</p>
+                
+                <h4>Vanliga koaxialtyper</h4>
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Typ</th>
+                            <th>Impedans</th>
+                            <th>Förlust (vid 100 MHz)</th>
+                            <th>Användning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RG-58</td>
+                            <td>50 Ω</td>
+                            <td>Hög (~10 dB/100m)</td>
+                            <td>Korta sträckor, låg effekt</td>
+                        </tr>
+                        <tr>
+                            <td>RG-213</td>
+                            <td>50 Ω</td>
+                            <td>Medel (~5 dB/100m)</td>
+                            <td>Allmän användning</td>
+                        </tr>
+                        <tr>
+                            <td>Aircell/Ecoflex</td>
+                            <td>50 Ω</td>
+                            <td>Låg (~2-3 dB/100m)</td>
+                            <td>Längre sträckor, VHF/UHF</td>
+                        </tr>
+                        <tr>
+                            <td>RG-75</td>
+                            <td>75 Ω</td>
+                            <td>Medel</td>
+                            <td>TV, vissa antenner</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="info-box warning">
+                    <strong>⚠️ Viktigt om förluster:</strong> Förlusterna ökar kraftigt med frekvensen! En kabel som fungerar bra på HF kan ha oacceptabla förluster på UHF.
+                </div>
+                
+                <h3>Hastighetsfaktor</h3>
+                <p>Signalen färdas långsammare i kabeln än i fri rymd:</p>
+                <ul>
+                    <li>Solid polyeten: ca 0,66</li>
+                    <li>Skum-polyeten: ca 0,80</li>
+                    <li>Luft (Aircell): ca 0,85</li>
+                </ul>
+                
+                <div class="formula-box">
+                    Elektrisk längd = Fysisk längd × Hastighetsfaktor
+                </div>
+                
+                <h3>Tvåledarkabel</h3>
+                <p>Parallella ledare med låga förluster men känslig för omgivningen.</p>
+                <ul>
+                    <li><strong>Hönsnät (luftledning):</strong> 450-600 Ω</li>
+                    <li><strong>Bandkabel:</strong> 300 Ω</li>
+                </ul>
+                
+                <h3>Kontakter</h3>
+                <ul>
+                    <li><strong>PL-259/SO-239:</strong> Vanlig för HF, inte 50 Ω</li>
+                    <li><strong>BNC:</strong> 50 Ω, snabbkoppling, VHF/UHF</li>
+                    <li><strong>N-kontakt:</strong> 50 Ω, vattentät, bra upp till mikrovåg</li>
+                    <li><strong>SMA:</strong> 50 Ω, liten, handhållna apparater</li>
+                </ul>
+            </div>
+
+            <!-- Sektion 6: Anpassning och SWR -->
+            <div class="content-section" id="anpassning">
+                <h2>3.6 Anpassning och SWR</h2>
+                
+                <h3>Varför anpassning?</h3>
+                <p>För maximal effektöverföring ska impedansen vara lika i hela kedjan: sändare → kabel → antenn. Missanpassning ger reflexioner.</p>
+                
+                <h3>SWR (Standing Wave Ratio)</h3>
+                <p>Stående vågförhållande - mäter hur bra anpassningen är:</p>
+                
+                <div class="formula-box">
+                    SWR = (1 + |Γ|) / (1 - |Γ|)<br><br>
+                    där Γ är reflexionskoefficienten
+                </div>
+                
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>SWR</th>
+                            <th>Reflekterad effekt</th>
+                            <th>Bedömning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1:1</td>
+                            <td>0%</td>
+                            <td>Perfekt</td>
+                        </tr>
+                        <tr>
+                            <td>1,5:1</td>
+                            <td>4%</td>
+                            <td>Utmärkt</td>
+                        </tr>
+                        <tr>
+                            <td>2:1</td>
+                            <td>11%</td>
+                            <td>Acceptabelt</td>
+                        </tr>
+                        <tr>
+                            <td>3:1</td>
+                            <td>25%</td>
+                            <td>Dåligt</td>
+                        </tr>
+                        <tr>
+                            <td>5:1</td>
+                            <td>44%</td>
+                            <td>Oacceptabelt</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="info-box important">
+                    <strong>🎯 Praktisk regel:</strong> SWR under 2:1 är oftast OK. De flesta sändare reducerar automatiskt effekten vid högre SWR för att skydda slutsteget.
+                </div>
+                
+                <h3>Anpassningsenheter (ATU/Antennavstämare)</h3>
+                <p>Transformerar antennens impedans till 50 Ω som sändaren vill se.</p>
+                
+                <h4>Vanliga konstruktioner:</h4>
+                <ul>
+                    <li><strong>L-nät:</strong> Enklast, spole + kondensator</li>
+                    <li><strong>T-nät:</strong> Flexibelt, stort anpassningsområde</li>
+                    <li><strong>Pi-nät:</strong> Vanlig i slutsteg, ger filtrering</li>
+                </ul>
+                
+                <div class="info-box warning">
+                    <strong>⚠️ Missförstånd:</strong> En ATU eliminerar INTE förlusterna i kabeln vid dålig SWR. Den döljer bara problemet för sändaren. Anpassa helst vid antennen!
+                </div>
+            </div>
+
+            <!-- Sektion 7: Balun -->
+            <div class="content-section" id="balun">
+                <h2>3.7 Balun och Mantelströmmar</h2>
+                
+                <h3>Varför balun?</h3>
+                <p>Balun = <strong>Bal</strong>anced to <strong>Un</strong>balanced. Koaxialkabel är obalanserad (skärmen är jordad), medan en dipol är balanserad (båda halvor har samma potential mot jord).</p>
+                
+                <p>Utan balun kan strömmar flyta på utsidan av koaxen (mantelströmmar), vilket orsakar:</p>
+                <ul>
+                    <li>Störningar på egen utrustning (RFI)</li>
+                    <li>Oönskat strålningsmönster</li>
+                    <li>Känslig mottagning (antennen blir en del av matarledningen)</li>
+                </ul>
+                
+                <h3>Typer av baluner</h3>
+                
+                <h4>Strömsbalun (Common-mode choke)</h4>
+                <p>Blockerar mantelströmmar med hög impedans. Görs enkelt genom att linda koaxen på en ferritkärna.</p>
+                
+                <h4>Transformerande balun</h4>
+                <p>Ändrar impedansen samtidigt som den balanserar:</p>
+                <ul>
+                    <li><strong>1:1</strong> - Balanserar, ingen impedansändring</li>
+                    <li><strong>4:1</strong> - Transformerar 200 Ω till 50 Ω</li>
+                    <li><strong>1:4</strong> - Transformerar 50 Ω till 200 Ω</li>
+                </ul>
+                
+                <h3>Unun</h3>
+                <p><strong>Un</strong>balanced to <strong>Un</strong>balanced - transformerar impedans utan att balansera. Används t.ex. för vertikala antenner.</p>
+            </div>
+
+            <!-- Sektion 8: Praktiska antenner -->
+            <div class="content-section" id="praktiska">
+                <h2>3.8 Praktiska Antenner</h2>
+                
+                <h3>Ändmatad antenn / Random wire</h3>
+                <p>En enkel tråd som matas i änden via en ATU. Fungerar på flera band men kräver en bra jordanslutning eller motvikt.</p>
+                
+                <h3>G5RV</h3>
+                <p>Populär flerbandsantenn med dipol + speciell matningstub. Ca 31 m bred.</p>
+                
+                <h3>Magnetisk loop</h3>
+                <p>Kompakt antenn för begränsat utrymme.</p>
+                <ul>
+                    <li>Liten storlek (1-3 m diameter för HF)</li>
+                    <li>Smal bandbredd, kräver finjustering</li>
+                    <li>Höga spänningar vid avstämningskondensatorn</li>
+                    <li>Relativt låg verkningsgrad</li>
+                </ul>
+                
+                <h3>J-pol / Slim Jim</h3>
+                <p>Populär för VHF/UHF, speciellt 2m. Ändmatad halvvågsantenn.</p>
+                <ul>
+                    <li>Inget jordplan behövs</li>
+                    <li>Lätt att bygga själv</li>
+                    <li>Kan hängas vertikalt</li>
+                </ul>
+                
+                <h3>Portabla antenner</h3>
+                <ul>
+                    <li><strong>Teleskopiska vertikaler</strong></li>
+                    <li><strong>Trådantenner</strong> (kasta upp i träd)</li>
+                    <li><strong>Hopfällbara Yagis</strong> för VHF/UHF</li>
+                </ul>
+                
+                <div class="info-box tip">
+                    <strong>💡 Praktiska tips:</strong>
+                    <br>• Höjd är guld! En dipol högre upp är bättre än en Yagi lågt
+                    <br>• Experimentera - varje QTH är unikt
+                    <br>• En "dålig" antenn är bättre än ingen antenn
+                    <br>• Mät SWR, men lyssna på signalrapporter också
+                </div>
+            </div>
+
+            <!-- Sammanfattning -->
+            <div class="content-section summary">
+                <h2>📝 Sammanfattning Kapitel 3</h2>
+                
+                <div class="key-points">
+                    <h3>Viktiga formler:</h3>
+                    <ul>
+                        <li><strong>Våglängd:</strong> λ = 300/f (MHz)</li>
+                        <li><strong>Halvvågsdipol:</strong> L = 143/f (MHz)</li>
+                        <li><strong>Kvartsvågsvertikal:</strong> L = 71,5/f (MHz)</li>
+                        <li><strong>dBi → dBd:</strong> dBi = dBd + 2,15</li>
+                    </ul>
+                </div>
+                
+                <div class="key-points">
+                    <h3>Kom ihåg:</h3>
+                    <ul>
+                        <li>Dipolen har ca 73 Ω impedans</li>
+                        <li>Vertikaler behöver bra jordplan</li>
+                        <li>Yagi ökar vinsten med fler direktorer</li>
+                        <li>Koaxförluster ökar med frekvensen</li>
+                        <li>SWR under 2:1 är generellt acceptabelt</li>
+                        <li>Balun behövs mellan koax och balanserad antenn</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="chapter-navigation">
+                <a href="kapitel-2-radioteknik.html" class="nav-button prev">
+                    <span class="arrow">←</span>
+                    <span class="label">Kapitel 2: Radioteknik</span>
+                </a>
+                <a href="../test/ovning.html?chapter=3" class="nav-button practice">
+                    <span class="icon">📝</span>
+                    <span class="label">Öva på kapitel 3</span>
+                </a>
+                <a href="kapitel-4-vagutbredning.html" class="nav-button next">
+                    <span class="label">Kapitel 4: Vågutbredning</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Radioamatör Utbildning. Baserat på SSA:s utbildningsmaterial.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof ProgressTracker !== 'undefined') {
+                const progress = ProgressTracker.getChapterProgress(3);
+                document.getElementById('chapterProgress').textContent = `📊 ${progress}% genomfört`;
+            }
+        });
+    </script>
+</body>
+</html>
