@@ -15,6 +15,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Hem</a></li>
+                <li><a href="introduktion.html">Introduktion</a></li>
                 <li><a href="#kapitel">Kapitel</a></li>
                 <li><a href="pages/test/prov.html">Gör prov</a></li>
                 <li><a href="pages/profil/statistik.html">Min statistik</a></li>
@@ -27,107 +28,117 @@
         </div>
     </nav>
 
-<header class="hero">
-    <div class="hero-content">
-        <h1>Bli certifierad radioamatör</h1>
-        <p>Utbildningsplattform med teori och provträning – inspirerad av körkortsteori!</p>
-        <div class="hero-buttons">
-            <a href="pages/test/prov.html" class="btn btn-primary">Starta provträning</a>
-            <a href="#kapitel" class="btn btn-secondary">Börja studera</a>
-        </div>
-    </div>
-    <div class="hero-stats" id="heroStats">
-        <!-- Fylls i dynamiskt -->
-    </div>
-</header>
-
-<main>
-    <!-- Snabb statistik-översikt -->
-    <section class="quick-stats" id="quickStats">
-        <div class="stat-card">
-            <div class="stat-icon">📚</div>
-            <div class="stat-info">
-                <span class="stat-value" id="chaptersCompleted">0/10</span>
-                <span class="stat-label">Kapitel klara</span>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Bli certifierad radioamatör</h1>
+            <p>Utbildningsplattform med teori och provträning – inspirerad av körkortsteori!</p>
+            <div class="hero-buttons">
+                <a href="pages/test/prov.html" class="btn btn-primary">Starta provträning</a>
+                <a href="#kapitel" class="btn btn-secondary">Börja studera</a>
             </div>
         </div>
-        <div class="stat-card">
-            <div class="stat-icon">✅</div>
-            <div class="stat-info">
-                <span class="stat-value" id="questionsAnswered">0</span>
-                <span class="stat-label">Frågor besvarade</span>
-            </div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-icon">🎯</div>
-            <div class="stat-info">
-                <span class="stat-value" id="averageScore">0%</span>
-                <span class="stat-label">Genomsnitt</span>
-            </div>
-        </div>
-        <div class="stat-card">
-            <div class="stat-icon">🏆</div>
-            <div class="stat-info">
-                <span class="stat-value" id="examReady">Ej redo</span>
-                <span class="stat-label">Provstatus</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kapitelöversikt -->
-    <section class="chapters-section" id="kapitel">
-        <h2>Utbildningskapitel</h2>
-        <p class="section-intro">Studera varje kapitel noggrant innan du gör proven. Klicka på ett kapitel för att börja.</p>
-        <div class="chapters-grid" id="chaptersGrid">
-            <!-- Fylls i dynamiskt från chapters.js -->
-        </div>
-    </section>
-
-    <!-- Provsektion -->
-    <section class="exam-section">
-        <h2>Provträning</h2>
-        <div class="exam-options">
-            <div class="exam-card">
-                <div class="exam-icon">📝</div>
-                <h3>Övningsprov</h3>
-                <p>Träna på frågor från specifika kapitel med direkt feedback.</p>
-                <a href="pages/test/ovning.html" class="btn btn-secondary">Starta Övning</a>
-            </div>
-            <div class="exam-card featured">
-                <div class="exam-badge">Rekommenderas</div>
-                <div class="exam-icon">🎓</div>
-                <h3>Simulerat prov</h3>
-                <p>Exakt som det riktiga provet: 60 frågor, 90 minuter, slumpmässigt urval.</p>
-                <a href="pages/test/prov.html" class="btn btn-primary">Starta Prov</a>
-            </div>
-            <div class="exam-card">
-                <div class="exam-icon">📊</div>
-                <h3>Se Statistik</h3>
-                <p>Analysera dina resultat och se var du behöver förbättras.</p>
-                <a href="pages/profil/statistik.html" class="btn btn-secondary">Visa statistik</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Kunskapsnivå per område -->
-    <section class="knowledge-section">
-        <h2>Din kunskapsnivå</h2>
-        <div class="knowledge-bars" id="knowledgeBars">
+        <div class="hero-stats" id="heroStats">
             <!-- Fylls i dynamiskt -->
         </div>
-    </section>
-</main>
+    </header>
 
-<footer>
-    <div class="footer-content">
-        <p>&copy; 2026 Radioamatörutbildning. Lycka till med dina studier!</p>
-        <p class="footer-note">Denna plattform är inte officiellt kopplad till PTS. Ingen datainsamling sker.</p>
-    </div>
-</footer>
+    <main>
+        <!-- Snabb statistik-översikt -->
+        <section class="quick-stats" id="quickStats">
+            <div class="stat-card">
+                <div class="stat-icon">📚</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="chaptersCompleted">0/10</span>
+                    <span class="stat-label">Kapitel klara</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="questionsAnswered">0</span>
+                    <span class="stat-label">Frågor besvarade</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="averageScore">0%</span>
+                    <span class="stat-label">Genomsnitt</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🏆</div>
+                <div class="stat-info">
+                    <span class="stat-value" id="examReady">Ej redo</span>
+                    <span class="stat-label">Provstatus</span>
+                </div>
+            </div>
+        </section>
 
-<script src="js/data/chapters.js"></script>
-<script src="js/data/questions.js"></script>
-<script src="js/progress.js"></script>
-<script src="js/main.js"></script>
+        <!-- Kapitelöversikt -->
+        <section class="chapters-section" id="kapitel">
+            <h2>Utbildningskapitel</h2>
+            <p class="section-intro">Studera varje kapitel noggrant innan du gör proven. Klicka på ett kapitel för att börja.</p>
+            <div class="chapters-grid" id="chaptersGrid">
+                <!-- Fylls i dynamiskt från chapters.js -->
+            </div>
+        </section>
+
+        <!-- Provsektion - UPPDATERAD MED INTRODUKTION -->
+        <section class="exam-section">
+            <h2>Provträning</h2>
+            <div class="exam-options">
+                <!-- NY: Introduktionskort -->
+                <div class="exam-card intro-card">
+                    <div class="exam-icon">📖</div>
+                    <h3>Introduktion</h3>
+                    <p>Verkar det svårt? Vad handlar det om egentligen? Här tar vi det från början.</p>
+                    <a href="introduktion.html" class="btn btn-intro">Börja här</a>
+                </div>
+                
+                <div class="exam-card">
+                    <div class="exam-icon">📝</div>
+                    <h3>Övningsprov</h3>
+                    <p>Träna på frågor från specifika kapitel med direkt feedback.</p>
+                    <a href="pages/test/ovning.html" class="btn btn-secondary">Starta övning</a>
+                </div>
+                
+                <div class="exam-card featured">
+                    <div class="exam-badge">Rekommenderas</div>
+                    <div class="exam-icon">🎓</div>
+                    <h3>Simulerat prov</h3>
+                    <p>Exakt som det riktiga provet: 60 frågor, 90 minuter, slumpmässigt urval.</p>
+                    <a href="pages/test/prov.html" class="btn btn-primary">Starta prov</a>
+                </div>
+                
+                <div class="exam-card">
+                    <div class="exam-icon">📊</div>
+                    <h3>Se statistik</h3>
+                    <p>Analysera dina resultat och se var du behöver förbättras.</p>
+                    <a href="pages/profil/statistik.html" class="btn btn-secondary">Visa statistik</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kunskapsnivå per område -->
+        <section class="knowledge-section">
+            <h2>Din kunskapsnivå</h2>
+            <div class="knowledge-bars" id="knowledgeBars">
+                <!-- Fylls i dynamiskt -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Radioamatörutbildning. Lycka till med dina studier!</p>
+            <p class="footer-note">Denna plattform är inte officiellt kopplad till PTS. Ingen datainsamling sker.</p>
+        </div>
+    </footer>
+
+    <script src="js/data/chapters.js"></script>
+    <script src="js/data/questions.js"></script>
+    <script src="js/progress.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
