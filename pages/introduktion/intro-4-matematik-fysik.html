@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematik & fysik från grunden – Introduktion – Radioskola.se</title>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <a href="../../index.html" class="logo">
+                <span class="logo-icon">📻</span>
+                <span>Radioskola.se</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../../index.html">Hem</a></li>
+                <li><a href="../../introduktion.html" class="active">Introduktion</a></li>
+                <li><a href="../../index.html#kapitel">Kapitel</a></li>
+                <li><a href="../test/prov.html">Gör prov</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Öppna meny">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../../index.html">Hem</a>
+            <span>/</span>
+            <a href="../../introduktion.html">Introduktion</a>
+            <span>/</span>
+            <span class="current">Kapitel 4</span>
+        </div>
+    </div>
+
+    <main class="chapter-content">
+        <article class="chapter-article">
+            <header class="chapter-header">
+                <span class="chapter-label">Introduktion – Kapitel 4</span>
+                <h1>🔢 Matematik & fysik från grunden</h1>
+                <div class="chapter-meta">
+                    <span class="read-time">🕐 35 min läsning</span>
+                    <span class="difficulty medium">Medelnivå</span>
+                </div>
+            </header>
+
+            <section class="chapter-section">
+                <div class="intro-box">
+                    <p class="lead">Oroa dig inte – du behöver inte vara ett mattegeni! Här går vi igenom precis det du behöver veta, steg för steg. Om du klarar grundskolans matte klarar du det här också.</p>
+                </div>
+            </section>
+
+            <!-- Stora och små tal -->
+            <section class="chapter-section">
+                <h2>📏 Stora och små tal – prefix</h2>
+                
+                <p>Inom radioteknik pratar vi ofta om väldigt stora tal (miljoner Hz) eller väldigt små tal (tusendels ampere). För att slippa skriva alla nollor använder vi <strong>prefix</strong>.</p>
+
+                <div class="prefix-table-container">
+                    <table class="prefix-table">
+                        <thead>
+                            <tr>
+                                <th>Prefix</th>
+                                <th>Symbol</th>
+                                <th>Värde</th>
+                                <th>Exempel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="prefix-large">
+                                <td>giga</td>
+                                <td>G</td>
+                                <td>1 000 000 000 (en miljard)</td>
+                                <td>1 GHz = 1 000 000 000 Hz</td>
+                            </tr>
+                            <tr class="prefix-large">
+                                <td>mega</td>
+                                <td>M</td>
+                                <td>1 000 000 (en miljon)</td>
+                                <td>145 MHz = 145 000 000 Hz</td>
+                            </tr>
+                            <tr class="prefix-large">
+                                <td>kilo</td>
+                                <td>k</td>
+                                <td>1 000 (tusen)</td>
+                                <td>3,5 kW = 3 500 W</td>
+                            </tr>
+                            <tr class="prefix-base">
+                                <td>–</td>
+                                <td>–</td>
+                                <td>1 (grundenheten)</td>
+                                <td>1 V, 1 A, 1 Ω, 1 W</td>
+                            </tr>
+                            <tr class="prefix-small">
+                                <td>milli</td>
+                                <td>m</td>
+                                <td>0,001 (en tusendel)</td>
+                                <td>500 mA = 0,5 A</td>
+                            </tr>
+                            <tr class="prefix-small">
+                                <td>mikro</td>
+                                <td>µ</td>
+                                <td>0,000001 (en miljondel)</td>
+                                <td>100 µV = 0,0001 V</td>
+                            </tr>
+                            <tr class="prefix-small">
+                                <td>nano</td>
+                                <td>n</td>
+                                <td>0,000000001 (en miljarddel)</td>
+                                <td>47 nF = 0,000000047 F</td>
+                            </tr>
+                            <tr class="prefix-small">
+                                <td>piko</td>
+                                <td>p</td>
+                                <td>0,000000000001</td>
+                                <td>22 pF = 0,000000000022 F</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Tips för att minnas</h4>
+                    <ul>
+                        <li><strong>Kilo</strong> känner du igen från kilometer (1000 meter) och kilogram (1000 gram)</li>
+                        <li><strong>Milli</strong> känner du från millimeter (0,001 meter) och milliliter</li>
+                        <li><strong>Mega</strong> betyder "stor" – megastjärna, megahit!</li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Räkneexempel</h4>
+                    <div class="example">
+                        <p><strong>Konvertera 2,4 GHz till Hz:</strong></p>
+                        <p>Giga = 1 000 000 000</p>
+                        <p>2,4 × 1 000 000 000 = <strong>2 400 000 000 Hz</strong></p>
+                    </div>
+                    <div class="example">
+                        <p><strong>Konvertera 4700 mA till A:</strong></p>
+                        <p>milli = 0,001 (dela med 1000)</p>
+                        <p>4700 ÷ 1000 = <strong>4,7 A</strong></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Enheter -->
+            <section class="chapter-section">
+                <h2>⚡ Elektriska enheter</h2>
+                
+                <p>Det finns fyra grundläggande elektriska storheter du behöver känna till:</p>
+
+                <div class="unit-cards">
+                    <div class="unit-card">
+                        <div class="unit-symbol">V</div>
+                        <h4>Volt – Spänning (U)</h4>
+                        <p class="unit-analogy">🚿 Tänk: Vattentrycket i en slang</p>
+                        <p>Spänning är den "kraft" som driver elektroner genom en ledare. Ju högre spänning, desto hårdare "tryck".</p>
+                        <p class="unit-example">Exempel: Ett bilbatteri har 12 V, ett vägguttag 230 V</p>
+                    </div>
+                    
+                    <div class="unit-card">
+                        <div class="unit-symbol">A</div>
+                        <h4>Ampere – Ström (I)</h4>
+                        <p class="unit-analogy">🚿 Tänk: Hur mycket vatten som flödar</p>
+                        <p>Ström är mängden elektroner som flödar förbi en punkt per sekund.</p>
+                        <p class="unit-example">Exempel: En mobilladdar drar ca 1-2 A, en vattenkokare 10 A</p>
+                    </div>
+                    
+                    <div class="unit-card">
+                        <div class="unit-symbol">Ω</div>
+                        <h4>Ohm – Resistans (R)</h4>
+                        <p class="unit-analogy">🚿 Tänk: Hur trång slangen är</p>
+                        <p>Resistans är motståndet mot strömflöde. Hög resistans = svårare för strömmen att ta sig fram.</p>
+                        <p class="unit-example">Exempel: En kopparledning har låg resistans, en glödlampa har högre</p>
+                    </div>
+                    
+                    <div class="unit-card">
+                        <div class="unit-symbol">W</div>
+                        <h4>Watt – Effekt (P)</h4>
+                        <p class="unit-analogy">🔥 Tänk: Hur mycket energi som används</p>
+                        <p>Effekt är hur mycket energi som omvandlas per sekund. Mer watt = starkare sändare/ljusare lampa.</p>
+                        <p class="unit-example">Exempel: En lampa 60 W, en handradio 5 W, en basstation 100 W</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Ohms lag -->
+            <section class="chapter-section">
+                <h2>📐 Ohms lag – den viktigaste formeln</h2>
+                
+                <p>Ohms lag beskriver hur spänning, ström och resistans hänger ihop. Det är den <em>absolut viktigaste</em> formeln inom elektronik!</p>
+
+                <div class="formula-box main-formula">
+                    <h3>U = I × R</h3>
+                    <p>Spänning (volt) = Ström (ampere) × Resistans (ohm)</p>
+                </div>
+
+                <p>Genom att vrida på formeln kan du räkna ut vilken storhet som helst om du vet de andra två:</p>
+
+                <div class="formula-triangle">
+                    <div class="triangle-visual">
+                        <div class="triangle-top">U</div>
+                        <div class="triangle-bottom">
+                            <span>I</span>
+                            <span>×</span>
+                            <span>R</span>
+                        </div>
+                    </div>
+                    <div class="formula-variants">
+                        <div class="variant">
+                            <strong>U = I × R</strong>
+                            <span>Beräkna spänning</span>
+                        </div>
+                        <div class="variant">
+                            <strong>I = U / R</strong>
+                            <span>Beräkna ström</span>
+                        </div>
+                        <div class="variant">
+                            <strong>R = U / I</strong>
+                            <span>Beräkna resistans</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4>Räkneexempel med Ohms lag</h4>
+                    
+                    <div class="example">
+                        <p><strong>Exempel 1: Beräkna strömmen</strong></p>
+                        <p>En lampa med resistansen 100 Ω ansluts till 12 V. Hur stor blir strömmen?</p>
+                        <div class="solution">
+                            <p>Vi använder: I = U / R</p>
+                            <p>I = 12 V / 100 Ω = <strong>0,12 A</strong> (eller 120 mA)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="example">
+                        <p><strong>Exempel 2: Beräkna spänningen</strong></p>
+                        <p>En ström på 2 A flyter genom en resistans på 47 Ω. Vilken spänning ligger över resistorn?</p>
+                        <div class="solution">
+                            <p>Vi använder: U = I × R</p>
+                            <p>U = 2 A × 47 Ω = <strong>94 V</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div class="example">
+                        <p><strong>Exempel 3: Beräkna resistansen</strong></p>
+                        <p>En krets har spänningen 9 V och strömmen 0,5 A. Vad är resistansen?</p>
+                        <div class="solution">
+                            <p>Vi använder: R = U / I</p>
+                            <p>R = 9 V / 0,5 A = <strong>18 Ω</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Effekt -->
+            <section class="chapter-section">
+                <h2>💡 Effekt – hur stark är sändaren?</h2>
+                
+                <p>Effekt mäts i Watt (W) och talar om hur mycket energi som omvandlas varje sekund. För radiosändare är effekten avgörande – mer watt betyder längre räckvidd (allt annat lika).</p>
+
+                <div class="formula-box">
+                    <h3>P = U × I</h3>
+                    <p>Effekt (watt) = Spänning (volt) × Ström (ampere)</p>
+                </div>
+
+                <p>Det finns också en variant som kombinerar med Ohms lag:</p>
+
+                <div class="formula-variants-grid">
+                    <div class="formula-variant">
+                        <strong>P = U × I</strong>
+                    </div>
+                    <div class="formula-variant">
+                        <strong>P = I² × R</strong>
+                    </div>
+                    <div class="formula-variant">
+                        <strong>P = U² / R</strong>
+                    </div>
+                </div>
+
+                <div class="example-box">
+                    <h4>Räkneexempel</h4>
+                    <div class="example">
+                        <p><strong>Exempel: Hur mycket effekt drar en radio?</strong></p>
+                        <p>En radio drivs av 13,8 V och drar 2,5 A vid sändning. Vilken effekt förbrukar den?</p>
+                        <div class="solution">
+                            <p>P = U × I</p>
+                            <p>P = 13,8 V × 2,5 A = <strong>34,5 W</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Decibel -->
+            <section class="chapter-section">
+                <h2>📊 Decibel – inte så svårt som det låter!</h2>
+                
+                <p>Decibel (dB) är ett sätt att beskriva förhållanden – hur mycket starkare eller svagare något är. Det används överallt inom radioteknik!</p>
+
+                <div class="info-box">
+                    <h4>Varför decibel?</h4>
+                    <p>Istället för att säga "signalen blev 1000 gånger starkare" säger vi "+30 dB". Det är enklare att räkna med, speciellt när man kedjar ihop förstärkare och kablar.</p>
+                </div>
+
+                <div class="db-table-container">
+                    <h4>De viktigaste dB-värdena att minnas:</h4>
+                    <table class="db-table">
+                        <thead>
+                            <tr>
+                                <th>Förändring i dB</th>
+                                <th>Effektförändring</th>
+                                <th>Minnesregel</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>+3 dB</strong></td>
+                                <td>× 2 (dubbel effekt)</td>
+                                <td>🔺 Dubbelt</td>
+                            </tr>
+                            <tr>
+                                <td><strong>-3 dB</strong></td>
+                                <td>× 0,5 (halv effekt)</td>
+                                <td>🔻 Halverat</td>
+                            </tr>
+                            <tr>
+                                <td><strong>+10 dB</strong></td>
+                                <td>× 10 (tio gånger)</td>
+                                <td>🔺🔺🔺 Tio gånger</td>
+                            </tr>
+                            <tr>
+                                <td><strong>-10 dB</strong></td>
+                                <td>× 0,1 (en tiondel)</td>
+                                <td>🔻🔻🔻 En tiondel</td>
+                            </tr>
+                            <tr>
+                                <td><strong>+20 dB</strong></td>
+                                <td>× 100</td>
+                                <td>Hundra gånger</td>
+                            </tr>
+                            <tr>
+                                <td><strong>+30 dB</strong></td>
+                                <td>× 1000</td>
+                                <td>Tusen gånger</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Supertrick: Kombinera +3 och +10!</h4>
+                    <p>Du kan alltid räkna ut dB genom att kombinera +3 (dubbel) och +10 (tio gånger):</p>
+                    <ul>
+                        <li>+13 dB = +10 dB + 3 dB = 10 × 2 = <strong>20 gånger</strong></li>
+                        <li>+6 dB = +3 dB + 3 dB = 2 × 2 = <strong>4 gånger</strong></li>
+                        <li>+20 dB = +10 dB + 10 dB = 10 × 10 = <strong>100 gånger</strong></li>
+                    </ul>
+                </div>
+
+                <div class="example-box">
+                    <h4>Räkneexempel med decibel</h4>
+                    <div class="example">
+                        <p><strong>Exempel 1:</strong> En sändare har 5 W. Du kopplar in en förstärkare på +10 dB. Vilken effekt har du nu?</p>
+                        <div class="solution">
+                            <p>+10 dB = 10 gånger effekten</p>
+                            <p>5 W × 10 = <strong>50 W</strong></p>
+                        </div>
+                    </div>
+                    <div class="example">
+                        <p><strong>Exempel 2:</strong> Du har 100 W och kopplar in en kabel som har -3 dB förlust. Hur mycket effekt når antennen?</p>
+                        <div class="solution">
+                            <p>-3 dB = halv effekt</p>
+                            <p>100 W × 0,5 = <strong>50 W</strong></p>
+                        </div>
+                    </div>
+                    <div class="example">
+                        <p><strong>Exempel 3:</strong> Förstärkare +13 dB, kabel -3 dB, antenn +6 dB. Totalförstärkning?</p>
+                        <div class="solution">
+                            <p>Addera alla dB: 13 + (-3) + 6 = <strong>+16 dB</strong></p>
+                            <p>(Det är cirka 40 gånger förstärkning: 10×2×2 = 40)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Frekvens och våglängd -->
+            <section class="chapter-section">
+                <h2>🌊 Frekvens och våglängd</h2>
+                
+                <p>Frekvens och våglängd hänger ihop – de är två sätt att beskriva samma radiovåg!</p>
+
+                <div class="concept-comparison">
+                    <div class="concept">
+                        <h4>Frekvens (f)</h4>
+                        <p>Antal vågor per sekund</p>
+                        <p>Mäts i <strong>Hertz (Hz)</strong></p>
+                        <p>Hög frekvens = många vågor</p>
+                    </div>
+                    <div class="concept">
+                        <h4>Våglängd (λ)</h4>
+                        <p>Avståndet mellan två vågtoppar</p>
+                        <p>Mäts i <strong>meter (m)</strong></p>
+                        <p>Hög frekvens = kort våglängd</p>
+                    </div>
+                </div>
+
+                <div class="formula-box">
+                    <h3>λ = c / f</h3>
+                    <p>Våglängd (meter) = Ljusets hastighet / Frekvens</p>
+                    <p class="formula-note">c ≈ 300 000 000 m/s (eller 300 000 km/s)</p>
+                </div>
+
+                <div class="tip-box">
+                    <h4>💡 Förenklad formel för snabb beräkning</h4>
+                    <p>Om frekvensen är i MHz kan du använda:</p>
+                    <div class="formula-simple">λ (meter) = 300 / f (MHz)</div>
+                    <p>Exempel: 145 MHz → λ = 300/145 ≈ <strong>2 meter</strong> (därav "2-metersbandet"!)</p>
+                </div>
+
+                <div class="example-box">
+                    <h4>Räkneexempel</h4>
+                    <div class="example">
+                        <p><strong>Vilken våglängd har 7 MHz?</strong></p>
+                        <div class="solution">
+                            <p>λ = 300 / 7 ≈ <strong>43 meter</strong> (40-metersbandet)</p>
+                        </div>
+                    </div>
+                    <div class="example">
+                        <p><strong>Vilken våglängd har 433 MHz?</strong></p>
+                        <div class="solution">
+                            <p>λ = 300 / 433 ≈ <strong>0,7 meter = 70 cm</strong> (70 cm-bandet)</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="chapter-section">
+                <div class="summary-box">
+                    <h3>📝 Sammanfattning</h3>
+                    <ul>
+                        <li><strong>Prefix</strong>: kilo (k) = 1000, mega (M) = 1 miljon, milli (m) = 0,001</li>
+                        <li><strong>Enheter</strong>: Volt (spänning), Ampere (ström), Ohm (resistans), Watt (effekt)</li>
+                        <li><strong>Ohms lag</strong>: U = I × R – den viktigaste formeln!</li>
+                        <li><strong>Effekt</strong>: P = U × I</li>
+                        <li><strong>Decibel</strong>: +3 dB = dubbelt, +10 dB = tio gånger</li>
+                        <li><strong>Våglängd</strong>: λ = 300 / f (MHz)</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="chapter-section exercises-section">
+                <h2>✍️ Övningsuppgifter</h2>
+                <p>Nu är det dags att öva! Dessa uppgifter hjälper dig att befästa kunskaperna.</p>
+                <div class="exercises-container" id="exercisesContainer"></div>
+                <div class="exercise-results" id="exerciseResults" style="display: none;">
+                    <h3>Ditt resultat</h3>
+                    <p>Du fick <span id="correctCount">0</span> av <span id="totalCount">0</span> rätt!</p>
+                    <button class="btn btn-secondary" onclick="resetExercises()">Försök igen</button>
+                </div>
+            </section>
+
+            <nav class="chapter-navigation">
+                <a href="intro-3-nar-radio-raddade-liv.html" class="nav-btn prev">
+                    <span class="nav-direction">← Föregående</span>
+                    <span class="nav-title">När radion räddade liv</span>
+                </a>
+                <a href="intro-5-frekvensbanden.html" class="nav-btn next">
+                    <span class="nav-direction">Nästa kapitel →</span>
+                    <span class="nav-title">Alla frekvensband</span>
+                </a>
+            </nav>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 Radioskola.se</p>
+        </div>
+    </footer>
+
+    <script src="../../js/data/intro-chapters.js"></script>
+    <script src="../../js/exercises.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const chapter = introChapters.find(c => c.id === 'intro-4');
+            if (chapter && chapter.exercises) {
+                loadExercises(chapter.exercises);
+            }
+        });
+    </script>
+</body>
+</html>
+
