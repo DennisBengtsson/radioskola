@@ -5,75 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Din radioskola online – gratis övningar för certifikatet</title>
     <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* Extra CSS för bok-expansion (lägg till i style.css senare) */
-        .book-card {
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        .book-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        .book-card .book-header {
-            padding: 1.5rem;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            position: relative;
-            overflow: hidden;
-        }
-        .book-card.expanded .book-header {
-            border-bottom-left-radius: 0;
-            border-bottom-right-radius: 0;
-        }
-        .book-card .toggle-icon {
-            position: absolute;
-            right: 1.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 1.2em;
-            transition: transform 0.3s ease;
-        }
-        .book-card.expanded .toggle-icon {
-            transform: translateY(-50%) rotate(180deg);
-        }
-        .book-intro, .sub-chapters {
-            display: none;
-            padding: 1.5rem;
-            background: #f8f9ff;
-            border: 1px solid #e0e6ff;
-            border-top: none;
-            border-radius: 0 0 12px 12px;
-        }
-        .book-card.expanded .book-intro,
-        .book-card.expanded .sub-chapters {
-            display: block;
-        }
-        .sub-chapter-link {
-            padding: 1rem;
-            border-left: 4px solid #667eea;
-            background: white;
-            margin-bottom: 0.5rem;
-            border-radius: 0 8px 8px 0;
-            transition: background 0.2s;
-        }
-        .sub-chapter-link:hover {
-            background: #e8f0ff;
-        }
-        .book-main-info {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .book-number {
-            font-size: 2em;
-            font-weight: bold;
-            background: rgba(255,255,255,0.2);
-            padding: 0.5rem 1rem;
-            border-radius: 50%;
-        }
-    </style>
+    <link rel="stylesheet" href="css/books.css">
 </head>
 <body>
     <nav class="main-nav">
@@ -84,7 +16,7 @@
             </a>
             <ul class="nav-links">
                 <li><a href="index.html" class="active">Hem</a></li>
-                <li><a href="#kapitel">Böcker</a></li>
+                <li><a href="#bocker">Böcker</a></li>
                 <li><a href="pages/test/prov.html">Gör prov</a></li>
                 <li><a href="pages/profil/statistik.html">Min statistik</a></li>
             </ul>
@@ -102,12 +34,10 @@
             <p>Utbildningsplattform med teori och provträning – inspirerad av körkortsteori!</p>
             <div class="hero-buttons">
                 <a href="pages/test/prov.html" class="btn btn-primary">Starta provträning</a>
-                <a href="#kapitel" class="btn btn-secondary">Börja studera</a>
+                <a href="#bocker" class="btn btn-secondary">Börja studera</a>
             </div>
         </div>
-        <div class="hero-stats" id="heroStats">
-            <!-- Fylls i dynamiskt -->
-        </div>
+        <div class="hero-stats" id="heroStats"></div>
     </header>
 
     <main>
@@ -144,89 +74,122 @@
         </section>
 
         <!-- Böckeröversikt -->
-        <section class="chapters-section books-section" id="kapitel">
+        <section class="books-section" id="bocker">
             <h2>📚 Utbildningsböcker</h2>
             <p class="section-intro">
-                Välj en bok nedan för att komma igång! Klicka på en bok för att läsa en introduktion och se alla kapitel. 
+                Välj en bok nedan för att komma igång! Klicka på en bok för att läsa introduktionen och se alla kapitel. 
                 Börja med <strong>Introduktion</strong> om du är nybörjare – ingen förkunskap krävs.
             </p>
             
-            <div class="books-grid chapters-grid">
+            <div class="books-container">
                 <!-- Bok 1: Introduktion -->
-                <article class="book-card chapter-card intro-card" data-book="intro">
-                    <div class="book-header" onclick="toggleBook(this.parentNode)">
-                        <div class="book-main-info">
-                            <span class="book-number">1</span>
-                            <span class="book-icon">📖</span>
+                <article class="book-card" data-book="intro">
+                    <div class="book-header">
+                        <div class="book-number">1</div>
+                        <div class="book-icon">📖</div>
+                        <div class="book-title-area">
                             <h3>Introduktion till radions värld</h3>
-                            <p class="book-short-desc">Här tar vi det från början! Ingen förkunskap krävs – perfekt för nyfikna nybörjare.</p>
+                            <p class="book-tagline">Här tar vi det från början! Ingen förkunskap krävs.</p>
                         </div>
                         <span class="toggle-icon">▼</span>
                     </div>
-                    <div class="book-intro">
-                        <p><strong>Tycker du det verkar svårt?</strong> Denna bok vänder sig till dig i åldern 10–15 år (eller vuxna som behöver fräscha upp grunderna), som tycker att tekniken verkar krånglig eller har inte rört matte på ett tag. Vi förklarar allt från grunden med roliga berättelser, enkla exempel och steg-för-steg. Bygg en stabil grund innan du går vidare till certifikatet!</p>
-                        <p>6 kapitel, ca 2 timmar totalt. Varje kapitel slutar med övningar för att testa dina kunskaper.</p>
-                    </div>
-                    <div class="sub-chapters">
-                        <div class="sub-chapter-link">
-                            <a href="pages/introduktion/intro-1-vad-ar-radio.html">
-                                <strong>Kapitel 1:</strong> Vad är radio egentligen? <span>🕐 15 min →</span>
-                            </a>
+                    
+                    <div class="book-expanded-content">
+                        <div class="book-intro">
+                            <h4>🎯 Vem är boken för?</h4>
+                            <p>
+                                <strong>Tycker du det verkar svårt?</strong> Denna bok vänder sig till dig som är 
+                                mellan 10–15 år, eller till vuxna som behöver fräscha upp grunderna. Om du tycker 
+                                att tekniken verkar krånglig eller inte har rört matte på ett tag – börja här!
+                            </p>
+                            <p>
+                                Vi förklarar allt från grunden med roliga berättelser, enkla exempel och 
+                                steg-för-steg-förklaringar. Bygg en stabil grund innan du går vidare till certifikatet!
+                            </p>
+                            <div class="book-meta">
+                                <span>📚 6 kapitel</span>
+                                <span>⏱️ Ca 2 timmar totalt</span>
+                                <span>✏️ Övningar efter varje kapitel</span>
+                            </div>
                         </div>
-                        <div class="sub-chapter-link">
-                            <a href="pages/introduktion/intro-2-radiohistoria.html">
-                                <strong>Kapitel 2:</strong> Radions fascinerande historia <span>🕐 20 min →</span>
+                        
+                        <div class="chapters-list">
+                            <h4>Kapitel i denna bok</h4>
+                            <a href="pages/introduktion/intro-1-vad-ar-radio.html" class="chapter-link">
+                                <span class="chapter-num">1</span>
+                                <span class="chapter-title">Vad är radio egentligen?</span>
+                                <span class="chapter-time">🕐 15 min</span>
                             </a>
-                        </div>
-                        <div class="sub-chapter-link">
-                            <a href="pages/introduktion/intro-3-nar-radio-raddade-liv.html">
-                                <strong>Kapitel 3:</strong> När radion räddade liv <span>🕐 25 min →</span>
+                            <a href="pages/introduktion/intro-2-radiohistoria.html" class="chapter-link">
+                                <span class="chapter-num">2</span>
+                                <span class="chapter-title">Radions fascinerande historia</span>
+                                <span class="chapter-time">🕐 20 min</span>
                             </a>
-                        </div>
-                        <div class="sub-chapter-link">
-                            <a href="pages/introduktion/intro-4-matematik-fysik.html">
-                                <strong>Kapitel 4:</strong> Matematik & fysik från grunden <span>🕐 35 min →</span>
+                            <a href="pages/introduktion/intro-3-nar-radio-raddade-liv.html" class="chapter-link">
+                                <span class="chapter-num">3</span>
+                                <span class="chapter-title">När radion räddade liv</span>
+                                <span class="chapter-time">🕐 25 min</span>
                             </a>
-                        </div>
-                        <div class="sub-chapter-link">
-                            <a href="pages/introduktion/intro-5-frekvensbanden.html">
-                                <strong>Kapitel 5:</strong> Alla frekvensband förklarade <span>🕐 30 min →</span>
+                            <a href="pages/introduktion/intro-4-matematik-fysik.html" class="chapter-link">
+                                <span class="chapter-num">4</span>
+                                <span class="chapter-title">Matematik & fysik från grunden</span>
+                                <span class="chapter-time">🕐 35 min</span>
                             </a>
-                        </div>
-                        <div class="sub-chapter-link">
-                            <a href="pages/introduktion/intro-6-vad-gor-radioamatorer.html">
-                                <strong>Kapitel 6:</strong> Vad gör radioamatörer egentligen? <span>🕐 25 min →</span>
+                            <a href="pages/introduktion/intro-5-frekvensbanden.html" class="chapter-link">
+                                <span class="chapter-num">5</span>
+                                <span class="chapter-title">Alla frekvensband förklarade</span>
+                                <span class="chapter-time">🕐 30 min</span>
+                            </a>
+                            <a href="pages/introduktion/intro-6-vad-gor-radioamatorer.html" class="chapter-link">
+                                <span class="chapter-num">6</span>
+                                <span class="chapter-title">Vad gör radioamatörer egentligen?</span>
+                                <span class="chapter-time">🕐 25 min</span>
                             </a>
                         </div>
                     </div>
                 </article>
 
                 <!-- Bok 2: Certifikatförberedelse -->
-                <article class="book-card chapter-card" data-book="cert">
-                    <div class="book-header" onclick="toggleBook(this.parentNode)">
-                        <div class="book-main-info">
-                            <span class="book-number">2</span>
-                            <span class="book-icon">🎓</span>
+                <article class="book-card" data-book="cert">
+                    <div class="book-header">
+                        <div class="book-number">2</div>
+                        <div class="book-icon">🎓</div>
+                        <div class="book-title-area">
                             <h3>Förberedelsebok för radiocertifikatet</h3>
-                            <p class="book-short-desc">Den officiella teorin uppdelad i 10 kapitel – allt du behöver för PTS-provet!</p>
+                            <p class="book-tagline">Den officiella teorin – allt du behöver för PTS-provet!</p>
                         </div>
                         <span class="toggle-icon">▼</span>
                     </div>
-                    <div class="book-intro">
-                        <p><strong>Redo för det riktiga provet?</strong> Här hittar du den strukturerade läroplanen för grundcertifikatet (N). All information du behöver om elektronik, antenner, regler, sändning och praktik – direkt anpassad efter PTS provbank. Studera ett kapitel i taget och testa med övningar.</p>
-                        <p>10 kapitel med djupgående teori, formler, diagram och hundratals övningsfrågor. Ca 15–20 timmar totalt.</p>
-                    </div>
-                    <div class="sub-chapters" id="certChaptersList">
-                        <!-- Fylls dynamiskt från chapters.js – placeholder för nu -->
-                        <div class="sub-chapter-placeholder">
-                            <p>(Kapitel listas här när du laddar chapters.js. Exempel: Kapitel 1: Grundläggande elektronik →)</p>
+                    
+                    <div class="book-expanded-content">
+                        <div class="book-intro">
+                            <h4>🎯 Vem är boken för?</h4>
+                            <p>
+                                <strong>Redo för det riktiga provet?</strong> Här hittar du den strukturerade 
+                                läroplanen för grundcertifikatet (N-certifikat). All information du behöver om 
+                                elektronik, antenner, regler, sändning och praktik – direkt anpassad efter PTS provbank.
+                            </p>
+                            <p>
+                                Studera ett kapitel i taget och testa dina kunskaper med övningar. När du känner 
+                                dig redo, gör ett simulerat prov för att se om du är förberedd!
+                            </p>
+                            <div class="book-meta">
+                                <span>📚 10 kapitel</span>
+                                <span>⏱️ Ca 15–20 timmar totalt</span>
+                                <span>✏️ Hundratals övningsfrågor</span>
+                            </div>
+                        </div>
+                        
+                        <div class="chapters-list" id="certChaptersList">
+                            <h4>Kapitel i denna bok</h4>
+                            <!-- Fylls dynamiskt från chapters.js -->
                         </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- Provsektion (utan introduktion) -->
+        <!-- Provsektion -->
         <section class="exam-section">
             <h2>Provträning</h2>
             <div class="exam-options">
@@ -270,32 +233,10 @@
         </div>
     </footer>
 
-    <script src="js/data/chapters.js"></script> <!-- För certifikat-kapitel -->
+    <script src="js/data/chapters.js"></script>
     <script src="js/data/questions.js"></script>
     <script src="js/progress.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        // Funktion för att toggla bok-expansion
-        function toggleBook(bookCard) {
-            bookCard.classList.toggle('expanded');
-        }
-
-        // Exempel: Ladda certifikat-kapitel dynamiskt (utöka med chapters.js)
-        // Anta att chapters är en array från chapters.js med {title, slug, number, estimatedTime}
-        if (typeof chapters !== 'undefined') {
-            const certList = document.getElementById('certChaptersList');
-            certList.innerHTML = '';
-            chapters.forEach(chap => {
-                const link = document.createElement('div');
-                link.className = 'sub-chapter-link';
-                link.innerHTML = `
-                    <a href="pages/kapitel/${chap.slug}.html">
-                        <strong>Kapitel ${chap.number}:</strong> ${chap.title} <span>🕐 ${chap.estimatedTime} min →</span>
-                    </a>
-                `;
-                certList.appendChild(link);
-            });
-        }
-    </script>
+    <script src="js/books.js"></script>
 </body>
 </html>
