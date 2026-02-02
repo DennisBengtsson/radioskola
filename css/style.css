@@ -2899,102 +2899,289 @@ section h2 {
         --surface-hover: #4a5568;
         
         --text-primary: #f7fafc;
-        --text-secondary: #cbd5e0;
-        --text-light: #718096;
+        --text-secondary: #e2e8f0;  /* Ljusare för bättre läsbarhet */
+        --text-light: #a0aec0;      /* Ljusare än tidigare #718096 */
         
         --border-color: #4a5568;
         
-        /* Justerade färger för mörkt läge */
-        --info-bg: rgba(66, 153, 225, 0.15);
-        --info-border: #2b6cb0;
+        /* Justerade färger för mörkt läge - högre kontrast */
+        --info-bg: rgba(66, 153, 225, 0.2);
+        --info-border: #4299e1;
+        --info-text: #bee3f8;       /* Ny: ljus text för info-boxar */
         
-        --success-bg: rgba(72, 187, 120, 0.15);
-        --success-border: #2f855a;
+        --success-bg: rgba(72, 187, 120, 0.2);
+        --success-border: #48bb78;
+        --success-text: #c6f6d5;    /* Ny: ljus text för success */
         
-        --warning-bg: rgba(237, 137, 54, 0.15);
-        --warning-border: #9c4221;
+        --warning-bg: rgba(237, 137, 54, 0.2);
+        --warning-border: #ed8936;
+        --warning-text: #feebc8;    /* Ny: ljus text för warning */
         
-        --danger-bg: rgba(245, 101, 101, 0.15);
-        --danger-border: #c53030;
+        --danger-bg: rgba(245, 101, 101, 0.2);
+        --danger-border: #fc8181;
+        --danger-text: #fed7d7;     /* Ny: ljus text för danger */
     }
     
-    /* Specifika justeringar för dark mode */
+    /* Generell textförbättring för dark mode */
+    body {
+        color: var(--text-primary);
+    }
+    
+    p, li, td, th, label, span {
+        color: var(--text-primary);
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--text-primary);
+    }
+    
+    /* Content boxes - säkerställ läsbar text */
+    .content-box,
+    .info-box,
+    .note-box {
+        color: var(--text-primary);
+    }
+    
+    .content-box.info,
+    .info-box {
+        background: var(--info-bg);
+        border-color: var(--info-border);
+        color: var(--info-text);
+    }
+    
+    .content-box.success,
+    .success-box {
+        background: var(--success-bg);
+        border-color: var(--success-border);
+        color: var(--success-text);
+    }
+    
+    .content-box.warning,
+    .warning-box {
+        background: var(--warning-bg);
+        border-color: var(--warning-border);
+        color: var(--warning-text);
+    }
+    
+    .content-box.danger,
+    .danger-box {
+        background: var(--danger-bg);
+        border-color: var(--danger-border);
+        color: var(--danger-text);
+    }
+    
+    /* Tabeller */
     .content-table th,
     .prefix-table th,
     .db-table th,
     .amateur-bands-table th {
         background: #2c5282;
+        color: #f7fafc;
     }
+    
+    .content-table td,
+    .prefix-table td,
+    .db-table td,
+    .amateur-bands-table td {
+        color: var(--text-primary);
+    }
+    
     .content-table tr:nth-child(even) {
-        background: rgba(255,255,255,0.03);
-    }
-    .content-table tr:hover,
-    .prefix-table tr:hover {
         background: rgba(255,255,255,0.05);
     }
     
+    .content-table tr:hover,
+    .prefix-table tr:hover {
+        background: rgba(255,255,255,0.08);
+    }
+    
+    /* Fun fact och quote boxes */
     .content-box.fun-fact,
     .fun-fact {
-        background: var(--surface);
-        border-color: #b7791f;
+        background: rgba(183, 121, 31, 0.15);
+        border-color: #d69e2e;
+        color: #faf089;
     }
+    
+    .content-box.fun-fact h4,
+    .fun-fact h4 {
+        color: #f6e05e;
+    }
+    
     .content-box.quote,
     .quote-box {
         background: var(--surface);
+        color: var(--text-primary);
+        border-left-color: #a0aec0;
     }
     
+    .quote-box blockquote,
+    .content-box.quote blockquote {
+        color: #e2e8f0;
+    }
+    
+    /* Formel-boxar */
+    .formula-box,
     .formula-variant {
-        background: rgba(255,255,255,0.05);
+        background: rgba(255,255,255,0.08);
+        color: var(--text-primary);
     }
     
+    .formula-box code,
+    .formula-variant code {
+        color: #faf089;
+    }
+    
+    /* Footer */
     .main-footer, footer {
         background: #171923;
+        color: #e2e8f0;
     }
     
-    /* Inputs */
+    .main-footer a,
+    footer a {
+        color: #90cdf4;
+    }
+    
+    /* Inputs - förbättrad kontrast */
     input[type="text"],
     input[type="number"],
     input[type="email"],
     textarea,
     select {
-        background: #1a202c;
+        background: #2d3748;
         border-color: #4a5568;
         color: #f7fafc;
     }
     
-    /* Boxar */
-    .example-box,
-    .key-points,
+    input::placeholder,
+    textarea::placeholder {
+        color: #a0aec0;
+    }
+    
+    /* Diverse boxar */
+    .example-box {
+        background: rgba(99, 179, 237, 0.1);
+        border-color: #4299e1;
+        color: var(--text-primary);
+    }
+    
+    .example-box h4,
+    .example-box strong {
+        color: #90cdf4;
+    }
+    
+    .key-points {
+        background: var(--surface);
+        color: var(--text-primary);
+    }
+    
+    .key-points li {
+        color: var(--text-primary);
+    }
+    
     .activity-showcase,
     .contest-info,
     .comparison-box {
         background: var(--surface);
+        color: var(--text-primary);
     }
     
+    /* Kort och interaktiva element */
     .welcome-card,
     .option-label,
     .exercise-card {
         background: var(--surface);
+        color: var(--text-primary);
     }
     
+    .option-label:hover {
+        background: var(--surface-hover);
+    }
+    
+    /* Intro och summary boxar */
     .intro-box {
-        background: linear-gradient(135deg, rgba(66, 153, 225, 0.15), rgba(56, 178, 172, 0.15));
+        background: linear-gradient(135deg, rgba(66, 153, 225, 0.2), rgba(56, 178, 172, 0.2));
+        color: var(--text-primary);
+    }
+    
+    .intro-box p {
+        color: #e2e8f0;
     }
     
     .summary-box,
     .exercise-results {
-        background: linear-gradient(135deg, rgba(66, 153, 225, 0.15), rgba(56, 178, 172, 0.15));
+        background: linear-gradient(135deg, rgba(66, 153, 225, 0.2), rgba(56, 178, 172, 0.2));
+        color: var(--text-primary);
     }
     
-    /* Prefix table */
-    .prefix-table tr.prefix-large {
-        background: rgba(66, 153, 225, 0.1);
+    .summary-box h3,
+    .summary-box h4 {
+        color: #90cdf4;
     }
+    
+    .summary-box li {
+        color: #e2e8f0;
+    }
+    
+    /* Prefix table - förbättrade färger */
+    .prefix-table tr.prefix-large {
+        background: rgba(66, 153, 225, 0.15);
+    }
+    
     .prefix-table tr.prefix-base {
         background: var(--surface);
     }
+    
     .prefix-table tr.prefix-small {
-        background: rgba(159, 122, 234, 0.1);
+        background: rgba(159, 122, 234, 0.15);
+    }
+    
+    /* Kodblock */
+    code, pre {
+        background: rgba(0, 0, 0, 0.3);
+        color: #faf089;
+    }
+    
+    pre code {
+        color: #e2e8f0;
+    }
+    
+    /* Länkar */
+    a {
+        color: #90cdf4;
+    }
+    
+    a:hover {
+        color: #63b3ed;
+    }
+    
+    /* Knappar behåller sina färger men med bättre kontrast */
+    .btn-primary {
+        color: #ffffff;
+    }
+    
+    .btn-secondary {
+        background: var(--surface);
+        color: var(--text-primary);
+        border-color: var(--border-color);
+    }
+    
+    .btn-secondary:hover {
+        background: var(--surface-hover);
+    }
+    
+    /* Säkerställ att small text och hjälptext syns */
+    small,
+    .hint,
+    .help-text,
+    figcaption {
+        color: #a0aec0;
+    }
+    
+    /* Avdelare och linjer */
+    hr {
+        border-color: #4a5568;
     }
 }
 
@@ -3046,7 +3233,6 @@ section h2 {
         color: #666;
     }
 }
-
 
 /* ============================================
    BÖCKER-SEKTION - Radioskola.se
