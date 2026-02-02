@@ -2889,8 +2889,8 @@ section h2 {
     }
 }
 
-/* ===================================
-   26. DARK MODE
+//* ===================================
+   26. DARK MODE (FÖRBÄTTRAD)
    =================================== */
 @media (prefers-color-scheme: dark) {
     :root {
@@ -2899,35 +2899,27 @@ section h2 {
         --surface-hover: #4a5568;
         
         --text-primary: #f7fafc;
-        --text-secondary: #e2e8f0;  /* Ljusare för bättre läsbarhet */
-        --text-light: #a0aec0;      /* Ljusare än tidigare #718096 */
+        --text-secondary: #e2e8f0;
+        --text-light: #a0aec0;
         
         --border-color: #4a5568;
         
-        /* Justerade färger för mörkt läge - högre kontrast */
-        --info-bg: rgba(66, 153, 225, 0.2);
-        --info-border: #4299e1;
-        --info-text: #bee3f8;       /* Ny: ljus text för info-boxar */
+        /* Justerade bakgrundsfärger för bättre kontrast */
+        --info-bg: rgba(66, 153, 225, 0.15);
+        --info-border: #63b3ed;
         
-        --success-bg: rgba(72, 187, 120, 0.2);
-        --success-border: #48bb78;
-        --success-text: #c6f6d5;    /* Ny: ljus text för success */
+        --success-bg: rgba(72, 187, 120, 0.15);
+        --success-border: #68d391;
         
-        --warning-bg: rgba(237, 137, 54, 0.2);
-        --warning-border: #ed8936;
-        --warning-text: #feebc8;    /* Ny: ljus text för warning */
+        --warning-bg: rgba(237, 137, 54, 0.15);
+        --warning-border: #f6ad55;
         
-        --danger-bg: rgba(245, 101, 101, 0.2);
+        --danger-bg: rgba(245, 101, 101, 0.15);
         --danger-border: #fc8181;
-        --danger-text: #fed7d7;     /* Ny: ljus text för danger */
     }
     
-    /* Generell textförbättring för dark mode */
-    body {
-        color: var(--text-primary);
-    }
-    
-    p, li, td, th, label, span {
+    /* === GRUNDLÄGGANDE TEXT === */
+    body, p, li, td, span, label {
         color: var(--text-primary);
     }
     
@@ -2935,46 +2927,164 @@ section h2 {
         color: var(--text-primary);
     }
     
-    /* Content boxes - säkerställ läsbar text */
+    /* === CONTENT BOXES === */
     .content-box,
     .info-box,
-    .note-box {
+    .tip-box,
+    .warning-box,
+    .example-box {
         color: var(--text-primary);
     }
     
+    /* Info box */
     .content-box.info,
     .info-box {
         background: var(--info-bg);
         border-color: var(--info-border);
-        color: var(--info-text);
+    }
+    .content-box.info h3,
+    .content-box.info h4,
+    .info-box h4 {
+        color: #90cdf4;
+    }
+    .info-box p,
+    .info-box ul,
+    .content-box.info p {
+        color: #e2e8f0;
     }
     
-    .content-box.success,
-    .success-box {
+    /* Tip box */
+    .content-box.tip,
+    .tip-box {
         background: var(--success-bg);
         border-color: var(--success-border);
-        color: var(--success-text);
+    }
+    .content-box.tip h3,
+    .content-box.tip h4,
+    .tip-box h4 {
+        color: #9ae6b4;
+    }
+    .tip-box p,
+    .tip-box ul {
+        color: #e2e8f0;
     }
     
+    /* Warning box */
     .content-box.warning,
     .warning-box {
         background: var(--warning-bg);
         border-color: var(--warning-border);
-        color: var(--warning-text);
+    }
+    .content-box.warning h3,
+    .content-box.warning h4,
+    .warning-box h4 {
+        color: #fbd38d;
+    }
+    .warning-box p {
+        color: #e2e8f0;
     }
     
-    .content-box.danger,
-    .danger-box {
+    /* Danger/Important box */
+    .content-box.important,
+    .content-box.danger {
         background: var(--danger-bg);
         border-color: var(--danger-border);
-        color: var(--danger-text);
+    }
+    .content-box.important h3,
+    .content-box.important h4 {
+        color: #feb2b2;
     }
     
-    /* Tabeller */
+    /* === FUN FACT === */
+    .content-box.fun-fact,
+    .fun-fact {
+        background: rgba(237, 137, 54, 0.15);
+        border-color: #f6ad55;
+    }
+    .fun-fact h4 {
+        color: #fbd38d;
+    }
+    .fun-fact p {
+        color: #e2e8f0;
+    }
+    
+    /* === QUOTE BOX === */
+    .content-box.quote,
+    .quote-box {
+        background: rgba(159, 122, 234, 0.15);
+        border-left-color: #b794f4;
+    }
+    .quote-box p {
+        color: #e2e8f0;
+    }
+    .quote-box cite,
+    .content-box.quote cite {
+        color: #d6bcfa;
+    }
+    
+    /* === INTRO BOX === */
+    .intro-box {
+        background: rgba(66, 153, 225, 0.15);
+        border-left-color: #63b3ed;
+    }
+    .intro-box .lead,
+    .intro-box p {
+        color: #e2e8f0;
+    }
+    .intro-box.warning {
+        background: rgba(237, 137, 54, 0.15);
+        border-left-color: #f6ad55;
+    }
+    
+    /* === KEY POINTS / SUMMARY === */
+    .key-points,
+    .summary-box {
+        background: rgba(66, 153, 225, 0.12);
+        border-color: #4299e1;
+    }
+    .key-points h3,
+    .summary-box h3 {
+        color: #90cdf4;
+    }
+    .key-points ul,
+    .key-points li,
+    .summary-box ul,
+    .summary-box li {
+        color: #e2e8f0;
+    }
+    
+    /* === EXAMPLE BOX === */
+    .example-box {
+        background: var(--surface);
+        border-color: var(--border-color);
+    }
+    .example-box h4 {
+        color: #90cdf4;
+        border-bottom-color: var(--border-color);
+    }
+    .solution {
+        background: rgba(0, 0, 0, 0.2);
+        color: #e2e8f0;
+    }
+    
+    /* === TABELLER === */
+    .content-table,
+    .prefix-table,
+    .db-table,
+    .amateur-bands-table table,
+    .comparison-table table,
+    .channel-table,
+    .ctcss-table {
+        background: var(--surface);
+    }
+    
     .content-table th,
     .prefix-table th,
     .db-table th,
-    .amateur-bands-table th {
+    .amateur-bands-table th,
+    .comparison-table th,
+    .channel-table th,
+    .ctcss-table th {
         background: #2c5282;
         color: #f7fafc;
     }
@@ -2982,73 +3092,65 @@ section h2 {
     .content-table td,
     .prefix-table td,
     .db-table td,
-    .amateur-bands-table td {
+    .amateur-bands-table td,
+    .comparison-table td,
+    .channel-table td,
+    .ctcss-table td {
         color: var(--text-primary);
+        border-color: var(--border-color);
     }
     
-    .content-table tr:nth-child(even) {
-        background: rgba(255,255,255,0.05);
+    .content-table tr:nth-child(even),
+    .channel-table tr:nth-child(even) {
+        background: rgba(255, 255, 255, 0.03);
     }
     
     .content-table tr:hover,
     .prefix-table tr:hover {
-        background: rgba(255,255,255,0.08);
+        background: rgba(255, 255, 255, 0.06);
     }
     
-    /* Fun fact och quote boxes */
-    .content-box.fun-fact,
-    .fun-fact {
-        background: rgba(183, 121, 31, 0.15);
-        border-color: #d69e2e;
-        color: #faf089;
+    /* Prefix table rader */
+    .prefix-table tr.prefix-large {
+        background: rgba(66, 153, 225, 0.12);
     }
-    
-    .content-box.fun-fact h4,
-    .fun-fact h4 {
-        color: #f6e05e;
-    }
-    
-    .content-box.quote,
-    .quote-box {
+    .prefix-table tr.prefix-base {
         background: var(--surface);
-        color: var(--text-primary);
-        border-left-color: #a0aec0;
+    }
+    .prefix-table tr.prefix-small {
+        background: rgba(159, 122, 234, 0.12);
     }
     
-    .quote-box blockquote,
-    .content-box.quote blockquote {
-        color: #e2e8f0;
+    /* Highlighted row */
+    .amateur-bands-table tr.highlight-row,
+    .channel-table tr.highlighted {
+        background: rgba(237, 137, 54, 0.15);
     }
     
-    /* Formel-boxar */
-    .formula-box,
-    .formula-variant {
-        background: rgba(255,255,255,0.08);
-        color: var(--text-primary);
+    /* Comparison table specifikt */
+    .comparison-table td.good,
+    .comparison-table-large td.good {
+        color: #68d391;
+    }
+    .comparison-table td.bad,
+    .comparison-table-large td.bad {
+        color: #fc8181;
+    }
+    .comparison-table td.neutral,
+    .comparison-table-large td.neutral {
+        color: #a0aec0;
     }
     
-    .formula-box code,
-    .formula-variant code {
-        color: #faf089;
-    }
-    
-    /* Footer */
-    .main-footer, footer {
-        background: #171923;
-        color: #e2e8f0;
-    }
-    
-    .main-footer a,
-    footer a {
-        color: #90cdf4;
-    }
-    
-    /* Inputs - förbättrad kontrast */
+    /* === FORMULÄR === */
     input[type="text"],
     input[type="number"],
     input[type="email"],
     textarea,
-    select {
+    select,
+    .fill-blank-input,
+    .calculation-input,
+    .matching-select,
+    .reflection-textarea {
         background: #2d3748;
         border-color: #4a5568;
         color: #f7fafc;
@@ -3059,129 +3161,835 @@ section h2 {
         color: #a0aec0;
     }
     
-    /* Diverse boxar */
-    .example-box {
-        background: rgba(99, 179, 237, 0.1);
-        border-color: #4299e1;
-        color: var(--text-primary);
+    input:focus,
+    textarea:focus,
+    select:focus {
+        border-color: #63b3ed;
+        box-shadow: 0 0 0 3px rgba(99, 179, 237, 0.2);
     }
     
-    .example-box h4,
-    .example-box strong {
-        color: #90cdf4;
-    }
-    
-    .key-points {
-        background: var(--surface);
-        color: var(--text-primary);
-    }
-    
-    .key-points li {
-        color: var(--text-primary);
-    }
-    
-    .activity-showcase,
-    .contest-info,
-    .comparison-box {
-        background: var(--surface);
-        color: var(--text-primary);
-    }
-    
-    /* Kort och interaktiva element */
+    /* === KORT & KOMPONENTER === */
+    .chapter-card,
+    .exam-card,
+    .stat-card,
     .welcome-card,
+    .book-card,
+    .exercise-card,
+    .stats-card,
+    .bonus-card,
+    .use-case-card,
+    .range-card,
+    .activity-card,
+    .price-tier,
+    .battery-type,
+    .unit-card,
+    .feature-card,
+    .person-card,
+    .example-card,
+    .comparison-item,
+    .contest-card,
+    .project-level,
+    .mode-card,
+    .community-card,
+    .org-card,
+    .next-step-card,
+    .tip-card,
+    .troubleshoot-item,
+    .step-card {
+        background: var(--surface);
+        border-color: var(--border-color);
+        color: var(--text-primary);
+    }
+    
+    .chapter-card-body p,
+    .chapter-content > p,
+    .exam-card p,
+    .stat-label,
+    .welcome-item p,
+    .use-case-card p,
+    .range-card p,
+    .activity-card p,
+    .feature-card p,
+    .person-card p:last-child,
+    .example-card p,
+    .unit-example,
+    .community-card p,
+    .next-step-card p,
+    .tip-card p,
+    .blocker-info p:last-child,
+    .step-content p,
+    .step-card p,
+    .activity-content p {
+        color: #a0aec0;
+    }
+    
+    .chapter-topics li {
+        color: #cbd5e0;
+    }
+    
+    .chapter-footer,
+    .book-intro {
+        background: rgba(0, 0, 0, 0.2);
+        border-color: var(--border-color);
+    }
+    
+    /* === OPTION LABELS (Quiz/Övningar) === */
     .option-label,
-    .exercise-card {
+    .answer-option {
         background: var(--surface);
+        border-color: var(--border-color);
         color: var(--text-primary);
     }
     
-    .option-label:hover {
+    .option-label:hover,
+    .answer-option:hover {
         background: var(--surface-hover);
+        border-color: #63b3ed;
     }
     
-    /* Intro och summary boxar */
-    .intro-box {
-        background: linear-gradient(135deg, rgba(66, 153, 225, 0.2), rgba(56, 178, 172, 0.2));
-        color: var(--text-primary);
+    .answer-option.selected {
+        background: rgba(66, 153, 225, 0.2);
+        border-color: #4299e1;
     }
     
-    .intro-box p {
+    .answer-option.correct {
+        background: rgba(72, 187, 120, 0.2);
+        border-color: #48bb78;
+    }
+    
+    .answer-option.incorrect {
+        background: rgba(245, 101, 101, 0.2);
+        border-color: #fc8181;
+    }
+    
+    .exercise-card.answered-correct {
+        background: rgba(72, 187, 120, 0.15);
+        border-color: #68d391;
+    }
+    
+    .exercise-card.answered-wrong {
+        background: rgba(245, 101, 101, 0.15);
+        border-color: #fc8181;
+    }
+    
+    .exercise-card.reflection-card {
+        background: rgba(159, 122, 234, 0.15);
+        border-color: #b794f4;
+    }
+    
+    /* === FEEDBACK === */
+    .feedback-correct {
+        background: rgba(72, 187, 120, 0.2);
+        border-color: #68d391;
+        color: #9ae6b4;
+    }
+    
+    .feedback-wrong {
+        background: rgba(245, 101, 101, 0.2);
+        border-color: #fc8181;
+        color: #feb2b2;
+    }
+    
+    /* === EXERCISE HINTS === */
+    .exercise-hint {
+        background: rgba(159, 122, 234, 0.15);
         color: #e2e8f0;
     }
     
-    .summary-box,
-    .exercise-results {
-        background: linear-gradient(135deg, rgba(66, 153, 225, 0.2), rgba(56, 178, 172, 0.2));
-        color: var(--text-primary);
-    }
-    
-    .summary-box h3,
-    .summary-box h4 {
-        color: #90cdf4;
-    }
-    
-    .summary-box li {
-        color: #e2e8f0;
-    }
-    
-    /* Prefix table - förbättrade färger */
-    .prefix-table tr.prefix-large {
-        background: rgba(66, 153, 225, 0.15);
-    }
-    
-    .prefix-table tr.prefix-base {
-        background: var(--surface);
-    }
-    
-    .prefix-table tr.prefix-small {
+    .reflection-hints {
         background: rgba(159, 122, 234, 0.15);
     }
-    
-    /* Kodblock */
-    code, pre {
-        background: rgba(0, 0, 0, 0.3);
-        color: #faf089;
+    .reflection-hints h5 {
+        color: #d6bcfa;
+    }
+    .reflection-hints ul {
+        color: #e2e8f0;
+    }
+    .reflection-note {
+        color: #b794f4;
     }
     
-    pre code {
+    /* === EXERCISE RESULTS === */
+    .exercise-results {
+        background: rgba(66, 153, 225, 0.15);
+        border-color: #4299e1;
+    }
+    .exercise-results h3 {
+        color: #90cdf4;
+    }
+    .exercise-results p {
         color: #e2e8f0;
     }
     
-    /* Länkar */
+    /* === ORDERING/TIMELINE ITEMS === */
+    .ordering-item,
+    .timeline-item {
+        background: var(--surface);
+        border-color: var(--border-color);
+    }
+    .ordering-item:hover,
+    .timeline-item:hover {
+        border-color: #63b3ed;
+    }
+    .ordering-item.dragging,
+    .timeline-item.dragging {
+        background: rgba(66, 153, 225, 0.2);
+        border-color: #4299e1;
+    }
+    .drag-handle {
+        color: #718096;
+    }
+    .item-text {
+        color: var(--text-primary);
+    }
+    
+    /* === MATCHING === */
+    .matching-item {
+        background: rgba(66, 153, 225, 0.15);
+        color: #90cdf4;
+    }
+    
+    /* === BREADCRUMB === */
+    .breadcrumb {
+        background: var(--surface);
+        border-color: var(--border-color);
+    }
+    .breadcrumb .current {
+        color: #a0aec0;
+    }
+    
+    /* === TOC === */
+    .toc {
+        background: var(--surface);
+    }
+    .toc h2 {
+        color: #90cdf4;
+    }
+    .toc-list a {
+        color: var(--text-primary);
+    }
+    .toc-list a:hover {
+        color: #63b3ed;
+    }
+    
+    /* === QUIZ HEADER === */
+    .quiz-header {
+        background: var(--surface);
+    }
+    .quiz-info-label {
+        color: #a0aec0;
+    }
+    .quiz-info-value {
+        color: var(--text-primary);
+    }
+    
+    /* === QUESTION CARD === */
+    .question-card {
+        background: var(--surface);
+    }
+    .question-body {
+        color: var(--text-primary);
+    }
+    .question-text {
+        color: var(--text-primary);
+    }
+    .question-nav {
+        background: rgba(0, 0, 0, 0.2);
+        border-color: var(--border-color);
+    }
+    
+    /* Question dots */
+    .question-dot {
+        background: var(--surface);
+        border-color: var(--border-color);
+        color: var(--text-primary);
+    }
+    .question-dot:hover {
+        border-color: #63b3ed;
+    }
+    
+    /* === EXPLANATION BOX === */
+    .explanation-box {
+        background: rgba(102, 126, 234, 0.1);
+        border-left-color: #667eea;
+    }
+    .explanation-box h4 {
+        color: #a3bffa;
+    }
+    .explanation-box p {
+        color: #e2e8f0;
+    }
+    
+    /* === RESULT HERO === */
+    .result-hero {
+        background: var(--surface);
+    }
+    .result-message {
+        color: var(--text-primary);
+    }
+    .result-details {
+        border-color: var(--border-color);
+    }
+    .result-detail-value {
+        color: var(--text-primary);
+    }
+    .result-detail-label {
+        color: #a0aec0;
+    }
+    
+    /* === STATS === */
+    .knowledge-item {
+        background: var(--surface);
+    }
+    .knowledge-label {
+        color: var(--text-primary);
+    }
+    
+    .progress-bar {
+        background: var(--border-color);
+    }
+    
+    .history-list {
+        background: var(--surface);
+    }
+    .history-item {
+        border-color: var(--border-color);
+    }
+    .history-date {
+        color: #a0aec0;
+    }
+    .history-type {
+        background: rgba(0, 0, 0, 0.2);
+        color: #a0aec0;
+    }
+    
+    /* === BADGES === */
+    .badge.easy,
+    .difficulty.easy {
+        background: rgba(72, 187, 120, 0.2);
+        color: #9ae6b4;
+    }
+    .badge.medium,
+    .difficulty.medium {
+        background: rgba(237, 137, 54, 0.2);
+        color: #fbd38d;
+    }
+    .badge.hard,
+    .difficulty.hard {
+        background: rgba(245, 101, 101, 0.2);
+        color: #feb2b2;
+    }
+    
+    .exercise-type {
+        background: rgba(0, 0, 0, 0.3);
+        color: #a0aec0;
+    }
+    
+    /* === READ TIME === */
+    .read-time {
+        color: #a0aec0;
+    }
+    
+    /* === CHAPTER SECTIONS === */
+    .chapter-section h2,
+    .content-section h2 {
+        color: #90cdf4;
+        border-bottom-color: rgba(99, 179, 237, 0.3);
+    }
+    
+    /* === PROCESS STEPS === */
+    .process-steps .step-content p,
+    .step-guide .step-card p {
+        color: #a0aec0;
+    }
+    
+    .step-tip {
+        background: rgba(237, 137, 54, 0.15);
+        color: #fbd38d;
+    }
+    
+    /* === COMPARISON BOX === */
+    .comparison-box {
+        background: var(--surface);
+    }
+    .comparison-item {
+        background: rgba(0, 0, 0, 0.2);
+        border-color: var(--border-color);
+    }
+    .comparison-item h5 {
+        color: #90cdf4;
+    }
+    
+    /* === TWO COLUMN === */
+    .two-column .column h4 {
+        color: var(--text-primary);
+    }
+    
+    /* === SUCCESS/WARNING LISTS === */
+    .success-list li {
+        color: var(--text-primary);
+    }
+    .success-list li::before {
+        color: #68d391;
+    }
+    .warning-list li {
+        color: var(--text-primary);
+    }
+    .warning-list li::before {
+        color: #fc8181;
+    }
+    
+    /* === IMPACT BOX === */
+    .impact-box {
+        background: rgba(159, 122, 234, 0.15);
+        border-color: #b794f4;
+    }
+    .impact-box h4 {
+        color: #d6bcfa;
+    }
+    .impact-box ul {
+        color: #e2e8f0;
+    }
+    
+    /* === CASE STUDY === */
+    .case-study {
+        background: var(--surface);
+        border-left-color: #4299e1;
+    }
+    .case-study h4 {
+        color: #90cdf4;
+    }
+    .case-study p,
+    .case-study ul {
+        color: #e2e8f0;
+    }
+    
+    /* === UNIT CARDS === */
+    .unit-symbol {
+        color: #90cdf4;
+    }
+    .unit-analogy {
+        background: rgba(72, 187, 120, 0.15);
+        color: #9ae6b4;
+    }
+    
+    /* === BAND CARDS === */
+    .band-card {
+        background: var(--surface);
+        border-color: var(--border-color);
+    }
+    .band-content p,
+    .band-content ul {
+        color: #e2e8f0;
+    }
+    .band-highlight {
+        background: rgba(66, 153, 225, 0.15);
+    }
+    .band-highlight p {
+        color: #90cdf4;
+    }
+    
+    /* === FREQUENCY ACTIVITIES === */
+    .frequency-activities .activity-card {
+        background: var(--surface);
+    }
+    .frequency-activities .activity-card h4 {
+        color: #90cdf4;
+    }
+    
+    /* === CHAOS EXAMPLES === */
+    .chaos-item {
+        background: rgba(245, 101, 101, 0.15);
+        border-color: rgba(252, 129, 129, 0.3);
+    }
+    .chaos-item p {
+        color: #feb2b2;
+    }
+    
+    /* === ACTIVITY SHOWCASE === */
+    .activity-showcase {
+        background: var(--surface);
+    }
+    .achievement-box {
+        background: rgba(159, 122, 234, 0.15);
+        border-color: #b794f4;
+    }
+    .achievement-box h5 {
+        color: #d6bcfa;
+    }
+    .achievement-box p {
+        color: #e2e8f0;
+    }
+    
+    /* === CONTEST INFO === */
+    .contest-info {
+        background: var(--surface);
+    }
+    .contest-card {
+        background: rgba(0, 0, 0, 0.2);
+        border-color: var(--border-color);
+    }
+    .contest-card p {
+        color: #a0aec0;
+    }
+    
+    /* === SPECIAL ACTIVITIES === */
+    .special-activities {
+        background: var(--surface);
+    }
+    .activity-item {
+        border-color: var(--border-color);
+    }
+    
+    /* === EMERGENCY INFO === */
+    .org-card {
+        background: rgba(245, 101, 101, 0.15);
+        border-color: rgba(252, 129, 129, 0.3);
+    }
+    .org-card h5 {
+        color: #feb2b2;
+    }
+    .org-card p {
+        color: #fecaca;
+    }
+    
+    /* === TROUBLESHOOT === */
+    .troubleshoot-item .problem {
+        background: rgba(237, 137, 54, 0.15);
+    }
+    .troubleshoot-item .problem h4 {
+        color: #fbd38d;
+    }
+    .troubleshoot-item .solution {
+        background: var(--surface);
+    }
+    .troubleshoot-item .solution li {
+        color: #e2e8f0;
+    }
+    
+    /* === BLOCKER ITEMS === */
+    .blocker-item {
+        background: var(--surface);
+    }
+    .blocker-info h4 {
+        color: var(--text-primary);
+    }
+    
+    /* === RULES LIST === */
+    .rule-item {
+        background: var(--surface);
+    }
+    .rule-content h4 {
+        color: var(--text-primary);
+    }
+    .rule-content p {
+        color: #a0aec0;
+    }
+    
+    /* === CHECKLIST BOX === */
+    .checklist-box {
+        background: rgba(72, 187, 120, 0.15);
+    }
+    .checklist-box h4 {
+        color: #9ae6b4;
+    }
+    .checklist li {
+        color: #e2e8f0;
+    }
+    
+    /* === RADIO ETIQUETTE === */
+    .etiquette-do {
+        background: rgba(72, 187, 120, 0.15);
+    }
+    .etiquette-do h4 {
+        color: #9ae6b4;
+    }
+    .etiquette-do li {
+        color: #e2e8f0;
+    }
+    
+    .etiquette-dont {
+        background: rgba(245, 101, 101, 0.15);
+    }
+    .etiquette-dont h4 {
+        color: #feb2b2;
+    }
+    .etiquette-dont li {
+        color: #e2e8f0;
+    }
+    
+    /* === EXAMPLE CONVERSATION === */
+    .example-conversation {
+        background: var(--surface);
+    }
+    .message.incoming {
+        background: rgba(0, 0, 0, 0.3);
+        color: var(--text-primary);
+    }
+    
+    /* === PRO TIP === */
+    .pro-tip {
+        background: rgba(33, 150, 243, 0.15);
+        border-left-color: #64b5f6;
+    }
+    .pro-tip h4 {
+        color: #90caf9;
+    }
+    .pro-tip p {
+        color: #e2e8f0;
+    }
+    
+    /* === YOUTH TIPS === */
+    .youth-tips {
+        background: var(--surface);
+    }
+    .youth-tips li {
+        color: #e2e8f0;
+    }
+    
+    /* === BOOKS SECTION === */
+    .book-card {
+        background: var(--surface);
+    }
+    
+    .book-intro {
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .book-intro h4 {
+        color: var(--text-primary);
+    }
+    .book-intro p {
+        color: #a0aec0;
+    }
+    
+    .book-meta span {
+        background: rgba(0, 0, 0, 0.3);
+        border-color: var(--border-color);
+        color: #a0aec0;
+    }
+    
+    .chapters-list h4 {
+        color: var(--text-primary);
+    }
+    
+    .chapter-link {
+        background: rgba(0, 0, 0, 0.2);
+        border-color: var(--border-color);
+    }
+    .chapter-link:hover {
+        background: rgba(66, 153, 225, 0.15);
+    }
+    .chapter-title {
+        color: var(--text-primary);
+    }
+    .chapter-time {
+        color: #a0aec0;
+    }
+    
+    /* Bonus book */
+    .book-card.bonus-book {
+        background: rgba(230, 126, 34, 0.1);
+        border-color: #e67e22;
+    }
+    .book-card.bonus-book .book-header {
+        background: rgba(230, 126, 34, 0.2);
+    }
+    
+    /* === BOOKS DIVIDER === */
+    .books-divider {
+        background: var(--surface);
+    }
+    .books-divider.cert-divider {
+        background: rgba(231, 76, 60, 0.1);
+    }
+    .divider-text h4 {
+        color: var(--text-primary);
+    }
+    .divider-text p {
+        color: #a0aec0;
+    }
+    
+    /* === BONUS SECTION === */
+    .bonus-section {
+        background: var(--background);
+        border-top-color: var(--border-color);
+    }
+    .bonus-header h2 {
+        color: var(--text-primary);
+    }
+    .bonus-header p {
+        color: #a0aec0;
+    }
+    .bonus-card {
+        background: var(--surface);
+        border-color: var(--border-color);
+    }
+    .bonus-title-area h3 {
+        color: var(--text-primary);
+    }
+    .bonus-title-area p,
+    .bonus-meta {
+        color: #a0aec0;
+    }
+    
+    /* === SSA RECOMMENDATION === */
+    .ssa-recommendation {
+        background: var(--surface);
+        border-color: var(--border-color);
+    }
+    .ssa-recommendation-text h4 {
+        color: var(--text-primary);
+    }
+    .ssa-recommendation-text p {
+        color: #a0aec0;
+    }
+    
+    /* === EXAM READY MODAL === */
+    .exam-ready-content {
+        background: var(--surface);
+    }
+    .exam-ready-content h2 {
+        color: var(--text-primary);
+    }
+    .exam-ready-content p {
+        color: #a0aec0;
+    }
+    .exam-ready-note {
+        background: rgba(0, 0, 0, 0.2);
+        color: #a0aec0;
+    }
+    .exam-ready-buttons .btn-secondary {
+        background: rgba(0, 0, 0, 0.3);
+        color: var(--text-primary);
+    }
+    
+    /* === NEXT STEPS === */
+    .next-steps-card {
+        /* Behåll gradient men ljusare text */
+    }
+    
+    /* === WELCOME SECTION === */
+    .welcome-card {
+        background: var(--surface);
+    }
+    .welcome-item {
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .welcome-item h3 {
+        color: var(--text-primary);
+    }
+    .welcome-item p {
+        color: #a0aec0;
+    }
+    
+    /* === LINKS === */
     a {
         color: #90cdf4;
     }
-    
     a:hover {
         color: #63b3ed;
     }
     
-    /* Knappar behåller sina färger men med bättre kontrast */
-    .btn-primary {
+    /* === KNAPPAR === */
+    .btn-secondary {
+        background: transparent;
+        color: #90cdf4;
+        border-color: #4299e1;
+    }
+    .btn-secondary:hover {
+        background: #4299e1;
         color: #ffffff;
     }
     
-    .btn-secondary {
+    .btn-outline {
+        border-color: #667eea;
+        color: #a3bffa;
+    }
+    .btn-outline:hover {
+        background: #667eea;
+        color: #ffffff;
+    }
+    
+    .btn-chapter {
+        color: #ffffff;
+    }
+    
+    /* === NAV === */
+    .main-nav {
         background: var(--surface);
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    .nav-links a {
+        color: #a0aec0;
+    }
+    .nav-links a:hover,
+    .nav-links a.active {
+        color: #90cdf4;
+        background: rgba(66, 153, 225, 0.15);
+    }
+    .mobile-menu-btn span {
+        background: var(--text-primary);
+    }
+    
+    /* === NAVIGATION BUTTONS === */
+    .nav-btn,
+    .nav-button {
+        background: var(--surface);
+        border-color: var(--border-color);
+    }
+    .nav-btn:hover,
+    .nav-button:hover {
+        border-color: #63b3ed;
+    }
+    .nav-direction {
+        color: #90cdf4;
+    }
+    .nav-title {
         color: var(--text-primary);
+    }
+    
+    /* === FOOTER === */
+    .main-footer,
+    footer {
+        background: #171923;
+    }
+    .main-footer p,
+    footer p {
+        color: #a0aec0;
+    }
+    .main-footer a,
+    footer a {
+        color: #90cdf4;
+    }
+    .footer-note {
+        color: #718096;
+    }
+    
+    /* === CODE === */
+    code {
+        background: rgba(0, 0, 0, 0.3);
+        color: #faf089;
+    }
+    
+    pre {
+        background: rgba(0, 0, 0, 0.4);
+    }
+    pre code {
+        color: #e2e8f0;
+    }
+    
+    /* === HR === */
+    hr {
         border-color: var(--border-color);
     }
     
-    .btn-secondary:hover {
-        background: var(--surface-hover);
-    }
-    
-    /* Säkerställ att small text och hjälptext syns */
+    /* === SMALL TEXT === */
     small,
     .hint,
     .help-text,
-    figcaption {
+    figcaption,
+    .table-note {
         color: #a0aec0;
-    }
-    
-    /* Avdelare och linjer */
-    hr {
-        border-color: #4a5568;
     }
 }
 
