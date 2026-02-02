@@ -270,7 +270,7 @@ p {
     border: 1px solid #fbd38d; 
 }
 .fun-fact h4 { color: #c05621; margin: 0 0 0.5rem 0; }
-.fun-fact p { color: #9c4221; margin: 0; }
+.fun-fact p { color: #000000; margin: 0; }
 
 /* Quote box */
 .content-box.quote, .quote-box { 
