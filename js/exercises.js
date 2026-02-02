@@ -21,13 +21,13 @@ function loadExercises(exercises) {
     
     container.innerHTML = exercises.map((ex, index) => renderExercise(ex, index)).join('');
     
-    // Initiera drag and drop om det finns sådana övningar
+    // Initiera drag and drop / touch
     initDragAndDrop();
 }
 
 function renderExercise(exercise, index) {
     const num = index + 1;
-    const type = exercise.type || 'multiple-choice'; // Default till flerval
+    const type = exercise.type || 'multiple-choice';
     
     switch(type) {
         case 'multiple-choice':
@@ -48,7 +48,7 @@ function renderExercise(exercise, index) {
         case 'timeline':
             return renderTimeline(exercise, index, num);
         default:
-            return renderMultipleChoice(exercise, index, num); // Fallback
+            return renderMultipleChoice(exercise, index, num);
     }
 }
 
@@ -57,12 +57,11 @@ function renderMultipleChoice(ex, index, num) {
     const correctIndex = ex.correct;
     
     const optionsHTML = ex.options.map((opt, i) => `
-        <label class="exercise-option" data-option="${i}">
-            <input type="radio" name="exercise-${index}" value="${i}" 
-                   onchange="handleMultipleChoice('${exerciseId}', ${index}, ${i}, ${correctIndex})">
-            <span class="option-marker">${String.fromCharCode(65 + i)}</span>
-            <span class="option-text">${opt}</span>
-        </label>
+        <button type="button" class="mc-option-btn" data-option="${i}"
+                onclick="handleMultipleChoice('${exerciseId}', ${index}, ${i}, ${correctIndex})">
+            <span class="mc-marker">${String.fromCharCode(65 + i)}</span>
+            <span class="mc-text">${opt}</span>
+        </button>
     `).join('');
     
     return `
@@ -71,7 +70,7 @@ function renderMultipleChoice(ex, index, num) {
                 <span class="exercise-number">${num}.</span>
                 <span class="exercise-text">${ex.question}</span>
             </div>
-            <div class="exercise-options">
+            <div class="mc-options">
                 ${optionsHTML}
             </div>
             <div class="exercise-feedback" id="feedback-${exerciseId}" style="display: none;">
@@ -91,19 +90,17 @@ function renderTrueFalse(ex, index, num) {
                 <span class="exercise-number">${num}.</span>
                 <span class="exercise-text">${ex.question}</span>
             </div>
-            <div class="exercise-options true-false-options">
-                <label class="exercise-option" data-option="true">
-                    <input type="radio" name="exercise-${index}" value="true" 
-                           onchange="handleTrueFalse('${exerciseId}', ${index}, true, ${ex.correct})">
-                    <span class="option-marker">✓</span>
-                    <span class="option-text">Sant</span>
-                </label>
-                <label class="exercise-option" data-option="false">
-                    <input type="radio" name="exercise-${index}" value="false" 
-                           onchange="handleTrueFalse('${exerciseId}', ${index}, false, ${ex.correct})">
-                    <span class="option-marker">✗</span>
-                    <span class="option-text">Falskt</span>
-                </label>
+            <div class="tf-options">
+                <button type="button" class="tf-btn tf-true" data-value="true"
+                        onclick="handleTrueFalse('${exerciseId}', ${index}, true, ${ex.correct})">
+                    <span class="tf-icon">✓</span>
+                    <span class="tf-label">Sant</span>
+                </button>
+                <button type="button" class="tf-btn tf-false" data-value="false"
+                        onclick="handleTrueFalse('${exerciseId}', ${index}, false, ${ex.correct})">
+                    <span class="tf-icon">✗</span>
+                    <span class="tf-label">Falskt</span>
+                </button>
             </div>
             <div class="exercise-feedback" id="feedback-${exerciseId}" style="display: none;">
                 <p class="feedback-text"></p>
@@ -167,7 +164,9 @@ function renderCalculation(ex, index, num) {
 
 function renderMatching(ex, index, num) {
     const exerciseId = ex.id || `ex-${index}`;
-    const shuffledRight = [...ex.pairs].sort(() => Math.random() - 0.5);
+    // Skapa shufflad lista med original-index
+    const shuffledRight = ex.pairs.map((pair, i) => ({ text: pair.right, origIndex: i }))
+        .sort(() => Math.random() - 0.5);
     
     return `
         <div class="exercise-item" id="exercise-${exerciseId}" data-index="${index}">
@@ -175,20 +174,24 @@ function renderMatching(ex, index, num) {
                 <span class="exercise-number">${num}.</span>
                 <span class="exercise-text">${ex.question}</span>
             </div>
-            <div class="matching-container">
-                <div class="matching-column left-column">
-                    ${ex.pairs.map((pair, i) => `
-                        <div class="matching-item" data-index="${i}">${pair.left}</div>
-                    `).join('')}
-                </div>
-                <div class="matching-column right-column">
-                    ${ex.pairs.map((pair, i) => `
-                        <select class="matching-select" data-pair="${i}">
-                            <option value="">Välj...</option>
-                            ${shuffledRight.map((p) => `<option value="${ex.pairs.indexOf(p)}">${p.right}</option>`).join('')}
-                        </select>
-                    `).join('')}
-                </div>
+            <div class="matching-grid">
+                ${ex.pairs.map((pair, i) => `
+                    <div class="match-row" data-pair="${i}">
+                        <div class="match-left">${pair.left}</div>
+                        <div class="match-arrow">→</div>
+                        <div class="match-right-wrapper">
+                            <div class="match-right-options" data-pair="${i}">
+                                ${shuffledRight.map((item) => `
+                                    <button type="button" class="match-choice" 
+                                            data-value="${item.origIndex}"
+                                            onclick="selectMatchOption(this, ${i})">
+                                        ${item.text}
+                                    </button>
+                                `).join('')}
+                            </div>
+                        </div>
+                    </div>
+                `).join('')}
             </div>
             <button class="btn btn-small" onclick="handleMatching('${exerciseId}', ${index})">Kontrollera</button>
             <div class="exercise-feedback" id="feedback-${exerciseId}" style="display: none;">
@@ -199,9 +202,17 @@ function renderMatching(ex, index, num) {
     `;
 }
 
+function selectMatchOption(btn, pairIndex) {
+    // Avmarkera andra i samma rad
+    const wrapper = btn.closest('.match-right-options');
+    wrapper.querySelectorAll('.match-choice').forEach(b => b.classList.remove('selected'));
+    btn.classList.add('selected');
+}
+
 function renderOrdering(ex, index, num) {
     const exerciseId = ex.id || `ex-${index}`;
-    const shuffledItems = [...ex.items].sort(() => Math.random() - 0.5);
+    const shuffledItems = ex.items.map((item, i) => ({ text: item, origIndex: i }))
+        .sort(() => Math.random() - 0.5);
     
     return `
         <div class="exercise-item" id="exercise-${exerciseId}" data-index="${index}">
@@ -209,11 +220,13 @@ function renderOrdering(ex, index, num) {
                 <span class="exercise-number">${num}.</span>
                 <span class="exercise-text">${ex.question}</span>
             </div>
+            <p class="ordering-help">Tryck på ett objekt och sedan på ett annat för att byta plats, eller dra för att flytta.</p>
             <div class="ordering-container" id="ordering-${exerciseId}">
-                ${shuffledItems.map((item) => `
-                    <div class="ordering-item" draggable="true" data-original="${ex.items.indexOf(item)}">
+                ${shuffledItems.map((item, i) => `
+                    <div class="ordering-item" data-original="${item.origIndex}" data-pos="${i}">
+                        <span class="order-number">${i + 1}</span>
+                        <span class="item-text">${item.text}</span>
                         <span class="drag-handle">⋮⋮</span>
-                        <span class="item-text">${item}</span>
                     </div>
                 `).join('')}
             </div>
@@ -228,7 +241,8 @@ function renderOrdering(ex, index, num) {
 
 function renderTimeline(ex, index, num) {
     const exerciseId = ex.id || `ex-${index}`;
-    const shuffledItems = [...ex.items].sort(() => Math.random() - 0.5);
+    const shuffledItems = ex.items.map((item, i) => ({ text: item, origIndex: i }))
+        .sort(() => Math.random() - 0.5);
     
     return `
         <div class="exercise-item" id="exercise-${exerciseId}" data-index="${index}">
@@ -236,11 +250,13 @@ function renderTimeline(ex, index, num) {
                 <span class="exercise-number">${num}.</span>
                 <span class="exercise-text">${ex.question}</span>
             </div>
-            <div class="timeline-container" id="timeline-${exerciseId}">
-                ${shuffledItems.map((item) => `
-                    <div class="timeline-item" draggable="true" data-original="${ex.items.indexOf(item)}">
+            <p class="ordering-help">Tryck på ett objekt och sedan på ett annat för att byta plats, eller dra för att flytta.</p>
+            <div class="timeline-container ordering-container" id="timeline-${exerciseId}">
+                ${shuffledItems.map((item, i) => `
+                    <div class="ordering-item timeline-item" data-original="${item.origIndex}" data-pos="${i}">
+                        <span class="order-number">${i + 1}</span>
+                        <span class="item-text">${item.text}</span>
                         <span class="drag-handle">⋮⋮</span>
-                        <span class="item-text">${item}</span>
                     </div>
                 `).join('')}
             </div>
@@ -288,25 +304,19 @@ function handleMultipleChoice(exerciseId, index, selected, correct) {
     const exerciseEl = document.getElementById(`exercise-${exerciseId}`);
     const feedbackEl = document.getElementById(`feedback-${exerciseId}`);
     const feedbackText = feedbackEl.querySelector('.feedback-text');
-    const options = exerciseEl.querySelectorAll('.exercise-option');
-    const exercise = currentExercises[index];
+    const options = exerciseEl.querySelectorAll('.mc-option-btn');
     
-    // Inaktivera alla alternativ
-    exerciseEl.querySelectorAll('input[type="radio"]').forEach(input => {
-        input.disabled = true;
-    });
-    
-    // Markera rätt och fel
-    options.forEach((option, i) => {
-        option.classList.remove('correct', 'incorrect');
+    // Inaktivera alla
+    options.forEach((btn, i) => {
+        btn.disabled = true;
+        btn.classList.remove('selected', 'correct', 'incorrect');
         if (i === correct) {
-            option.classList.add('correct');
+            btn.classList.add('correct');
         } else if (i === selected && selected !== correct) {
-            option.classList.add('incorrect');
+            btn.classList.add('incorrect');
         }
     });
     
-    // Visa feedback
     const isCorrect = selected === correct;
     userAnswers[index] = isCorrect;
     
@@ -328,21 +338,16 @@ function handleTrueFalse(exerciseId, index, selected, correct) {
     const exerciseEl = document.getElementById(`exercise-${exerciseId}`);
     const feedbackEl = document.getElementById(`feedback-${exerciseId}`);
     const feedbackText = feedbackEl.querySelector('.feedback-text');
-    const options = exerciseEl.querySelectorAll('.exercise-option');
+    const buttons = exerciseEl.querySelectorAll('.tf-btn');
     
-    // Inaktivera alla alternativ
-    exerciseEl.querySelectorAll('input[type="radio"]').forEach(input => {
-        input.disabled = true;
-    });
-    
-    // Markera rätt och fel
-    options.forEach((option) => {
-        const optionValue = option.dataset.option === 'true';
-        option.classList.remove('correct', 'incorrect');
-        if (optionValue === correct) {
-            option.classList.add('correct');
-        } else if (optionValue === selected && selected !== correct) {
-            option.classList.add('incorrect');
+    buttons.forEach((btn) => {
+        btn.disabled = true;
+        const btnValue = btn.dataset.value === 'true';
+        btn.classList.remove('correct', 'incorrect');
+        if (btnValue === correct) {
+            btn.classList.add('correct');
+        } else if (btnValue === selected && selected !== correct) {
+            btn.classList.add('incorrect');
         }
     });
     
@@ -368,7 +373,6 @@ function handleFillBlank(exerciseId, index) {
     
     let isCorrect = userAnswer === exercise.answer.toLowerCase();
     
-    // Kolla alternativa svar
     if (!isCorrect && exercise.alternatives) {
         isCorrect = exercise.alternatives.some(alt => alt.toLowerCase() === userAnswer);
     }
@@ -423,17 +427,26 @@ function handleCalculation(exerciseId, index) {
 
 function handleMatching(exerciseId, index) {
     const exerciseEl = document.getElementById(`exercise-${exerciseId}`);
-    const selects = exerciseEl.querySelectorAll('.matching-select');
+    const rows = exerciseEl.querySelectorAll('.match-row');
     
     let allCorrect = true;
-    selects.forEach((select, i) => {
-        if (parseInt(select.value) !== i) {
-            allCorrect = false;
-            select.classList.add('incorrect-select');
+    rows.forEach((row, i) => {
+        const selected = row.querySelector('.match-choice.selected');
+        const wrapper = row.querySelector('.match-right-options');
+        
+        // Inaktivera alla knappar
+        wrapper.querySelectorAll('.match-choice').forEach(btn => btn.disabled = true);
+        
+        if (selected && parseInt(selected.dataset.value) === i) {
+            selected.classList.add('correct');
         } else {
-            select.classList.add('correct-select');
+            allCorrect = false;
+            if (selected) {
+                selected.classList.add('incorrect');
+            }
+            // Visa rätt svar
+            wrapper.querySelector(`.match-choice[data-value="${i}"]`).classList.add('correct');
         }
-        select.disabled = true;
     });
     
     userAnswers[index] = allCorrect;
@@ -445,7 +458,7 @@ function handleMatching(exerciseId, index) {
         feedbackText.textContent = '✅ Alla rätt!';
         feedbackText.className = 'feedback-text correct';
     } else {
-        feedbackText.textContent = '❌ Några fel. Gröna är rätt, röda är fel.';
+        feedbackText.textContent = '❌ Några fel. Gröna visar rätt svar.';
         feedbackText.className = 'feedback-text incorrect';
     }
     
@@ -459,6 +472,7 @@ function handleOrdering(exerciseId, index) {
     
     let isCorrect = true;
     items.forEach((item, i) => {
+        item.classList.remove('correct-order', 'incorrect-order');
         if (parseInt(item.dataset.original) !== i) {
             isCorrect = false;
             item.classList.add('incorrect-order');
@@ -485,7 +499,7 @@ function handleOrdering(exerciseId, index) {
 }
 
 function handleTimeline(exerciseId, index) {
-    handleOrdering(exerciseId, index); // Samma logik
+    handleOrdering(exerciseId, index);
 }
 
 function toggleSteps(exerciseId) {
@@ -518,21 +532,31 @@ function resetExercises() {
     }
 }
 
-// === DRAG AND DROP ===
+// === DRAG AND DROP + TOUCH + TAP-TO-SWAP ===
 
 let draggedItem = null;
+let selectedForSwap = null;
 
 function initDragAndDrop() {
-    const containers = document.querySelectorAll('.ordering-container, .timeline-container');
+    const containers = document.querySelectorAll('.ordering-container');
     
     containers.forEach(container => {
-        const items = container.querySelectorAll('.ordering-item, .timeline-item');
+        const items = container.querySelectorAll('.ordering-item');
         
         items.forEach(item => {
+            // Desktop drag
             item.addEventListener('dragstart', handleDragStart);
             item.addEventListener('dragover', handleDragOver);
             item.addEventListener('drop', handleDrop);
             item.addEventListener('dragend', handleDragEnd);
+            
+            // Touch events för mobil
+            item.addEventListener('touchstart', handleTouchStart, { passive: false });
+            item.addEventListener('touchmove', handleTouchMove, { passive: false });
+            item.addEventListener('touchend', handleTouchEnd);
+            
+            // Click/tap för swap
+            item.addEventListener('click', handleTapToSwap);
         });
     });
 }
@@ -541,6 +565,7 @@ function handleDragStart(e) {
     draggedItem = this;
     this.classList.add('dragging');
     e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/plain', ''); // Firefox fix
 }
 
 function handleDragOver(e) {
@@ -550,11 +575,12 @@ function handleDragOver(e) {
     const container = this.parentNode;
     const afterElement = getDragAfterElement(container, e.clientY);
     
-    if (afterElement == null) {
+    if (draggedItem && afterElement == null) {
         container.appendChild(draggedItem);
-    } else {
+    } else if (draggedItem && afterElement !== draggedItem) {
         container.insertBefore(draggedItem, afterElement);
     }
+    updateOrderNumbers(container);
 }
 
 function handleDrop(e) {
@@ -564,10 +590,120 @@ function handleDrop(e) {
 function handleDragEnd() {
     this.classList.remove('dragging');
     draggedItem = null;
+    updateOrderNumbers(this.parentNode);
+}
+
+// === TOUCH HANDLING ===
+
+let touchStartY = 0;
+let touchCurrentItem = null;
+let touchClone = null;
+let isTouchDragging = false;
+
+function handleTouchStart(e) {
+    // Bara om man trycker på drag handle eller håller länge
+    const handle = e.target.closest('.drag-handle');
+    if (!handle) return;
+    
+    e.preventDefault();
+    touchCurrentItem = this;
+    touchStartY = e.touches[0].clientY;
+    
+    // Markera som aktiv efter kort delay (för att skilja från tap)
+    setTimeout(() => {
+        if (touchCurrentItem === this) {
+            isTouchDragging = true;
+            this.classList.add('dragging');
+            
+            // Skapa ghost element
+            touchClone = this.cloneNode(true);
+            touchClone.classList.add('drag-ghost');
+            document.body.appendChild(touchClone);
+            updateGhostPosition(e.touches[0].clientY);
+        }
+    }, 150);
+}
+
+function handleTouchMove(e) {
+    if (!isTouchDragging || !touchCurrentItem) return;
+    e.preventDefault();
+    
+    const touch = e.touches[0];
+    updateGhostPosition(touch.clientY);
+    
+    const container = touchCurrentItem.parentNode;
+    const afterElement = getDragAfterElement(container, touch.clientY);
+    
+    if (afterElement == null) {
+        container.appendChild(touchCurrentItem);
+    } else if (afterElement !== touchCurrentItem) {
+        container.insertBefore(touchCurrentItem, afterElement);
+    }
+    updateOrderNumbers(container);
+}
+
+function handleTouchEnd(e) {
+    if (touchClone) {
+        touchClone.remove();
+        touchClone = null;
+    }
+    
+    if (touchCurrentItem) {
+        touchCurrentItem.classList.remove('dragging');
+        updateOrderNumbers(touchCurrentItem.parentNode);
+    }
+    
+    touchCurrentItem = null;
+    isTouchDragging = false;
+}
+
+function updateGhostPosition(y) {
+    if (touchClone) {
+        touchClone.style.top = (y - 25) + 'px';
+    }
+}
+
+// === TAP TO SWAP (alternativ metod för mobil) ===
+
+function handleTapToSwap(e) {
+    // Ignorera om man drar
+    if (isTouchDragging) return;
+    // Ignorera om man klickade på handle
+    if (e.target.closest('.drag-handle')) return;
+    
+    const container = this.parentNode;
+    
+    if (selectedForSwap === null) {
+        // Första valet
+        selectedForSwap = this;
+        this.classList.add('selected-for-swap');
+    } else if (selectedForSwap === this) {
+        // Avmarkera
+        this.classList.remove('selected-for-swap');
+        selectedForSwap = null;
+    } else {
+        // Byt plats
+        const parent = this.parentNode;
+        const items = Array.from(parent.children);
+        const idx1 = items.indexOf(selectedForSwap);
+        const idx2 = items.indexOf(this);
+        
+        if (idx1 < idx2) {
+            parent.insertBefore(this, selectedForSwap);
+            parent.insertBefore(selectedForSwap, items[idx2 + 1] || null);
+        } else {
+            parent.insertBefore(selectedForSwap, this);
+            parent.insertBefore(this, items[idx1 + 1] || null);
+        }
+        
+        selectedForSwap.classList.remove('selected-for-swap');
+        selectedForSwap = null;
+        updateOrderNumbers(container);
+    }
 }
 
 function getDragAfterElement(container, y) {
-    const draggableElements = [...container.querySelectorAll('.ordering-item:not(.dragging), .timeline-item:not(.dragging)')];
+    const draggableElements = [...container.querySelectorAll('.ordering-item:not(.dragging)')];
     
     return draggableElements.reduce((closest, child) => {
         const box = child.getBoundingClientRect();
@@ -581,6 +717,14 @@ function getDragAfterElement(container, y) {
     }, { offset: Number.NEGATIVE_INFINITY }).element;
 }
 
+function updateOrderNumbers(container) {
+    const items = container.querySelectorAll('.ordering-item');
+    items.forEach((item, i) => {
+        const numEl = item.querySelector('.order-number');
+        if (numEl) numEl.textContent = i + 1;
+    });
+}
+
 // Global export
 window.loadExercises = loadExercises;
 window.resetExercises = resetExercises;
@@ -592,3 +736,4 @@ window.handleMatching = handleMatching;
 window.handleOrdering = handleOrdering;
 window.handleTimeline = handleTimeline;
 window.toggleSteps = toggleSteps;
+window.selectMatchOption = selectMatchOption;
