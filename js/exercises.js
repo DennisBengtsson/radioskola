@@ -549,7 +549,7 @@ function resetExercises() {
 
 // =============================================
 // DRAG AND DROP + TOUCH + TAP-TO-SWAP
-// Förbättrad mobilkompatibilitet
+// Förbättrad mobilkompatibilitet + Desktop drag fix
 // =============================================
 
 let draggedItem = null;
@@ -570,62 +570,90 @@ function initDragAndDrop() {
         const items = container.querySelectorAll('.ordering-item');
         
         items.forEach(item => {
-            // Desktop drag events
+            // Sätt draggable för desktop
+            item.setAttribute('draggable', 'true');
+            
+            // Desktop drag events - lägg till på BÅDE item och container
             item.addEventListener('dragstart', handleDragStart);
-            item.addEventListener('dragover', handleDragOver);
-            item.addEventListener('drop', handleDrop);
             item.addEventListener('dragend', handleDragEnd);
             
-            // Touch events för mobil - på HELA elementet
+            // Touch events för mobil
             item.addEventListener('touchstart', handleTouchStart, { passive: false });
             item.addEventListener('touchmove', handleTouchMove, { passive: false });
             item.addEventListener('touchend', handleTouchEnd);
             item.addEventListener('touchcancel', handleTouchCancel);
             
-            // Click/tap för swap (fungerar på både desktop och mobil)
+            // Click/tap för swap
             item.addEventListener('click', handleTapToSwap);
         });
+        
+        // Dragover och drop på CONTAINER nivå (viktigt för desktop!)
+        container.addEventListener('dragover', handleContainerDragOver);
+        container.addEventListener('drop', handleContainerDrop);
     });
 }
 
 // === DESKTOP DRAG HANDLERS ===
 
 function handleDragStart(e) {
+    // Förhindra drag om vi är på touch-enhet och redan hanterar touch
+    if (isTouchDragging) {
+        e.preventDefault();
+        return;
+    }
+    
     draggedItem = this;
     this.classList.add('dragging');
-    e.dataTransfer.effectAllowed = 'move';
-    e.dataTransfer.setData('text/plain', '');
     
-    // Gör elementet lite transparent
+    // Viktigt: Sätt drag data
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', this.innerHTML);
+    
+    // Gör elementet lite transparent efter en kort fördröjning
     setTimeout(() => {
-        this.style.opacity = '0.5';
+        if (draggedItem) {
+            draggedItem.style.opacity = '0.4';
+        }
     }, 0);
 }
 
-function handleDragOver(e) {
+function handleContainerDragOver(e) {
     e.preventDefault();
     e.dataTransfer.dropEffect = 'move';
     
-    const container = this.parentNode;
+    if (!draggedItem) return;
+    
+    const container = this;
     const afterElement = getDragAfterElement(container, e.clientY);
     
-    if (draggedItem && afterElement == null) {
+    if (afterElement == null) {
         container.appendChild(draggedItem);
-    } else if (draggedItem && afterElement !== draggedItem) {
+    } else if (afterElement !== draggedItem) {
         container.insertBefore(draggedItem, afterElement);
     }
     updateOrderNumbers(container);
 }
 
-function handleDrop(e) {
+function handleContainerDrop(e) {
     e.preventDefault();
+    if (draggedItem) {
+        updateOrderNumbers(this);
+    }
 }
 
-function handleDragEnd() {
-    this.classList.remove('dragging');
-    this.style.opacity = '1';
+function handleDragEnd(e) {
+    if (this.classList.contains('dragging')) {
+        this.classList.remove('dragging');
+        this.style.opacity = '1';
+    }
+    
+    if (draggedItem) {
+        draggedItem.style.opacity = '1';
+        draggedItem.classList.remove('dragging');
+        updateOrderNumbers(draggedItem.parentNode);
+    }
+    
     draggedItem = null;
-    updateOrderNumbers(this.parentNode);
 }
 
 // === TOUCH HANDLERS (MOBIL) ===
@@ -663,6 +691,7 @@ function startTouchDrag(item, touch) {
     // Skapa ghost element som följer fingret
     touchClone = item.cloneNode(true);
     touchClone.classList.add('drag-ghost');
+    touchClone.classList.remove('dragging', 'touch-active');
     touchClone.style.width = item.offsetWidth + 'px';
     touchClone.style.position = 'fixed';
     touchClone.style.zIndex = '10000';
@@ -710,7 +739,6 @@ function handleTouchEnd(e) {
     clearTimeout(longPressTimer);
     
     const wasDragging = isTouchDragging;
-    const touchDuration = Date.now() - touchStartTime;
     
     // Städa upp ghost
     if (touchClone) {
@@ -720,9 +748,6 @@ function handleTouchEnd(e) {
     
     if (touchCurrentItem) {
         touchCurrentItem.classList.remove('dragging', 'touch-active');
-        
-        // Om det var en kort tap (inte drag), låt click-eventet hantera swap
-        // handleTapToSwap hanteras av click-eventet
         
         if (wasDragging) {
             updateOrderNumbers(touchCurrentItem.parentNode);
@@ -746,14 +771,14 @@ function updateGhostPosition(y, x) {
     }
 }
 
-// === TAP TO SWAP (Alternativ metod - fungerar alltid) ===
+// === TAP TO SWAP ===
 
 function handleTapToSwap(e) {
     // Ignorera om vi har dragit
     if (isTouchDragging) return;
     
-    // Ignorera om click kom från drag handle på desktop
-    if (e.target.closest('.drag-handle') && !('ontouchstart' in window)) return;
+    // Ignorera om det var en riktig drag på desktop
+    if (draggedItem) return;
     
     const container = this.parentNode;
     
@@ -809,6 +834,7 @@ function getDragAfterElement(container, y) {
 }
 
 function updateOrderNumbers(container) {
+    if (!container) return;
     const items = container.querySelectorAll('.ordering-item');
     items.forEach((item, i) => {
         const numEl = item.querySelector('.order-number');
@@ -816,6 +842,7 @@ function updateOrderNumbers(container) {
         item.dataset.pos = i;
     });
 }
+
 
 // === GLOBAL EXPORTS ===
 window.loadExercises = loadExercises;

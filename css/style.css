@@ -6816,10 +6816,15 @@ section h2 {
         color: var(--text-primary);
     }
     
-    .bonus-title-area p,
-    .bonus-meta {
+    .bonus-title-area p {
         color: #a0aec0;
     }
+    
+    .bonus-meta,
+    .bonus-meta span {
+        color: #cbd5e0;
+    }
+
     
     /* SSA recommendation */
     .ssa-recommendation {
