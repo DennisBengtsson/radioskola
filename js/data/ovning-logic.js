@@ -1,5 +1,6 @@
 // ============================================
 // ÖVNINGSLOGIK - ALLA FRÅGETYPER
+// Version 2.0 - Med förbättrad drag & drop + touch-support
 // ============================================
 
 // Global state
@@ -9,6 +10,7 @@ let currentExercises = [];
 let currentQuestionIndex = 0;
 let answers = [];
 let correctAnswers = 0;
+let feedbackTimerInterval = null;
 
 // State för matching-frågor
 let matchingState = {
@@ -20,6 +22,18 @@ let matchingState = {
 let orderingState = {
     currentOrder: []
 };
+
+// State för drag & drop
+let draggedItem = null;
+let selectedForSwap = null;
+let touchStartY = 0;
+let touchStartX = 0;
+let touchCurrentItem = null;
+let touchClone = null;
+let isTouchDragging = false;
+let longPressTimer = null;
+let touchStartTime = 0;
+let initialTouchPos = { x: 0, y: 0 };
 
 // ============================================
 // INITIERING
@@ -156,6 +170,12 @@ function startSubchapter(subchapterId) {
 // VISA FRÅGA (ROUTER)
 // ============================================
 function showQuestion() {
+    // Rensa tidigare timer om den finns
+    if (feedbackTimerInterval) {
+        clearInterval(feedbackTimerInterval);
+        feedbackTimerInterval = null;
+    }
+    
     if (currentQuestionIndex >= currentExercises.length) {
         showResults();
         return;
@@ -233,7 +253,7 @@ function renderMultipleChoice(question, container) {
     container.innerHTML = html;
 }
 
-function selectMultipleChoice(selectedIndex) {
+window.selectMultipleChoice = function(selectedIndex) {
     const question = currentExercises[currentQuestionIndex];
     const isCorrect = selectedIndex === question.correct;
     
@@ -253,9 +273,7 @@ function selectMultipleChoice(selectedIndex) {
             btn.classList.add('correct');
         }
     });
-    
-    setTimeout(nextQuestion, 2000);
-}
+};
 
 // ============================================
 // TRUE/FALSE
@@ -281,7 +299,7 @@ function renderTrueFalse(question, container) {
     container.innerHTML = html;
 }
 
-function selectTrueFalse(selectedValue) {
+window.selectTrueFalse = function(selectedValue) {
     const question = currentExercises[currentQuestionIndex];
     const isCorrect = selectedValue === question.correct;
     
@@ -302,9 +320,7 @@ function selectTrueFalse(selectedValue) {
             btn.classList.add('correct');
         }
     });
-    
-    setTimeout(nextQuestion, 2000);
-}
+};
 
 // ============================================
 // FILL BLANK
@@ -329,21 +345,18 @@ function renderFillBlank(question, container) {
     // Enter-tangent för att skicka
     document.getElementById('fillBlankInput').addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
-            submitFillBlank();
+            window.submitFillBlank();
         }
     });
 }
 
-function submitFillBlank() {
+window.submitFillBlank = function() {
     const question = currentExercises[currentQuestionIndex];
     const input = document.getElementById('fillBlankInput');
     const userAnswer = input.value.trim().toLowerCase();
     
-    // Kolla både answer och alternatives
-    const correctAnswers = [question.answer.toLowerCase()];
-    if (question.alternatives) {
-        correctAnswers.push(...question.alternatives.map(a => a.toLowerCase()));
-    }
+    // Kolla både correctAnswers array
+    const correctAnswers = question.correctAnswers ? question.correctAnswers.map(a => a.toLowerCase()) : [question.answer.toLowerCase()];
     
     const isCorrect = correctAnswers.includes(userAnswer);
     
@@ -354,9 +367,7 @@ function submitFillBlank() {
     input.disabled = true;
     input.classList.add(isCorrect ? 'correct' : 'incorrect');
     document.querySelector('.submit-button').disabled = true;
-    
-    setTimeout(nextQuestion, 2000);
-}
+};
 
 // ============================================
 // CALCULATION
@@ -384,12 +395,12 @@ function renderCalculation(question, container) {
     
     document.getElementById('calculationInput').addEventListener('keypress', function(e) {
         if (e.key === 'Enter') {
-            submitCalculation();
+            window.submitCalculation();
         }
     });
 }
 
-function submitCalculation() {
+window.submitCalculation = function() {
     const question = currentExercises[currentQuestionIndex];
     const input = document.getElementById('calculationInput');
     const userAnswer = parseFloat(input.value);
@@ -410,9 +421,7 @@ function submitCalculation() {
     input.disabled = true;
     input.classList.add(isCorrect ? 'correct' : 'incorrect');
     document.querySelector('.submit-button').disabled = true;
-    
-    setTimeout(nextQuestion, 2000);
-}
+};
 
 // ============================================
 // MATCHING
@@ -475,7 +484,7 @@ function renderMatching(question, container) {
     container.innerHTML = html;
 }
 
-function selectMatchingLeft(index) {
+window.selectMatchingLeft = function(index) {
     const item = document.querySelector(`.matching-left .matching-item[data-index="${index}"]`);
     
     if (item.classList.contains('matched')) return;
@@ -487,9 +496,9 @@ function selectMatchingLeft(index) {
     
     item.classList.add('selected');
     matchingState.selected = index;
-}
+};
 
-function selectMatchingRight(value) {
+window.selectMatchingRight = function(value) {
     if (matchingState.selected === null) {
         alert('Välj först ett alternativ från vänster sida');
         return;
@@ -518,9 +527,9 @@ function selectMatchingRight(value) {
     if (matchingState.pairs.length === question.pairs.length) {
         document.getElementById('submitMatching').disabled = false;
     }
-}
+};
 
-function submitMatching() {
+window.submitMatching = function() {
     const question = currentExercises[currentQuestionIndex];
     
     // Räkna rätt matchningar
@@ -543,12 +552,10 @@ function submitMatching() {
         item.onclick = null;
     });
     document.getElementById('submitMatching').disabled = true;
-    
-    setTimeout(nextQuestion, 2500);
-}
+};
 
 // ============================================
-// ORDERING
+// ORDERING - MED FÖRBÄTTRAD DRAG & DROP + TOUCH
 // ============================================
 function renderOrdering(question, container) {
     // Blanda items
@@ -557,19 +564,28 @@ function renderOrdering(question, container) {
         originalIndex: index
     })).sort(() => Math.random() - 0.5);
     
+    // Detektera om det är en touch-enhet
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+    
+    const helpText = isTouchDevice 
+        ? '👆 Tryck på ett objekt och sedan på ett annat för att byta plats. Eller håll in för att dra.'
+        : '🖱️ Dra och släpp för att ordna objekten i rätt ordning.';
+    
     let html = `
         <div class="question-card">
             <span class="question-number">Fråga ${currentQuestionIndex + 1}</span>
             <div class="question-text">${question.question}</div>
             ${question.hint ? `<div class="question-hint">💡 ${question.hint}</div>` : ''}
+            <p class="ordering-help">${helpText}</p>
             <div class="ordering-container" id="orderingContainer">
     `;
     
     orderingState.currentOrder.forEach((item, index) => {
         html += `
             <div class="ordering-item" draggable="true" data-index="${index}">
-                <span class="drag-handle">☰</span>
-                <span>${item.text}</span>
+                <span class="order-number">${index + 1}</span>
+                <span class="item-text">${item.text}</span>
+                <span class="drag-handle">⋮⋮</span>
             </div>
         `;
     });
@@ -585,63 +601,316 @@ function renderOrdering(question, container) {
     
     container.innerHTML = html;
     
-    // Setup drag and drop
+    // Setup förbättrad drag and drop med touch-support
     setupDragAndDrop();
 }
 
 function setupDragAndDrop() {
-    const items = document.querySelectorAll('.ordering-item');
-    let draggedElement = null;
+    const container = document.getElementById('orderingContainer');
+    if (!container) return;
+    
+    const items = container.querySelectorAll('.ordering-item');
     
     items.forEach(item => {
-        item.addEventListener('dragstart', function(e) {
-            draggedElement = this;
-            this.style.opacity = '0.5';
-        });
+        // Sätt draggable för desktop
+        item.setAttribute('draggable', 'true');
         
-        item.addEventListener('dragend', function(e) {
-            this.style.opacity = '';
-        });
+        // Desktop drag events
+        item.addEventListener('dragstart', handleDragStart);
+        item.addEventListener('dragend', handleDragEnd);
         
-        item.addEventListener('dragover', function(e) {
-            e.preventDefault();
-        });
+        // Touch events för mobil
+        item.addEventListener('touchstart', handleTouchStart, { passive: false });
+        item.addEventListener('touchmove', handleTouchMove, { passive: false });
+        item.addEventListener('touchend', handleTouchEnd);
+        item.addEventListener('touchcancel', handleTouchCancel);
         
-        item.addEventListener('drop', function(e) {
-            e.preventDefault();
-            if (draggedElement !== this) {
-                // Byt plats
-                const container = document.getElementById('orderingContainer');
-                const allItems = [...container.children];
-                const draggedIndex = allItems.indexOf(draggedElement);
-                const targetIndex = allItems.indexOf(this);
-                
-                if (draggedIndex < targetIndex) {
-                    container.insertBefore(draggedElement, this.nextSibling);
-                } else {
-                    container.insertBefore(draggedElement, this);
-                }
-                
-                // Uppdatera state
+        // Click/tap för swap
+        item.addEventListener('click', handleTapToSwap);
+    });
+    
+    // Dragover och drop på CONTAINER nivå
+    container.addEventListener('dragover', handleContainerDragOver);
+    container.addEventListener('drop', handleContainerDrop);
+}
+
+// === DESKTOP DRAG HANDLERS ===
+
+function handleDragStart(e) {
+    // Förhindra drag om vi är på touch-enhet och redan hanterar touch
+    if (isTouchDragging) {
+        e.preventDefault();
+        return;
+    }
+    
+    draggedItem = this;
+    this.classList.add('dragging');
+    
+    // Viktigt: Sätt drag data
+    e.dataTransfer.effectAllowed = 'move';
+    e.dataTransfer.setData('text/html', this.innerHTML);
+    
+    // Gör elementet lite transparent efter en kort fördröjning
+    setTimeout(() => {
+        if (draggedItem) {
+            draggedItem.style.opacity = '0.4';
+        }
+    }, 0);
+}
+
+function handleContainerDragOver(e) {
+    e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
+    
+    if (!draggedItem) return;
+    
+    const container = this;
+    const afterElement = getDragAfterElement(container, e.clientY);
+    
+    if (afterElement == null) {
+        container.appendChild(draggedItem);
+    } else if (afterElement !== draggedItem) {
+        container.insertBefore(draggedItem, afterElement);
+    }
+    updateOrderNumbers(container);
+}
+
+function handleContainerDrop(e) {
+    e.preventDefault();
+    if (draggedItem) {
+        updateOrderNumbers(this);
+    }
+}
+
+function handleDragEnd(e) {
+    if (this.classList.contains('dragging')) {
+        this.classList.remove('dragging');
+        this.style.opacity = '1';
+    }
+    
+    if (draggedItem) {
+        draggedItem.style.opacity = '1';
+        draggedItem.classList.remove('dragging');
+        const container = draggedItem.parentNode;
+        if (container) {
+            updateOrderNumbers(container);
+            updateOrderingState();
+        }
+    }
+    
+    draggedItem = null;
+}
+
+// === TOUCH HANDLERS (MOBIL) ===
+
+function handleTouchStart(e) {
+    // Spara startposition och tid
+    const touch = e.touches[0];
+    touchStartY = touch.clientY;
+    touchStartX = touch.clientX;
+    initialTouchPos = { x: touch.clientX, y: touch.clientY };
+    touchStartTime = Date.now();
+    touchCurrentItem = this;
+    
+    // Lägg till visuell feedback direkt
+    this.classList.add('touch-active');
+    
+    // Starta long-press timer (250ms för att starta drag)
+    longPressTimer = setTimeout(() => {
+        if (touchCurrentItem === this) {
+            startTouchDrag(this, touch);
+        }
+    }, 250);
+}
+
+function startTouchDrag(item, touch) {
+    isTouchDragging = true;
+    item.classList.remove('touch-active');
+    item.classList.add('dragging');
+    
+    // Haptic feedback om tillgängligt
+    if (navigator.vibrate) {
+        navigator.vibrate(30);
+    }
+    
+    // Skapa ghost element som följer fingret
+    touchClone = item.cloneNode(true);
+    touchClone.classList.add('drag-ghost');
+    touchClone.classList.remove('dragging', 'touch-active');
+    touchClone.style.width = item.offsetWidth + 'px';
+    touchClone.style.position = 'fixed';
+    touchClone.style.zIndex = '10000';
+    touchClone.style.pointerEvents = 'none';
+    document.body.appendChild(touchClone);
+    updateGhostPosition(touch.clientY, touch.clientX);
+}
+
+function handleTouchMove(e) {
+    if (!touchCurrentItem) return;
+    
+    const touch = e.touches[0];
+    const deltaY = Math.abs(touch.clientY - initialTouchPos.y);
+    const deltaX = Math.abs(touch.clientX - initialTouchPos.x);
+    
+    // Om användaren rör sig mer än 15px innan long-press aktiveras, avbryt drag-försöket
+    if (!isTouchDragging && (deltaY > 15 || deltaX > 15)) {
+        clearTimeout(longPressTimer);
+        if (touchCurrentItem) {
+            touchCurrentItem.classList.remove('touch-active');
+        }
+        // Låt scroll ske normalt
+        return;
+    }
+    
+    // Om vi faktiskt drar, förhindra scroll
+    if (isTouchDragging) {
+        e.preventDefault();
+        
+        updateGhostPosition(touch.clientY, touch.clientX);
+        
+        const container = touchCurrentItem.parentNode;
+        const afterElement = getDragAfterElement(container, touch.clientY);
+        
+        if (afterElement == null) {
+            container.appendChild(touchCurrentItem);
+        } else if (afterElement !== touchCurrentItem) {
+            container.insertBefore(touchCurrentItem, afterElement);
+        }
+        updateOrderNumbers(container);
+    }
+}
+
+function handleTouchEnd(e) {
+    clearTimeout(longPressTimer);
+    
+    const wasDragging = isTouchDragging;
+    
+    // Städa upp ghost
+    if (touchClone) {
+        touchClone.remove();
+        touchClone = null;
+    }
+    
+    if (touchCurrentItem) {
+        touchCurrentItem.classList.remove('dragging', 'touch-active');
+        
+        if (wasDragging) {
+            const container = touchCurrentItem.parentNode;
+            if (container) {
+                updateOrderNumbers(container);
                 updateOrderingState();
             }
-        });
+        }
+    }
+    
+    touchCurrentItem = null;
+    isTouchDragging = false;
+}
+
+function handleTouchCancel(e) {
+    handleTouchEnd(e);
+}
+
+function updateGhostPosition(y, x) {
+    if (touchClone) {
+        const ghostHeight = touchClone.offsetHeight || 50;
+        const ghostWidth = touchClone.offsetWidth || 200;
+        touchClone.style.top = (y - ghostHeight / 2) + 'px';
+        touchClone.style.left = (x - ghostWidth / 2) + 'px';
+    }
+}
+
+// === TAP TO SWAP ===
+
+function handleTapToSwap(e) {
+    // Ignorera om vi har dragit
+    if (isTouchDragging) return;
+    
+    // Ignorera om det var en riktig drag på desktop
+    if (draggedItem) return;
+    
+    const container = this.parentNode;
+    
+    if (selectedForSwap === null) {
+        // Första valet
+        selectedForSwap = this;
+        this.classList.add('selected-for-swap');
+    } else if (selectedForSwap === this) {
+        // Klick på samma - avmarkera
+        this.classList.remove('selected-for-swap');
+        selectedForSwap = null;
+    } else {
+        // Andra valet - byt plats
+        const items = Array.from(container.children);
+        const idx1 = items.indexOf(selectedForSwap);
+        const idx2 = items.indexOf(this);
+        
+        // Byt plats genom att flytta element
+        if (idx1 < idx2) {
+            container.insertBefore(this, selectedForSwap);
+            container.insertBefore(selectedForSwap, items[idx2 + 1] || null);
+        } else {
+            container.insertBefore(selectedForSwap, this);
+            container.insertBefore(this, items[idx1 + 1] || null);
+        }
+        
+        // Haptic feedback
+        if (navigator.vibrate) {
+            navigator.vibrate(20);
+        }
+        
+        selectedForSwap.classList.remove('selected-for-swap');
+        selectedForSwap = null;
+        updateOrderNumbers(container);
+        updateOrderingState();
+    }
+}
+
+// === HELPER FUNCTIONS ===
+
+function getDragAfterElement(container, y) {
+    const draggableElements = [...container.querySelectorAll('.ordering-item:not(.dragging)')];
+    
+    return draggableElements.reduce((closest, child) => {
+        const box = child.getBoundingClientRect();
+        const offset = y - box.top - box.height / 2;
+        
+        if (offset < 0 && offset > closest.offset) {
+            return { offset: offset, element: child };
+        } else {
+            return closest;
+        }
+    }, { offset: Number.NEGATIVE_INFINITY }).element;
+}
+
+function updateOrderNumbers(container) {
+    if (!container) return;
+    const items = container.querySelectorAll('.ordering-item');
+    items.forEach((item, i) => {
+        const numEl = item.querySelector('.order-number');
+        if (numEl) numEl.textContent = i + 1;
+        item.dataset.pos = i;
     });
 }
 
 function updateOrderingState() {
-    const items = document.querySelectorAll('.ordering-item');
+    const container = document.getElementById('orderingContainer');
+    if (!container) return;
+    
+    const items = container.querySelectorAll('.ordering-item');
     const newOrder = [];
     
-    items.forEach((item, index) => {
+    items.forEach((item, i) => {
         const originalIndex = parseInt(item.dataset.index);
-        newOrder.push(orderingState.currentOrder[originalIndex]);
+        if (!isNaN(originalIndex) && orderingState.currentOrder[originalIndex]) {
+            newOrder.push(orderingState.currentOrder[originalIndex]);
+        }
     });
     
     orderingState.currentOrder = newOrder;
 }
 
-function submitOrdering() {
+window.submitOrdering = function() {
     const question = currentExercises[currentQuestionIndex];
     
     // Kolla om ordningen är korrekt
@@ -661,6 +930,12 @@ function submitOrdering() {
         item.draggable = false;
         item.classList.add('disabled');
         
+        // Ta bort alla event listeners
+        item.onclick = null;
+        item.ontouchstart = null;
+        item.ontouchmove = null;
+        item.ontouchend = null;
+        
         if (originalIndex === correctOriginalIndex) {
             item.classList.add('correct-position');
         } else {
@@ -669,9 +944,7 @@ function submitOrdering() {
     });
     
     document.querySelector('.submit-button').disabled = true;
-    
-    setTimeout(nextQuestion, 2500);
-}
+};
 
 // ============================================
 // GEMENSAMMA FUNKTIONER
@@ -701,11 +974,67 @@ function showFeedback(isCorrect, question) {
                 <strong>${title}</strong><br>
                 ${question.explanation || ''}
             </div>
+            <div class="feedback-actions">
+                <div class="feedback-timer">
+                    <div class="timer-bar" id="timerBar"></div>
+                    <span class="timer-text" id="timerText">Nästa fråga om 10s</span>
+                </div>
+                <button class="next-button" onclick="nextQuestion()">
+                    Nästa fråga →
+                </button>
+            </div>
         </div>
     `;
+    
+    // Starta timer-animation (10 sekunder)
+    startFeedbackTimer(10);
+}
+
+function startFeedbackTimer(seconds) {
+    const timerBar = document.getElementById('timerBar');
+    const timerText = document.getElementById('timerText');
+    
+    if (!timerBar || !timerText) return;
+    
+    let remaining = seconds;
+    timerText.textContent = `Nästa fråga om ${remaining}s`;
+    
+    // Animera timer-bar
+    timerBar.style.transition = `width ${seconds}s linear`;
+    timerBar.style.width = '0%';
+    
+    // Uppdatera text varje sekund
+    feedbackTimerInterval = setInterval(() => {
+        remaining--;
+        if (remaining > 0) {
+            timerText.textContent = `Nästa fråga om ${remaining}s`;
+        } else {
+            timerText.textContent = 'Laddar...';
+            clearInterval(feedbackTimerInterval);
+            feedbackTimerInterval = null;
+            // Gå automatiskt till nästa efter 10 sekunder
+            nextQuestion();
+        }
+    }, 1000);
 }
 
 function nextQuestion() {
+    // Rensa timer om den finns
+    if (feedbackTimerInterval) {
+        clearInterval(feedbackTimerInterval);
+        feedbackTimerInterval = null;
+    }
+    
+    // Rensa drag & drop state
+    draggedItem = null;
+    selectedForSwap = null;
+    touchCurrentItem = null;
+    isTouchDragging = false;
+    if (touchClone) {
+        touchClone.remove();
+        touchClone = null;
+    }
+    
     currentQuestionIndex++;
     showQuestion();
 }
@@ -742,7 +1071,7 @@ function showResults() {
         percentage: percentage
     });
     
-    // Visa resultat
+    // Dölj övningsvyn, visa resultat
     document.getElementById('stepExercise').style.display = 'none';
     document.getElementById('stepResults').style.display = 'block';
     
@@ -754,50 +1083,57 @@ function showResults() {
     document.getElementById('statusValue').textContent = passed ? '✅ Godkänd' : '❌ Ej godkänd';
     document.getElementById('statusValue').className = 'result-value ' + (passed ? 'pass' : 'fail');
     
+    // Hämta kapitel och delkapitel info
+    const chapter = certChapters.find(ch => ch.id === currentChapterId);
+    const subchapter = chapter.subchapters.find(sub => sub.id === currentSubchapterId);
+    
     // Resultatikon och meddelande
     if (passed) {
         document.getElementById('resultsIcon').textContent = '🎉';
         document.getElementById('resultsTitle').textContent = 'Grattis!';
-        document.getElementById('resultsSubtitle').textContent = 'Du har klarat detta delkapitel!';
+        document.getElementById('resultsSubtitle').textContent = `Du har klarat ${subchapter.id} - ${subchapter.title}`;
         document.getElementById('resultMessage').className = 'result-message pass';
         document.getElementById('resultMessage').innerHTML = `
             <strong>Bra jobbat!</strong><br>
-            Du fick ${percentage}% rätt och har nu klarat detta delkapitel.
+            Du fick ${correctAnswers} av ${total} frågor rätt (${percentage}%) och har nu klarat detta delkapitel.
+            <br><br>
             Du kan fortsätta till nästa delkapitel eller öva mer för att bli ännu säkrare.
         `;
     } else {
         document.getElementById('resultsIcon').textContent = '📚';
         document.getElementById('resultsTitle').textContent = 'Inte godkänd än';
-        document.getElementById('resultsSubtitle').textContent = 'Men du är på rätt väg!';
+        document.getElementById('resultsSubtitle').textContent = `${subchapter.id} - ${subchapter.title}`;
         document.getElementById('resultMessage').className = 'result-message fail';
         document.getElementById('resultMessage').innerHTML = `
             <strong>Fortsätt öva!</strong><br>
-            Du fick ${percentage}% rätt, men behöver minst 80% för att klara delkapitlet.
+            Du fick ${correctAnswers} av ${total} frågor rätt (${percentage}%), men behöver minst 80% för att klara delkapitlet.
+            <br><br>
             ${getRecommendation(percentage)}
         `;
     }
     
+    // Scrolla till toppen för att se resultatet
     window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function getRecommendation(percentage) {
     if (percentage < 50) {
-        return 'Rekommendation: Läs igenom teorin igen innan du gör om övningen.';
+        return '<strong>Rekommendation:</strong> Läs igenom teorin igen innan du gör om övningen. Ta god tid på dig och anteckna viktiga punkter.';
     } else if (percentage < 70) {
-        return 'Rekommendation: Fokusera på de områden du svarade fel på och försök igen.';
+        return '<strong>Rekommendation:</strong> Du är på rätt väg! Fokusera på de områden du svarade fel på och försök igen.';
     } else {
-        return 'Du är nästan där! Försök igen så når du säkert 80%.';
+        return '<strong>Rekommendation:</strong> Du är nästan där! Försök igen så når du säkert 80%. Du behöver bara några fler rätt.';
     }
 }
 
 // ============================================
 // NAVIGERINGSFUNKTIONER
 // ============================================
-function tryAgain() {
+window.tryAgain = function() {
     startSubchapter(currentSubchapterId);
-}
+};
 
-function nextSubchapter() {
+window.nextSubchapter = function() {
     const chapter = certChapters.find(ch => ch.id === currentChapterId);
     const currentIndex = chapter.subchapters.findIndex(sub => sub.id === currentSubchapterId);
     
@@ -814,11 +1150,11 @@ function nextSubchapter() {
         startSubchapter(nextSubchapter.id);
     } else {
         alert('Grattis! Du har kommit till slutet av detta kapitel. Välj ett nytt kapitel för att fortsätta.');
-        backToChapters();
+        window.backToChapters();
     }
-}
+};
 
-function backToChapters() {
+window.backToChapters = function() {
     document.getElementById('stepResults').style.display = 'none';
     document.getElementById('stepExercise').style.display = 'none';
     document.getElementById('stepChapter').style.display = 'block';
@@ -830,4 +1166,21 @@ function backToChapters() {
     }
     
     window.scrollTo({ top: 0, behavior: 'smooth' });
-}
+};
+
+window.goBackToTheory = function() {
+    const chapter = certChapters.find(ch => ch.id === currentChapterId);
+    const subchapter = chapter.subchapters.find(sub => sub.id === currentSubchapterId);
+    
+    // Bekräfta innan användaren lämnar övningen
+    const confirmed = confirm(`Vill du lämna övningen och läsa teorin för ${subchapter.title}?\n\nDin nuvarande progress sparas inte.`);
+    
+    if (confirmed) {
+        // Bygg URL baserat på kapitel
+        const chapterSlug = chapter.slug || `kapitel-${chapter.number}`;
+        const theoryUrl = `../../pages/chapters/${chapterSlug}.html`;
+        
+        // Öppna i ny flik så användaren kan komma tillbaka enkelt
+        window.open(theoryUrl, '_blank');
+    }
+};

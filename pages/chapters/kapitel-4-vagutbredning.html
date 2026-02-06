@@ -33,8 +33,8 @@
             <!-- Kapitel Hero -->
             <div class="chapter-hero">
                 <div class="chapter-badge">Kapitel 4</div>
-                <h1>Vågutbredning</h1>
-                <p>Förstå hur radiovågor färdas runt jorden och ut i rymden</p>
+                <h1>🌍 Vågutbredning</h1>
+                <p>Förstå hur radiovågor färdas runt jorden - från markvåg till satellit</p>
                 <div class="chapter-meta">
                     <span>⏱️ 2-3 timmar</span>
                     <span>📝 35 frågor</span>
@@ -46,492 +46,2458 @@
             <div class="content-section toc">
                 <h2>📑 Innehåll</h2>
                 <ol class="toc-list">
-                    <li><a href="#grundbegrepp">Grundbegrepp</a></li>
-                    <li><a href="#markvag">Markvåg</a></li>
-                    <li><a href="#rymdvag">Rymdvåg och jonosfären</a></li>
-                    <li><a href="#siktlinje">Siktlinjeförbindelse (VHF/UHF)</a></li>
-                    <li><a href="#speciella">Speciella utbredningsfenomen</a></li>
-                    <li><a href="#solflaeckar">Solfläckar och solaktivitet</a></li>
+                    <li><a href="#grundbegrepp">Grundbegrepp - Det elektromagnetiska spektrumet</a></li>
+                    <li><a href="#markvag">Markvåg - Följer jordytan</a></li>
+                    <li><a href="#rymdvag">Rymdvåg och jonosfären - Hopp över horisonten</a></li>
+                    <li><a href="#siktlinje">Siktlinjeförbindelse (VHF/UHF) - Radiohorisonten</a></li>
+                    <li><a href="#speciella">Speciella utbredningsfenomen - Aurora, Es, EME</a></li>
+                    <li><a href="#solflaeckar">Solfläckar och solaktivitet - Påverkan på HF</a></li>
                 </ol>
             </div>
 
-            <!-- Sektion 1: Grundbegrepp -->
+            <!-- ============================================ -->
+            <!-- SEKTION 4.1: GRUNDBEGREPP -->
+            <!-- ============================================ -->
+            
             <div class="content-section" id="grundbegrepp">
-                <h2>4.1 Grundbegrepp</h2>
+                <h2>4.1 Grundbegrepp - Det elektromagnetiska spektrumet</h2>
                 
-                <h3>Det elektromagnetiska spektrumet</h3>
-                <p>Radiovågor är elektromagnetisk strålning, precis som ljus, men med längre våglängd.</p>
+                <h3>Vad är radiovågor?</h3>
+                <p>Radiovågor är elektromagnetisk strålning - precis som ljus, men med mycket längre våglängd. De färdas med ljusets hastighet (cirka 300 000 km/s i vakuum) och kan ta sig över enorma avstånd beroende på frekvens och utbredningsförhållanden.</p>
+                
+                <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+                    <strong>💡 Ljusanalogin:</strong>
+                    <br><br>
+                    Tänk på radiovågor som <strong>osynligt ljus</strong> med mycket längre våglängd:
+                    <br><br>
+                    • <strong>Synligt ljus:</strong> Våglängd ~500 nanometer (0,0000005 meter!)
+                    <br>• <strong>FM-radio (100 MHz):</strong> Våglängd ~3 meter
+                    <br>• <strong>HF-radio (14 MHz):</strong> Våglängd ~21 meter
+                    <br>• <strong>Långvåg (200 kHz):</strong> Våglängd ~1500 meter
+                    <br><br>
+                    Precis som ljus kan radiovågor:
+                    <br>✓ Reflekteras (studsa mot ytor)
+                    <br>✓ Böjas (diffraktion runt hinder)
+                    <br>✓ Brytas (ändra riktning i olika medium)
+                    <br>✓ Dämpas (försvagas med avståndet)
+                </div>
+                
+                <h3>Sambandet mellan frekvens och våglängd</h3>
+                
+                <div class="formula-box" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; font-size: 1.4rem;">
+                    <strong>GRUNDFORMELN:</strong>
+                    <br><br>
+                    λ = c / f
+                    <br><br>
+                    <small style="opacity: 1; color: white;">Våglängd (meter) = Ljusets hastighet / Frekvens</small>
+                </div>
+                
+                <p><strong>Förenklad formel för amatörradio:</strong></p>
+                
+                <div class="formula-box" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white; font-size: 1.3rem;">
+                    <strong>PRAKTISK FORMEL:</strong>
+                    <br><br>
+                    λ (meter) = 300 / f (MHz)
+                    <br><br>
+                    <small style="opacity: 1; color: white;">Våglängd i meter = 300 delat med frekvens i MHz</small>
+                </div>
+                
+                <div class="info-box important" style="background: #dbeafe; border-left: 4px solid #3b82f6;">
+                    <strong>🔑 Varför 300?</strong>
+                    <br><br>
+                    Ljusets hastighet är ~300 000 000 m/s (3×10⁸ m/s)
+                    <br><br>
+                    Om vi använder frekvens i MHz (miljoner Hz):
+                    <br>• 1 MHz = 1 000 000 Hz = 10⁶ Hz
+                    <br>• c = 300 000 000 m/s = 300 × 10⁶ m/s
+                    <br>• λ = (300 × 10⁶) / (f × 10⁶) = 300 / f
+                    <br><br>
+                    <strong>Därför:</strong> λ (m) = 300 / f (MHz) ✓
+                </div>
+                
+                <h3>Räkneexempel - Våglängd och frekvens</h3>
+                
+                <div class="example-box" style="border-left: 4px solid #3b82f6;">
+                    <strong>📻 Exempel 1 - Beräkna våglängd på 20m-bandet:</strong>
+                    <br>20m-bandet ligger på 14 MHz. Vad är den exakta våglängden?
+                    <br><br>
+                    <strong>Lösning:</strong>
+                    <br>λ = 300 / f = 300 / 14 ≈ <strong>21,4 meter</strong>
+                    <br><br>
+                    <em>🤔 Varför kallas det "20m-bandet" om våglängden är 21,4m? Det är en historisk avrundning - bandet kallas helt enkelt "20 meter"!</em>
+                </div>
+                
+                <div class="example-box" style="border-left: 4px solid #3b82f6;">
+                    <strong>📻 Exempel 2 - Beräkna frekvens från våglängd:</strong>
+                    <br>En antenn är konstruerad för λ = 2 meter. Vilken frekvens är den designad för?
+                    <br><br>
+                    <strong>Steg 1 - Lös ut f ur formeln:</strong>
+                    <br>λ = 300 / f → f = 300 / λ
+                    <br><br>
+                    <strong>Steg 2 - Sätt in värden:</strong>
+                    <br>f = 300 / 2 = <strong>150 MHz</strong>
+                    <br><br>
+                    <em>📡 Detta ligger precis i 2m-bandet (144-146 MHz)!</em>
+                </div>
+                
+                <div class="example-box" style="border-left: 4px solid #3b82f6;">
+                    <strong>📻 Exempel 3 - FM-rundradio:</strong>
+                    <br>Sveriges Radio P3 sänder på 103,3 MHz. Vad är våglängden?
+                    <br><br>
+                    <strong>Lösning:</strong>
+                    <br>λ = 300 / 103,3 ≈ <strong>2,9 meter</strong>
+                    <br><br>
+                    <em>💡 Därför är FM-antenner (både sändare och mottagare) cirka 3 meter långa eller konstruerade som λ/4 ≈ 75 cm!</em>
+                </div>
+                
+                <h3>Det elektromagnetiska spektrumet - Frekvensområden</h3>
                 
                 <table class="content-table">
                     <thead>
                         <tr>
-                            <th>Beteckning</th>
-                            <th>Frekvensområde</th>
-                            <th>Våglängd</th>
-                            <th>Typisk användning</th>
+                            <th style="width: 15%;">Beteckning</th>
+                            <th style="width: 20%;">Frekvensområde</th>
+                            <th style="width: 20%;">Våglängd</th>
+                            <th style="width: 45%;">Typisk användning & egenskaper</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>VLF</td>
+                        <tr style="background: #fee2e2;">
+                            <td><strong>VLF</strong><br><small>Very Low Frequency</small></td>
                             <td>3-30 kHz</td>
                             <td>100-10 km</td>
-                            <td>Ubåtskommunikation</td>
+                            <td>• Ubåtskommunikation (tränger genom vatten)<br>• Tidssignaler<br>• Går runt hela jorden via jonosfären</td>
                         </tr>
-                        <tr>
-                            <td>LF (Långvåg)</td>
+                        <tr style="background: #fef3c7;">
+                            <td><strong>LF</strong><br><small>Långvåg</small></td>
                             <td>30-300 kHz</td>
                             <td>10-1 km</td>
-                            <td>Rundradio (LW)</td>
+                            <td>• Rundradio (LW)<br>• Navigering (bl.a. flygning)<br>• Bra markvågsutbredning</td>
                         </tr>
-                        <tr>
-                            <td>MF (Mellanvåg)</td>
-                            <td>300 kHz-3 MHz</td>
+                        <tr style="background: #d1fae5;">
+                            <td><strong>MF</strong><br><small>Mellanvåg</small></td>
+                            <td>300 kHz - 3 MHz</td>
                             <td>1000-100 m</td>
-                            <td>Rundradio (MW), 160m</td>
+                            <td>• AM-rundradio (MW 531-1602 kHz)<br>• 160m-bandet (1,8 MHz)<br>• Bra markvåg dagtid, rymdvåg natt</td>
                         </tr>
-                        <tr>
-                            <td>HF (Kortvåg)</td>
+                        <tr style="background: #dbeafe;">
+                            <td><strong>HF</strong><br><small>Kortväg/High Frequency</small></td>
                             <td>3-30 MHz</td>
                             <td>100-10 m</td>
-                            <td>Amatörradio, världsradio</td>
+                            <td>• <strong>AMATÖRRADIO! (80m, 40m, 20m, 15m, 10m)</strong><br>• Världsomspännande kommunikation<br>• Rymdvåg via jonosfären<br>• DX-trafik</td>
                         </tr>
-                        <tr>
-                            <td>VHF</td>
+                        <tr style="background: #fce7f3;">
+                            <td><strong>VHF</strong><br><small>Very High Frequency</small></td>
                             <td>30-300 MHz</td>
                             <td>10-1 m</td>
-                            <td>FM-radio, 6m, 2m</td>
+                            <td>• <strong>2m-bandet (144-146 MHz)</strong><br>• <strong>6m-bandet (50-52 MHz)</strong><br>• FM-radio (87,5-108 MHz)<br>• Flygradio, TV<br>• Huvudsakligen siktlinje</td>
                         </tr>
-                        <tr>
-                            <td>UHF</td>
-                            <td>300 MHz-3 GHz</td>
-                            <td>1 m-10 cm</td>
-                            <td>TV, 70cm, mobiltelefoni</td>
+                        <tr style="background: #ede9fe;">
+                            <td><strong>UHF</strong><br><small>Ultra High Frequency</small></td>
+                            <td>300 MHz - 3 GHz</td>
+                            <td>1 m - 10 cm</td>
+                            <td>• <strong>70cm-bandet (430-440 MHz)</strong><br>• TV, mobiltelefoni<br>• WiFi (2,4 GHz)<br>• Siktlinje, kort räckvidd</td>
                         </tr>
-                        <tr>
-                            <td>SHF (Mikrovåg)</td>
+                        <tr style="background: #fff7ed;">
+                            <td><strong>SHF</strong><br><small>Mikrovåg/Super High Frequency</small></td>
                             <td>3-30 GHz</td>
                             <td>10-1 cm</td>
-                            <td>Satellit, radar, WiFi</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h3>Utbredningssätt</h3>
-                <p>Radiovågor kan nå mottagaren på flera sätt:</p>
-                <ol>
-                    <li><strong>Markvåg:</strong> Följer jordytan</li>
-                    <li><strong>Rymdvåg:</strong> Reflekteras av jonosfären</li>
-                    <li><strong>Siktlinje:</strong> Direkt väg genom atmosfären</li>
-                    <li><strong>Troposfärisk:</strong> Via nedersta atmosfärlagret</li>
-                </ol>
-            </div>
-
-            <!-- Sektion 2: Markvåg -->
-            <div class="content-section" id="markvag">
-                <h2>4.2 Markvåg</h2>
-                
-                <h3>Hur fungerar markvågen?</h3>
-                <p>Markvågen följer jordytan tack vare diffraktion (böjning). Den fungerar bäst på låga frekvenser.</p>
-                
-                <h3>Faktorer som påverkar markvågen</h3>
-                <ul>
-                    <li><strong>Frekvens:</strong> Lägre frekvens = längre räckvidd</li>
-                    <li><strong>Markens ledningsförmåga:</strong> Saltvatten bäst, berg/sand sämst</li>
-                    <li><strong>Sändareffekt</strong></li>
-                    <li><strong>Antennens polarisation:</strong> Vertikal polarisation bäst för markvåg</li>
-                </ul>
-                
-                <h3>Typiska räckvidder</h3>
-                <table class="content-table">
-                    <thead>
-                        <tr>
-                            <th>Frekvensband</th>
-                            <th>Typisk räckvidd (markvåg)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>160 m (1,8 MHz)</td>
-                            <td>Flera hundra km (natt)</td>
-                        </tr>
-                        <tr>
-                            <td>80 m (3,5 MHz)</td>
-                            <td>100-200 km</td>
-                        </tr>
-                        <tr>
-                            <td>40 m (7 MHz)</td>
-                            <td>50-100 km</td>
-                        </tr>
-                        <tr>
-                            <td>20 m och uppåt</td>
-                            <td>Försumbar</td>
+                            <td>• Satellit-TV<br>• Radar<br>• WiFi (5 GHz)<br>• Mikrovågsugn (2,45 GHz)<br>• Riktantenner krävs</td>
                         </tr>
                     </tbody>
                 </table>
                 
                 <div class="info-box tip">
-                    <strong>💡 Praktiskt:</strong> Markvåg används för NVIS (Near Vertical Incidence Skywave) på 80m och 40m för regional kommunikation, och på 160m för lokala kontakter nattetid.
+                    <strong>💡 Tumregel för att komma ihåg:</strong>
+                    <br><br>
+                    <strong>Lägre frekvens (längre våglängd):</strong>
+                    <br>✓ Längre räckvidd
+                    <br>✓ Böjs runt hinder lättare
+                    <br>✓ Reflekteras i jonosfären
+                    <br>✓ Penetrerar byggnader bättre
+                    <br>❌ Större antenner behövs
+                    <br>❌ Mindre bandbredd tillgänglig
+                    <br><br>
+                    <strong>Högre frekvens (kortare våglängd):</strong>
+                    <br>✓ Mindre antenner
+                    <br>✓ Mer bandbredd tillgänglig
+                    <br>✓ Bättre för riktantenner
+                    <br>❌ Kortare räckvidd (siktlinje)
+                    <br>❌ Blockeras av hinder lättare
+                    <br>❌ Reflekteras inte i jonosfären
+                </div>
+                
+                <h3>Tre sätt för radiovågor att utbreda sig</h3>
+                
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 3px solid #0ea5e9; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #0369a1;">🌊 TRE HUVUDSAKLIGA UTBREDNINGSSÄTT</h4>
+                    
+                    <table class="content-table" style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Typ</th>
+                                <th style="width: 30%;">Hur det fungerar</th>
+                                <th style="width: 25%;">Frekvensområde</th>
+                                <th style="width: 25%;">Räckvidd</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: #d1fae5;">
+                                <td><strong>1. MARKVÅG</strong></td>
+                                <td>Följer jordytan, böjs runt horisonten</td>
+                                <td>LF, MF, lägre HF<br>(160m, 80m)</td>
+                                <td>10-200 km (beror på frekvens & mark)</td>
+                            </tr>
+                            <tr style="background: #fef3c7;">
+                                <td><strong>2. RYMDVÅG</strong></td>
+                                <td>Reflekteras av jonosfären</td>
+                                <td>MF, HF<br>(160m till 10m)</td>
+                                <td>100 km till <strong>runt hela jorden!</strong></td>
+                            </tr>
+                            <tr style="background: #fce7f3;">
+                                <td><strong>3. SIKTLINJE</strong></td>
+                                <td>Rak väg, begränsas av horisonten</td>
+                                <td>VHF, UHF, högre<br>(6m, 2m, 70cm)</td>
+                                <td>10-100 km (beroende på antennhöjd)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div style="text-align: center; margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                        <strong style="color: #0369a1; font-size: 1.1rem;">🎯 Enkel minnesregel:</strong>
+                        <br><br>
+                        <strong>LÅG frekvens (LF/MF/lägre HF):</strong> Markvåg & Rymdvåg
+                        <br><strong>MEDEL frekvens (HF):</strong> Rymdvåg (jonosfären!)
+                        <br><strong>HÖG frekvens (VHF/UHF):</strong> Siktlinje (rak väg)
+                    </div>
+                </div>
+                
+                <h3>📻 Praktisk nytta för radioamatörer</h3>
+                
+                <div class="info-box important" style="background: #d1fae5; border-left: 4px solid #059669;">
+                    <strong>Så väljer DU rätt band för olika situationer:</strong>
+                    <br><br>
+                    <strong>1. Lokal trafik (10-50 km):</strong>
+                    <br>• <strong>BÄST:</strong> VHF/UHF (2m/70cm) med repeatrar
+                    <br>• Repeater ökar räckvidden enormt!
+                    <br>• Handhållen radio på 5W räcker långt med repeater
+                    <br>• Direktkontakt (simplex) fungerar 10-30 km beroende på terräng
+                    <br><br>
+                    <strong>2. Regional trafik (50-500 km):</strong>
+                    <br>• <strong>Dagtid:</strong> 80m eller 40m (markvåg + kort rymdvåg)
+                    <br>• <strong>Nattetid:</strong> 80m (F-skiktsreflektion)
+                    <br>• <strong>NVIS-teknik:</strong> Brant antenn på 80m/40m för "över huvudet"-täckning
+                    <br>• <strong>VHF under Es:</strong> 6m kan ge 500-2000 km vid sporadiskt E!
+                    <br><br>
+                    <strong>3. Långdistans/DX (>1000 km, andra kontinenter):</strong>
+                    <br>• <strong>Dagtid (högt solfläckstal):</strong> 20m, 15m, 10m
+                    <br>• <strong>Nattetid:</strong> 40m, 80m, 160m
+                    <br>• <strong>Gryning/skymning (grålinjen):</strong> Utmärkt på 40m & 80m för DX
+                    <br>• <strong>Solcykeltopp:</strong> 10m öppet till hela världen!
+                    <br><br>
+                    <strong>4. Pålitlig kommunikation dygnet runt:</strong>
+                    <br>• <strong>40m-bandet (7 MHz):</strong> "Arbetshästen"
+                    <br>• Fungerar både dag och natt året runt
+                    <br>• 500-2000 km dagtid, DX nattetid
+                    <br>• Mindre påverkad av solcykeln än högre band
+                </div>
+                
+                <h3>✅ Snabbtest - Grundbegrepp</h3>
+                
+                <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+                    <strong>✅ Kan du svara på dessa?</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Vad är våglängden för 14 MHz? (Använd λ = 300/f)</li>
+                        <li>Vilket frekvensområde kallas HF (kortväg)?</li>
+                        <li>Vilket utbredningssätt används för långdistans på HF?</li>
+                        <li>Är 2m-bandet VHF eller UHF?</li>
+                        <li>Vilket band fungerar bäst för lokal trafik: 20m eller 2m?</li>
+                        <li>Vad betyder det att högre frekvens ger kortare våglängd?</li>
+                    </ul>
+                    <details style="margin-top: 0.5rem;">
+                        <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+                        <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                            <small>
+                                • 21,4 meter (300/14 ≈ 21,4)
+                                <br>• 3-30 MHz
+                                <br>• Rymdvåg (reflektion i jonosfären)
+                                <br>• VHF (Very High Frequency, 30-300 MHz)
+                                <br>• 2m - VHF/UHF är mycket bättre för lokal trafik!
+                                <br>• Mindre antenner behövs, men kortare räckvidd (siktlinje)
+                            </small>
+                        </div>
+                    </details>
+                </div>
+                
+                <div class="info-box important">
+                    <strong>🎯 Viktigt för provet:</strong>
+                    <br>• Formeln λ = 300/f där f är i MHz och λ i meter
+                    <br>• Förstå sambandet: hög frekvens = kort våglängd
+                    <br>• Kunna frekvensområdena: HF (3-30 MHz), VHF (30-300 MHz), UHF (300 MHz-3 GHz)
+                    <br>• Veta vilket band som används för vad (HF för DX, VHF/UHF för lokalt)
+                    <br>• Förstå att lägre frekvenser ger längre räckvidd men kräver större antenner
+                    <br>• Tre utbredningssätt: Markvåg, Rymdvåg, Siktlinje
                 </div>
             </div>
 
-            <!-- Sektion 3: Rymdvåg och jonosfären -->
-            <div class="content-section" id="rymdvag">
-                <h2>4.3 Rymdvåg och Jonosfären</h2>
+
+            <!-- ============================================ -->
+            <!-- SEKTION 4.2: MARKVÅG -->
+            <!-- ============================================ -->
+            
+            <div class="content-section" id="markvag">
+                <h2>4.2 Markvåg - Följer jordytan</h2>
                 
-                <h3>Jonosfären</h3>
-                <p>Jonosfären är ett skikt av joniserad gas 60-600 km över jordytan. Solens ultravioletta strålning skapar fria elektroner som kan reflektera radiovågor.</p>
+                <h3>Vad är markvåg?</h3>
+                <p>Markvågen är den del av radiovågen som följer jordytan och böjs runt horisonten genom <strong>diffraktion</strong> (böjning). Det är som när ljudvågor kan höras runt hörn - radiovågor kan också böja sig runt jordkrökningen, speciellt på låga frekvenser!</p>
                 
-                <h3>Jonosfärens skikt</h3>
+                <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+                    <strong>💡 Strandvågsanalogin:</strong>
+                    <br><br>
+                    Tänk på markvågen som <strong>vågor på en strand</strong>:
+                    <br><br>
+                    <strong>LÅNGA vågor (LF/MF):</strong> Som stora havsvågor
+                    <br>• Rullar lätt över sandbankar och runt uddar
+                    <br>• Når långt innan de bryts
+                    <br>• Påverkas lite av små stenar (småskaliga hinder)
+                    <br><br>
+                    <strong>KORTA vågor (HF/VHF):</strong> Som små krusningar
+                    <br>• Stannar snabbt upp vid minsta hinder
+                    <br>• Når inte lika långt
+                    <br>• Dör ut snabbt på land
+                    <br><br>
+                    <strong>Därför:</strong> Markvåg fungerar BÄST på låga frekvenser (LF, MF, lägre HF)!
+                </div>
+                
+                <h3>Hur fungerar markvågen rent fysiskt?</h3>
+                
+                <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 3px solid #059669; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #065f46;">🌍 MARKVÅGENS MEKANIK</h4>
+                    
+                    <p><strong>Varför böjer sig markvågen runt jorden?</strong></p>
+                    
+                    <ol style="margin-top: 1rem;">
+                        <li><strong>Diffraktion (böjning):</strong>
+                            <br>Vågor böjs runt hinder om våglängden är jämförbar med hindrets storlek
+                            <br>• Jordkrökningen är ett "mjukt" hinder
+                            <br>• Långa vågor (låg frekvens) böjs lätt
+                            <br>• Korta vågor (hög frekvens) böjs knappt</li>
+                        <br>
+                        <li><strong>Jordytans ledningsförmåga:</strong>
+                            <br>Marken är delvis ledande → strömmar induceras i marken
+                            <br>• Dessa strömmar "drar med sig" vågen framåt
+                            <br>• Bra ledande mark (saltvatten, våt jord) → längre räckvidd
+                            <br>• Dålig ledande mark (sand, berg) → kortare räckvidd</li>
+                        <br>
+                        <li><strong>Vertikal polarisation:</strong>
+                            <br>För att markvågen ska fungera bra krävs vertikal polarisation
+                            <br>• Vertikal antenn → E-fältet vinkelrätt mot marken
+                            <br>• Minimal absorption i marken
+                            <br>• Horisontell polarisation fungerar dåligt (hög absorption)</li>
+                    </ol>
+                </div>
+                
+                <h3>Faktorer som påverkar markvågens räckvidd</h3>
+                
                 <table class="content-table">
                     <thead>
                         <tr>
-                            <th>Skikt</th>
-                            <th>Höjd</th>
-                            <th>Egenskaper</th>
+                            <th style="width: 25%;">Faktor</th>
+                            <th style="width: 35%;">Påverkan</th>
+                            <th style="width: 40%;">Praktiskt exempel</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><strong>D-skiktet</strong></td>
-                            <td>60-90 km</td>
-                            <td>Finns bara dagtid. Absorberar LF/MF, dämpar lägre HF.</td>
+                        <tr style="background: #dbeafe;">
+                            <td><strong>1. FREKVENS</strong></td>
+                            <td>Lägre frekvens = längre räckvidd<br><br>Absorption ökar med f²</td>
+                            <td>• 160m (1,8 MHz): 100-200 km<br>• 80m (3,5 MHz): 50-100 km<br>• 40m (7 MHz): 20-50 km<br>• 20m (14 MHz): <10 km (försumbar)</td>
                         </tr>
-                        <tr>
-                            <td><strong>E-skiktet</strong></td>
-                            <td>90-140 km</td>
-                            <td>Reflekterar MF och lägre HF. Sporadiskt E kan ge VHF-hopp.</td>
+                        <tr style="background: #fef3c7;">
+                            <td><strong>2. MARKENS LEDNINGSFÖRMÅGA</strong></td>
+                            <td>Bättre ledning = längre räckvidd</td>
+                            <td><strong>Bäst till sämst:</strong><br>1. Saltvatten (utmärkt!) 🌊<br>2. Våt jordbruksmark 🌾<br>3. Torr jord 🏜️<br>4. Sand (dålig) 🏖️<br>5. Berg/sten (värst) 🏔️</td>
                         </tr>
-                        <tr>
-                            <td><strong>F-skiktet</strong></td>
-                            <td>140-600 km</td>
-                            <td>Viktigast för HF. Delar sig i F1 och F2 dagtid.</td>
+                        <tr style="background: #fce7f3;">
+                            <td><strong>3. SÄNDAREFFEKT</strong></td>
+                            <td>Högre effekt = längre räckvidd<br><br>Men: Avtar logaritmiskt</td>
+                            <td>• 10W på 160m: ~30 km<br>• 100W på 160m: ~100 km<br>• 1000W på 160m: ~300 km<br><br><em>(10× effekt ≈ 3× räckvidd)</em></td>
+                        </tr>
+                        <tr style="background: #ede9fe;">
+                            <td><strong>4. POLARISATION</strong></td>
+                            <td>Vertikal polarisation MYCKET bättre</td>
+                            <td>• <strong>Vertikal:</strong> Minimal markabsorption ✓<br>• <strong>Horisontell:</strong> Hög absorption ❌<br><br>Därför: Vertikala antenner för markvåg!</td>
+                        </tr>
+                        <tr style="background: #d1fae5;">
+                            <td><strong>5. TERRÄNG</strong></td>
+                            <td>Släta ytor bättre än kuperade</td>
+                            <td>• <strong>Havet:</strong> Idealiskt (slätt + ledande)<br>• <strong>Flat jordbruksmark:</strong> Bra<br>• <strong>Bergig terräng:</strong> Kortare räckvidd<br>• <strong>Skogsområden:</strong> Ytterligare dämpning</td>
                         </tr>
                     </tbody>
                 </table>
+                
+                <h3>Typiska räckvidder för markvåg</h3>
+                
+                <div class="example-box" style="border-left: 4px solid #059669;">
+                    <strong>📻 Exempel 1 - 160m-bandet (1,8 MHz):</strong>
+                    <br><br>
+                    <strong>Scenario:</strong> Sänder med 100W från en vertikal antenn på 160m nattetid över jordbruksmark.
+                    <br><br>
+                    <strong>Förväntad räckvidd (markvåg):</strong>
+                    <br>• <strong>Över land (jordbruksmark):</strong> 100-150 km
+                    <br>• <strong>Över saltvatten:</strong> 200-300 km (dubbelt så långt!)
+                    <br>• <strong>Över berg/sten:</strong> 50-75 km (mycket kortare)
+                    <br><br>
+                    <strong>Plus rymdvåg nattetid:</strong> +500-2000 km via F-skikt!
+                    <br><br>
+                    <em>💡 160m är ett "undervurderat" DX-band nattetid - markvåg lokalt + rymdvåg för långdistans!</em>
+                </div>
+                
+                <div class="example-box" style="border-left: 4px solid #059669;">
+                    <strong>📻 Exempel 2 - 80m-bandet (3,5 MHz):</strong>
+                    <br><br>
+                    <strong>Dagtid:</strong>
+                    <br>• Markvåg: 50-100 km (beroende på terräng)
+                    <br>• D-skiktet absorberar rymdvågen → huvudsakligen lokal trafik
+                    <br><br>
+                    <strong>Nattetid:</strong>
+                    <br>• Markvåg: Samma 50-100 km
+                    <br>• Rymdvåg via F-skikt: +500-3000 km (Europa och bortom!)
+                    <br><br>
+                    <em>🌙 80m förvandlas från "lokalband" till "DX-band" efter solnedgången!</em>
+                </div>
+                
+                <div class="example-box" style="border-left: 4px solid #059669;">
+                    <strong>📻 Exempel 3 - 40m-bandet (7 MHz):</strong>
+                    <br><br>
+                    <strong>Markvåg:</strong> 20-50 km (begränsad)
+                    <br><strong>Rymdvåg (huvudutbredningssätt):</strong>
+                    <br>• Dagtid: 500-1500 km (Europa)
+                    <br>• Nattetid: DX till andra kontinenter möjligt
+                    <br><br>
+                    <em>⚡ 40m är "arbetshästen" - fungerar bra både dag och natt!</em>
+                </div>
+                
+                <h3>NVIS - Utnyttja markvågen smart!</h3>
+                
+                <div class="info-box tip" style="background: #dbeafe; border-left: 4px solid #3b82f6;">
+                    <strong>💡 NVIS = Near Vertical Incidence Skywave</strong>
+                    <br><br>
+                    <strong>Problemet:</strong>
+                    <br>På 80m/40m finns det ofta en "död zon" (skip zone):
+                    <br>• Markvåg räcker kanske 100 km
+                    <br>• Rymdvåg landar först 500+ km bort
+                    <br>• → Inget täckning mellan 100-500 km!
+                    <br><br>
+                    <strong>Lösningen - NVIS:</strong>
+                    <br>Rikta antennen <strong>RAKT UPP</strong> istället för horisontellt!
+                    <br><br>
+                    <strong>Hur det fungerar:</strong>
+                    <br>1. Horisontell antenn LÅGT (5-10m höjd)
+                    <br>2. Vågen går rakt upp → reflekteras i F-skiktet
+                    <br>3. Kommer rakt ner igen → täcker området runt dig!
+                    <br><br>
+                    <strong>Resultat:</strong>
+                    <br>✓ Täckning 0-500 km (ingen död zon!)
+                    <br>✓ Perfekt för regional nödkommunikation
+                    <br>✓ Fungerar bra i bergig terräng (går över bergen)
+                    <br>✓ Idealt för civil beredskap och fältövningar
+                    <br><br>
+                    <strong>Bästa banden för NVIS:</strong>
+                    <br>• <strong>80m (3,5 MHz):</strong> Nattetid, utmärkt
+                    <br>• <strong>40m (7 MHz):</strong> Dag och natt, mest pålitligt
+                    <br>• <strong>60m (5 MHz):</strong> Mycket bra NVIS-band
+                </div>
+                
+                <h3>📻 Praktisk nytta för radioamatörer</h3>
+                
+                <div class="info-box important" style="background: #d1fae5; border-left: 4px solid #059669;">
+                    <strong>Så utnyttjar DU markvågen:</strong>
+                    <br><br>
+                    <strong>1. Val av antenn för markvåg:</strong>
+                    <br>• <strong>VERTIKAL polarisation är A och O!</strong>
+                    <br>• Vertikal jordplansantenn (GP) - klassiskt val
+                    <br>• Inverted-L (horisontell topp, vertikal matning)
+                    <br>• Korta vertikaler med lastspole
+                    <br><br>
+                    <strong>2. Förbättra jordplanet:</strong>
+                    <br>• Fler radialer = bättre markvåg
+                    <br>• Minimum 4 radialer, helst 16-32 för optimalt
+                    <br>• Radialer på marken eller strax under markytan
+                    <br>• Längd: λ/4 (cirka 40m för 160m-bandet)
+                    <br><br>
+                    <strong>3. Placering nära vatten:</strong>
+                    <br>• Saltvatten ger 2-3× räckvidd jämfört med land!
+                    <br>• Placera antennen nära havet om möjligt
+                    <br>• Siktlinje över vatten är GULD för markvåg
+                    <br><br>
+                    <strong>4. Regional kommunikation:</strong>
+                    <br>• <strong>160m nattetid:</strong> Utmärkt för regional trafik
+                    <br>• <strong>80m dagtid:</strong> Pålitlig lokal/regional täckning
+                    <br>• <strong>NVIS på 40m/80m:</strong> För civil beredskap
+                    <br><br>
+                    <strong>5. Mobil 160m/80m:</strong>
+                    <br>• Kort vertikal med lastspole på biltaket
+                    <br>• Bilkarosseriet som jordplan
+                    <br>• Räckvidd 50-100 km med 100W
+                    <br>• Utmärkt för lokal mobil trafik
+                </div>
+                
+                <h3>✅ Snabbtest - Markvåg</h3>
+                
+                <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+                    <strong>✅ Kan du svara på dessa?</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Fungerar markvåg bättre på låga eller höga frekvenser?</li>
+                        <li>Vilken polarisation är bäst för markvåg - vertikal eller horisontell?</li>
+                        <li>Varför når markvågen längre över saltvatten än över land?</li>
+                        <li>Vilket band ger längst markvågsräckvidd: 160m, 40m eller 20m?</li>
+                        <li>Vad betyder NVIS och när använder man det?</li>
+                        <li>Hur många radialer rekommenderas minimum för en jordplansantenn?</li>
+                    </ul>
+                    <details style="margin-top: 0.5rem;">
+                        <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+                        <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                            <small>
+                                • Låga frekvenser (LF, MF, lägre HF) - våglängden måste vara lång
+                                <br>• Vertikal - horisontell polarisation absorberas mycket mer i marken
+                                <br>• Saltvatten är mycket mer ledande än jord/sten → mindre absorption
+                                <br>• 160m (längst), sedan 40m, sist 20m (nästan ingen markvåg)
+                                <br>• Near Vertical Incidence Skywave - rakt upp och ner för regional täckning utan "död zon"
+                                <br>• Minimum 4, men helst 16-32 för bästa prestanda
+                            </small>
+                        </div>
+                    </details>
+                </div>
+                
+                <div class="info-box important">
+                    <strong>🎯 Viktigt för provet:</strong>
+                    <br>• Markvåg fungerar bäst på LÅGA frekvenser (160m, 80m)
+                    <br>• Vertikal polarisation ger mycket längre räckvidd än horisontell
+                    <br>• Saltvatten ger 2-3× bättre räckvidd än land
+                    <br>• Räckvidd minskar snabbt med högre frekvens (f²-beroende)
+                    <br>• NVIS = regional täckning utan död zon (40m/80m)
+                    <br>• Fler jordplansradialer = bättre markvåg
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- SEKTION 4.3: RYMDVÅG OCH JONOSFÄREN -->
+            <!-- ============================================ -->
+            
+            <div class="content-section" id="rymdvag">
+                <h2>4.3 Rymdvåg och Jonosfären - Hoppa över horisonten</h2>
+                
+                <h3>Vad är jonosfären?</h3>
+                <p>Jonosfären är ett skikt av <strong>joniserad gas</strong> 60-600 km över jordytan. Solens ultravioletta strålning slår loss elektroner från luftmolekyler och skapar fria elektroner och joner - ett plasma som kan reflektera radiovågor!</p>
+                
+                <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+                    <strong>💡 Spegel-i-himlen-analogin:</strong>
+                    <br><br>
+                    Tänk på jonosfären som en <strong>gigantisk, osynlig spegel</strong> högt uppe i himlen:
+                    <br><br>
+                    <strong>För VISSA frekvenser (HF):</strong>
+                    <br>• Vågen studsar tillbaka mot jorden → "HOPP"
+                    <br>• Ett hopp = 2000-4000 km räckvidd
+                    <br>• Flera hopp = hela jorden (runt jordklotet!)
+                    <br>• Därför kan du prata med Japan från Sverige på 20m! 🌏
+                    <br><br>
+                    <strong>För HÖGA frekvenser (VHF/UHF):</strong>
+                    <br>• Vågen går rakt igenom jonosfären (för hög frekvens)
+                    <br>• Ingen reflektion → fortsätter ut i rymden
+                    <br>• Därför fungerar satellitkommunikation! 🛰️
+                    <br><br>
+                    <strong>För LÅGA frekvenser (LF/VLF):</strong>
+                    <br>• Vågen reflekteras helt → går inte igenom
+                    <br>• Fastnar mellan jord och jonosfär som i en "vågledare"
+                    <br>• Kan gå runt hela jorden! (ubåtskommunikation)
+                </div>
+                
+                <h3>Jonosfärens tre huvudskikt</h3>
+                
+                <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #92400e;">☀️ DE TRE SKIKTEN - D, E och F</h4>
+                    
+                    <table class="content-table" style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 15%;">Skikt</th>
+                                <th style="width: 15%;">Höjd</th>
+                                <th style="width: 20%;">Finns när?</th>
+                                <th style="width: 50%;">Egenskaper & Påverkan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: #fee2e2;">
+                                <td><strong>D-SKIKTET</strong></td>
+                                <td>60-90 km</td>
+                                <td><strong>Bara dagtid!</strong><br>Försvinner på natten</td>
+                                <td><strong>ABSORBERANDE skikt (fienden för DX dagtid!):</strong>
+                                <br>• Absorberar MF och lägre HF kraftigt
+                                <br>• 160m/80m nästan omöjliga dagtid
+                                <br>• Dämpar även 40m betydligt
+                                <br>• <strong>Varför?</strong> Många kollisioner mellan elektroner och molekyler
+                                <br>• <strong>Bra:</strong> När solen går ner → D-skiktet försvinner → 80m/160m öppnar för DX! 🌙</td>
+                            </tr>
+                            <tr style="background: #fef3c7;">
+                                <td><strong>E-SKIKTET</strong></td>
+                                <td>90-140 km</td>
+                                <td>Dag (starkt)<br>Natt (svagt)</td>
+                                <td><strong>REFLEKTERANDE skikt för lägre HF:</strong>
+                                <br>• Reflekterar MF och lägre HF bra
+                                <br>• Typisk hoppsträcka: 1000-2000 km
+                                <br>• Används för 160m/80m på natten
+                                <br>• <strong>Sporadiskt E (Es):</strong> Intensiva moln → kan reflektera VHF! 📡
+                                <br>• Es vanligast maj-augusti (6m-bandet!)
+                                <br>• Oförutsägbart men spännande för VHF-DX</td>
+                            </tr>
+                            <tr style="background: #dbeafe;">
+                                <td><strong>F-SKIKTET</strong></td>
+                                <td>140-600 km</td>
+                                <td>Alltid!<br>Delas F1+F2 dagtid</td>
+                                <td><strong>VIKTIGASTE skiktet för HF-DX:</strong>
+                                <br>• Högst upp → högst elektronkoncentration
+                                <br>• Reflekterar 20m, 15m, 10m utmärkt
+                                <br>• <strong>Dagtid:</strong> Delar sig i F1 (140-200 km) + F2 (200-600 km)
+                                <br>• <strong>Nattetid:</strong> Slås samman till ett F-skikt
+                                <br>• F2 har högst elektronkoncentration → bäst för DX
+                                <br>• Påverkas mest av solcykeln (solfläckstal)
+                                <br>• <strong>Detta är "motorvägen" för världsomspännande QSO:n!</strong> 🌍</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div style="text-align: center; margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+                        <strong style="color: #92400e; font-size: 1.1rem;">🎯 Enkel minnesregel:</strong>
+                        <br><br>
+                        <strong>D = DÅLIGT</strong> (absorberar, "äter upp" signalen)
+                        <br><strong>E = EMELLAN</strong> (mellan D och F, medelmåttig reflektion)
+                        <br><strong>F = FANTASTISKT</strong> (bäst för DX, högst elektronkoncentration)
+                    </div>
+                </div>
                 
                 <h3>Kritisk frekvens och MUF</h3>
-                <p><strong>Kritisk frekvens:</strong> Högsta frekvensen som reflekteras vid vertikal infallsvinkel.</p>
-                <p><strong>MUF (Maximum Usable Frequency):</strong> Högsta användbara frekvensen för en viss sträcka.</p>
                 
-                <div class="formula-box">
-                    MUF ≈ Kritisk frekvens × sekant(infallsvinkel)<br><br>
-                    MUF kan vara 3-4 gånger kritisk frekvens vid långa hopp
-                </div>
+                <p>För att förstå hur jonosfären fungerar måste vi förstå två viktiga begrepp: <strong>kritisk frekvens</strong> och <strong>MUF</strong>.</p>
                 
-                <div class="info-box important">
-                    <strong>🎯 Tumregel:</strong> Använd en frekvens ca 80-90% av MUF för bästa signalstyrka.
-                </div>
-                
-                <h3>Hoppavstånd och död zon</h3>
-                <ul>
-                    <li><strong>Skip distance (hoppsträcka):</strong> Kortaste avståndet rymdvågen kan nå</li>
-                    <li><strong>Död zon:</strong> Området mellan markvågens räckvidd och skip distance - inga signaler hörs</li>
-                </ul>
-                
-                <h3>Dag och natt</h3>
-                <table class="content-table">
-                    <thead>
-                        <tr>
-                            <th>Band</th>
-                            <th>Dag</th>
-                            <th>Natt</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>160m / 80m</td>
-                            <td>Kort räckvidd, dämpas av D-skiktet</td>
-                            <td>DX möjligt, F-skiktsreflektion</td>
-                        </tr>
-                        <tr>
-                            <td>40m</td>
-                            <td>Europa / 1000-2000 km</td>
-                            <td>DX till andra kontinenter</td>
-                        </tr>
-                        <tr>
-                            <td>20m</td>
-                            <td>Världsomspännande</td>
-                            <td>Ofta stängt</td>
-                        </tr>
-                        <tr>
-                            <td>15m / 10m</td>
-                            <td>Utmärkt vid hög solaktivitet</td>
-                            <td>Oftast stängt</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h3>Fädning (Fading)</h3>
-                <p>Signalstyrkan varierar när flera signalvägar interfererar. Typer:</p>
-                <ul>
-                    <li><strong>Selektiv fädning:</strong> Vissa frekvenser påverkas mer</li>
-                    <li><strong>Flat fädning:</strong> Hela signalen påverkas lika</li>
-                    <li><strong>Flutter:</strong> Snabb fädning, ofta från polarområden</li>
-                </ul>
-            </div>
-
-            <!-- Sektion 4: Siktlinjeförbindelse -->
-            <div class="content-section" id="siktlinje">
-                <h2>4.4 Siktlinjeförbindelse (VHF/UHF)</h2>
-                
-                <h3>Line-of-sight (LoS)</h3>
-                <p>På VHF och högre frekvenser går signalen normalt i rak linje. Räckvidden begränsas av jordkrökningen och terrängen.</p>
-                
-                <div class="formula-box">
-                    <strong>Radiohorisonten:</strong><br>
-                    d (km) ≈ 4,12 × √h (m)<br><br>
-                    där h är antennhöjden
-                </div>
-                
-                <div class="example-box">
-                    <strong>Exempel:</strong> En antenn på 25 meters höjd:
-                    <br>d = 4,12 × √25 = 4,12 × 5 = <strong>20,6 km</strong> till radiohorisonten
+                <div class="formula-box" style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white;">
+                    <strong>KRITISK FREKVENS (f<sub>c</sub>):</strong>
                     <br><br>
-                    Mellan två stationer med 25m antennhöjd blir max-avståndet ca 41 km.
+                    Högsta frekvensen som reflekteras vid <strong>vertikal</strong> infallsvinkel
+                    <br><br>
+                    <small style="opacity: 1; color: white;">Om du sänder rakt upp: Vilken är högsta frekvensen som studsar tillbaka?</small>
                 </div>
                 
-                <h3>Faktorer som påverkar VHF/UHF</h3>
-                <ul>
-                    <li><strong>Antennhöjd:</strong> Avgörande för räckvidd</li>
-                    <li><strong>Terräng:</strong> Berg blockerar, vatten reflekterar bra</li>
-                    <li><strong>Byggnader:</strong> Kan blockera eller reflektera</li>
-                    <li><strong>Frekvens:</strong> Högre frekvens = mer dämpning</li>
-                </ul>
-                
-                <h3>Frirumsförlust</h3>
-                <p>Signalen försvagas med avståndet även i fri rymd (utan hinder):</p>
-                
-                <div class="formula-box">
-                    <strong>Frirumsförlust (dB) = 32,4 + 20×log(d) + 20×log(f)</strong><br>
-                    där d = avstånd i km, f = frekvens i MHz
+                <div class="formula-box" style="background: linear-gradient(135deg, #059669 0%, #047857 100%); color: white;">
+                    <strong>MUF (Maximum Usable Frequency):</strong>
+                    <br><br>
+                    Högsta frekvensen som kan användas för en <strong>viss sträcka</strong>
+                    <br><br>
+                    MUF ≈ f<sub>c</sub> × sekant(infallsvinkel)
+                    <br>MUF ≈ 3-4 × f<sub>c</sub> för långa hopp
+                    <br><br>
+                    <small style="opacity: 1; color: white;">MUF beror på sträckan - längre sträcka = högre MUF möjlig!</small>
                 </div>
                 
-                <div class="example-box">
-                    <strong>Exempel:</strong> Förlust på 145 MHz över 10 km:
-                    <br>L = 32,4 + 20×log(10) + 20×log(145)
-                    <br>L = 32,4 + 20 + 43,2 = <strong>95,6 dB</strong>
+                <div class="info-box important" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+                    <strong>🔑 Förstå sambandet:</strong>
+                    <br><br>
+                    <strong>1. Kritisk frekvens (f<sub>c</sub>):</strong>
+                    <br>• Sänder <strong>rakt upp</strong> → högsta frekvens som reflekteras
+                    <br>• Typiskt 3-10 MHz beroende på tid på dygnet och solcykel
+                    <br>• Högre solfläckstal = högre f<sub>c</sub>
+                    <br><br>
+                    <strong>2. MUF för en viss sträcka:</strong>
+                    <br>• Sänder <strong>snett/låg vinkel</strong> → kan använda högre frekvens!
+                    <br>• MUF = f<sub>c</sub> × (faktor beroende på vinkel)
+                    <br>• Låg vinkel (långt hopp) → MUF kan vara 3-4× f<sub>c</sub>
+                    <br><br>
+                    <strong>Exempel:</strong>
+                    <br>Om f<sub>c</sub> = 7 MHz (kritisk frekvens)
+                    <br>→ Sänder rakt upp: Max 7 MHz reflekteras
+                    <br>→ Sänder snett (långt hopp): MUF kanske 21-28 MHz!
+                    <br><br>
+                    <strong>Därför:</strong> Längre hopp → högre frekvenser användbara! ✓
                 </div>
+                
+                <div class="example-box" style="border-left: 4px solid #f59e0b;">
+                    <strong>📻 Exempel 1 - Val av frekvens:</strong>
+                    <br><br>
+                    <strong>Scenario:</strong> Du vill prata med USA från Sverige (6000 km). MUF just nu är 24 MHz.
+                    <br><br>
+                    <strong>Vilken frekvens ska du använda?</strong>
+                    <br>• <strong>Ej över MUF:</strong> Allt över 24 MHz går igenom jonosfären → förlorat i rymden ❌
+                    <br>• <strong>Optimal frekvens:</strong> 80-90% av MUF = 19-22 MHz
+                    <br>• <strong>Bästa valet:</strong> <strong>20m-bandet (14 MHz)</strong> eller <strong>15m-bandet (21 MHz)</strong>
+                    <br><br>
+                    <strong>Varför inte använda exakt MUF (24 MHz)?</strong>
+                    <br>• MUF varierar hela tiden (± 10-20%)
+                    <br>• Om MUF plötsligt sjunker till 22 MHz försvinner din signal!
+                    <br>• Säkrare att ligga 80-90% av MUF → mer stabilt
+                    <br><br>
+                    <em>💡 Tumregel: Använd 80-90% av MUF för bästa signalstyrka och stabilitet!</em>
+                </div>
+                
+                <h3>Hoppsträcka och död zon</h3>
+                
+                <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #991b1b;">⚠️ DÖD ZON (Skip Zone) - Området ingen når!</h4>
+                    
+                    <p><strong>Vad är skip distance (hoppsträcka)?</strong></p>
+                    <p>Det KORTASTE avståndet där rymdvågen kan nå marken efter reflektion.</p>
+                    
+                    <p><strong>Problemet - DÖD ZON:</strong></p>
+                    <ol>
+                        <li><strong>Markvåg når till:</strong> 50-100 km (exempel för 40m)</li>
+                        <li><strong>Rymdvåg landar först vid:</strong> 500 km (skip distance)</li>
+                        <li><strong>→ DÖD ZON:</strong> 100-500 km → INGEN mottagning! ❌</li>
+                    </ol>
+                    
+                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                        <strong style="color: #991b1b;">Praktiskt exempel på 20m-bandet:</strong>
+                        <br><br>
+                        <strong>Från Stockholm kan du prata med:</strong>
+                        <br>✓ <strong>Lokalt (markvåg):</strong> 0-50 km
+                        <br>❌ <strong>DÖD ZON:</strong> 50-800 km → Ingen kontakt!
+                        <br>✓ <strong>Rymdvåg (skip):</strong> 800+ km (resten av Europa, världen)
+                        <br><br>
+                        <strong>Resultat:</strong>
+                        <br>• Du når London (1400 km) utan problem ✓
+                        <br>• Du når Berlin (800 km) precis ✓
+                        <br>• Men du når INTE Göteborg (400 km)! ❌ (i döda zonen)
+                        <br><br>
+                        <em>💡 Detta är varför olika band behövs för olika avstånd!</em>
+                    </div>
+                    
+                    <p style="margin-top: 1rem;"><strong>Lösningar på problemet med död zon:</strong></p>
+                    <ul>
+                        <li><strong>Byt till lägre band:</strong> 40m eller 80m har kortare skip distance</li>
+                        <li><strong>Använd NVIS:</strong> Rakt upp och ner (täcker döda zonen!)</li>
+                        <li><strong>Vänta till kväll:</strong> Jonosfären ändras → skip distance kortare</li>
+                        <li><strong>Använd VHF/UHF:</strong> För lokal trafik (siktlinje)</li>
+                    </ul>
+                </div>
+                
+                <h3>Dag vs Natt - Dramatiska skillnader!</h3>
+                
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 15%;">Band</th>
+                            <th style="width: 40%;">DAGTID ☀️</th>
+                            <th style="width: 40%;">NATTETID 🌙</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #fee2e2;">
+                            <td><strong>160m<br>(1,8 MHz)</strong></td>
+                            <td><strong>STÄNGT för DX</strong>
+                            <br>• D-skiktet absorberar kraftigt
+                            <br>• Bara lokal trafik (markvåg 50-100 km)
+                            <br>• Brus från atmosfäriska störningar högt</td>
+                            <td><strong>ÖPPET för DX! ✓</strong>
+                            <br>• D-skiktet borta → ingen absorption
+                            <br>• F-skikt reflekterar bra
+                            <br>• 500-2000 km möjligt
+                            <br>• Europa och bortom!</td>
+                        </tr>
+                        <tr style="background: #fef3c7;">
+                            <td><strong>80m<br>(3,5 MHz)</strong></td>
+                            <td><strong>Regionalt band</strong>
+                            <br>• D-skiktet dämpar, men inte helt
+                            <br>• Markvåg + kort rymdvåg
+                            <br>• 100-500 km typiskt
+                            <br>• Sverige, Norge, Danmark, Finland</td>
+                            <td><strong>DX-band! ✓</strong>
+                            <br>• F-skiktsreflektion utmärkt
+                            <br>• Hela Europa lätt
+                            <br>• USA/Asien möjligt
+                            <br>• 500-5000 km</td>
+                        </tr>
+                        <tr style="background: #d1fae5;">
+                            <td><strong>40m<br>(7 MHz)</strong></td>
+                            <td><strong>Bra öppet ✓</strong>
+                            <br>• Europa och Mellanöstern
+                            <br>• 500-2000 km
+                            <br>• F-skiktsreflektion
+                            <br>• "Arbetshästen" - alltid något öppet</td>
+                            <td><strong>Världsomspännande! ✓</strong>
+                            <br>• DX till andra kontinenter
+                            <br>• USA, Asien, Afrika möjligt
+                            <br>• 1000-10000 km
+                            <br>• Stabilare än högre band</td>
+                        </tr>
+                        <tr style="background: #dbeafe;">
+                            <td><strong>20m<br>(14 MHz)</strong></td>
+                            <td><strong>BÄSTA DX-bandet dagtid! ✓✓✓</strong>
+                            <br>• Hela världen öppen vid bra förhållanden
+                            <br>• F2-skiktet perfekt
+                            <br>• Låg absorption
+                            <br>• 2000-15000 km möjligt</td>
+                            <td><strong>Stänger kvällar/nätter</strong>
+                            <br>• F-skiktet sjunker i elektronkoncentration
+                            <br>• MUF under 14 MHz → går igenom
+                            <br>• Ibland öppet till Asien/Oceanien
+                            <br>• Varierar med årstid och solcykel</td>
+                        </tr>
+                        <tr style="background: #fce7f3;">
+                            <td><strong>15m / 10m<br>(21 / 28 MHz)</strong></td>
+                            <td><strong>UTMÄRKT vid hög solaktivitet! ✓✓</strong>
+                            <br>• Kräver högt solfläckstal (SSN > 50)
+                            <br>• Fantastiskt DX när öppet
+                            <br>• Långa hopp med låg effekt
+                            <br>• 10m = "magiska bandet" vid solar max</td>
+                            <td><strong>STÄNGT nattetid</strong>
+                            <br>• MUF för låg
+                            <br>• Går igenom jonosfären
+                            <br>• Undantag: Ekvatoriala regioner kan ha öppet
+                            <br>• Vänta till dagtid!</td>
+                        </tr>
+                    </tbody>
+                </table>
                 
                 <div class="info-box tip">
-                    <strong>💡 Tumregel:</strong> Dubbelt avstånd = 6 dB mer förlust. Dubbel frekvens = 6 dB mer förlust.
+                    <strong>💡 Praktisk guide - Vilken tid, vilket band?</strong>
+                    <br><br>
+                    <strong>DAGTID (10:00-16:00 lokal tid):</strong>
+                    <br>• <strong>Bäst:</strong> 20m, 17m, 15m, 12m (HF "motorvägen")
+                    <br>• <strong>OK:</strong> 40m (regional till Europa)
+                    <br>• <strong>Vid solar max:</strong> 10m fantastiskt!
+                    <br><br>
+                    <strong>GRYNING/SKYMNING (grålinjen 06:00-08:00 & 18:00-20:00):</strong>
+                    <br>• <strong>GULD-tiden för DX!</strong> ✨
+                    <br>• 40m och 80m utmärkta för långdistans
+                    <br>• D-skiktet försvinner men F-skiktet finns kvar
+                    <br>• Bästa chansen för sällsynta DX-länder
+                    <br><br>
+                    <strong>NATTETID (22:00-04:00):</strong>
+                    <br>• <strong>Bäst:</strong> 160m, 80m, 40m
+                    <br>• <strong>Ibland:</strong> 20m till Asien/Oceanien (long path)
+                    <br>• <strong>Stängt:</strong> 15m, 10m (går igenom jonosfären)
                 </div>
                 
-                <h3>Repeatrar</h3>
-                <p>För att öka räckvidden på VHF/UHF används repeatrar - automatiska stationer på höga positioner som tar emot på en frekvens och samtidigt sänder ut signalen på en annan.</p>
-                <ul>
-                    <li><strong>2m (145 MHz):</strong> Typiskt 600 kHz shift</li>
-                    <li><strong>70cm (432 MHz):</strong> Typiskt 1,6 MHz shift</li>
-                </ul>
-            </div>
-
-            <!-- Sektion 5: Speciella utbredningsfenomen -->
-            <div class="content-section" id="speciella">
-                <h2>4.5 Speciella Utbredningsfenomen</h2>
+                <h3>Fädning (Fading) - Varför signalen varierar</h3>
                 
-                <h3>Sporadiskt E (Es)</h3>
-                <p>Tillfälliga, intensivt joniserade molnliknande områden i E-skiktet som kan reflektera VHF-signaler (50 MHz och ibland 144 MHz).</p>
-                <ul>
-                    <li>Vanligast maj-augusti på norra halvklotet</li>
-                    <li>Typisk räckvidd: 500-2300 km</li>
-                    <li>Oförutsägbart men spännande!</li>
-                    <li>6-metersbandet är känt för Es-öppningar</li>
-                </ul>
+                <p><strong>Fädning</strong> är när signalstyrkan varierar över tid - ibland stark (S9+), ibland svag (S3), ibland helt borta. Detta beror på att signalen når mottagaren via <strong>flera olika vägar</strong> som interfererar med varandra!</p>
                 
-                <h3>Troposfärisk utbredning</h3>
-                <p>Väderfenomen i troposfären (0-10 km höjd) kan böja VHF/UHF-signaler utöver horisonten.</p>
+                <div style="background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border: 3px solid #8b5cf6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #5b21b6;">🌊 TYPER AV FÄDNING</h4>
+                    
+                    <table class="content-table" style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">Typ</th>
+                                <th style="width: 35%;">Orsak</th>
+                                <th style="width: 40%;">Kännetecken</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: white;">
+                                <td><strong>Flat fading<br>(Plan fädning)</strong></td>
+                                <td>Signalen tar <strong>två vägar</strong>:
+                                <br>• Ett hopp vs två hopp
+                                <br>• F1-skikt vs F2-skikt
+                                <br>• Interferens mellan vägarna</td>
+                                <td>• <strong>HELA signalen</strong> fäder (alla frekvenser lika)
+                                <br>• Långsam (sekunder till minuter)
+                                <br>• S9 → S3 → S9 igen
+                                <br>• Vanligast på HF</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td><strong>Selektiv fädning<br>(Frequency-selective)</strong></td>
+                                <td>Olika frekvenser tar olika vägar
+                                <br>• Multipath med olika längd
+                                <br>• Vissa frekvenser förstärks, andra försvinner</td>
+                                <td>• <strong>Delar av signalen</strong> fäder olika
+                                <br>• Tal blir förvrängt/robotaktigt
+                                <br>• SSB svårt att kopiera
+                                <br>• CW bättre (smal bandbredd)</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td><strong>Flutter fading<br>(Fladderfädning)</strong></td>
+                                <td>Snabba förändringar i jonosfären
+                                <br>• Turbulens
+                                <br>• Aurora (norrsken)</td>
+                                <td>• <strong>SNABB</strong> fädning (flera gånger/sekund)
+                                <br>• "Raspig", hes signal
+                                <br>• Tal nästan omöjligt
+                                <br>• CW funkar OK med övning</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td><strong>Polarisationsrotation</strong></td>
+                                <td>Jonosfären roterar polarisationen
+                                <br>• Magnetfältet påverkar
+                                <br>• Faraday-effekten</td>
+                                <td>• Signalen varierar med antennens läge
+                                <br>• Vanligt på lägre HF (160m/80m)
+                                <br>• Ändra antennen kan hjälpa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                        <strong style="color: #5b21b6;">🛠️ Hantera fädning:</strong>
+                        <br><br>
+                        <strong>Som sändare:</strong>
+                        <br>• Prata långsamt och tydligt
+                        <br>• Upprepa viktig info (signalrapport, QTH)
+                        <br>• Använd CW eller digitala modes (mer motståndskraftiga)
+                        <br>• AGC (Automatic Gain Control) hjälper mottagaren
+                        <br><br>
+                        <strong>Som mottagare:</strong>
+                        <br>• Använd smal bandbredd (minskar selektiv fädning)
+                        <br>• AGC FAST för snabb fädning, SLOW för långsam
+                        <br>• Var tålmodig - signalen kommer tillbaka!
+                        <br>• Be om upprepning när det fäder djupt
+                    </div>
+                </div>
                 
-                <h4>Inversioner</h4>
-                <p>När varm luft ligger ovanpå kall (omvänt mot normalt) bildas ett "lock" som leder radiovågor längs jordytan.</p>
-                <ul>
-                    <li>Vanligt vid stabilt högtryck</li>
-                    <li>Ger räckvidder på flera hundra km på 2m/70cm</li>
-                    <li>Bäst över vatten och flacka landskap</li>
-                </ul>
+                <h3>📻 Praktisk nytta för radioamatörer</h3>
                 
-                <h4>Troposcatter</h4>
-                <p>Signalen sprids av turbulens i troposfären. Ger svaga men stabila signaler över 500-800 km. Kräver hög effekt och bra antenner.</p>
+                <div class="info-box important" style="background: #d1fae5; border-left: 4px solid #059669;">
+                    <strong>Så utnyttjar DU jonosfären maximalt:</strong>
+                    <br><br>
+                    <strong>1. Välj rätt band för tiden på dygnet:</strong>
+                    <br>• <strong>Morgon (06:00-10:00):</strong> Grålinjen! 40m/80m utmärkt för DX
+                    <br>• <strong>Dagtid (10:00-16:00):</strong> 20m, 17m, 15m bäst
+                    <br>• <strong>Kväll (18:00-22:00):</strong> Grålinjen igen! 40m/80m DX-tid
+                    <br>• <strong>Natt (22:00-06:00):</strong> 160m, 80m, 40m för DX
+                    <br><br>
+                    <strong>2. Förstå MUF och använd rätt frekvens:</strong>
+                    <br>• Kolla online-prognoser (VOACAP, proppy, etc.)
+                    <br>• Använd 80-90% av MUF för bästa resultat
+                    <br>• Om ingen svarar → prova lägre band
+                    <br>• Om mycket brus/QRM → prova högre band
+                    <br><br>
+                    <strong>3. Utnyttja grålinjen (gray line):</strong>
+                    <br>• D-skiktet borta, F-skiktet kvar = perfekt!
+                    <br>• Bästa tiden för sällsynta DX-länder
+                    <br>• 40m och 80m speciellt bra
+                    <br>• Planera QSO:n när grålinjen passerar mellan er
+                    <br><br>
+                    <strong>4. Solcykelns påverkan:</strong>
+                    <br>• <strong>Solar max (SSN > 100):</strong> 10m, 12m, 15m fantastiska!
+                    <br>• <strong>Solar min (SSN < 30):</strong> Fokusera på 20m, 40m, 80m
+                    <br>• <strong>Mittemellan:</strong> 17m och 15m ofta öppna
+                    <br><br>
+                    <strong>5. Long path vs Short path:</strong>
+                    <br>• Till Australien från Europa: Kort väg (~14 000 km) eller lång väg (~26 000 km)?
+                    <br>• Prova båda riktningarna!
+                    <br>• Long path ofta bättre när short path stängt
+                    <br>• Använd beam och vrid den båda vägarna
+                </div>
                 
-                <h3>Aurorareflektion</h3>
-                <p>Norrsken joniserar atmosfären och kan reflektera VHF-signaler.</p>
-                <ul>
-                    <li>Signalen blir förvrängd och "raspig" (CW bäst)</li>
-                    <li>Rikta antennen mot norrskenet (norr)</li>
-                    <li>Fungerar på 6m och 2m, ibland 70cm</li>
-                </ul>
+                <h3>✅ Snabbtest - Rymdvåg och jonosfären</h3>
                 
-                <h3>Meteorscatter</h3>
-                <p>Meteorer som brinner upp i atmosfären (80-120 km höjd) skapar joniserade spår som kan reflektera VHF.</p>
-                <ul>
-                    <li>Korta "bursts" på sekunder till minuter</li>
-                    <li>Bäst på 6m och 2m</li>
-                    <li>Meteorskurar ger förutsägbara möjligheter</li>
-                    <li>Digitala modes (MSK144) optimerade för detta</li>
-                </ul>
-                
-                <h3>EME (Earth-Moon-Earth)</h3>
-                <p>Signaler skickas till månen och reflekteras tillbaka - "moonbounce".</p>
-                <ul>
-                    <li>Fördröjning ca 2,5 sekunder</li>
-                    <li>Kräver stora antenner och hög effekt (eller känslig digital mode)</li>
-                    <li>Möjligt från VHF till mikrovåg</li>
-                    <li>Total banförlust ca 250 dB på 2m</li>
-                </ul>
-                
-                <h3>Grålinjen (Greyline)</h3>
-                <p>Övergångszonen mellan dag och natt på jorden ger speciella utbredningsförhållanden på HF.</p>
-                <ul>
-                    <li>D-skiktet försvinner men F-skiktet finns kvar en stund</li>
-                    <li>Signaler kan "följa" grålinjen runt jorden</li>
-                    <li>Utmärkt för DX på 40m och 80m</li>
-                </ul>
+                <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+                    <strong>✅ Kan du svara på dessa?</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Vilket jonosfärskikt är ABSORBERANDE dagtid?</li>
+                        <li>Vilket skikt är viktigast för HF-DX?</li>
+                        <li>Vad betyder MUF?</li>
+                        <li>Varför är 20m bättre dagtid än nattetid?</li>
+                        <li>Vad är "död zon" (skip zone)?</li>
+                        <li>Vilken tid på dygnet är grålinjen och varför är den bra för DX?</li>
+                    </ul>
+                    <details style="margin-top: 0.5rem;">
+                        <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+                        <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                            <small>
+                                • D-skiktet (60-90 km) - absorberar MF och lägre HF dagtid
+                                <br>• F-skiktet (140-600 km) - högst elektronkoncentration, bäst reflektion
+                                <br>• Maximum Usable Frequency - högsta frekvens som kan användas för en viss sträcka
+                                <br>• F-skiktet starkare dagtid → högre MUF → 14 MHz reflekteras bra. Nattetid sjunker MUF → går igenom
+                                <br>• Området mellan markvågens räckvidd och där rymdvågen landar - ingen täckning!
+                                <br>• Gryning/skymning (06:00-08:00 & 18:00-20:00). D-skiktet borta men F-skiktet kvar = perfekt för DX!
+                            </small>
+                        </div>
+                    </details>
+                </div>
                 
                 <div class="info-box important">
-                    <strong>🎯 För DX-jägare:</strong> Lär dig när grålinjen passerar mellan dig och önskade DX-länder. Det finns program och webbsidor som visar detta i realtid!
+                    <strong>🎯 Viktigt för provet:</strong>
+                    <br>• D-skiktet: Absorberar, finns bara dagtid
+                    <br>• E-skiktet: 90-140 km, sporadiskt E kan reflektera VHF
+                    <br>• F-skiktet: 140-600 km, viktigast för HF-DX
+                    <br>• MUF = Maximum Usable Frequency (högsta användbara för en sträcka)
+                    <br>• Använd 80-90% av MUF för bäst resultat
+                    <br>• Död zon = område utan täckning mellan markvåg och rymdvåg
+                    <br>• Grålinjen = bästa tiden för DX (D-skikt borta, F-skikt kvar)
+                    <br>• 20m bäst dagtid, 80m/160m bäst nattetid
                 </div>
             </div>
 
-            <!-- Sektion 6: Solfläckar och solaktivitet -->
-            <div class="content-section" id="solflaeckar">
-                <h2>4.6 Solfläckar och Solaktivitet</h2>
+            <!-- ============================================ -->
+            <!-- SEKTION 4.4: SIKTLINJEFÖRBINDELSE VHF/UHF -->
+            <!-- ============================================ -->
+            
+            <div class="content-section" id="siktlinje">
+                <h2>4.4 Siktlinjeförbindelse (VHF/UHF) - Radiohorisonten</h2>
                 
-                <h3>Solcykeln</h3>
-                <p>Solens aktivitet varierar i en cykel på cirka 11 år. Solfläckstalet (SSN - Sunspot Number) är ett mått på aktiviteten.</p>
+                <h3>Vad är siktlinje (Line of Sight)?</h3>
+                <p>På frekvenser över cirka 30 MHz (VHF och högre) går radiovågor normalt i <strong>rak linje</strong> - precis som ljus. Jonosfären reflekterar inte längre, så räckvidden begränsas av <strong>jordkrökningen</strong> och terrängen.</p>
+                
+                <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+                    <strong>💡 Ficklampsanalogin:</strong>
+                    <br><br>
+                    Tänk på VHF/UHF som en <strong>ficklampa</strong>:
+                    <br><br>
+                    • Ljuset går i rak linje ✓
+                    <br>• Stannar vid första hindret (vägg, träd, berg) ❌
+                    <br>• Ju högre du står, desto längre når ljuset
+                    <br>• Kan reflekteras i speglar (byggnader, berg)
+                    <br>• Kan inte "böja sig" runt hörn (nästan)
+                    <br><br>
+                    <strong>Därför:</strong>
+                    <br>• <strong>Antennhöjd är ALLT</strong> på VHF/UHF!
+                    <br>• 10m högre antenn = flera mil längre räckvidd
+                    <br>• Berg och byggnader blockerar effektivt
+                    <br>• Vatten och öppet land är perfekt
+                </div>
+                
+                <h3>Radiohorisonten - Hur långt når du?</h3>
+                
+                <p>På grund av jordkrökningen finns det en <strong>horisont</strong> för radiovågor, precis som för synligt ljus. Men radiovågor böjer sig LITE mer än ljus (refraktion i atmosfären), så <strong>radiohorisonten</strong> är cirka 15% längre än den optiska horisonten!</p>
+                
+                <div class="formula-box" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white; font-size: 1.4rem;">
+                    <strong>RADIOHORISONTEN:</strong>
+                    <br><br>
+                    d (km) ≈ 4,12 × √h (m)
+                    <br><br>
+                    <small style="opacity: 1; color: white;">Avstånd (km) = 4,12 gånger kvadratroten ur antennhöjd (meter)</small>
+                </div>
+                
+                <div class="info-box important" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+                    <strong>🔑 Varför 4,12?</strong>
+                    <br><br>
+                    Geometrisk horisont (utan atmosfär): d ≈ 3,57 × √h
+                    <br><br>
+                    Men atmosfären <strong>bryter</strong> (refrakterar) vågen lite:
+                    <br>• Luften tätare nära marken → vågen böjs nedåt
+                    <br>• Detta förlänger räckvidden med ~15%
+                    <br>• 3,57 × 1,15 ≈ 4,12 ✓
+                    <br><br>
+                    <strong>Därför:</strong> Radiohorisonten är längre än den optiska horisonten!
+                </div>
+                
+                <h3>Räkneexempel - Radiohorisonten</h3>
+                
+                <div class="example-box" style="border-left: 4px solid #3b82f6;">
+                    <strong>📻 Exempel 1 - Handhållen radio i terräng:</strong>
+                    <br><br>
+                    <strong>Scenario:</strong> Du står på en kulle med din handhållna 2m-radio. Antennen är 2 meter över marken (din höjd + antennen).
+                    <br><br>
+                    <strong>Hur långt når du till horisonten?</strong>
+                    <br>d = 4,12 × √2 = 4,12 × 1,41 ≈ <strong>5,8 km</strong>
+                    <br><br>
+                    <em>💡 Bara 6 km! Därför känns handhållen VHF så "kort" i kuperad terräng.</em>
+                </div>
+                
+                <div class="example-box" style="border-left: 4px solid #3b82f6;">
+                    <strong>📻 Exempel 2 - Fast basstation:</strong>
+                    <br><br>
+                    <strong>Scenario:</strong> Du monterar en 2m-antenn på taket, 25 meter över marken.
+                    <br><br>
+                    <strong>Räckvidd till horisonten:</strong>
+                    <br>d = 4,12 × √25 = 4,12 × 5 = <strong>20,6 km</strong>
+                    <br><br>
+                    <em>✨ Över 3× längre räckvidd bara genom att komma högre upp!</em>
+                </div>
+                
+                <div class="example-box" style="border-left: 4px solid #3b82f6;">
+                    <strong>📻 Exempel 3 - Kommunikation mellan två stationer:</strong>
+                    <br><br>
+                    <strong>Scenario:</strong> Station A har antenn på 25m höjd, Station B har antenn på 16m höjd. Hur långt emellan kan de kommunicera?
+                    <br><br>
+                    <strong>Steg 1 - Station A:s horisont:</strong>
+                    <br>d<sub>A</sub> = 4,12 × √25 = 20,6 km
+                    <br><br>
+                    <strong>Steg 2 - Station B:s horisont:</strong>
+                    <br>d<sub>B</sub> = 4,12 × √16 = 4,12 × 4 = 16,5 km
+                    <br><br>
+                    <strong>Steg 3 - Total räckvidd:</strong>
+                    <br>d<sub>tot</sub> = d<sub>A</sub> + d<sub>B</sub> = 20,6 + 16,5 = <strong>37,1 km</strong>
+                    <br><br>
+                    <em>🎯 Nästan 40 km med bara två ganska låga antenner!</em>
+                </div>
+                
+                <div class="example-box" style="border-left: 4px solid #3b82f6;">
+                    <strong>📻 Exempel 4 - Repeater på bergstopp:</strong>
+                    <br><br>
+                    <strong>Scenario:</strong> En repeater placeras på ett berg 400 meter över omgivande terräng. Handhållen radio på 2m höjd. Räckvidd?
+                    <br><br>
+                    <strong>Repeater:s horisont:</strong>
+                    <br>d<sub>rep</sub> = 4,12 × √400 = 4,12 × 20 = 82,4 km
+                    <br><br>
+                    <strong>Handhållen:s horisont:</strong>
+                    <br>d<sub>ht</sub> = 4,12 × √2 ≈ 5,8 km
+                    <br><br>
+                    <strong>Total:</strong>
+                    <br>d<sub>tot</sub> = 82,4 + 5,8 ≈ <strong>88 km</strong>
+                    <br><br>
+                    <em>🏔️ Därför är repeatrar på berg SÅ effektiva - 88 km med bara 5W från handhållen!</em>
+                </div>
+                
+                <h3>Frirumsförlust - Signalen försvagas med avståndet</h3>
+                
+                <p>Även i perfekt fri rymd (utan några hinder) försvagas signalen med avståndet. Detta kallas <strong>frirumsförlust</strong> (Free Space Path Loss, FSPL).</p>
+                
+                <div class="formula-box" style="background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%); color: white; font-size: 1.3rem;">
+                    <strong>FRIRUMSFÖRLUST:</strong>
+                    <br><br>
+                    L (dB) = 32,4 + 20×log(d) + 20×log(f)
+                    <br><br>
+                    <small style="opacity: 1; color: white;">d = avstånd (km), f = frekvens (MHz)</small>
+                </div>
+                
+                <div class="info-box important" style="background: #fee2e2; border-left: 4px solid #dc2626;">
+                    <strong>🔑 Vad betyder formeln?</strong>
+                    <br><br>
+                    <strong>20×log(d):</strong> Dubbelt avstånd = +6 dB förlust
+                    <br>• 10 km → 20 km: +6 dB mer förlust
+                    <br>• 20 km → 40 km: +6 dB mer förlust
+                    <br>• Signalen försvagas kvadratiskt med avståndet!
+                    <br><br>
+                    <strong>20×log(f):</strong> Dubbel frekvens = +6 dB förlust
+                    <br>• 144 MHz → 288 MHz: +6 dB mer förlust
+                    <br>• 432 MHz har 9,5 dB MER förlust än 144 MHz
+                    <br>• Högre frekvens = kortare räckvidd!
+                    <br><br>
+                    <strong>Därför:</strong>
+                    <br>• 2m-bandet (144 MHz) når längre än 70cm (432 MHz)
+                    <br>• Dubbelt avstånd kräver 4× effekt för samma signalstyrka
+                </div>
+                
+                <div class="example-box" style="border-left: 4px solid #dc2626;">
+                    <strong>📻 Exempel 5 - Jämför 2m och 70cm:</strong>
+                    <br><br>
+                    <strong>Scenario:</strong> 10 km avstånd. Hur mycket mer förlust har 70cm jämfört med 2m?
+                    <br><br>
+                    <strong>2m-bandet (144 MHz):</strong>
+                    <br>L = 32,4 + 20×log(10) + 20×log(144)
+                    <br>L = 32,4 + 20 + 43,2 = <strong>95,6 dB</strong>
+                    <br><br>
+                    <strong>70cm-bandet (432 MHz):</strong>
+                    <br>L = 32,4 + 20×log(10) + 20×log(432)
+                    <br>L = 32,4 + 20 + 52,7 = <strong>105,1 dB</strong>
+                    <br><br>
+                    <strong>Skillnad:</strong> 105,1 - 95,6 = <strong>9,5 dB mer förlust på 70cm!</strong>
+                    <br><br>
+                    <em>💡 9,5 dB ≈ 9× mer effekt behövs på 70cm för samma räckvidd!</em>
+                </div>
+                
+                <h3>Repeatrar - Lösningen för lokal VHF/UHF-trafik</h3>
+                
+                <p>För att övervinna siktlinjebegränsningen används <strong>repeatrar</strong> - automatiska stationer på höga positioner som tar emot på en frekvens och samtidigt sänder ut på en annan.</p>
+                
+                <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 3px solid #059669; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #065f46;">📡 SÅ FUNGERAR EN REPEATER</h4>
+                    
+                    <p><strong>Grundprincipen:</strong></p>
+                    <ol>
+                        <li>Du sänder på <strong>ingångsfrekvens</strong> (input) med handhållen radio</li>
+                        <li>Repeatern tar emot din signal</li>
+                        <li>Repeatern sänder SAMTIDIGT ut din signal på <strong>utgångsfrekvens</strong> (output)</li>
+                        <li>Andra stationer lyssnar på utgångsfrekvensen</li>
+                    </ol>
+                    
+                    <table class="content-table" style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Band</th>
+                                <th style="width: 25%;">Typiskt shift</th>
+                                <th style="width: 30%;">Exempel</th>
+                                <th style="width: 25%;">CTCSS/Tone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: white;">
+                                <td><strong>2m<br>(145 MHz)</strong></td>
+                                <td><strong>±600 kHz</strong></td>
+                                <td>Output: 145,750 MHz<br>Input: 145,150 MHz<br>(−600 kHz)</td>
+                                <td>Ofta 123,0 Hz<br>eller 88,5 Hz</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td><strong>70cm<br>(432 MHz)</strong></td>
+                                <td><strong>±1,6 MHz</strong></td>
+                                <td>Output: 433,500 MHz<br>Input: 431,900 MHz<br>(−1,6 MHz)</td>
+                                <td>Ofta 123,0 Hz<br>eller 118,8 Hz</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div style="background: white; padding: 1rem; border-radius: 8px; margin-top: 1rem;">
+                        <strong style="color: #065f46;">💡 Varför shift (skillnad mellan in/ut)?</strong>
+                        <br><br>
+                        Repeatern måste kunna <strong>sända och ta emot SAMTIDIGT</strong> utan att störa sig själv!
+                        <br><br>
+                        • <strong>Duplex-operation:</strong> RX och TX samtidigt
+                        <br>• <strong>Två antenner:</strong> En för mottagning, en för sändning
+                        <br>• <strong>Cavityfilter:</strong> Isolerar frekvenserna från varandra
+                        <br>• <strong>600 kHz på 2m räcker:</strong> Tillräckligt för att filtrera
+                        <br><br>
+                        <strong>Din radio:</strong> När du trycker PTT sänder den på input, lyssnar på output
+                    </div>
+                </div>
+                
+                <h3>Faktorer som påverkar VHF/UHF-räckvidden</h3>
                 
                 <table class="content-table">
                     <thead>
                         <tr>
-                            <th>Solaktivitet</th>
-                            <th>SSN</th>
-                            <th>Effekt på HF</th>
+                            <th style="width: 25%;">Faktor</th>
+                            <th style="width: 35%;">Påverkan</th>
+                            <th style="width: 40%;">Praktisk betydelse</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Minimum</td>
-                            <td>0-30</td>
-                            <td>Bara lägre band öppna (40m och nedåt)</td>
+                        <tr style="background: #dbeafe;">
+                            <td><strong>1. ANTENNHÖJD</strong></td>
+                            <td><strong>VIKTIGASTE faktorn!</strong>
+                            <br>10m högre = flera km längre</td>
+                            <td>• Sätt antennen så högt som möjligt
+                            <br>• Varje meter räknas!
+                            <br>• Berg, torn, höghus = utmärkt
+                            <br>• I bil: Takmonterad bättre än invändig</td>
                         </tr>
-                        <tr>
-                            <td>Medel</td>
-                            <td>30-100</td>
-                            <td>20m ofta öppet, 15m ibland</td>
+                        <tr style="background: #fef3c7;">
+                            <td><strong>2. TERRÄNG</strong></td>
+                            <td>Hinder blockerar fullständigt</td>
+                            <td>• Berg: STOP ❌
+                            <br>• Skog: 10-20 dB dämpning
+                            <br>• Byggnader: Blockerar eller reflekterar
+                            <br>• Vatten/öppet land: Perfekt! ✓</td>
                         </tr>
-                        <tr>
-                            <td>Maximum</td>
-                            <td>100-200+</td>
-                            <td>Alla band öppna, 10m utmärkt</td>
+                        <tr style="background: #fce7f3;">
+                            <td><strong>3. FREKVENS</strong></td>
+                            <td>Högre frekvens = mer förlust</td>
+                            <td>• 2m (144 MHz): Långt, penetrerar byggnader OK
+                            <br>• 70cm (432 MHz): Kortare, penetrerar sämre
+                            <br>• 23cm (1296 MHz): Mycket kort, kräver fri sikt</td>
+                        </tr>
+                        <tr style="background: #ede9fe;">
+                            <td><strong>4. EFFEKT</strong></td>
+                            <td>Hjälper, men inte så mycket som man tror</td>
+                            <td>• 5W handhållen: 10-30 km
+                            <br>• 50W mobil: 20-60 km
+                            <br>• 10× effekt ≈ 2× räckvidd (bara!)
+                            <br>• <strong>Bättre antenn ger MER än mer effekt!</strong></td>
+                        </tr>
+                        <tr style="background: #d1fae5;">
+                            <td><strong>5. ANTENN-GAIN</strong></td>
+                            <td>Högvinst-antenn fokuserar signalen</td>
+                            <td>• Gummianka (HT): 0 dBd (referens)
+                            <br>• λ/4 GP (bil): +2 dBd
+                            <br>• 5/8λ (bil/bas): +3 dBd
+                            <br>• Yagi: +10 till +15 dBd (riktantenn)
+                            <br>• Collinear: +6 dBd (vertikal, 360°)</td>
                         </tr>
                     </tbody>
                 </table>
-                
-                <h3>Varför påverkar solen HF?</h3>
-                <p>Ökad solaktivitet = mer UV-strålning = mer jonisering = högre MUF</p>
-                <ul>
-                    <li><strong>Högt solfläckstal:</strong> De högre banden (10m, 12m, 15m) blir användbara</li>
-                    <li><strong>Lågt solfläckstal:</strong> Koncentrera dig på 20m, 40m, 80m</li>
-                </ul>
-                
-                <h3>Solstormar och störningar</h3>
-                
-                <h4>Solflares</h4>
-                <p>Plötsliga explosioner på solen som sänder ut röntgenstrålning.</p>
-                <ul>
-                    <li>Ökar D-skiktets absorption kraftigt</li>
-                    <li>Kan orsaka "radio blackout" på HF</li>
-                    <li>Påverkar bara dagsidan av jorden</li>
-                    <li>Varar minuter till timmar</li>
-                </ul>
-                
-                <h4>Geomagnetiska stormar</h4>
-                <p>Solvindens partiklar når jorden 1-3 dagar efter stora solhändelser.</p>
-                <ul>
-                    <li>Stör jonosfären, speciellt vid polerna</li>
-                    <li>Kan ge aurora (norrsken)</li>
-                    <li>Polära förbindelser påverkas mest</li>
-                    <li>Mäts med K-index (0-9) och A-index</li>
-                </ul>
                 
                 <div class="info-box tip">
-                    <strong>💡 Resurser för utbredningsprognoser:</strong>
-                    <br>• VOACAP - propagationsprognoser online
-                    <br>• DX Cluster - realtidsspotting
-                    <br>• WSPRnet - automatisk utbredningsmonitorering
-                    <br>• Space Weather Prediction Center (SWPC)
+                    <strong>💡 Prioritetsordning för att öka räckvidden:</strong>
+                    <br><br>
+                    <strong>1. Höjd! Höjd! Höjd!</strong> 🏔️
+                    <br>• 10m högre antenn ger MER än 10× effekten!
+                    <br>• Viktigaste åtgärden, alltid
+                    <br><br>
+                    <strong>2. Bättre antenn</strong> 📡
+                    <br>• Från gummianka till ordentlig antenn = 10-20 dB vinst
+                    <br>• Mer än 100× effektökning!
+                    <br><br>
+                    <strong>3. Lägre kabelförlust</strong> 🔌
+                    <br>• Använd bra koax (RG-213, LMR-400)
+                    <br>• Korta kablar (varje meter räknas på UHF!)
+                    <br><br>
+                    <strong>4. Mer effekt</strong> ⚡
+                    <br>• Sist! Ger minst per investerad krona
+                    <br>• 5W → 50W ger bara 3× räckvidd
                 </div>
                 
-                <h3>K-index och A-index</h3>
+                <h3>📻 Praktisk nytta för radioamatörer</h3>
+                
+                <div class="info-box important" style="background: #d1fae5; border-left: 4px solid #059669;">
+                    <strong>Så maximerar DU VHF/UHF-räckvidden:</strong>
+                    <br><br>
+                    <strong>1. Mobil installation (bil):</strong>
+                    <br>• <strong>ALLTID takmonterad antenn!</strong> Inte invändig
+                    <br>• λ/4 GP (60 cm på 2m) eller 5/8λ (90 cm)
+                    <br>• Montera mitt på taket för bästa mönster
+                    <br>• Bilens karosseri = jordplan
+                    <br>• Kort koax (max 3-5m)
+                    <br><br>
+                    <strong>2. Basstation hemma:</strong>
+                    <br>• Antenn på taket eller mast
+                    <br>• Så högt som möjligt!
+                    <br>• Vertikal för 360° täckning (GP, collinear, J-pole)
+                    <br>• Yagi om du bara vill åt ett håll
+                    <br>• LMR-400 eller bättre koax
+                    <br><br>
+                    <strong>3. Handhållen radio portabelt:</strong>
+                    <br>• Sök höjd! Gå upp på kulle/berg
+                    <br>• Varje meter höjd hjälper
+                    <br>• Använd repeatrar (lista finns online)
+                    <br>• Ta med längre antenn (flexibel λ/2)
+                    <br>• Full effekt (oftast 5W) om batteriet tillåter
+                    <br><br>
+                    <strong>4. DX på VHF/UHF:</strong>
+                    <br>• Vänta på sporadiskt E (6m, ibland 2m)
+                    <br>• Vänta på troposfärisk ducting (inversion)
+                    <br>• Använd höga platser (SOTA = Summits On The Air)
+                    <br>• Yagi-antenn riktad mot DX
+                    <br>• SSB eller CW (bättre räckvidd än FM)
+                </div>
+                
+                <h3>✅ Snabbtest - Siktlinjeförbindelse</h3>
+                
+                <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+                    <strong>✅ Kan du svara på dessa?</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Vad är formeln för radiohorisont? (om h i meter)</li>
+                        <li>Hur långt når en antenn på 100m höjd till horisonten?</li>
+                        <li>Varför når 2m-bandet längre än 70cm-bandet?</li>
+                        <li>Vad är "shift" på en repeater och varför behövs det?</li>
+                        <li>Vad är viktigast för VHF-räckvidd: Effekt eller antennhöjd?</li>
+                        <li>Hur mycket längre räckvidd ger 10× effekt (teoretiskt)?</li>
+                    </ul>
+                    <details style="margin-top: 0.5rem;">
+                        <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+                        <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                            <small>
+                                • d = 4,12 × √h (där d i km och h i meter)
+                                <br>• 4,12 × √100 = 4,12 × 10 = 41,2 km
+                                <br>• Lägre frekvens = mindre frirumsförlust (432 MHz har ~9,5 dB mer förlust än 144 MHz)
+                                <br>• Shift = skillnad mellan input och output frekvens. Behövs för att repeatern ska kunna sända och ta emot samtidigt utan att störa sig själv
+                                <br>• Antennhöjd! 10m högre antenn ger ofta mer än 10× effekten
+                                <br>• Cirka 3× längre räckvidd (10 dB = √10 ≈ 3,16 gånger i fältstyrka)
+                                <br>• 100 dB = 10× i fältstyrka ≈ 10× räckvidd
+                            </small>
+                        </div>
+                    </details>
+                </div>
+                
+                <div class="info-box important">
+                    <strong>🎯 Viktigt för provet:</strong>
+                    <br>• Radiohorisont: d = 4,12 × √h (km och meter)
+                    <br>• VHF/UHF går i rak linje (siktlinje)
+                    <br>• Antennhöjd är viktigaste faktorn för räckvidd
+                    <br>• Högre frekvens = mer frirumsförlust (70cm kortare än 2m)
+                    <br>• Repeater: shift mellan input och output (600 kHz på 2m, 1,6 MHz på 70cm)
+                    <br>• 10× effekt ger bara ~3× räckvidd (inte värt det jämfört med höjd!)
+                    <br>• Terrängen avgör: berg blockerar, vatten är perfekt
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- SEKTION 4.5: SPECIELLA UTBREDNINGSFENOMEN -->
+            <!-- ============================================ -->
+            
+            <div class="content-section" id="speciella">
+                <h2>4.5 Speciella utbredningsfenomen - Aurora, Es, EME</h2>
+                
+                <p>Förutom "normal" utbredning via jonosfären och siktlinje finns det flera speciella fenomen som kan ge fantastiska möjligheter - eller totalt stoppa kommunikationen!</p>
+                
+                <h3>Sporadiskt E (Es) - VHF:s DX-maskin</h3>
+                
+                <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #92400e;">⚡ SPORADISKT E - DET OFÖRUTSÄGBARAUNDER</h4>
+                    
+                    <p><strong>Vad är sporadiskt E?</strong></p>
+                    <p>Intensiva, täta moln av joner som bildas i E-skiktet (90-140 km höjd) och kan reflektera <strong>VHF-signaler</strong> som normalt skulle gå rakt igenom jonosfären!</p>
+                    
+                    <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                        <strong style="color: #92400e;">🔑 Nyckelegenskaper:</strong>
+                        <br><br>
+                        <strong>Frekvenser som påverkas:</strong>
+                        <br>• <strong>6m (50 MHz):</strong> OFTA reflekteras (därför älskas Es av 6m-operatörer!)
+                        <br>• <strong>4m (70 MHz):</strong> Ibland reflekteras
+                        <br>• <strong>2m (144 MHz):</strong> SÄLLAN men händer vid intensiv Es
+                        <br>• <strong>70cm och högre:</strong> Nästan aldrig (för hög frekvens)
+                        <br><br>
+                        <strong>När det händer:</strong>
+                        <br>• <strong>Vanligast:</strong> Maj-augusti (sommarhalvåret)
+                        <br>• <strong>Tid på dygnet:</strong> Mest förmiddag och tidig eftermiddag (10:00-16:00)
+                        <br>• <strong>Geografiskt:</strong> Vanligare i södra Europa/USA än i norra Sverige
+                        <br><br>
+                        <strong>Räckvidd:</strong>
+                        <br>• Ett hopp: 500-2000 km (typiskt 1000-1500 km)
+                        <br>• Dubbelhopp: Upp till 4000 km möjligt!
+                        <br>• Perfekt för Europa-till-Europa DX på 6m
+                        <br><br>
+                        <strong>Kännetecken:</strong>
+                        <br>• Kommer plötsligt (inom minuter)
+                        <br>• Varar 10 minuter till flera timmar
+                        <br>• Kan "flytta" - olika riktningar öppnar/stänger
+                        <br>• Mycket starka signaler (ofta S9+20 dB eller mer!)
+                    </div>
+                    
+                    <div class="info-box tip">
+                        <strong>💡 Hur du känner igen Es-öppning:</strong>
+                        <br><br>
+                        <strong>På 6m-bandet (50 MHz):</strong>
+                        <br>1. Plötsligt hör du starka signaler från avlägsna länder
+                        <br>2. Ofta flera stationer samtidigt från samma område
+                        <br>3. FM-broadcast-TV runt 50 MHz kan höras
+                        <br>4. Signalerna är MYCKET starka (S9+++)
+                        <br>5. Kan komma och gå på sekunder
+                        <br><br>
+                        <strong>På 2m-bandet (144 MHz):</strong>
+                        <br>1. Mycket ovanligt men FANTASTISKT när det händer!
+                        <br>2. Hör plötsligt CQ från 1000+ km bort
+                        <br>3. Ofta samtidigt med stark Es på 6m
+                        <br>4. Varar kortare än på 6m (minuter till 30 min)
+                        <br><br>
+                        <strong>Verktyg för att följa Es:</strong>
+                        <br>• <strong>DXMaps.com</strong> - realtidskartor över Es-aktivitet
+                        <br>• <strong>PSKReporter.info</strong> - spåra FT8-signaler på 6m
+                        <br>• <strong>WSPR-databaser</strong> - automatiska sändningar visar öppningar
+                        <br>• <strong>VHF/UHF clusters</strong> - rapporter från andra operatörer
+                    </div>
+                </div>
+                
+                <h3>Troposfärisk ducting - "Magiska kabeln"</h3>
+                
+                <p><strong>Troposfärisk ducting</strong> uppstår när ett lager varm luft ligger över ett lager kall luft (temperaturinversion). Detta skapar en slags "vågledare" i atmosfären som kan leda VHF/UHF-signaler hundratals mil!</p>
+                
+                <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #1e40af;">🌡️ TROPOSFÄRISK DUCTING</h4>
+                    
+                    <table class="content-table" style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 30%;">Aspekt</th>
+                                <th style="width: 70%;">Beskrivning</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: white;">
+                                <td><strong>Hur det uppstår</strong></td>
+                                <td><strong>Temperaturinversion:</strong>
+                                <br>• Normalt: Luften kallnar med höjden (normalt 6,5°C per km)
+                                <br>• Inversion: Varm luft ÖVER kall luft (temperaturen ökar med höjden!)
+                                <br>• Detta skapar en brytning av radiovågor
+                                <br>• Vågen "fångas" mellan marken och inversionen → leds långt bort</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td><strong>Vanligast när</strong></td>
+                                <td><strong>Vädersituationer som skapar inversion:</strong>
+                                <br>• Högtryck med klart väder (speciellt sommar/höst)
+                                <br>• Lugnt väder, svag vind
+                                <br>• Efter solnedgången (marken kyls snabbt)
+                                <br>• Över vatten (kallare vattenyta, varmare luft ovanför)
+                                <br>• Kuster och strandnära områden → utmärkt för ducting!</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td><strong>Frekvenser</strong></td>
+                                <td><strong>Fungerar bäst på:</strong>
+                                <br>• VHF (2m) - bra
+                                <br>• UHF (70cm) - utmärkt
+                                <br>• SHF (23cm och högre) - fantastiskt!
+                                <br><br>Högre frekvens = bättre ducting-effekt</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td><strong>Räckvidd</strong></td>
+                                <td><strong>Betydligt längre än normalt:</strong>
+                                <br>• Normalt VHF: 50-100 km
+                                <br>• Med ducting: 300-1000 km möjligt!
+                                <br>• Över vatten: Ännu längre (1000+ km på 2m rapporterat)
+                                <br>• Signalerna ofta mycket starka (S9+++)</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td><strong>Kännetecken</strong></td>
+                                <td><strong>Hur du känner igen det:</strong>
+                                <br>• Plötsligt hör du stationer från 300-1000 km bort
+                                <br>• Mycket stark signal (S9+)
+                                <br>• Varar timmar till dagar (mycket längre än Es!)
+                                <br>• Ofta samma riktning hela tiden (följer inversionen)
+                                <br>• Kan vara selektivt (bara vissa riktningar öppna)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="info-box tip" style="margin-top: 1rem;">
+                        <strong>💡 Praktiska tips för tropoducting:</strong>
+                        <br><br>
+                        <strong>Prognos:</strong>
+                        <br>• Kolla väderprognoser: Högtryck + klart väder = bra chans!
+                        <br>• Websites: <strong>DXMAPS.com/tropo</strong> - realtidskartor
+                        <br>• Titta efter inversioner i höjddata (radiosonder)
+                        <br><br>
+                        <strong>Bästa tiden:</strong>
+                        <br>• Tidig morgon (05:00-09:00) - efter kall natt
+                        <br>• Sena kvällen (20:00-24:00) - när marken svalnat
+                        <br>• Sommarnätter med högtryck - perfekt!
+                        <br><br>
+                        <strong>Teknik:</strong>
+                        <br>• Rikta antennen mot kusten/havet (om möjligt)
+                        <br>• Yagi-antenn ger bäst resultat (gain + riktning)
+                        <br>• SSB eller CW bättre än FM (smalare bandbredd)
+                        <br>• Lyssna efter svaga signaler - öppningen kanske precis börjar!
+                    </div>
+                </div>
+                
+                <h3>Aurora - Norrskenets effekt på radio</h3>
+                
+                <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 3px solid #059669; border-radius: 12px; padding: 1.5rem; margin: 2rem 2rem 0 0;">
+                    <h4 style="margin-top: 0; color: #065f46;">🌌 AURORA (NORRSKEN) - MAGISK MEN SVÅR</h4>
+                    
+                    <p><strong>Vad händer:</strong></p>
+                    <p>När solvinden (laddade partiklar från solen) träffar jordens magnetfält skapas norrsken (aurora). Samtidigt joniseras luften i polartrakterna kraftigt - och detta kan reflektera radiovågor!</p>
+                    
+                    <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                        <strong style="color: #065f46;">Aurora-reflektion - Två ansikten:</strong>
+                        <br><br>
+                        <strong>1. POSITIV effekt (Aurora-DX på VHF):</strong>
+                        <br>• <strong>2m (144 MHz)</strong> kan reflekteras i norrskensvorhänget
+                        <br>• Räckvidd 500-2000 km norrut (mot aurorazonen)
+                        <br>• Måste rikta antennen MOT norr (mot norrskenet)
+                        <br>• SSB-signaler låter "raspiga" och förvrängda
+                        <br>• CW fungerar bättre (klarar förvrängningen)
+                        <br>• Signalerna "fladdrar" snabbt (flutter fading)
+                        <br><br>
+                        <strong>2. NEGATIV effekt (HF-blackout):</strong>
+                        <br>• Absorption av HF-signaler (speciellt på högre HF)
+                        <br>• 20m, 15m, 10m kan vara helt "döda" under stark aurora
+                        <br>• Norra Europa drabbas värst (närmast aurora)
+                        <br>• 40m och 80m fungerar ofta OK
+                        <br>• Kan vara "radio-blackout" i flera timmar eller dagar
+                    </div>
+                    
+                    <table class="content-table" style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Band</th>
+                                <th style="width: 40%;">Effekt under aurora</th>
+                                <th style="width: 40%;">Vad du kan göra</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: #fee2e2;">
+                                <td><strong>10m-20m<br>(HF högt)</strong></td>
+                                <td><strong>NEGATIVT:</strong>
+                                <br>• Kraftig absorption
+                                <br>• Banden kan vara helt döda
+                                <br>• S-meter visar högt brus (S9+)</td>
+                                <td>• Vänta ut stormen
+                                <br>• Gå ner till lägre band
+                                <br>• Prova 40m eller 80m istället</td>
+                            </tr>
+                            <tr style="background: #fef3c7;">
+                                <td><strong>40m-80m<br>(HF lågt)</strong></td>
+                                <td><strong>OK till bra:</strong>
+                                <br>• Mindre påverkan
+                                <br>• Kan fungera normalt
+                                <br>• Ibland t.o.m. förbättrade förhållanden!</td>
+                                <td>• Använd dessa band under aurora
+                                <br>• Ofta bra för DX nattetid</td>
+                            </tr>
+                            <tr style="background: #d1fae5;">
+                                <td><strong>6m<br>(VHF lågt)</strong></td>
+                                <td><strong>VARIERAR:</strong>
+                                <br>• Ibland aurora-reflektion
+                                <br>• Ibland absorption
+                                <br>• Oförutsägbart</td>
+                                <td>• Testa och se!
+                                <br>• Rikta norrut mot aurora</td>
+                            </tr>
+                            <tr style="background: #dbeafe;">
+                                <td><strong>2m<br>(VHF)</strong></td>
+                                <td><strong>POSITIVT för aurora-DX:</strong>
+                                <br>• Reflektion i auroravorhänget
+                                <br>• 500-2000 km norrut möjligt
+                                <br>• Raspiga, förvrängda signaler</td>
+                                <td>• Rikta Yagi norrut (mot aurora)
+                                <br>• Använd CW (lättare än SSB)
+                                <br>• Lyssna efter "raspig" signal
+                                <br>• Kör långsamt, tydligt</td>
+                            </tr>
+                            <tr style="background: #ede9fe;">
+                                <td><strong>70cm<br>(UHF)</strong></td>
+                                <td><strong>INGEN effekt:</strong>
+                                <br>• För hög frekvens
+                                <br>• Går igenom aurora
+                                <br>• Fungerar normalt</td>
+                                <td>• Använd som vanligt
+                                <br>• Inget speciellt att tänka på</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="info-box tip" style="margin-top: 1rem;">
+                        <strong>💡 Förbered dig för aurora:</strong>
+                        <br><br>
+                        <strong>Prognos och varning:</strong>
+                        <br>• <strong>Space Weather Prediction Center (NOAA):</strong> 3-dagars aurora-prognos
+                        <br>• <strong>Kp-index:</strong> Måttet på geomagnetisk aktivitet
+                        <br>  - Kp 0-2: Lugnt, ingen aurora
+                        <br>  - Kp 3-4: Mindre aurora-aktivitet
+                        <br>  - Kp 5-6: Aurora synlig i norra Sverige, VHF-DX möjligt
+                        <br>  - Kp 7-9: Stor geomagnetisk storm, aurora långt söderut, HF-blackout!
+                        <br>• <strong>Websites:</strong> spaceweather.com, aurora-service.eu
+                        <br><br>
+                        <strong>Under aurora-aktivitet:</strong>
+                        <br>• Kolla Kp-index varje dag
+                        <br>• När Kp > 5: Förbered dig på HF-problem
+                        <br>• När Kp > 5: Chansa på 2m aurora-DX norrut!
+                        <br>• Håll koll på local aurora reports
+                    </div>
+                </div>
+                
+                <h3>EME (Earth-Moon-Earth) - "Moonbounce"</h3>
+                
+                <p>Den ultimata utmaningen: Att <strong>studsa radiosignaler mot månen</strong> och ta emot dem tillbaka på jorden!</p>
+                
+                <div style="background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%); border: 3px solid #a855f7; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #6b21a8;">🌙 EME (MOONBOUNCE) - RADIONS MOUNT EVEREST</h4>
+                    
+                    <p><strong>Grundprincipen:</strong></p>
+                    <ol>
+                        <li>Sänder riktad signal mot månen</li>
+                        <li>Signalen reflekteras av månens yta (~2,5 sekunder senare)</li>
+                        <li>Den reflekterade signalen tas emot på jorden</li>
+                        <li>Total fördröjning: ~2,5 sekunder (jorden-månen-jorden)</li>
+                    </ol>
+                    
+                    <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                        <strong style="color: #6b21a8;">🔑 Utmaningarna:</strong>
+                        <br><br>
+                        <strong>1. ENORM vägförlust:</strong>
+                        <br>• Månen är 380 000 km bort
+                        <br>• Total väg: 2 × 380 000 = 760 000 km!
+                        <br>• Frirumsförlust på 2m: ~252 dB (!!!)
+                        <br>• Därför krävs MYCKET effekt och stora antenner
+                        <br><br>
+                        <strong>2. Månens yta reflekterar dåligt:</strong>
+                        <br>• Månen är inte en perfekt spegel
+                        <br>• Diffus reflektion → ytterligare förlust
+                        <br>• Bara ~7% av signalen reflekteras
+                        <br><br>
+                        <strong>3. Doppler-shift:</strong>
+                        <br>• Månen rör sig mot/från jorden
+                        <br>• Frekvensen skiftar upp till ±400 Hz
+                        <br>• Måste kompensera för detta!
+                        <br><br>
+                        <strong>4. Libration (månens gungning):</strong>
+                        <br>• Månen gungar lite fram och tillbaka
+                        <br>• Skapar fading och ekofenomen
+                        <br>• Signalen kan "fladdra"
+                    </div>
+                    
+                    <table class="content-table" style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">Aspekt</th>
+                                <th style="width: 75%;">Krav och detaljer</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: white;">
+                                <td><strong>Frekvenser</strong></td>
+                                <td><strong>Vanligast:</strong>
+                                <br>• <strong>2m (144 MHz):</strong> Mest populärt (lägre förlust än högre band)
+                                <br>• <strong>70cm (432 MHz):</strong> Också populärt
+                                <br>• <strong>23cm (1296 MHz):</strong> Mer utmanande (högre förlust)
+                                <br>• <strong>6m (50 MHz):</strong> Sällsynt (jonosfären stör ibland)
+                                <br>• HF EME existerar men är extremt svårt</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td><strong>Utrustning</strong></td>
+                                <td><strong>Minimum för 2m EME:</strong>
+                                <br>• <strong>Effekt:</strong> 500-1000W (ju mer desto bättre!)
+                                <br>• <strong>Antenn:</strong> 4× Yagi (cross-yagi) eller större array
+                                <br>  - Gain: Minst +17 dBd (helst +20 dBd eller mer)
+                                <br>  - Måste kunna riktas mot månen (azimut + elevation)
+                                <br>• <strong>Rotor:</strong> El-Az rotor (styrs datoriserat mot månen)
+                                <br>• <strong>LNA (Low Noise Amplifier):</strong> Förförstärkare vid antennen
+                                <br>• <strong>Datorprogram:</strong> Beräknar månens position, Doppler-shift
+                                <br><br>
+                                <strong>Stor station (serious EME):</strong>
+                                <br>• 1-2 kW effekt eller mer
+                                <br>• 8-16 Yagi-antenner i array (30+ dBd gain)
+                                <br>• Avancerad LNA (noise figure < 0,5 dB)
+                                <br>• JT65/FT8-programvara för svaga signaler</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td><strong>Modes</strong></td>
+                                <td><strong>CW (Morse):</strong>
+                                <br>• Traditionellt, kräver bra station
+                                <br>• Långsam CW (10-15 WPM) p.g.a. fading
+                                <br><br>
+                                <strong>JT65 / Q65 (digitalt):</strong>
+                                <br>• Revolutionerat EME!
+                                <br>• Kan detektera signaler -28 dB under bruset
+                                <br>• Automatisk Doppler-kompensation
+                                <br>• Nu kan små stationer köra EME (100W + 4×Yagi)
+                                <br><br>
+                                <strong>FT8:</strong>
+                                <br>• Också använt, ännu svagare signaler
+                                <br>• Snabbare än JT65</td>
+                            </tr>
+                            <tr style="background: white;">
+                                <td><strong>Bästa tiden</strong></td>
+                                <td><strong>Månens position:</strong>
+                                <br>• <strong>Perigeum:</strong> Månen närmast jorden (365 000 km)
+                                <br>  → ~3 dB mindre förlust = lättare EME
+                                <br>• <strong>Apogeum:</strong> Månen längst bort (405 000 km)
+                                <br>  → ~3 dB mer förlust = svårare EME
+                                <br><br>
+                                <strong>Måndeklinering:</strong>
+                                <br>• När månen är högt över horisonten → mindre atmosfärisk förlust
+                                <br>• Vänta tills månen minst 10-15° över horisonten
+                                <br><br>
+                                <strong>EME-windows:</strong>
+                                <br>• Koordinerade tider när många kör EME samtidigt
+                                <br>• Oftast helger
+                                <br>• Se DXMAPS eller EME-kalendrar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="info-box tip" style="margin-top: 1rem;">
+                        <strong>💡 Börja med EME (för den som är intresserad):</strong>
+                        <br><br>
+                        <strong>Steg 1 - Lyssna först:</strong>
+                        <br>• Du behöver inte stor station för att LYSSNA
+                        <br>• 1× Yagi + LNA räcker för att höra stora EME-stationer
+                        <br>• Ladda ner JT65-HF eller WSJT-X programvara
+                        <br>• Rikta mot månen och lyssna på 144,120 MHz (JT65)
+                        <br><br>
+                        <strong>Steg 2 - Uppgradera gradvis:</strong>
+                        <br>• Börja med 2× Yagi (cross-yagi för cirkulär polarisation)
+                        <br>• 100-200W PA räcker med JT65!
+                        <br>• Datoriserad El-Az rotor (måste spåra månen)
+                        <br>• LNA vid antennen (kritiskt!)
+                        <br><br>
+                        <strong>Steg 3 - Din första EME-QSO:</strong>
+                        <br>• Välj en EME-window (helg med aktivitet)
+                        <br>• Använd JT65 (lättare än CW för nybörjare)
+                        <br>• Aktivera "Moon tracking" i WSJT-X
+                        <br>• CQ eller svar på CQ
+                        <br>• Vänta tålmodigt (kan ta timmar första gången!)
+                        <br><br>
+                        <strong>Resurser:</strong>
+                        <br>• <strong>EME System Performance Calculator:</strong> Beräkna vad din station klarar
+                        <br>• <strong>VK3UM EME Planner:</strong> Se när det är bästa tiden
+                        <br>• <strong>EME-grupper:</strong> Moon-net, DXMAPS EME-chat
+                    </div>
+                </div>
+                
+                <h3>Meteorscatter (MS) - Snabba DX-kontakter</h3>
+                
+                <div class="info-box tip" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+                    <strong>☄️ METEORSCATTER - BLIXTKONTAKTER PÅ VHF</strong>
+                    <br><br>
+                    <p><strong>Vad händer:</strong></p>
+                    <p>Meteoriter som brinner upp i atmosfären (80-120 km höjd) skapar joniserade spår som kan reflektera VHF-signaler i några sekunder till minuter!</p>
+                    <br>
+                    <strong>Kännetecken:</strong>
+                    <br>• <strong>Frekvenser:</strong> 6m (50 MHz) och 2m (144 MHz) bäst
+                    <br>• <strong>Räckvidd:</strong> 500-2000 km typiskt
+                    <br>• <strong>Varaktighet:</strong> Från bråkdel av sekund till flera minuter
+                    <br>  - <strong>Underdense trails:</strong> < 1 sekund (vanligast)
+                    <br>  - <strong>Overdense trails:</strong> Upp till 30 minuter (sällsynt men fantastiskt!)
+                    <br>• <strong>Kännetecken:</strong> Plötslig, kort burst av signal, sedan borta igen
+                    <br><br>
+                    <strong>Bästa tiden:</strong>
+                    <br>• <strong>Meteorskurar:</strong> Perseider (aug), Geminider (dec), Quadrantider (jan)
+                    <br>• <strong>Tid på dygnet:</strong> 04:00-08:00 lokal tid (mest meteoriter då)
+                    <br>• Pågår året runt men intensivare under skurar
+                    <br><br>
+                    <strong>Teknik:</strong>
+                    <br>• <strong>High-Speed CW:</strong> Skicka snabbt under korta bursts
+                    <br>• <strong>FSK441 (digitalt mode):</strong> Optimerat för korta bursts
+                    <br>• <strong>MSK144 (nyare):</strong> Snabbare än FSK441, standard idag
+                    <br>• <strong>Automatiskt:</strong> WSJT-X hanterar MS automatiskt
+                    <br><br>
+                    <strong>QSO-procedur (MSK144):</strong>
+                    <br>1. Station A sänder sitt anrop varje 15:e sekund
+                    <br>2. Station B svarar när den hör via meteorspår
+                    <br>3. Växla meddelanden (callsign, rapport, RR73) via korta bursts
+                    <br>4. En komplett QSO kan ta 5-30 minuter (många korta bursts!)
+                </div>
+                
+                <h3>Sammanfattning - Speciella utbredningsfenomen</h3>
+                
                 <table class="content-table">
                     <thead>
                         <tr>
-                            <th>K-index</th>
-                            <th>Geomagnetisk aktivitet</th>
-                            <th>HF-förhållanden</th>
+                            <th style="width: 20%;">Fenomen</th>
+                            <th style="width: 20%;">Band</th>
+                            <th style="width: 20%;">Räckvidd</th>
+                            <th style="width: 20%;">När</th>
+                            <th style="width: 20%;">Svårighetsgrad</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>0-1</td>
-                            <td>Lugnt</td>
-                            <td>Normala till bra</td>
+                        <tr style="background: #fef3c7;">
+                            <td><strong>Sporadiskt E</strong></td>
+                            <td>6m, (2m)</td>
+                            <td>500-4000 km</td>
+                            <td>Maj-aug, förmiddag</td>
+                            <td>🟢 Lätt (händer ofta på 6m)</td>
                         </tr>
-                        <tr>
-                            <td>2-3</td>
-                            <td>Svagt ostadigt</td>
-                            <td>Något försämrade</td>
+                        <tr style="background: #dbeafe;">
+                            <td><strong>Tropoducting</strong></td>
+                            <td>VHF, UHF, SHF</td>
+                            <td>300-1000+ km</td>
+                            <td>Högtryck, inversion</td>
+                            <td>🟢 Lätt (förutsägbart)</td>
                         </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Aktivt</td>
-                            <td>Försämrade, speciellt nord</td>
+                        <tr style="background: #d1fae5;">
+                            <td><strong>Aurora</strong></td>
+                            <td>2m (VHF)</td>
+                            <td>500-2000 km norrut</td>
+                            <td>Geomagn. storm</td>
+                            <td>🟡 Medel (CW lättare än SSB)</td>
                         </tr>
-                        <tr>
-                            <td>5+</td>
-                            <td>Storm</td>
-                            <td>Dåliga, polära vägar blockerade</td>
+                        <tr style="background: #fce7f3;">
+                            <td><strong>Meteorscatter</strong></td>
+                            <td>6m, 2m</td>
+                            <td>500-2000 km</td>
+                            <td>Året runt, mest gryning</td>
+                            <td>🟡 Medel (kräver digitala modes)</td>
+                        </tr>
+                        <tr style="background: #ede9fe;">
+                            <td><strong>EME (Moonbounce)</strong></td>
+                            <td>2m, 70cm, 23cm</td>
+                            <td>Global (via månen)</td>
+                            <td>När månen uppe</td>
+                            <td>🔴 Svårt (kräver stor station)</td>
                         </tr>
                     </tbody>
                 </table>
+                
+                <h3>✅ Snabbtest - Speciella utbredningsfenomen</h3>
+                
+                <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+                    <strong>✅ Kan du svara på dessa?</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Vilket fenomen är vanligast på 6m-bandet sommartid?</li>
+                        <li>Vad är troposfärisk ducting och när händer det?</li>
+                        <li>Hur påverkar aurora HF-banden jämfört med VHF?</li>
+                        <li>Vad står EME för och vilket band är vanligast för EME?</li>
+                        <li>Hur länge varar en typisk meteorscatter-burst?</li>
+                        <li>Vilket digitalt mode används mest för EME idag?</li>
+                    </ul>
+                    <details style="margin-top: 0.5rem;">
+                        <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+                        <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                            <small>
+                                • Sporadiskt E (Es) - intensiva jonmoln som reflekterar VHF
+                                <br>• Temperaturinversion skapar "vågledare" i atmosfären som leder VHF/UHF-signaler långt. Vanligast vid högtryck med klart väder
+                                <br>• HF: Absorption och blackout (negativt). VHF (2m): Kan ge reflektion och DX norrut (positivt men förvrängd signal)
+                                <br>• Earth-Moon-Earth (månstuds). 2m (144 MHz) är vanligast
+                                <br>• Från bråkdel av sekund (underdense) till 30 minuter (overdense, sällsynt)
+                                <br>• JT65 eller Q65 (kan detektera signaler -28 dB under bruset)
+                            </small>
+                        </div>
+                    </details>
+                </div>
+                
+                <div class="info-box important">
+                    <strong>🎯 Viktigt för provet:</strong>
+                    <br>• Sporadiskt E: Vanligast maj-aug, reflekterar 6m (och ibland 2m)
+                    <br>• Tropoducting: Temperaturinversion, fungerar bra på VHF/UHF/SHF
+                    <br>• Aurora: Negativ för HF (absorption), positiv för 2m-DX norrut (men förvrängd signal)
+                    <br>• EME: Moonbounce, kräver stor station, 2m vanligast
+                    <br>• Meteorscatter: Korta bursts (sekunder), 6m och 2m, digitala modes
+                    <br>• Kp-index: Mäter geomagnetisk aktivitet (aurora). Kp > 5 = aurora möjlig
+                </div>
             </div>
 
-            <!-- Sammanfattning -->
-            <div class="content-section summary">
-                <h2>📝 Sammanfattning Kapitel 4</h2>
+            <!-- ============================================ -->
+            <!-- SEKTION 4.6: SOLFLÄCKAR OCH SOLAKTIVITET -->
+            <!-- ============================================ -->
+            
+            <div class="content-section" id="solflaeckar">
+                <h2>4.6 Solfläckar och solaktivitet - Påverkan på HF</h2>
                 
-                <div class="key-points">
-                    <h3>Jonosfärens skikt:</h3>
-                    <ul>
-                        <li><strong>D-skiktet:</strong> Absorberar, finns bara dagtid</li>
-                        <li><strong>E-skiktet:</strong> Reflekterar MF/lägre HF, sporadiskt E ger VHF</li>
-                        <li><strong>F-skiktet:</strong> Viktigast för HF-DX</li>
-                    </ul>
+                <h3>Solfläckar och den 11-åriga solcykeln</h3>
+                
+                <p>Solen går genom en cirka <strong>11-årig cykel</strong> av aktivitet. Antalet solfläckar varierar från nästan noll (solar minimum) till över 200 (solar maximum). Solfläckar är mörka områden på solens yta med starka magnetfält - och de påverkar radiovågutbredning ENORMT!</p>
+                
+                <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #92400e;">☀️ SOLCYKELN - HF-OPERATÖRENS BÄP OCH SMÄRTA</h4>
+                    
+                    <p><strong>Vad är solfläckar?</strong></p>
+                    <p>Mörka områden på solens yta där magnetfältet är mycket starkt. De ser mörka ut eftersom de är kallare än omgivningen (men fortfarande 3500°C!). Fler solfläckar = mer solaktivitet = mer UV-strålning = starkare jonosfär!</p>
+                    
+                    <div style="background: white; padding: 1rem; border-radius: 8px; margin: 1rem 0;">
+                        <strong style="color: #92400e;">🔑 Sambandet:</strong>
+                        <br><br>
+                        <strong>FLer solfläckar (Solar Max):</strong>
+                        <br>✅ Mer UV-strålning från solen
+                        <br>✅ Starkare jonisering av jonosfären
+                        <br>✅ Högre kritisk frekvens (högre MUF)
+                        <br>✅ Högre HF-band (20m, 15m, 10m) ÖPPNAR!
+                        <br>✅ 10m-bandet kan vara öppet dygnet runt till hela världen
+                        <br>✅ Fantastiska DX-förhållanden
+                        <br><br>
+                        <strong>FÅ solfläckar (Solar Min):</strong>
+                        <br>❌ Mindre UV-strålning
+                        <br>❌ Svagare jonisering
+                        <br>❌ Lägre kritisk frekvens (lägre MUF)
+                        <br>❌ 20m, 15m, 10m ofta "döda"
+                        <br>❌ Måste använda lägre band (40m, 80m, 160m)
+                        <br>❌ Kortare räckvidd på HF
+                    </div>
+                    
+                    <table class="content-table" style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Solcykelfas</th>
+                                <th style="width: 20%;">SSN (solfläckstal)</th>
+                                <th style="width: 30%;">HF-förhållanden</th>
+                                <th style="width: 30%;">Bästa banden</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: #fee2e2;">
+                                <td><strong>Solar Minimum</strong></td>
+                                <td>SSN < 30</td>
+                                <td><strong>SVÅRT:</strong>
+                                <br>• 10m, 12m, 15m nästan alltid stängda
+                                <br>• 20m öppet bara några timmar/dag
+                                <br>• 17m ibland öppet
+                                <br>• Fokus på lägre band</td>
+                                <td>• <strong>40m:</strong> Arbetshästen
+                                <br>• <strong>80m/160m:</strong> Nattetid
+                                <br>• <strong>20m:</strong> Mitt på dagen
+                                <br>• <strong>30m:</strong> Dygnet runt</td>
+                            </tr>
+                            <tr style="background: #fef3c7;">
+                                <td><strong>Rising Phase<br>(Stigande)</strong></td>
+                                <td>SSN 30-100</td>
+                                <td><strong>BRA och förbättras:</strong>
+                                <br>• 20m blir bättre och bättre
+                                <br>• 17m och 15m börjar öppna
+                                <br>• 12m ibland öppet
+                                <br>• 10m börjar vakna (sporadiskt)</td>
+                                <td>• <strong>20m:</strong> Utmärkt
+                                <br>• <strong>17m/15m:</strong> Allt bättre
+                                <br>• <strong>40m:</strong> Fortsatt bra
+                                <br>• <strong>12m:</strong> Spännande!</td>
+                            </tr>
+                            <tr style="background: #d1fae5;">
+                                <td><strong>Solar Maximum</strong></td>
+                                <td>SSN > 100</td>
+                                <td><strong>FANTASTISKT! ✨</strong>
+                                <br>• 10m öppet till hela världen!
+                                <br>• 12m och 15m utmärkta
+                                <br>• 20m "motorvägen"
+                                <br>• Långa DX-kontakter med låg effekt
+                                <br>• "Golden age of HF"</td>
+                                <td>• <strong>10m:</strong> MAGISKT band! 🌟
+                                <br>• <strong>12m/15m:</strong> Fantastiskt
+                                <br>• <strong>17m/20m:</strong> Överfulla
+                                <br>• <strong>40m:</strong> Alltid bra</td>
+                            </tr>
+                            <tr style="background: #dbeafe;">
+                                <td><strong>Falling Phase<br>(Fallande)</strong></td>
+                                <td>SSN 100-30</td>
+                                <td><strong>BRA men försämras:</strong>
+                                <br>• 10m stänger gradvis
+                                <br>• 15m och 12m mindre tillförlitliga
+                                <br>• 20m fortsatt bra
+                                <br>• Tillbaka mot lägre band</td>
+                                <td>• <strong>20m:</strong> Fortfarande utmärkt
+                                <br>• <strong>17m/15m:</strong> OK
+                                <br>• <strong>40m/80m:</strong> Allt viktigare
+                                <br>• <strong>10m:</strong> Sista chansen!</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="info-box tip" style="margin-top: 1rem;">
+                        <strong>💡 Senaste solcyklerna:</strong>
+                        <br><br>
+                        • <strong>Cykel 24 (2008-2019):</strong> Mycket svag, SSN max ~120 (2014)
+                        <br>• <strong>Cykel 25 (2019-2030?):</strong> Pågår nu! Maximum beräknas 2024-2025
+                        <br>• <strong>Just nu (feb 2026):</strong> Förmodligen strax efter maximum - utmärkt för HF! ✨
+                        <br><br>
+                        <strong>Var är vi i cykeln nu?</strong>
+                        <br>Kolla aktuellt SSN på: <strong>spaceweather.com</strong> eller <strong>solen.info</strong>
+                    </div>
                 </div>
                 
-                <div class="key-points">
-                    <h3>Dag vs natt:</h3>
-                    <ul>
-                        <li><strong>Dagtid:</strong> Högre band öppna (20m-10m)</li>
-                        <li><strong>Nattetid:</strong> Lägre band för DX (160m-40m)</li>
-                        <li><strong>Grålinjen:</strong> Speciellt bra för 40m/80m DX</li>
-                    </ul>
+                <h3>Solfläckstal (SSN) - Det viktigaste måttet</h3>
+                
+                <div class="formula-box" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white;">
+                    <strong>SOLFLÄCKSTAL (SSN / Sunspot Number):</strong>
+                    <br><br>
+                    SSN = k × (10g + s)
+                    <br><br>
+                    g = antal solfläcksgrupper
+                    <br>s = antal individuella solfläckar
+                    <br>k = korrektionsfaktor (beroende på teleskop och observatör)
+                    <br><br>
+                    <small style="opacity: 1; color: white;">Typiskt SSN: 0-250, vanligen 0-150</small>
                 </div>
                 
-                <div class="key-points">
-                    <h3>VHF/UHF-utbredning:</h3>
-                    <ul>
-                        <li><strong>Normal:</strong> Siktlinje, begränsas av horisonten</li>
-                        <li><strong>Troposcatter/inversion:</strong> Hundratals km</li>
-                        <li><strong>Sporadiskt E:</strong> 500-2300 km (6m/2m)</li>
-                        <li><strong>Aurora/Meteor:</strong> Speciella förhållanden</li>
-                    </ul>
+                <div class="info-box important" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+                    <strong>🔑 Vad betyder SSN för dig som operatör?</strong>
+                    <br><br>
+                    <strong>SSN 0-20 (Mycket lågt):</strong>
+                    <br>• 10m, 12m, 15m: Stängda
+                    <br>• 20m: Begränsat öppet (några timmar mitt på dagen)
+                    <br>• Använd 40m, 80m, 160m
+                    <br><br>
+                    <strong>SSN 20-50 (Lågt):</strong>
+                    <br>• 10m: Sällan öppet
+                    <br>• 15m: Ibland öppet mitt på dagen
+                    <br>• 20m: Öppet större delen av dagen
+                    <br>• 40m: Utmärkt
+                    <br><br>
+                    <strong>SSN 50-100 (Medel):</strong>
+                    <br>• 10m: Öppet vissa dagar, speciellt ekvatornära
+                    <br>• 15m: Ofta öppet dagtid
+                    <br>• 20m: Fantastiskt
+                    <br>• 17m: Allt bättre
+                    <br><br>
+                    <strong>SSN 100-150 (Högt):</strong>
+                    <br>• 10m: Regelbundet öppet, bra DX!
+                    <br>• 12m, 15m: Utmärkta
+                    <br>• 20m: Överfyllt (så bra att det blir trångt!)
+                    <br>• Högre band mycket användbara
+                    <br><br>
+                    <strong>SSN > 150 (Mycket högt):</strong>
+                    <br>• 10m: Öppet dygnet runt till hela världen! 🌍
+                    <br>• 6m: Sporadiskt E nästan dagligen
+                    <br>• Alla HF-band fantastiska
+                    <br>• "Golden age" - njut medan det varar!
                 </div>
                 
-                <div class="key-points">
-                    <h3>Formler att komma ihåg:</h3>
-                    <ul>
-                        <li><strong>Radiohorisont:</strong> d = 4,12 × √h (km/m)</li>
-                        <li><strong>Frirumsförlust:</strong> 32,4 + 20log(d) + 20log(f) dB</li>
+                <h3>Solflares och geomagnetiska stormar</h3>
+                
+                <p>Ibland "exploderar" solfläckar och skickar ut enorma mängder energi - en <strong>solflaresolfackla)</strong>. Denna energi når jorden och kan både förbättra OCH förstöra HF-förhållanden!</p>
+                
+                <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #991b1b;">⚠️ SOLFLARES OCH STORMAR</h4>
+                    
+                    <p><strong>Händelseförlopp:</strong></p>
+                    
+                    <ol>
+                        <li><strong>Solflarar inträffar</strong> (explosion på solen)
+                            <br>→ Intensiv röntgen- och UV-strålning når jorden på 8 minuter (ljusets hastighet)</li>
+                        <br>
+                        <li><strong>Omedelbar effekt (minuter):</strong>
+                            <br>• D-skiktet joniseras KRAFTIGT
+                            <br>• HF-band absorberas totalt
+                            <br>• <strong>SWF (Sudden Ionospheric Disturbance):</strong> HF-blackout!
+                            <br>• Varar 10 minuter till några timmar
+                            <br>• Solbelyst sida av jorden drabbas (nattsidan opåverkad)</li>
+                        <br>
+                        <li><strong>Fördröjd effekt (1-3 dagar senare):</strong>
+                            <br>• Laddade partiklar (CME = Coronal Mass Ejection) når jorden
+                            <br>• <strong>Geomagnetisk storm</strong> inträffar
+                            <br>• Aurora, störd jonosfär
+                            <br>• HF-absorption (speciellt högre band)
+                            <br>• Kan vara "radio-blackout" i flera dagar</li>
+                    </ol>
+                    
+                    <table class="content-table" style="margin-top: 1rem;">
+                        <thead>
+                            <tr>
+                                <th style="width: 20%;">Fas</th>
+                                <th style="width: 20%;">Tid</th>
+                                <th style="width: 30%;">Vad händer</th>
+                                <th style="width: 30%;">Effekt på HF</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: white;">
+                                <td><strong>Före flare</strong></td>
+                                <td>Timmar-dagar innan</td>
+                                <td>• Solfläcksgrupp växer
+                                <br>• Magnetfält blir instabilt</td>
+                                <td>• Normala förhållanden
+                                <br>• Ofta mycket bra (högt SSN)</td>
+                            </tr>
+                            <tr style="background: #fee2e2;">
+                                <td><strong>Flare (X-ray)</strong></td>
+                                <td>8 minuter (ljusets hastighet)</td>
+                                <td>• Röntgen och UV når jorden
+                                <br>• D-skiktet joniseras kraftigt</td>
+                                <td><strong>BLACKOUT (SWF):</strong>
+                                <br>• HF-band döda (solsida)
+                                <br>• 10 min - 2 timmar
+                                <br>• VHF/UHF opåverkade</td>
+                            </tr>
+                            <tr style="background: #fef3c7;">
+                                <td><strong>1-3 dagar efter</strong></td>
+                                <td>Partiklar når jorden</td>
+                                <td>• CME träffar magnetosfären
+                                <br>• Geomagnetisk storm (aurora)
+                                <br>• Störd jonosfär</td>
+                                <td><strong>ABSORPTION & AURORA:</strong>
+                                <br>• 20m/15m/10m dåliga
+                                <br>• 40m/80m OK till bra
+                                <br>• 2m aurora-DX möjlig
+                                <br>• Varar dagar</td>
+                            </tr>
+                            <tr style="background: #d1fae5;">
+                                <td><strong>Efter storm</strong></td>
+                                <td>3-7 dagar efter</td>
+                                <td>• Jonosfären återhämtar sig
+                                <br>• Magnetfält stabiliseras</td>
+                                <td><strong>EFTERGLOW:</strong>
+                                <br>• Ibland BÄTTRE än innan!
+                                <br>• F2-skikt extra joniserat
+                                <br>• Fantastiska DX-förhållanden</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <div class="info-box tip" style="margin-top: 1rem;">
+                        <strong>💡 Flare-klassificering (X-ray flares):</strong>
+                        <br><br>
+                        • <strong>A-klass:</strong> Små, ingen effekt på radio
+                        <br>• <strong>B-klass:</strong> Små, ingen effekt på radio
+                        <br>• <strong>C-klass:</strong> Små, minimal effekt
+                        <br>• <strong>M-klass:</strong> Medelstora, kan ge SWF och aurora
+                        <br>• <strong>X-klass:</strong> Stora, HF-blackout troligt, geomagnetisk storm följer
+                        <br><br>
+                        Varje klass är 10× starkare än föregående!
+                        <br>Exempel: X2-flare är 2× starkare än X1, M5 är halva styrkan av X1
+                        <br><br>
+                        <strong>Varning och prognos:</strong>
+                        <br>• <strong>spaceweather.com:</strong> Realtidsvarningar för flares
+                        <br>• <strong>NOAA Space Weather:</strong> 3-dagars prognos
+                        <br>• <strong>A-index & K-index:</strong> Mått på geomagnetisk aktivitet
+                        <br>  - A < 20: Lugnt
+                        <br>  - A 20-50: Störningar möjliga
+                        <br>  - A > 50: Geomagnetisk storm, HF-problem troliga
+                    </div>
+                </div>
+                
+                <h3>A-index och K-index - Magnetiska störningar</h3>
+                
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 15%;">Index</th>
+                            <th style="width: 20%;">Vad det mäter</th>
+                            <th style="width: 30%;">Skala</th>
+                            <th style="width: 35%;">Betydelse för HF</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: #d1fae5;">
+                            <td><strong>K-index</strong></td>
+                            <td>Magnetiska störningar<br>(3-timmars intervall)</td>
+                            <td><strong>0-9:</strong>
+                            <br>0-2: Lugnt
+                            <br>3-4: Oroligt
+                            <br>5-6: Storm
+                            <br>7-9: Svår storm</td>
+                            <td>• K 0-3: Normala HF-förhållanden
+                            <br>• K 4: Lätt påverkan på HF
+                            <br>• K 5-6: Aurora möjlig, HF absorption
+                            <br>• K 7-9: HF-blackout, stark aurora</td>
+                        </tr>
+                        <tr style="background: #dbeafe;">
+                            <td><strong>A-index</strong></td>
+                            <td>Dagligt medelvärde av K-index</td>
+                            <td><strong>0-400:</strong>
+                            <br>0-20: Lugnt
+                            <br>20-50: Oroligt
+                            <br>50-100: Storm
+                            <br>>100: Svår storm</td>
+                            <td>• A < 10: Utmärkta HF-förhållanden
+                            <br>• A 10-20: Normalt
+                            <br>• A 20-50: Störningar på högre HF
+                            <br>• A > 50: Allvarliga HF-problem</td>
+                        </tr>
+                        <tr style="background: #fef3c7;">
+                            <td><strong>Kp-index</strong></td>
+                            <td>Planetariskt K-index<br>(global aktivitet)</td>
+                            <td><strong>0-9:</strong>
+                            <br>Samma som K-index<br>men globalt medelvärde</td>
+                            <td>• Kp < 4: Normalt
+                            <br>• Kp 4-5: Aurora på höga breddgrader
+                            <br>• Kp 6-7: Aurora långt söderut
+                            <br>• Kp 8-9: Aurora överallt, HF kaos</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div class="info-box tip">
+                    <strong>💡 Så använder du indexen praktiskt:</strong>
+                    <br><br>
+                    <strong>Planera DX-kväll:</strong>
+                    <br>1. Kolla K-index och A-index (spaceweather.com, hamqsl.com/solar)
+                    <br>2. Om K < 3 och A < 15: Perfekt för HF-DX! ✅
+                    <br>3. Om K > 4 eller A > 30: Förvänta dig problem på högre band ⚠️
+                    <br><br>
+                    <strong>Snabbregel:</strong>
+                    <br>• <strong>Lågt A-index + högt SSN = DX-himmel! 🌟</strong>
+                    <br>• <strong>Högt A-index + högt SSN = blandade förhållanden 🎲</strong>
+                    <br>• <strong>Lågt SSN + högt A-index = frustrerat  😞</strong>
+                </div>
+                
+                <h3>Praktiska råd för olika solcykelfaser</h3>
+                
+                <div style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 3px solid #0ea5e9; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                    <h4 style="margin-top: 0; color: #0369a1;">🎯 OPTIMERA DIN DRIFT EFTER SOLCYKELN</h4>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                        <strong style="color: #0369a1; font-size: 1.2rem;">Solar Minimum (SSN < 30):</strong>
+                        <br><br>
+                        <strong>Strategier:</strong>
+                        <br>• <strong>Använd lägre band:</strong> 40m, 80m, 160m är dina vänner
+                        <br>• <strong>Fokusera på CW och digitala modes:</strong> Går längre än SSB vid svaga förhållanden
+                        <br>• <strong>NVIS-teknik:</strong> Perfekt för regional täckning när DX är svårt
+                        <br>• <strong>Grålinjen är guld:</strong> 40m och 80m kan ge långdistans vid gryning/skymning
+                        <br>• <strong>VHF/UHF:</strong> Satsa mer på lokal VHF/UHF-trafik när HF är tråkigt
+                        <br>• <strong>Lär dig digitala modes:</strong> FT8, FT4, WSPR - detekterar svagare signaler
+                        <br><br>
+                        <strong>Förväntningar:</strong>
+                        <br>• 20m öppet bara några timmar/dag
+                        <br>• 15m och 10m nästan alltid stängda
+                        <br>• DX svårare men inte omöjligt (tålamod krävs!)
+                        <br>• 40m blir "arbetshästen"
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                        <strong style="color: #0369a1; font-size: 1.2rem;">Rising/Falling Phase (SSN 30-100):</strong>
+                        <br><br>
+                        <strong>Strategier:</strong>
+                        <br>• <strong>Experimentera med högre band:</strong> 17m och 15m börjar öppna
+                        <br>• <strong>Följ SSN dagligen:</strong> Varje ökning ger bättre förhållanden
+                        <br>• <strong>20m blir fantastiskt:</strong> Nu börjar det hända!
+                        <br>• <strong>Prova 12m och 10m sporadiskt:</strong> Kan ge överraskningar
+                        <br>• <strong>Balans mellan band:</strong> Både höga och låga band användbara
+                        <br><br>
+                        <strong>Förväntningar:</strong>
+                        <br>• 20m öppet större delen av dagen
+                        <br>• 17m och 15m allt bättre
+                        <br>• 10m börjar vakna (stigande fas) eller somnar (fallande fas)
+                        <br>• Spännande period - förhållandena förbättras hela tiden (stigande) eller försämras (fallande)
+                    </div>
+                    
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                        <strong style="color: #0369a1; font-size: 1.2rem;">Solar Maximum (SSN > 100): 🌟</strong>
+                        <br><br>
+                        <strong>Strategier:</strong>
+                        <br>• <strong>NJUT AV 10m-BANDET!</strong> Det magiska bandet är öppet!
+                        <br>• <strong>Satsa på högre band:</strong> 10m, 12m, 15m ger bäst DX med minsta möjliga effekt
+                        <br>• <strong>QRP (låg effekt):</strong> Fungerar utmärkt! 5W kan nå hela världen på 10m
+                        <br>• <strong>Mobil DX:</strong> Perfekt tid för mobil HF (10m och 15m från bilen!)
+                        <br>• <strong>Bygg små antenner:</strong> Korta dipoler på 10m räcker långt
+                        <br>• <strong>6m sporadiskt E:</strong> Kolla 6m ofta - Es nästan dagligen!
+                        <br>• <strong>Var aktiv!</strong> Detta är "golden age" - det kommer inte vara så här bra på flera år
+                        <br><br>
+                        <strong>Förväntningar:</strong>
+                        <br>• 10m öppet hela dagen till hela världen
+                        <br>• 15m och 12m fantastiska
+                        <br>• 20m så bra att det blir trångt
+                        <br>• Långa DX-kontakter med minimal utrustning
+                        <br>• Men: Risk för solflares och geomagnetiska stormar! Håll koll på spaceweather.com
+                    </div>
+                </div>
+                
+                <h3>📻 Praktiska verktyg och resurser</h3>
+                
+                <div class="info-box important" style="background: #d1fae5; border-left: 4px solid #059669;">
+                    <strong>🛠️ Viktiga webbplatser för att följa solaktivitet och HF-propagation:</strong>
+                    <br><br>
+                    <strong>Solaktivitet och Space Weather:</strong>
+                    <br>• <strong>spaceweather.com:</strong> Dagliga uppdateringar, bilder av solen, flare-varningar
+                    <br>• <strong>solen.info:</strong> Svensk site med SSN, K/A-index, prognoser
+                    <br>• <strong>NOAA Space Weather Prediction Center:</strong> Officiella prognoser
+                    <br>• <strong>SDO (Solar Dynamics Observatory):</strong> Realtidsbilder av solen från NASA
+                    <br><br>
+                    <strong>HF-propagation och bandförhållanden:</strong>
+                    <br>• <strong>HamQSL Solar Data:</strong> Samlade index (SSN, SFI, K, A)
+                    <br>• <strong>PSKReporter.info:</strong> Realtidskarta över vilka band som är öppna (via FT8/PSK)
+                    <br>• <strong>VOACAP Online:</strong> Beräkna propagation mellan två platser
+                    <br>• <strong>Proppy:</strong> Propagationsprognoser baserat på din QTH
+                    <br>• <strong>DXMaps.com:</strong> Realtid HF-, VHF-propagation, Es-kartor
+                    <br>• <strong>WSPRnet.org:</strong> Automatiska sändningar visar exakt vilka band som är öppna
+                    <br><br>
+                    <strong>Mobil-appar:</strong>
+                    <br>• <strong>HamSCI:</strong> Propagation-app för mobil
+                    <br>• <strong>Solar Monitor:</strong> Realtids-soldata i fickan
+                    <br>• <strong>Ham Radio Deluxe (HRD):</strong> Loggningsprogram med inbyggd propagationsinfo
+                    <br><br>
+                    <strong>Prenumerera på varningar:</strong>
+                    <br>• NOAA skickar e-post vid solflares och geomagnetiska stormar (gratis!)
+                    <br>• Spaceweather.com har e-post-prenumeration
+                </div>
+                
+                <h3>✅ Snabbtest - Solfläckar och solaktivitet</h3>
+                
+                <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+                    <strong>✅ Kan du svara på dessa?</strong>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Hur lång är solcykeln (ungefär)?</li>
+                        <li>Vad betyder SSN (Sunspot Number)?</li>
+                        <li>Hur påverkar högt SSN (solar max) 10m-bandet?</li>
+                        <li>Vad är SWF och hur snabbt efter en solflar inträffar det?</li>
+                        <li>Vilket index mäter geomagnetisk aktivitet (aurora)?</li>
+                        <li>Vilka band fungerar bäst vid solar minimum?</li>
                     </ul>
+                    <details style="margin-top: 0.5rem;">
+                        <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+                        <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                            <small>
+                                • Cirka 11 år (varierar mellan 9-14 år)
+                                <br>• Sunspot Number - antalet solfläckar (mått på solaktivitet)
+                                <br>• 10m öppnar! Kan vara öppet dygnet runt till hela världen. Fantastiskt för DX med låg effekt
+                                <br>• Sudden Ionospheric Disturbance / Sudden Wave Fadeout. Inträffar 8 minuter efter flare (ljusets hastighet)
+                                <br>• K-index (eller Kp-index för planetariskt). K > 4 innebär ökad aurora-sannolikhet
+                                <br>• 40m, 80m, 160m (lägre HF-band). 20m fungerar begränsat, högre band (15m, 10m) oftast stängda
+                            </small>
+                        </div>
+                    </details>
+                </div>
+                
+                <div class="info-box important">
+                    <strong>🎯 Viktigt för provet:</strong>
+                    <br>• Solcykeln är cirka 11 år lång
+                    <br>• SSN (Sunspot Number) mäter antal solfläckar
+                    <br>• Högt SSN (solar max) = högre HF-band öppnar (10m, 15m, 20m)
+                    <br>• Lågt SSN (solar min) = bara lägre HF-band fungerar (40m, 80m)
+                    <br>• Solflar → SWF efter 8 minuter (HF-blackout på solsidan)
+                    <br>• CME → Geomagnetisk storm 1-3 dagar senare (aurora, HF-absorption)
+                    <br>• K-index och A-index mäter geomagnetisk aktivitet
+                    <br>• K > 4 eller A > 30 = störningar på HF troliga
+                    <br>• Solar max = fantastisk tid för HF-DX!
+                </div>
+            </div>
+
+            <!-- ============================================ -->
+            <!-- KAPITELSAMMANFATTNING -->
+            <!-- ============================================ -->
+            
+            <div class="content-section" style="background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%); border: 3px solid #0ea5e9; border-radius: 12px; padding: 2rem; margin: 3rem 0;">
+                <h2 style="margin-top: 0; color: #0369a1;">📚 Sammanfattning - Kapitel 4: Vågutbredning</h2>
+                
+                <h3 style="color: #0369a1;">🔑 Viktigaste begreppen</h3>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                    <strong style="font-size: 1.1rem; color: #0369a1;">Grundläggande formler:</strong>
+                    <br><br>
+                    • <strong>Våglängd:</strong> λ (m) = 300 / f (MHz)
+                    <br>• <strong>Radiohorisont:</strong> d (km) = 4,12 × √h (m)
+                    <br>• <strong>Frirumsförlust:</strong> L (dB) = 32,4 + 20×log(d) + 20×log(f)
+                    <br><br>
+                    <em>💡 Dessa MÅSTE du kunna utantill!</em>
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                    <strong style="font-size: 1.1rem; color: #0369a1;">Tre utbredningssätt:</strong>
+                    <br><br>
+                    <strong>1. Markvåg:</strong>
+                    <br>• Följer jordytan, diffraktion runt horisonten
+                    <br>• Bäst på LF/MF/lägre HF (160m, 80m)
+                    <br>• Vertikal polarisation MYCKET viktigt
+                    <br>• Saltvatten ger 2-3× längre räckvidd än land
+                    <br><br>
+                    <strong>2. Rymdvåg (jonosfärisk reflektion):</strong>
+                    <br>• HF-banden (80m till 10m)
+                    <br>• F-skiktet viktigast (140-600 km höjd)
+                    <br>• D-skiktet absorberar dagtid (fiende!)
+                    <br>• MUF = Maximum Usable Frequency (använd 80-90% av MUF)
+                    <br>• Död zon (skip zone) mellan markvåg och rymdvåg
+                    <br><br>
+                    <strong>3. Siktlinje:</strong>
+                    <br>• VHF/UHF/högre (6m, 2m, 70cm)
+                    <br>• Antennhöjd är ALLT
+                    <br>• Begränsas av jordkrökning och terräng
+                    <br>• Repeatrar förlänger räckvidden enormt
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                    <strong style="font-size: 1.1rem; color: #0369a1;">Jonosfärens skikt:</strong>
+                    <br><br>
+                    • <strong>D-skikt (60-90 km):</strong> ABSORBERAR dagtid, borta nattetid
+                    <br>• <strong>E-skikt (90-140 km):</strong> Reflekterar MF/lägre HF, sporadiskt E för VHF
+                    <br>• <strong>F-skikt (140-600 km):</strong> VIKTIGAST för HF-DX, högst elektronkoncentration
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                    <strong style="font-size: 1.1rem; color: #0369a1;">Speciella fenomen:</strong>
+                    <br><br>
+                    • <strong>Sporadiskt E:</strong> VHF-reflektion (6m, ibland 2m), maj-augusti
+                    <br>• <strong>Tropoducting:</strong> Temperaturinversion, 300-1000+ km på VHF/UHF
+                    <br>• <strong>Aurora:</strong> 2m-DX norrut (raspig signal), HF-absorption
+                    <br>• <strong>EME (Moonbounce):</strong> Via månen, kräver stor station
+                    <br>• <strong>Meteorscatter:</strong> Korta bursts via meteorspår
+                </div>
+                
+                <div style="background: white; padding: 1.5rem; border-radius: 8px; margin: 1rem 0;">
+                    <strong style="font-size: 1.1rem; color: #0369a1;">Solaktivitet:</strong>
+                    <br><br>
+                    • <strong>Solcykel:</strong> ~11 år, SSN 0-200+
+                    <br>• <strong>Solar max (SSN > 100):</strong> 10m fantastiskt, högre band öppna
+                    <br>• <strong>Solar min (SSN < 30):</strong> Bara 40m, 80m, 160m funkar bra
+                    <br>• <strong>Solflar:</strong> SWF efter 8 minuter, CME → storm efter 1-3 dagar
+                    <br>• <strong>K-index / A-index:</strong> Geomagnetisk aktivitet (K > 4 = störningar)
+                </div>
+                
+                <h3 style="color: #0369a1; margin-top: 2rem;">🎯 Praktiska råd - Sammanfattat</h3>
+                
+                <table class="content-table" style="margin-top: 1rem;">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">Situation</th>
+                            <th style="width: 25%;">Bästa band</th>
+                            <th style="width: 25%;">Teknik</th>
+                            <th style="width: 25%;">Tid</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: white;">
+                            <td><strong>Lokal trafik<br>(10-50 km)</strong></td>
+                            <td>2m, 70cm<br>(VHF/UHF)</td>
+                            <td>• Repeater
+                            <br>• Handhållen OK</td>
+                            <td>Dygnet runt</td>
+                        </tr>
+                        <tr style="background: white;">
+                            <td><strong>Regional<br>(50-500 km)</strong></td>
+                            <td>80m, 40m</td>
+                            <td>• NVIS (låg antenn)
+                            <br>• Vertikal eller dipol</td>
+                            <td>80m: Natt
+                            <br>40m: Dag & natt</td>
+                        </tr>
+                        <tr style="background: white;">
+                            <td><strong>Långdistans/DX<br>(>1000 km)</strong></td>
+                            <td><strong>Solar max:</strong> 20m, 15m, 10m
+                            <br><strong>Solar min:</strong> 40m, 80m</td>
+                            <td>• Beam-antenn (Yagi)
+                            <br>• 100W räcker!</td>
+                            <td><strong>Högre band:</strong> Dag
+                            <br><strong>Lägre band:</strong> Natt</td>
+                        </tr>
+                        <tr style="background: white;">
+                            <td><strong>VHF-DX<br>(>500 km)</strong></td>
+                            <td>6m, 2m</td>
+                            <td>• Sporadiskt E (sommar)
+                            <br>• Tropoducting (högtryck)
+                            <br>• Yagi-antenn</td>
+                            <td><strong>Es:</strong> 10:00-16:00
+                            <br><strong>Tropo:</strong> Kväll/natt</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div style="background: #dbeafe; padding: 1.5rem; border-radius: 8px; margin: 2rem 0; border-left: 5px solid #3b82f6;">
+                    <strong style="font-size: 1.2rem; color: #1e40af;">💡 Den ultimata tumregeln:</strong>
+                    <br><br>
+                    <strong style="font-size: 1.1rem;">För HF:</strong>
+                    <br>• <strong>Högre frekvens (20m, 15m, 10m):</strong> Dagtid, solar max, långdistans
+                    <br>• <strong>Lägre frekvens (80m, 40m):</strong> Nattetid, solar min, regional/DX
+                    <br><br>
+                    <strong style="font-size: 1.1rem;">För VHF/UHF:</strong>
+                    <br>• <strong>Antennhöjd är ALLT!</strong> 10m högre = flera mil längre
+                    <br>• Terrängen avgör - berg blockerar, vatten är perfekt
+                    <br><br>
+                    <strong style="font-size: 1.1rem;">För alla band:</strong>
+                    <br>• <strong>Grålinjen (gryning/skymning) = DX-guld! ✨</strong>
                 </div>
             </div>
 
@@ -558,7 +2524,9 @@
             <p>&copy; 2025 Radioamatör Utbildning. Baserat på SSA:s utbildningsmaterial.</p>
         </div>
     </footer>
-
+    
+    <script src="../../js/data/chapters.js"></script>
+    <script src="../../js/progress.js"></script>
     <script src="../../js/main.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {

@@ -4,7 +4,7 @@
 
 const QUESTIONS = [
     // ============================================
-    // KAPITEL 1: GRUNDLÄGGANDE ELEKTRONIK
+    // KAPITEL 1: GRUNDLÄGGANDE ELEKTRONIK (20 frågor)
     // ============================================
     {
         id: 1,
@@ -37,6 +37,20 @@ const QUESTIONS = [
     {
         id: 3,
         chapterId: 1,
+        question: "Vilken spänning använder de flesta amatörradioapparater som standard?",
+        options: [
+            { id: "a", text: "9V DC" },
+            { id: "b", text: "12V DC" },
+            { id: "c", text: "13,8V DC" },
+            { id: "d", text: "230V AC" }
+        ],
+        correctAnswer: "c",
+        explanation: "13,8V DC är den universella standarden för amatörradioutrustning. Detta är lite högre än ett bilbatteri (12V) för att kompensera för spänningsfall i kablar.",
+        difficulty: "easy"
+    },
+    {
+        id: 4,
+        chapterId: 1,
         question: "Vad händer med totalresistansen när två motstånd på vardera 100Ω kopplas parallellt?",
         options: [
             { id: "a", text: "200 Ω" },
@@ -45,13 +59,13 @@ const QUESTIONS = [
             { id: "d", text: "25 Ω" }
         ],
         correctAnswer: "c",
-        explanation: "Vid parallellkoppling av två lika stora motstånd blir totalresistansen hälften: R_total = R/2 = 100Ω/2 = 50Ω.",
+        explanation: "Vid parallellkoppling av två lika stora motstånd blir totalresistansen hälften: R_total = R/2 = 100Ω/2 = 50Ω. För parallellkoppling gäller generellt: 1/R_tot = 1/R₁ + 1/R₂.",
         difficulty: "medium"
     },
     {
-        id: 4,
+        id: 5,
         chapterId: 1,
-        question: "Vilken formel beskriver elektrisk effekt?",
+        question: "Vilken formel beskriver elektrisk effekt när du känner till spänning och ström?",
         options: [
             { id: "a", text: "P = U × I" },
             { id: "b", text: "P = U / I" },
@@ -59,11 +73,25 @@ const QUESTIONS = [
             { id: "d", text: "P = U + I" }
         ],
         correctAnswer: "a",
-        explanation: "Elektrisk effekt P (Watt) = Spänning U (Volt) × Ström I (Ampere).",
+        explanation: "Elektrisk effekt P (Watt) = Spänning U (Volt) × Ström I (Ampere). Detta är grundformeln för effekt.",
         difficulty: "easy"
     },
     {
-        id: 5,
+        id: 6,
+        chapterId: 1,
+        question: "Om en radio drar 100W från nätaggregatet men levererar bara 60W RF till antennen, vad är verkningsgraden?",
+        options: [
+            { id: "a", text: "40%" },
+            { id: "b", text: "60%" },
+            { id: "c", text: "100%" },
+            { id: "d", text: "167%" }
+        ],
+        correctAnswer: "b",
+        explanation: "Verkningsgrad η = (P_ut / P_in) × 100% = (60W / 100W) × 100% = 60%. De övriga 40W blir värme som måste kylas bort.",
+        difficulty: "medium"
+    },
+    {
+        id: 7,
         chapterId: 1,
         question: "Vad är en kondensators huvudsakliga funktion?",
         options: [
@@ -73,25 +101,53 @@ const QUESTIONS = [
             { id: "d", text: "Att förstärka signaler" }
         ],
         correctAnswer: "b",
-        explanation: "En kondensator lagrar elektrisk energi i ett elektriskt fält mellan två ledande plattor.",
+        explanation: "En kondensator lagrar elektrisk energi i ett elektriskt fält mellan två ledande plattor. Den blockerar likström men släpper igenom växelström.",
         difficulty: "easy"
     },
     {
-        id: 6,
+        id: 8,
         chapterId: 1,
-        question: "Vad händer med kapacitansen när två kondensatorer på 10µF vardera seriekopplas?",
+        question: "Hur beter sig en kondensator mot likström (DC)?",
         options: [
-            { id: "a", text: "20 µF" },
-            { id: "b", text: "10 µF" },
-            { id: "c", text: "5 µF" },
-            { id: "d", text: "100 µF" }
+            { id: "a", text: "Släpper igenom DC fritt" },
+            { id: "b", text: "Blockerar DC helt" },
+            { id: "c", text: "Förstärker DC" },
+            { id: "d", text: "Omvandlar DC till AC" }
         ],
-        correctAnswer: "c",
-        explanation: "Vid seriekoppling av två lika stora kondensatorer: C_total = C/2 = 10µF/2 = 5µF.",
+        correctAnswer: "b",
+        explanation: "Kondensatorer blockerar likström (DC) helt efter initial laddning. De släpper däremot igenom växelström (AC), särskilt höga frekvenser.",
+        difficulty: "easy"
+    },
+    {
+        id: 9,
+        chapterId: 1,
+        question: "Vad händer med en kondensators reaktans när frekvensen ÖKAR?",
+        options: [
+            { id: "a", text: "Reaktansen ökar" },
+            { id: "b", text: "Reaktansen minskar" },
+            { id: "c", text: "Reaktansen förblir konstant" },
+            { id: "d", text: "Reaktansen blir noll" }
+        ],
+        correctAnswer: "b",
+        explanation: "Kapacitiv reaktans X_C = 1/(2πfC). När frekvensen ökar minskar reaktansen - det blir lättare för högfrekventa signaler att passera kondensatorn.",
         difficulty: "medium"
     },
     {
-        id: 7,
+        id: 10,
+        chapterId: 1,
+        question: "Hur beter sig en spole mot likström (DC) jämfört med växelström (AC)?",
+        options: [
+            { id: "a", text: "Blockerar DC, släpper igenom AC" },
+            { id: "b", text: "Släpper igenom DC, bromsar AC" },
+            { id: "c", text: "Blockerar både DC och AC" },
+            { id: "d", text: "Släpper igenom både DC och AC lika lätt" }
+        ],
+        correctAnswer: "b",
+        explanation: "Spolar släpper igenom likström (DC) nästan fritt, men bromsar växelström (AC). Högre frekvens ger högre reaktans (större motstånd). Detta är MOTSATSEN till kondensatorer!",
+        difficulty: "medium"
+    },
+    {
+        id: 11,
         chapterId: 1,
         question: "Vad är induktansens enhet?",
         options: [
@@ -101,25 +157,67 @@ const QUESTIONS = [
             { id: "d", text: "Tesla (T)" }
         ],
         correctAnswer: "b",
-        explanation: "Induktans mäts i Henry (H), uppkallat efter Joseph Henry.",
+        explanation: "Induktans mäts i Henry (H), uppkallat efter Joseph Henry. Vanliga värden i radioteknik är µH (mikrohenry) och mH (millihenry).",
         difficulty: "easy"
     },
     {
-        id: 8,
+        id: 12,
         chapterId: 1,
-        question: "Vad kännetecknar en ideal diod?",
+        question: "När två resistorer på 100Ω vardera kopplas i serie, vad blir totalresistansen?",
         options: [
-            { id: "a", text: "Den leder ström lika bra i båda riktningarna" },
-            { id: "b", text: "Den leder endast ström i en riktning" },
-            { id: "c", text: "Den har konstant resistans" },
-            { id: "d", text: "Den förstärker signaler" }
+            { id: "a", text: "50 Ω" },
+            { id: "b", text: "100 Ω" },
+            { id: "c", text: "200 Ω" },
+            { id: "d", text: "400 Ω" }
+        ],
+        correctAnswer: "c",
+        explanation: "I seriekoppling adderas resistanserna direkt: R_tot = R₁ + R₂ = 100Ω + 100Ω = 200Ω. Detta är motsatsen till parallellkoppling.",
+        difficulty: "easy"
+    },
+    {
+        id: 13,
+        chapterId: 1,
+        question: "I en seriekrets med tre resistorer, hur är strömmen genom varje resistor?",
+        options: [
+            { id: "a", text: "Olika, beroende på resistansen" },
+            { id: "b", text: "Samma genom alla resistorer" },
+            { id: "c", text: "Störst genom den minsta resistorn" },
+            { id: "d", text: "Noll genom den största resistorn" }
         ],
         correctAnswer: "b",
-        explanation: "En diod är en halvledarkomponent som endast leder ström i en riktning.",
-        difficulty: "easy"
+        explanation: "I seriekoppling är strömmen samma överallt - det finns bara en väg för strömmen. Däremot delas spänningen upp mellan resistorerna.",
+        difficulty: "medium"
     },
     {
-        id: 9,
+        id: 14,
+        chapterId: 1,
+        question: "Vad är RMS-värdet (effektivvärdet) för en sinusvåg med toppvärdet 100V?",
+        options: [
+            { id: "a", text: "50 V" },
+            { id: "b", text: "70,7 V" },
+            { id: "c", text: "100 V" },
+            { id: "d", text: "141,4 V" }
+        ],
+        correctAnswer: "b",
+        explanation: "RMS-värde = Toppvärde × 0,707 = 100V × 0,707 ≈ 70,7V. RMS (Root Mean Square) är det värde som ger samma effekt som likström.",
+        difficulty: "medium"
+    },
+    {
+        id: 15,
+        chapterId: 1,
+        question: "Vad händer vid resonans i en LC-krets?",
+        options: [
+            { id: "a", text: "X_L och X_C tar ut varandra" },
+            { id: "b", text: "Impedansen blir oändligt stor" },
+            { id: "c", text: "Strömmen blir noll" },
+            { id: "d", text: "Frekvensen blir noll" }
+        ],
+        correctAnswer: "a",
+        explanation: "Vid resonansfrekvensen är X_L = X_C (induktiv reaktans = kapacitiv reaktans). De tar ut varandra och impedansen blir minimal (seriekrets) eller maximal (parallellkrets).",
+        difficulty: "medium"
+    },
+    {
+        id: 16,
         chapterId: 1,
         question: "Vilken typ av filter släpper igenom låga frekvenser och dämpar höga?",
         options: [
@@ -129,43 +227,71 @@ const QUESTIONS = [
             { id: "d", text: "Bandspärrfilter" }
         ],
         correctAnswer: "b",
-        explanation: "Ett lågpassfilter släpper igenom frekvenser under brytfrekvensen och dämpar högre frekvenser.",
+        explanation: "Ett lågpassfilter släpper igenom frekvenser under brytfrekvensen och dämpar högre frekvenser. Används ofta efter slutsteget för att dämpa övertoner.",
         difficulty: "easy"
     },
     {
-        id: 10,
+        id: 17,
         chapterId: 1,
-        question: "Vad är reaktans?",
+        question: "Vad är formeln för resonansfrekvensen i en LC-krets?",
         options: [
-            { id: "a", text: "Motstånd i en likströmskrets" },
-            { id: "b", text: "Frekvensberoende motstånd i en växelströmskrets" },
-            { id: "c", text: "Effektförlust i en ledare" },
-            { id: "d", text: "Magnetisk fältstyrka" }
+            { id: "a", text: "f = 2π√(LC)" },
+            { id: "b", text: "f = 1/(2π√(LC))" },
+            { id: "c", text: "f = √(LC)" },
+            { id: "d", text: "f = LC/2π" }
         ],
         correctAnswer: "b",
-        explanation: "Reaktans är det frekvensberoende motståndet som kondensatorer och spolar uppvisar i växelströmskretsar. Mäts i Ohm.",
+        explanation: "Resonansfrekvens f₀ = 1/(2π√(LC)) där L är induktansen i Henry och C är kapacitansen i Farad. Detta är den viktigaste formeln i radioteknik!",
+        difficulty: "hard"
+    },
+    {
+        id: 18,
+        chapterId: 1,
+        question: "Vad betyder +3 dB effektförändring?",
+        options: [
+            { id: "a", text: "Effekten har halverats" },
+            { id: "b", text: "Effekten har fördubblats" },
+            { id: "c", text: "Effekten har ökats 10 gånger" },
+            { id: "d", text: "Ingen förändring" }
+        ],
+        correctAnswer: "b",
+        explanation: "+3 dB betyder att effekten har fördubblats (×2). -3 dB betyder att effekten har halverats (×0,5). Detta är viktiga värden att komma ihåg!",
         difficulty: "medium"
+    },
+    {
+        id: 19,
+        chapterId: 1,
+        question: "Vilken standard-impedans används för amatörradio?",
+        options: [
+            { id: "a", text: "25 Ω" },
+            { id: "b", text: "50 Ω" },
+            { id: "c", text: "75 Ω" },
+            { id: "d", text: "300 Ω" }
+        ],
+        correctAnswer: "b",
+        explanation: "50Ω är standard för amatörradio (sändare, koax, antenner). 75Ω används för TV, 300Ω för äldre TV-bandkabel. 50Ω är en kompromiss mellan låg förlust och hög effektkapacitet.",
+        difficulty: "easy"
+    },
+    {
+        id: 20,
+        chapterId: 1,
+        question: "Varför används elektrolytkondensatorer främst i nätaggregat och inte i RF-kretsar?",
+        options: [
+            { id: "a", text: "De är för dyra" },
+            { id: "b", text: "De har polaritet och stora förluster vid höga frekvenser" },
+            { id: "c", text: "De är för stora fysiskt" },
+            { id: "d", text: "De kan inte lagra energi" }
+        ],
+        correctAnswer: "b",
+        explanation: "Elektrolytkondensatorer har polaritet (+ och -) och stora förluster vid RF-frekvenser. De är bra för stora kapacitanser vid låga frekvenser (nätaggregatsfilter) men inte för RF-kretsar där keramiska kondensatorer används.",
+        difficulty: "hard"
     },
 
     // ============================================
-    // KAPITEL 2: RADIOTEKNIK
+    // KAPITEL 2: RADIOTEKNIK (20 frågor)
     // ============================================
     {
-        id: 11,
-        chapterId: 2,
-        question: "Vad är huvudfunktionen hos en oscillator i en radiosändare?",
-        options: [
-            { id: "a", text: "Att förstärka utgångssignalen" },
-            { id: "b", text: "Att generera en stabil bärvågsfrekvens" },
-            { id: "c", text: "Att modulera signalen" },
-            { id: "d", text: "Att filtrera bort störningar" }
-        ],
-        correctAnswer: "b",
-        explanation: "Oscillatorn genererar den grundläggande frekvens (bärvåg) som sändaren arbetar på.",
-        difficulty: "easy"
-    },
-    {
-        id: 12,
+        id: 21,
         chapterId: 2,
         question: "Vad innebär AM (Amplitudmodulation)?",
         options: [
@@ -175,13 +301,13 @@ const QUESTIONS = [
             { id: "d", text: "Bärvågen slås av och på" }
         ],
         correctAnswer: "b",
-        explanation: "Vid AM varieras bärvågens amplitud (styrka) i takt med modulationssignalen.",
+        explanation: "Vid AM varieras bärvågens amplitud (styrka) i takt med modulationssignalen (t.ex. din röst). Frekvensen förändras inte.",
         difficulty: "easy"
     },
     {
-        id: 13,
+        id: 22,
         chapterId: 2,
-        question: "Vad är fördelen med SSB jämfört med AM?",
+        question: "Vad är huvudfördelen med SSB jämfört med AM?",
         options: [
             { id: "a", text: "Enklare utrustning" },
             { id: "b", text: "Bättre ljudkvalitet" },
@@ -189,11 +315,25 @@ const QUESTIONS = [
             { id: "d", text: "Lättare att ställa in" }
         ],
         correctAnswer: "c",
-        explanation: "SSB använder endast ett sidband och ingen bärvåg, vilket ger bättre effektivitet och smalare bandbredd.",
+        explanation: "SSB tar bort bärvågen (66% av effekten) och ett sidband. Detta ger cirka 3 gånger mer effektiv effektanvändning och hälften så stor bandbredd jämfört med AM.",
         difficulty: "medium"
     },
     {
-        id: 14,
+        id: 23,
+        chapterId: 2,
+        question: "Vilket sidband (LSB eller USB) används på 7 MHz (40m-bandet)?",
+        options: [
+            { id: "a", text: "LSB (Lower Sideband)" },
+            { id: "b", text: "USB (Upper Sideband)" },
+            { id: "c", text: "Båda kan användas" },
+            { id: "d", text: "Inget, endast FM används" }
+        ],
+        correctAnswer: "a",
+        explanation: "På frekvenser UNDER 10 MHz används LSB (Lower Sideband). På och över 10 MHz används USB. 7 MHz är under 10 MHz, därför LSB. Minnesregel: 'Under tio, undre!'",
+        difficulty: "medium"
+    },
+    {
+        id: 24,
         chapterId: 2,
         question: "Vad är FM-deviation?",
         options: [
@@ -203,99 +343,239 @@ const QUESTIONS = [
             { id: "d", text: "Bandbredden på FM-signalen" }
         ],
         correctAnswer: "a",
-        explanation: "FM-deviation är hur mycket frekvensen avviker från bärvågsfrekvensen när signalen moduleras.",
+        explanation: "FM-deviation är hur mycket frekvensen avviker från bärvågsfrekvensen när signalen moduleras. Större deviation ger bredare bandbredd men ofta bättre ljudkvalitet.",
         difficulty: "medium"
     },
     {
-        id: 15,
+        id: 25,
         chapterId: 2,
-        question: "Vad är huvudprincipen bakom en superheterodynmottagare?",
+        question: "Vilket trafiksätt har smalast bandbredd?",
+        options: [
+            { id: "a", text: "AM" },
+            { id: "b", text: "SSB" },
+            { id: "c", text: "FM" },
+            { id: "d", text: "CW (morsekod)" }
+        ],
+        correctAnswer: "d",
+        explanation: "CW har smalast bandbredd (100-500 Hz), följt av SSB (2,4 kHz), AM (6-9 kHz) och FM (12-16 kHz). Därför fungerar CW bäst för svaga signaler och långdistans.",
+        difficulty: "easy"
+    },
+    {
+        id: 26,
+        chapterId: 2,
+        question: "Varför används inte FM på HF-banden (kortvåg)?",
+        options: [
+            { id: "a", text: "FM fungerar inte på låga frekvenser" },
+            { id: "b", text: "FM kräver för stor bandbredd - det är för trångt på HF" },
+            { id: "c", text: "FM är förbjudet på HF" },
+            { id: "d", text: "FM ger sämre ljudkvalitet än AM" }
+        ],
+        correctAnswer: "b",
+        explanation: "FM kräver 12-16 kHz bandbredd (smalband-FM), vilket är 5 gånger mer än SSB (2,4 kHz). På HF-banden är frekvensutrymmet begränsat, så SSB och CW används istället.",
+        difficulty: "medium"
+    },
+    {
+        id: 27,
+        chapterId: 2,
+        question: "Vilka är de sex huvudblocken i en sändare (i rätt ordning)?",
+        options: [
+            { id: "a", text: "Antenn → Filter → Slutsteg → Modulator → Oscillator" },
+            { id: "b", text: "Oscillator → Modulator → Drivsteg → Slutsteg → Filter → Antenn" },
+            { id: "c", text: "Filter → Oscillator → Slutsteg → Modulator → Antenn" },
+            { id: "d", text: "Modulator → Oscillator → Filter → Slutsteg → Antenn" }
+        ],
+        correctAnswer: "b",
+        explanation: "Rätt ordning: 1) Oscillator (skapar frekvensen) → 2) Modulator (lägger till information) → 3) Drivsteg (förförstärkning) → 4) Slutsteg/PA (full effekt) → 5) Lågpassfilter (dämpar övertoner) → 6) Antenn.",
+        difficulty: "hard"
+    },
+    {
+        id: 28,
+        chapterId: 2,
+        question: "Varför är lågpassfilter efter slutsteget viktigt?",
+        options: [
+            { id: "a", text: "För att öka utgångseffekten" },
+            { id: "b", text: "För att dämpa harmoniska övertoner som annars stör andra band" },
+            { id: "c", text: "För att förbättra ljudkvaliteten" },
+            { id: "d", text: "För att skydda slutsteget" }
+        ],
+        correctAnswer: "b",
+        explanation: "Slutsteget genererar övertoner (2×, 3×, 4× grundfrekvensen) som måste dämpas för att inte störa andra band. Lagkravet är -40 dB dämpning på HF. Exempel: Sänder 100W på 14 MHz → max 0,01W på 28 MHz.",
+        difficulty: "medium"
+    },
+    {
+        id: 29,
+        chapterId: 2,
+        question: "Vad händer om man sänder utan antenn eller dummyload?",
+        options: [
+            { id: "a", text: "Ingenting, signalen försvinner bara" },
+            { id: "b", text: "Sändaren blir effektivare" },
+            { id: "c", text: "Slutsteget kan skadas av överhettning" },
+            { id: "d", text: "Räckvidden ökar" }
+        ],
+        correctAnswer: "c",
+        explanation: "Utan last reflekteras effekten tillbaka till slutsteget. Slutstegs-transistorerna blir överhettade och kan brännas upp - dyr reparation! Använd ALLTID antenn eller dummyload när du sänder.",
+        difficulty: "easy"
+    },
+    {
+        id: 30,
+        chapterId: 2,
+        question: "Vad är principen bakom en superheterodyn-mottagare?",
         options: [
             { id: "a", text: "Direkt förstärkning av inkommande signal" },
-            { id: "b", text: "Konvertering till en fast mellanfrekvens (MF)" },
-            { id: "c", text: "Digital signalbehandling" },
+            { id: "b", text: "Omvandla alla inkommande frekvenser till en fast mellanfrekvens (MF)" },
+            { id: "c", text: "Digital signalbehandling av alla signaler" },
             { id: "d", text: "Regenerativ förstärkning" }
         ],
         correctAnswer: "b",
-        explanation: "Superheterodynprincipen innebär att signalen blandas med en lokal oscillator för att skapa en fast mellanfrekvens.",
+        explanation: "Superheterodyn-principen innebär att alla inkommande signaler blandas med en lokal oscillator för att skapa en fast mellanfrekvens (t.ex. 9 MHz). Där sker filtrering och förstärkning med samma komponenter oavsett originalfrekvens.",
         difficulty: "medium"
     },
     {
-        id: 16,
+        id: 31,
         chapterId: 2,
-        question: "Vad betyder förkortningen SDR?",
+        question: "Vad är spegelfrekvensproblemet i en superheterodyn-mottagare?",
         options: [
-            { id: "a", text: "Standard Digital Radio" },
-            { id: "b", text: "Software Defined Radio" },
-            { id: "c", text: "Single Data Rate" },
-            { id: "d", text: "Selective Digital Receiver" }
-        ],
-        correctAnswer: "b",
-        explanation: "SDR (Software Defined Radio) är en radiotyp där hårdvarukomponenter ersätts av mjukvara.",
-        difficulty: "easy"
-    },
-    {
-        id: 17,
-        chapterId: 2,
-        question: "Vad är syftet med en PA (Power Amplifier) i en sändare?",
-        options: [
-            { id: "a", text: "Att generera bärvågen" },
-            { id: "b", text: "Att modulera signalen" },
-            { id: "c", text: "Att förstärka signalen till önskad uteffekt" },
-            { id: "d", text: "Att filtrera bort övertoner" }
-        ],
-        correctAnswer: "c",
-        explanation: "PA (slutsteget) förstärker signalen till den slutliga uteffekten som matas till antennen.",
-        difficulty: "easy"
-    },
-    {
-        id: 18,
-        chapterId: 2,
-        question: "Vilken komponent i en sändare förhindrar att övertoner skickas ut?",
-        options: [
-            { id: "a", text: "Oscillatorn" },
-            { id: "b", text: "Modulatorn" },
-            { id: "c", text: "Lågpassfiltret" },
-            { id: "d", text: "Mixern" }
-        ],
-        correctAnswer: "c",
-        explanation: "Ett lågpassfilter efter slutsteget dämpar övertoner så att de inte strålas ut.",
-        difficulty: "medium"
-    },
-    {
-        id: 19,
-        chapterId: 2,
-        question: "Vad menas med selektivitet hos en mottagare?",
-        options: [
-            { id: "a", text: "Förmågan att ta emot svaga signaler" },
-            { id: "b", text: "Förmågan att skilja mellan närliggande frekvenser" },
-            { id: "c", text: "Förmågan att motstå störningar" },
-            { id: "d", text: "Förmågan att återge ljud korrekt" }
-        ],
-        correctAnswer: "b",
-        explanation: "Selektivitet är mottagarens förmåga att skilja ut önskad signal från närliggande frekvenser.",
-        difficulty: "medium"
-    },
-    {
-        id: 20,
-        chapterId: 2,
-        question: "Vad menas med känslighet hos en mottagare?",
-        options: [
-            { id: "a", text: "Förmågan att ta emot svaga signaler" },
-            { id: "b", text: "Förmågan att skilja mellan närliggande frekvenser" },
-            { id: "c", text: "Förmågan att motstå överbelastning" },
-            { id: "d", text: "Förmågan att återge ljud korrekt" }
+            { id: "a", text: "Mottagaren svarar på två frekvenser samtidigt" },
+            { id: "b", text: "Signalen reflekteras i antennen" },
+            { id: "c", text: "Oscillatorn skapar spegelbild av signalen" },
+            { id: "d", text: "Filtret fungerar inte korrekt" }
         ],
         correctAnswer: "a",
-        explanation: "Känslighet anger den minsta signalnivå som mottagaren kan ta emot med godtagbar kvalitet.",
+        explanation: "Blandaren svarar på både önskad signal OCH spegelfrekvensen (f_signal ± 2×f_MF). Exempel: Vill ta emot 14,2 MHz med 9 MHz MF → spegeln är 32,2 MHz. Preselektor måste dämpa spegeln.",
+        difficulty: "hard"
+    },
+    {
+        id: 32,
+        chapterId: 2,
+        question: "Vilken mellanfrekvens (MF/IF) är vanligast i HF-transceivrar?",
+        options: [
+            { id: "a", text: "455 kHz" },
+            { id: "b", text: "9 MHz" },
+            { id: "c", text: "10,7 MHz" },
+            { id: "d", text: "45 MHz" }
+        ],
+        correctAnswer: "b",
+        explanation: "9 MHz är vanligast i HF-transceivrar för amatörradio. 455 kHz används i äldre AM-mottagare, 10,7 MHz i FM-mottagare, och 45 MHz som första MF i dubbel-superheterodyn.",
+        difficulty: "medium"
+    },
+    {
+        id: 33,
+        chapterId: 2,
+        question: "Vad är en transceiver?",
+        options: [
+            { id: "a", text: "Endast en sändare" },
+            { id: "b", text: "Endast en mottagare" },
+            { id: "c", text: "Kombinerad sändare och mottagare i samma enhet" },
+            { id: "d", text: "En antennkopplare" }
+        ],
+        correctAnswer: "c",
+        explanation: "Transceiver = Transmitter + Receiver i samma enhet. Standard för alla moderna radioamatörer. Delar VFO, filter, display och kontroller mellan sändning och mottagning.",
         difficulty: "easy"
+    },
+    {
+        id: 34,
+        chapterId: 2,
+        question: "Vad gör RIT (Receiver Incremental Tuning)?",
+        options: [
+            { id: "a", text: "Ökar mottagarens känslighet" },
+            { id: "b", text: "Finjusterar mottagarens frekvens oberoende av sändarens" },
+            { id: "c", text: "Reducerar brus" },
+            { id: "d", text: "Ökar sändarens effekt" }
+        ],
+        correctAnswer: "b",
+        explanation: "RIT låter dig finjustera RX-frekvensen separat från TX-frekvensen. Användbart när motparten är lite 'off frequency' - du kan justera RX för att höra bättre utan att ändra din TX-frekvens.",
+        difficulty: "medium"
+    },
+    {
+        id: 35,
+        chapterId: 2,
+        question: "När används Split-läge i en transceiver?",
+        options: [
+            { id: "a", text: "För att öka effekten" },
+            { id: "b", text: "När man vill sända och ta emot på olika frekvenser" },
+            { id: "c", text: "För att förbättra ljudkvaliteten" },
+            { id: "d", text: "För att minska störningar" }
+        ],
+        correctAnswer: "b",
+        explanation: "Split-läge används när TX och RX ska vara på olika frekvenser. Typiskt vid DX pile-ups (DX-station lyssnar '5 up') och för satelliter (olika uplink/downlink-frekvenser).",
+        difficulty: "medium"
+    },
+    {
+        id: 36,
+        chapterId: 2,
+        question: "Vad gör en diod?",
+        options: [
+            { id: "a", text: "Förstärker signaler" },
+            { id: "b", text: "Släpper igenom ström i båda riktningarna lika" },
+            { id: "c", text: "Släpper igenom ström i endast en riktning" },
+            { id: "d", text: "Lagrar elektrisk energi" }
+        ],
+        correctAnswer: "c",
+        explanation: "En diod är en 'envägsventil' för ström - den släpper igenom ström i en riktning (framriktad) men blockerar i den andra (backriktad). Används för likriktning, skydd och signaldetektering.",
+        difficulty: "easy"
+    },
+    {
+        id: 37,
+        chapterId: 2,
+        question: "Vad är skillnaden mellan BJT och FET-transistorer?",
+        options: [
+            { id: "a", text: "BJT styrs av spänning, FET styrs av ström" },
+            { id: "b", text: "BJT styrs av ström, FET styrs av spänning" },
+            { id: "c", text: "Det finns ingen skillnad" },
+            { id: "d", text: "BJT används bara i digitala kretsar" }
+        ],
+        correctAnswer: "b",
+        explanation: "BJT (bipolär transistor) styrs av basström, medan FET (fälteffekttransistor) styrs av gate-spänning. FET har mycket högre ingångsimpedans och lägre brus vid RF-frekvenser.",
+        difficulty: "medium"
+    },
+    {
+        id: 38,
+        chapterId: 2,
+        question: "Vilken förstärkarklass MÅSTE användas för SSB-slutsteg?",
+        options: [
+            { id: "a", text: "Klass A eller AB (linjär förstärkare)" },
+            { id: "b", text: "Klass C (olinjär förstärkare)" },
+            { id: "c", text: "Klass D (digital förstärkare)" },
+            { id: "d", text: "Alla klasser fungerar lika bra" }
+        ],
+        correctAnswer: "a",
+        explanation: "SSB kräver LINJÄR förstärkning (klass A eller AB) eftersom amplituden varierar med modulationen. Klass C är olinjär och förvränger SSB, vilket ger 'splatter' och stör närliggande frekvenser. FM/CW kan däremot använda klass C.",
+        difficulty: "hard"
+    },
+    {
+        id: 39,
+        chapterId: 2,
+        question: "Vad gör AGC (Automatic Gain Control)?",
+        options: [
+            { id: "a", text: "Ökar alltid förstärkningen maximalt" },
+            { id: "b", text: "Reglerar förstärkningen automatiskt för jämn ljudnivå" },
+            { id: "c", text: "Stänger av mottagaren vid starka signaler" },
+            { id: "d", text: "Ökar sändarens effekt automatiskt" }
+        ],
+        correctAnswer: "b",
+        explanation: "AGC reglerar mottagarens förstärkning automatiskt så att ljudnivån hålls jämn trots att signalstyrkan varierar kraftigt (t.ex. fading). Svaga signaler förstärks mer, starka signaler förstärks mindre.",
+        difficulty: "easy"
+    },
+    {
+        id: 40,
+        chapterId: 2,
+        question: "Vad betyder förkortningen DDS som används i moderna oscillatorer?",
+        options: [
+            { id: "a", text: "Direct Digital Synthesis" },
+            { id: "b", text: "Dual Diode System" },
+            { id: "c", text: "Digital Data Signal" },
+            { id: "d", text: "Dynamic Display System" }
+        ],
+        correctAnswer: "a",
+        explanation: "DDS (Direct Digital Synthesis) genererar frekvenser digitalt med extremt hög stabilitet och precision. Standard i moderna transceivrar. Ger kristallstabilitet kombinerat med frekvenssteg ner till 1 Hz eller mindre!",
+        difficulty: "medium"
     },
 
     // ============================================
-    // KAPITEL 3: ANTENNER
+    // KAPITEL 3: ANTENNER OCH MATARLEDNINGAR
     // ============================================
     {
-        id: 21,
+        id: 41,
         chapterId: 3,
         question: "Hur lång är en halvvågsdipol för 7 MHz?",
         options: [
@@ -305,11 +585,11 @@ const QUESTIONS = [
             { id: "d", text: "Cirka 5 meter" }
         ],
         correctAnswer: "b",
-        explanation: "Halvvågsdipol längd ≈ 150/f(MHz) = 150/7 ≈ 21 meter (cirka 20 meter).",
+        explanation: "Halvvågsdipol längd ≈ 143/f(MHz) = 143/7 ≈ 20,4 meter (cirka 20 meter). Den praktiska formeln inkluderar förkortningsfaktorn.",
         difficulty: "medium"
     },
     {
-        id: 22,
+        id: 42,
         chapterId: 3,
         question: "Vad är impedansen hos en halvvågsdipol i fritt utrymme?",
         options: [
@@ -319,11 +599,11 @@ const QUESTIONS = [
             { id: "d", text: "600 Ω" }
         ],
         correctAnswer: "b",
-        explanation: "En halvvågsdipol i fritt utrymme har en impedans på cirka 73 Ω.",
+        explanation: "En halvvågsdipol i fritt utrymme har en impedans på cirka 73 Ω, vilket är nära standard 50 Ω.",
         difficulty: "medium"
     },
     {
-        id: 23,
+        id: 43,
         chapterId: 3,
         question: "Vad gör en Yagi-antenn?",
         options: [
@@ -333,11 +613,11 @@ const QUESTIONS = [
             { id: "d", text: "Filtrerar bort störningar" }
         ],
         correctAnswer: "b",
-        explanation: "En Yagi-antenn är en riktantenn som koncentrerar signalen i en riktning genom direktorer och reflektor.",
+        explanation: "En Yagi-antenn är en riktantenn som koncentrerar signalen i en riktning genom parasitiska element (direktorer och reflektor).",
         difficulty: "easy"
     },
     {
-        id: 24,
+        id: 44,
         chapterId: 3,
         question: "Vad är SWR?",
         options: [
@@ -351,7 +631,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 25,
+        id: 45,
         chapterId: 3,
         question: "Vilket SWR-värde anses vara acceptabelt för de flesta amatörtillämpningar?",
         options: [
@@ -361,11 +641,11 @@ const QUESTIONS = [
             { id: "d", text: "Under 10:1" }
         ],
         correctAnswer: "a",
-        explanation: "SWR under 1,5:1 anses vara bra och innebär minimal effektförlust. Under 2:1 är acceptabelt.",
+        explanation: "SWR under 1,5:1 anses vara utmärkt och innebär minimal effektförlust (endast 4%). Under 2:1 är också acceptabelt.",
         difficulty: "easy"
     },
     {
-        id: 26,
+        id: 46,
         chapterId: 3,
         question: "Vad är en balun?",
         options: [
@@ -375,11 +655,11 @@ const QUESTIONS = [
             { id: "d", text: "En förstärkare" }
         ],
         correctAnswer: "b",
-        explanation: "En balun (balanced-unbalanced) matchar mellan balanserad last (dipol) och obalanserad kabel (koax).",
+        explanation: "En balun (BALanced-UNbalanced) matchar mellan balanserad last (dipol) och obalanserad kabel (koax) och blockerar mantelströmmar.",
         difficulty: "medium"
     },
     {
-        id: 27,
+        id: 47,
         chapterId: 3,
         question: "Vilken karakteristisk impedans har vanlig 50-ohms koaxialkabel?",
         options: [
@@ -389,11 +669,11 @@ const QUESTIONS = [
             { id: "d", text: "600 Ω" }
         ],
         correctAnswer: "a",
-        explanation: "Standard koaxialkabel för amatörradio (t.ex. RG-58, RG-213) har 50 Ω impedans.",
+        explanation: "Standard koaxialkabel för amatörradio (t.ex. RG-58, RG-213) har 50 Ω impedans, vilket är världsstandard sedan 1940-talet.",
         difficulty: "easy"
     },
     {
-        id: 28,
+        id: 48,
         chapterId: 3,
         question: "Vad händer med kabeldämpningen när frekvensen ökar?",
         options: [
@@ -403,11 +683,11 @@ const QUESTIONS = [
             { id: "d", text: "Den försvinner" }
         ],
         correctAnswer: "b",
-        explanation: "Kabeldämpningen ökar med ökande frekvens. Därför används grövre kabel på VHF/UHF.",
+        explanation: "Kabeldämpningen ökar kraftigt med ökande frekvens. RG-58 som är OK på HF blir katastrofal på UHF. Därför används grövre/bättre kabel på VHF/UHF.",
         difficulty: "medium"
     },
     {
-        id: 29,
+        id: 49,
         chapterId: 3,
         question: "Vad menas med antennvinst?",
         options: [
@@ -417,11 +697,11 @@ const QUESTIONS = [
             { id: "d", text: "Antennen har lägre förluster" }
         ],
         correctAnswer: "b",
-        explanation: "Antennvinst innebär att antennen koncentrerar energin i viss riktning. Den skapar inte energi.",
+        explanation: "Antennvinst innebär att antennen koncentrerar energin i viss riktning jämfört med en referensantenn (dipol). Den skapar inte energi, utan omfördelar den.",
         difficulty: "medium"
     },
     {
-        id: 30,
+        id: 50,
         chapterId: 3,
         question: "Vad är en groundplane-antenn?",
         options: [
@@ -431,303 +711,859 @@ const QUESTIONS = [
             { id: "d", text: "En loopantenn" }
         ],
         correctAnswer: "b",
-        explanation: "En groundplane är en vertikal kvartsvågsantenn med radialer som skapar ett artificiellt jordplan.",
+        explanation: "En groundplane är en vertikal kvartsvågsantenn med radialer (vanligen 4 st, vinklade 45°) som skapar ett artificiellt jordplan. Med 45° radialer blir impedansen cirka 50 Ω.",
         difficulty: "medium"
     },
-
-    // ============================================
-    // KAPITEL 4: VÅGUTBREDNING
-    // ============================================
     {
-        id: 31,
-        chapterId: 4,
-        question: "Vilken utbredningsform dominerar på kortvåg (HF) för långväga förbindelser?",
+        id: 51,
+        chapterId: 3,
+        question: "Vad betyder reciprocitet för en antenn?",
         options: [
-            { id: "a", text: "Markvåg" },
-            { id: "b", text: "Rymdvåg (jonosfärsreflektion)" },
-            { id: "c", text: "Troposfärisk utbredning" },
-            { id: "d", text: "Siktlinjeförbindelse" }
+            { id: "a", text: "Antennen måste vara vertikal" },
+            { id: "b", text: "Antennen fungerar lika bra för sändning som mottagning" },
+            { id: "c", text: "Antennen måste vara balanserad" },
+            { id: "d", text: "Antennen behöver jordplan" }
         ],
         correctAnswer: "b",
-        explanation: "På HF reflekteras radiovågor av jonosfären vilket möjliggör förbindelser över stora avstånd.",
+        explanation: "Reciprocitetsprincipen betyder att en antenn har samma egenskaper (riktning, vinst, impedans) vid både sändning och mottagning. En bra sändantenn är automatiskt en bra mottagningsantenn.",
+        difficulty: "medium"
+    },
+    {
+        id: 52,
+        chapterId: 3,
+        question: "Hur långt sträcker sig det nära fältet från en antenn?",
+        options: [
+            { id: "a", text: "Cirka 0,1 våglängder" },
+            { id: "b", text: "Cirka 1-2 våglängder" },
+            { id: "c", text: "Cirka 10 våglängder" },
+            { id: "d", text: "Cirka 100 våglängder" }
+        ],
+        correctAnswer: "b",
+        explanation: "Det nära fältet (reactive near field) sträcker sig cirka 1-2 våglängder från antennen. Här lagras energi reaktivt. På 80m-bandet kan det vara 86-172 meter!",
+        difficulty: "hard"
+    },
+    {
+        id: 53,
+        chapterId: 3,
+        question: "Vilken formel används för att beräkna våglängd från frekvens?",
+        options: [
+            { id: "a", text: "λ = 150 / f(MHz)" },
+            { id: "b", text: "λ = 300 / f(MHz)" },
+            { id: "c", text: "λ = 143 / f(MHz)" },
+            { id: "d", text: "λ = 71,5 / f(MHz)" }
+        ],
+        correctAnswer: "b",
+        explanation: "λ (meter) = 300 / f(MHz) är den förenklade formeln för våglängd, där 300 kommer från ljusets hastighet 300 000 km/s.",
         difficulty: "easy"
     },
     {
-        id: 32,
+        id: 54,
+        chapterId: 3,
+        question: "Hur lång är en kvartsvågs vertikal för 145 MHz?",
+        options: [
+            { id: "a", text: "Cirka 25 cm" },
+            { id: "b", text: "Cirka 49 cm" },
+            { id: "c", text: "Cirka 2 meter" },
+            { id: "d", text: "Cirka 5 meter" }
+        ],
+        correctAnswer: "b",
+        explanation: "H = 71,5 / 145 ≈ 0,49 meter = 49 cm. Därför är VHF-antenner så kompakta jämfört med HF-antenner.",
+        difficulty: "medium"
+    },
+    {
+        id: 55,
+        chapterId: 3,
+        question: "Varför är den praktiska dipollängden kortare än den teoretiska?",
+        options: [
+            { id: "a", text: "För att spara material" },
+            { id: "b", text: "På grund av förkortningsfaktorn - elektronerna färdas långsammare i tråden" },
+            { id: "c", text: "För att minska vikten" },
+            { id: "d", text: "För att göra den billigare" }
+        ],
+        correctAnswer: "b",
+        explanation: "Förkortningsfaktorn (k ≈ 0,95) beror på att elektronerna färdas något långsammare i metall än i fri rymd. Därför används 143/f istället för teoretiska 150/f.",
+        difficulty: "hard"
+    },
+    {
+        id: 56,
+        chapterId: 3,
+        question: "Vilket element är längst i en Yagi-antenn?",
+        options: [
+            { id: "a", text: "Driven element" },
+            { id: "b", text: "Direktorn" },
+            { id: "c", text: "Reflektorn" },
+            { id: "d", text: "Alla är lika långa" }
+        ],
+        correctAnswer: "c",
+        explanation: "Reflektorn är längst (ca 5% längre än driven element). Den 'speglar' vågen framåt. Direktorerna är kortast och driven element är λ/2.",
+        difficulty: "easy"
+    },
+    {
+        id: 57,
+        chapterId: 3,
+        question: "Hur mycket vinst har en 5-elements Yagi ungefär?",
+        options: [
+            { id: "a", text: "2-3 dBd" },
+            { id: "b", text: "4-5 dBd" },
+            { id: "c", text: "7-8 dBd" },
+            { id: "d", text: "12-15 dBd" }
+        ],
+        correctAnswer: "c",
+        explanation: "En 5-elements Yagi har cirka 7-8 dBd vinst, vilket motsvarar ungefär 5× effekten jämfört med en dipol!",
+        difficulty: "medium"
+    },
+    {
+        id: 58,
+        chapterId: 3,
+        question: "Vad betyder F/B (fram/back-förhållande)?",
+        options: [
+            { id: "a", text: "Frekvens och bandbredd" },
+            { id: "b", text: "Hur mycket bättre antennen strålar framåt jämfört med bakåt" },
+            { id: "c", text: "Förstärkning och balans" },
+            { id: "d", text: "Filter och balun" }
+        ],
+        correctAnswer: "b",
+        explanation: "F/B (Front-to-Back ratio) mäter i dB hur mycket bättre antennen strålar framåt vs bakåt. Typiskt 15-25 dB för en bra Yagi.",
+        difficulty: "medium"
+    },
+    {
+        id: 59,
+        chapterId: 3,
+        question: "Vilken kabeltyp ska undvikas för VHF/UHF på grund av höga förluster?",
+        options: [
+            { id: "a", text: "RG-213" },
+            { id: "b", text: "Aircell 7" },
+            { id: "c", text: "RG-58" },
+            { id: "d", text: "Ecoflex 10" }
+        ],
+        correctAnswer: "c",
+        explanation: "RG-58 har mycket höga förluster på VHF/UHF (22 dB/100m på 432 MHz). På UHF försvinner 72% av effekten i 20m RG-58! Använd Aircell, Ecoflex eller RG-213 istället.",
+        difficulty: "medium"
+    },
+    {
+        id: 60,
+        chapterId: 3,
+        question: "Vilken kontakttyp rekommenderas för VHF/UHF?",
+        options: [
+            { id: "a", text: "PL-259" },
+            { id: "b", text: "N-kontakt" },
+            { id: "c", text: "BNC" },
+            { id: "d", text: "F-kontakt" }
+        ],
+        correctAnswer: "b",
+        explanation: "N-kontakt är bäst för VHF/UHF: äkta 50 Ω impedans, vattentät, fungerar utmärkt till 10 GHz. PL-259 är INTE 50 Ω och fungerar dåligt över 150 MHz.",
+        difficulty: "medium"
+    },
+    {
+        id: 61,
+        chapterId: 3,
+        question: "Hur mycket effekt reflekteras vid SWR 2:1?",
+        options: [
+            { id: "a", text: "4%" },
+            { id: "b", text: "11%" },
+            { id: "c", text: "25%" },
+            { id: "d", text: "50%" }
+        ],
+        correctAnswer: "b",
+        explanation: "Vid SWR 2:1 reflekteras 11% av effekten. 100W blir 89W till antennen. Detta är fortfarande acceptabelt för de flesta sändare.",
+        difficulty: "medium"
+    },
+    {
+        id: 62,
+        chapterId: 3,
+        question: "Vad är den vanligaste orsaken till högt SWR?",
+        options: [
+            { id: "a", text: "För lång koaxkabel" },
+            { id: "b", text: "Antenn inte resonant på frekvensen" },
+            { id: "c", text: "För låg sändareffekt" },
+            { id: "d", text: "Dåligt väder" }
+        ],
+        correctAnswer: "b",
+        explanation: "Vanligaste orsaken är att antennen inte är resonant på frekvensen - antingen fel längd, eller man sänder utanför antennens designade frekvensområde.",
+        difficulty: "easy"
+    },
+    {
+        id: 63,
+        chapterId: 3,
+        question: "Var ska en antenntuner placeras för bästa resultat vid högt SWR?",
+        options: [
+            { id: "a", text: "Vid radion" },
+            { id: "b", text: "Vid antennen" },
+            { id: "c", text: "I mitten av koaxkabeln" },
+            { id: "d", text: "Det spelar ingen roll" }
+        ],
+        correctAnswer: "b",
+        explanation: "Tuner vid antennen är bäst - då har kabeln lågt SWR hela vägen vilket ger mindre förluster. Tuner vid radion 'döljer' bara problemet - kabeln har fortfarande högt SWR och stora förluster.",
+        difficulty: "hard"
+    },
+    {
+        id: 64,
+        chapterId: 3,
+        question: "Vad är mantelströmmar?",
+        options: [
+            { id: "a", text: "Ström i antennen" },
+            { id: "b", text: "RF-ström på utsidan av koaxskärmen" },
+            { id: "c", text: "Ström i sändaren" },
+            { id: "d", text: "Ström i jordplanet" }
+        ],
+        correctAnswer: "b",
+        explanation: "Mantelströmmar är oönskade RF-strömmar på UTSIDAN av koaxskärmen. De orsakar RF i shacket, snedvridet strålningsmönster, felaktigt SWR och störningar.",
+        difficulty: "medium"
+    },
+    {
+        id: 65,
+        chapterId: 3,
+        question: "Hur bygger man en enkel strömsbalun?",
+        options: [
+            { id: "a", text: "Linda 50 varv tråd" },
+            { id: "b", text: "Trä 6-10 ferritkärnor på koaxen" },
+            { id: "c", text: "Använd en transformator" },
+            { id: "d", text: "Koppla två koaxkablar parallellt" }
+        ],
+        correctAnswer: "b",
+        explanation: "Enklaste hemmabyggda balun: Trä 6-10 st ferritkärnor (typ FT240-43) på koaxen 10-30 cm från matningspunkten. Packa tätt, fäst och vattentäta. Fungerar utmärkt!",
+        difficulty: "medium"
+    },
+    {
+        id: 66,
+        chapterId: 3,
+        question: "Var ska balun placeras för bästa resultat?",
+        options: [
+            { id: "a", text: "Endast vid radion" },
+            { id: "b", text: "Vid antennen (viktigast) och gärna även vid radion" },
+            { id: "c", text: "I mitten av koaxkabeln" },
+            { id: "d", text: "Det spelar ingen roll" }
+        ],
+        correctAnswer: "b",
+        explanation: "Balun ska placeras VID ANTENNEN (primärt - viktigast!) där mantelströmmarna uppstår. Sekundärt även vid radion som extra skydd. Båda = optimalt!",
+        difficulty: "medium"
+    },
+    {
+        id: 67,
+        chapterId: 3,
+        question: "Hur många radialer rekommenderas minimum för en vertikal antenn?",
+        options: [
+            { id: "a", text: "1 radial" },
+            { id: "b", text: "2 radialer" },
+            { id: "c", text: "4 radialer" },
+            { id: "d", text: "16 radialer" }
+        ],
+        correctAnswer: "c",
+        explanation: "4 radialer är acceptabelt minimum för en vertikal antenn. 8-16 radialer ger bra prestanda. Utan jordplan fungerar en vertikal antenn inte alls!",
+        difficulty: "medium"
+    },
+    {
+        id: 68,
+        chapterId: 3,
+        question: "Vilken impedans har en kvartsvågs vertikal med horisontella radialer?",
+        options: [
+            { id: "a", text: "25 Ω" },
+            { id: "b", text: "36 Ω" },
+            { id: "c", text: "50 Ω" },
+            { id: "d", text: "73 Ω" }
+        ],
+        correctAnswer: "b",
+        explanation: "En λ/4 vertikal med horisontella radialer har cirka 36 Ω. Med radialer vinklade 45° (ground plane) höjs impedansen till perfekta 50 Ω!",
+        difficulty: "hard"
+    },
+    {
+        id: 69,
+        chapterId: 3,
+        question: "Hur ser en vertikal antenns strålningsmönster ut horisontellt?",
+        options: [
+            { id: "a", text: "Åttafigur" },
+            { id: "b", text: "Rakt framåt" },
+            { id: "c", text: "Rundstrålande" },
+            { id: "d", text: "Endast bakåt" }
+        ],
+        correctAnswer: "c",
+        explanation: "En vertikal antenn är rundstrålande horisontellt - den strålar lika starkt åt alla riktningar. Perfekt för att täcka alla håll samtidigt!",
+        difficulty: "easy"
+    },
+    {
+        id: 70,
+        chapterId: 3,
+        question: "Vad är hastighetsfaktor (VF) för koaxialkabel?",
+        options: [
+            { id: "a", text: "Hur fort man kan montera kabeln" },
+            { id: "b", text: "Hur mycket långsammare RF färdas i kabeln än i vakuum" },
+            { id: "c", text: "Kabelns maximala effekttålighet" },
+            { id: "d", text: "Kabelns böjbarhet" }
+        ],
+        correctAnswer: "b",
+        explanation: "VF anger hur mycket långsammare RF färdas i kabeln jämfört med ljusets hastighet. Solid PE: VF=0,66, Skum-PE: 0,80, Luft (Aircell): 0,85. Viktigt för beräkning av elektrisk kabellängd.",
+        difficulty: "hard"
+    },
+
+    // ============================================
+    // KAPITEL 4: VÅGUTBREDNING (20 FRÅGOR)
+    // ============================================
+    {
+        id: 71,
         chapterId: 4,
-        question: "Vilket jonosfärsskikt är viktigast för HF-kommunikation på natten?",
+        question: "Vad är formeln för att beräkna våglängd från frekvens?",
+        options: [
+            { id: "a", text: "λ = f / 300" },
+            { id: "b", text: "λ = 300 / f (där f är i MHz och λ i meter)" },
+            { id: "c", text: "λ = 300 × f" },
+            { id: "d", text: "λ = f × c" }
+        ],
+        correctAnswer: "b",
+        explanation: "Den praktiska formeln för amatörradio är λ (meter) = 300 / f (MHz). Exempel: 14 MHz ger 300/14 ≈ 21,4 meter.",
+        difficulty: "easy"
+    },
+    {
+        id: 72,
+        chapterId: 4,
+        question: "Vilket frekvensområde kallas HF (kortväg)?",
+        options: [
+            { id: "a", text: "300 kHz - 3 MHz" },
+            { id: "b", text: "3-30 MHz" },
+            { id: "c", text: "30-300 MHz" },
+            { id: "d", text: "300 MHz - 3 GHz" }
+        ],
+        correctAnswer: "b",
+        explanation: "HF (High Frequency) är 3-30 MHz. Detta är 'kortväg' där amatörbanden 80m, 40m, 20m, 15m och 10m finns.",
+        difficulty: "easy"
+    },
+    {
+        id: 73,
+        chapterId: 4,
+        question: "Vilket utbredningssätt dominerar på HF för långdistans (DX)?",
+        options: [
+            { id: "a", text: "Markvåg" },
+            { id: "b", text: "Rymdvåg via jonosfären" },
+            { id: "c", text: "Siktlinje" },
+            { id: "d", text: "Troposfärisk ducting" }
+        ],
+        correctAnswer: "b",
+        explanation: "Rymdvåg (reflektion i jonosfären) möjliggör HF-DX över hela världen. F-skiktet reflekterar signalen tillbaka mot jorden.",
+        difficulty: "easy"
+    },
+    {
+        id: 74,
+        chapterId: 4,
+        question: "Vilken polarisation fungerar bäst för markvåg?",
+        options: [
+            { id: "a", text: "Horisontell" },
+            { id: "b", text: "Vertikal" },
+            { id: "c", text: "Cirkulär" },
+            { id: "d", text: "Det spelar ingen roll" }
+        ],
+        correctAnswer: "b",
+        explanation: "Vertikal polarisation ger mycket längre markvågsräckvidd än horisontell. Horisontell polarisation absorberas kraftigt i marken.",
+        difficulty: "medium"
+    },
+    {
+        id: 75,
+        chapterId: 4,
+        question: "Vilket jonosfärsskikt absorberar HF-signaler dagtid?",
+        options: [
+            { id: "a", text: "D-skiktet" },
+            { id: "b", text: "E-skiktet" },
+            { id: "c", text: "F-skiktet" },
+            { id: "d", text: "G-skiktet" }
+        ],
+        correctAnswer: "a",
+        explanation: "D-skiktet (60-90 km höjd) absorberar MF och lägre HF kraftigt dagtid. Det försvinner på natten, vilket öppnar 80m och 160m för DX.",
+        difficulty: "medium"
+    },
+    {
+        id: 76,
+        chapterId: 4,
+        question: "Vilket jonosfärsskikt är viktigast för HF-DX?",
         options: [
             { id: "a", text: "D-skiktet" },
             { id: "b", text: "E-skiktet" },
             { id: "c", text: "F-skiktet (F2)" },
-            { id: "d", text: "A-skiktet" }
+            { id: "d", text: "Alla lika viktiga" }
         ],
         correctAnswer: "c",
-        explanation: "F-skiktet är det högsta och mest stabila, och är särskilt viktigt nattetid då D- och E-skikten försvinner.",
+        explanation: "F-skiktet (140-600 km höjd) har högst elektronkoncentration och reflekterar 20m, 15m, 10m utmärkt. Det är 'motorvägen' för HF-DX.",
         difficulty: "medium"
     },
     {
-        id: 33,
+        id: 77,
         chapterId: 4,
-        question: "Vad menas med MUF (Maximum Usable Frequency)?",
+        question: "Vad betyder MUF?",
         options: [
-            { id: "a", text: "Den lägsta frekvens som kan användas" },
-            { id: "b", text: "Den högsta frekvens som reflekteras av jonosfären" },
-            { id: "c", text: "Den optimala frekvensen för kommunikation" },
-            { id: "d", text: "Maximal sändarfrekvens" }
+            { id: "a", text: "Minimum Usable Frequency" },
+            { id: "b", text: "Maximum Usable Frequency" },
+            { id: "c", text: "Medium Ultra Frequency" },
+            { id: "d", text: "Modulated Upper Frequency" }
         ],
         correctAnswer: "b",
-        explanation: "MUF är den högsta frekvens som reflekteras tillbaka av jonosfären vid given tidpunkt och riktning.",
+        explanation: "MUF = Maximum Usable Frequency. Den högsta frekvens som kan användas för en viss sträcka. Över MUF går signalen rakt igenom jonosfären.",
         difficulty: "medium"
     },
     {
-        id: 34,
+        id: 78,
         chapterId: 4,
-        question: "Vad är en 'dead zone' (skip zone)?",
+        question: "Vad är en 'död zon' (skip zone)?",
         options: [
-            { id: "a", text: "Ett område där sändaren är trasig" },
-            { id: "b", text: "Området mellan markvågens och rymdvågens räckvidd" },
-            { id: "c", text: "Ett frekvensband utan aktivitet" },
-            { id: "d", text: "En skärmad plats" }
+            { id: "a", text: "Ett område utan stationer" },
+            { id: "b", text: "Området mellan markvågens räckvidd och där rymdvågen landar" },
+            { id: "c", text: "Ett frekvensband utan trafik" },
+            { id: "d", text: "En region utan repeatrar" }
         ],
         correctAnswer: "b",
-        explanation: "Skip zone är området mellan markvågens räckvidd och där rymdvågen landar - här hörs inte signalen.",
+        explanation: "Skip zone är området där varken markvåg eller rymdvåg når. Exempel: Markvåg når 100 km, rymdvåg landar först vid 500 km → död zon 100-500 km.",
         difficulty: "medium"
     },
     {
-        id: 35,
+        id: 79,
         chapterId: 4,
-        question: "Hur påverkar solfläckar HF-utbredningen?",
+        question: "Vad är formeln för radiohorisont?",
         options: [
-            { id: "a", text: "Ingen påverkan" },
-            { id: "b", text: "Fler solfläckar ger generellt bättre utbredning på högre frekvenser" },
-            { id: "c", text: "Fler solfläckar försämrar alltid utbredningen" },
+            { id: "a", text: "d = 3,57 × √h" },
+            { id: "b", text: "d = 4,12 × √h (där d i km, h i meter)" },
+            { id: "c", text: "d = h / 4,12" },
+            { id: "d", text: "d = 300 / h" }
+        ],
+        correctAnswer: "b",
+        explanation: "Radiohorisont: d (km) = 4,12 × √h (m). Exempel: Antenn på 25m höjd når 4,12 × 5 = 20,6 km till horisonten.",
+        difficulty: "medium"
+    },
+    {
+        id: 80,
+        chapterId: 4,
+        question: "Vilket är viktigast för VHF/UHF-räckvidd?",
+        options: [
+            { id: "a", text: "Sändareffekt" },
+            { id: "b", text: "Antennhöjd" },
+            { id: "c", text: "Modulationstyp" },
+            { id: "d", text: "Kabeltyp" }
+        ],
+        correctAnswer: "b",
+        explanation: "Antennhöjd är VIKTIGASTE faktorn! 10m högre antenn ger ofta mer än 10× effekten. VHF/UHF begränsas av jordkrökningen.",
+        difficulty: "easy"
+    },
+    {
+        id: 81,
+        chapterId: 4,
+        question: "Vad är sporadiskt E?",
+        options: [
+            { id: "a", text: "Ett permanent jonosfärsskikt" },
+            { id: "b", text: "Intensiva jonmoln i E-skiktet som kan reflektera VHF" },
+            { id: "c", text: "En typ av aurora" },
+            { id: "d", text: "En störning" }
+        ],
+        correctAnswer: "b",
+        explanation: "Sporadiskt E är intensiva jonmoln i E-skiktet (90-140 km) som kan reflektera VHF, speciellt 6m-bandet. Vanligast maj-augusti.",
+        difficulty: "hard"
+    },
+    {
+        id: 82,
+        chapterId: 4,
+        question: "Vad är troposfärisk ducting?",
+        options: [
+            { id: "a", text: "Jonosfärsreflektion" },
+            { id: "b", text: "Temperaturinversion som skapar 'vågledare' för VHF/UHF" },
+            { id: "c", text: "Markreflektion" },
+            { id: "d", text: "Satellitkommunikation" }
+        ],
+        correctAnswer: "b",
+        explanation: "Tropoducting uppstår vid temperaturinversion (varm luft över kall). Skapar en 'vågledare' som kan leda VHF/UHF-signaler 300-1000+ km.",
+        difficulty: "hard"
+    },
+    {
+        id: 83,
+        chapterId: 4,
+        question: "Hur påverkar aurora HF-banden?",
+        options: [
+            { id: "a", text: "Förbättrar alltid utbredningen" },
+            { id: "b", text: "Absorption på högre HF (20m, 15m, 10m), 40m/80m fungerar OK" },
+            { id: "c", text: "Ingen påverkan" },
             { id: "d", text: "Endast påverkan på VHF" }
         ],
         correctAnswer: "b",
-        explanation: "Hög solfläcksaktivitet joniserar jonosfären mer, vilket höjer MUF och möjliggör DX på högre band.",
-        difficulty: "medium"
-    },
-    {
-        id: 36,
-        chapterId: 4,
-        question: "Vilken utbredningsform används främst på VHF/UHF?",
-        options: [
-            { id: "a", text: "Jonosfärsreflektion" },
-            { id: "b", text: "Markvåg" },
-            { id: "c", text: "Siktlinje (line of sight)" },
-            { id: "d", text: "Jordreflektion" }
-        ],
-        correctAnswer: "c",
-        explanation: "VHF/UHF-signaler följer i huvudsak siktlinjen och passerar normalt genom jonosfären.",
-        difficulty: "easy"
-    },
-    {
-        id: 37,
-        chapterId: 4,
-        question: "Vad är sporadiskt E-skikt?",
-        options: [
-            { id: "a", text: "Ett permanent jonosfärsskikt" },
-            { id: "b", text: "Tillfälliga joniserade områden som kan ge DX på VHF" },
-            { id: "c", text: "Ett skikt som bara finns på vintern" },
-            { id: "d", text: "Ett artificiellt skikt" }
-        ],
-        correctAnswer: "b",
-        explanation: "Sporadiskt E är tillfälliga intensivt joniserade områden som kan möjliggöra långväga VHF-förbindelser.",
+        explanation: "Aurora absorberar högre HF-band (20m, 15m, 10m) kraftigt. 40m och 80m fungerar oftast OK. På 2m kan aurora ge DX norrut men med raspig signal.",
         difficulty: "hard"
     },
     {
-        id: 38,
+        id: 84,
         chapterId: 4,
-        question: "Vad är troposcatter?",
+        question: "Vad står EME för?",
         options: [
-            { id: "a", text: "Reflektion från jonosfären" },
-            { id: "b", text: "Spridning av signaler i troposfären" },
-            { id: "c", text: "Reflektion från markföremål" },
-            { id: "d", text: "Absorption i atmosfären" }
+            { id: "a", text: "Extended Medium Equipment" },
+            { id: "b", text: "Earth-Moon-Earth (moonbounce)" },
+            { id: "c", text: "Emergency Mode Equipment" },
+            { id: "d", text: "Enhanced Mode Extension" }
         ],
         correctAnswer: "b",
-        explanation: "Troposcatter innebär att VHF/UHF-signaler sprids av turbulens i troposfären.",
+        explanation: "EME = Earth-Moon-Earth, även kallat 'moonbounce'. Radiosignaler studsar mot månen. Kräver stor station (hög effekt, stora antenner).",
         difficulty: "hard"
     },
     {
-        id: 39,
+        id: 85,
         chapterId: 4,
-        question: "Hur påverkas radiovågor av hinder som byggnader?",
+        question: "Hur lång är solcykeln?",
         options: [
-            { id: "a", text: "De passerar obehindrat" },
-            { id: "b", text: "De absorberas, reflekteras eller böjs" },
-            { id: "c", text: "De förstärks" },
-            { id: "d", text: "De ändrar frekvens" }
+            { id: "a", text: "Cirka 5 år" },
+            { id: "b", text: "Cirka 11 år" },
+            { id: "c", text: "Cirka 20 år" },
+            { id: "d", text: "Cirka 50 år" }
         ],
         correctAnswer: "b",
-        explanation: "Radiovågor kan absorberas, reflekteras eller böjas (diffraktion) av hinder.",
+        explanation: "Solcykeln är cirka 11 år lång (varierar mellan 9-14 år). Antalet solfläckar varierar från nästan noll (solar min) till över 200 (solar max).",
         difficulty: "easy"
     },
     {
-        id: 40,
+        id: 86,
         chapterId: 4,
-        question: "Vad är grålinjen (grayline)?",
+        question: "Hur påverkar högt solfläckstal (SSN) HF-banden?",
         options: [
-            { id: "a", text: "En kabel för antenner" },
-            { id: "b", text: "Övergångszonen mellan dag och natt som ger bra HF-utbredning" },
-            { id: "c", text: "En störning på signalen" },
-            { id: "d", text: "En typ av antenn" }
-        ],
-        correctAnswer: "b",
-        explanation: "Grålinjen är gränsen mellan dag och natt. HF-utbredningen kan vara extra bra längs denna linje.",
-        difficulty: "hard"
-    },
-
-    // ============================================
-    // KAPITEL 5: MÄTINSTRUMENT
-    // ============================================
-    {
-        id: 41,
-        chapterId: 5,
-        question: "Vad mäter en SWR-mätare?",
-        options: [
-            { id: "a", text: "Sändareffekt" },
-            { id: "b", text: "Förhållandet mellan framåt- och reflekterad effekt" },
-            { id: "c", text: "Frekvens" },
-            { id: "d", text: "Modulationsgrad" }
-        ],
-        correctAnswer: "b",
-        explanation: "SWR-mätaren visar förhållandet mellan framåtgående och reflekterad effekt, dvs hur bra antennen är anpassad.",
-        difficulty: "easy"
-    },
-    {
-        id: 42,
-        chapterId: 5,
-        question: "Vad är en dummyload?",
-        options: [
-            { id: "a", text: "En antenn för testning" },
-            { id: "b", text: "En resistiv last för att testa sändare utan att stråla" },
-            { id: "c", text: "En förstärkare" },
-            { id: "d", text: "En typ av filter" }
-        ],
-        correctAnswer: "b",
-        explanation: "En dummyload är ett motstånd (ofta 50Ω) som absorberar sändareffekten för tester utan att stråla ut.",
-        difficulty: "easy"
-    },
-    {
-        id: 43,
-        chapterId: 5,
-        question: "Hur ska en voltmeter kopplas för att mäta spänning?",
-        options: [
-            { id: "a", text: "I serie med lasten" },
-            { id: "b", text: "Parallellt med lasten" },
-            { id: "c", text: "Via en transformator" },
-            { id: "d", text: "Via en kondensator" }
-        ],
-        correctAnswer: "b",
-        explanation: "En voltmeter kopplas alltid parallellt med det som ska mätas.",
-        difficulty: "easy"
-    },
-    {
-        id: 44,
-        chapterId: 5,
-        question: "Hur ska en amperemeter kopplas för att mäta ström?",
-        options: [
-            { id: "a", text: "I serie med lasten" },
-            { id: "b", text: "Parallellt med lasten" },
-            { id: "c", text: "Via en transformator" },
-            { id: "d", text: "Via en kondensator" }
+            { id: "a", text: "Högre band (10m, 15m, 20m) öppnar" },
+            { id: "b", text: "Alla band stänger" },
+            { id: "c", text: "Bara lägre band fungerar" },
+            { id: "d", text: "Ingen påverkan" }
         ],
         correctAnswer: "a",
-        explanation: "En amperemeter kopplas alltid i serie så att strömmen passerar genom mätaren.",
-        difficulty: "easy"
-    },
-    {
-        id: 45,
-        chapterId: 5,
-        question: "Vad visar ett oscilloskop?",
-        options: [
-            { id: "a", text: "Endast spänning" },
-            { id: "b", text: "Signalens form över tiden" },
-            { id: "c", text: "Endast frekvens" },
-            { id: "d", text: "Endast effekt" }
-        ],
-        correctAnswer: "b",
-        explanation: "Ett oscilloskop visar hur en signal varierar över tiden, dvs signalens vågform.",
-        difficulty: "easy"
-    },
-    {
-        id: 46,
-        chapterId: 5,
-        question: "Vad är PEP (Peak Envelope Power)?",
-        options: [
-            { id: "a", text: "Medeleffekten" },
-            { id: "b", text: "Toppeffekten i SSB-signalens kuvert" },
-            { id: "c", text: "Effekten vid kontinuerlig bärvåg" },
-            { id: "d", text: "Förlusteffekten" }
-        ],
-        correctAnswer: "b",
-        explanation: "PEP är den maximala momentana effekten som uppnås vid topparna i en SSB-signal.",
+        explanation: "Högt SSN (solar max) joniserar jonosfären mer → högre MUF → högre HF-band öppnar! 10m kan vara öppet dygnet runt till hela världen.",
         difficulty: "medium"
     },
     {
-        id: 47,
-        chapterId: 5,
-        question: "Vilken enhet används för att ange effekt i dB relativt 1 milliwatt?",
+        id: 87,
+        chapterId: 4,
+        question: "Vad är SWF (Sudden Ionospheric Disturbance)?",
         options: [
-            { id: "a", text: "dBd" },
-            { id: "b", text: "dBi" },
-            { id: "c", text: "dBm" },
-            { id: "d", text: "dBW" }
-        ],
-        correctAnswer: "c",
-        explanation: "dBm är decibel relativt 1 milliwatt. 0 dBm = 1 mW, +30 dBm = 1 W.",
-        difficulty: "medium"
-    },
-    {
-        id: 48,
-        chapterId: 5,
-        question: "Hur många dB motsvarar en fördubbling av effekten?",
-        options: [
-            { id: "a", text: "1 dB" },
-            { id: "b", text: "3 dB" },
-            { id: "c", text: "6 dB" },
-            { id: "d", text: "10 dB" }
+            { id: "a", text: "En väderstörning" },
+            { id: "b", text: "HF-blackout 8 minuter efter solflar (D-skiktet joniseras kraftigt)" },
+            { id: "c", text: "En typ av antenn" },
+            { id: "d", text: "Ett mätinstrument" }
         ],
         correctAnswer: "b",
-        explanation: "3 dB motsvarar en fördubbling av effekten. 10 dB är 10 gånger, 6 dB är 4 gånger.",
-        difficulty: "medium"
+        explanation: "SWF = plötslig HF-blackout när röntgen/UV från solflar når jorden på 8 minuter. D-skiktet joniseras kraftigt och absorberar HF totalt i 10 min-2 timmar.",
+        difficulty: "hard"
     },
     {
-        id: 49,
-        chapterId: 5,
-        question: "Vad mäter en fältstyrkemätare?",
+        id: 88,
+        chapterId: 4,
+        question: "Vad mäter K-index?",
         options: [
-            { id: "a", text: "Elektriskt fält från en radiosändare" },
-            { id: "b", text: "Magnetfält" },
-            { id: "c", text: "Jordresistans" },
-            { id: "d", text: "Kabeldämpning" }
-        ],
-        correctAnswer: "a",
-        explanation: "En fältstyrkemätare mäter styrkan på det elektromagnetiska fältet från en sändare.",
-        difficulty: "easy"
-    },
-    {
-        id: 50,
-        chapterId: 5,
-        question: "Vad är S-enheter på en S-meter?",
-        options: [
-            { id: "a", text: "Absoluta spänningsvärden" },
-            { id: "b", text: "Relativa signalstyrkeenheter" },
-            { id: "c", text: "Frekvensavvikelser" },
-            { id: "d", text: "Effektvärden" }
+            { id: "a", text: "Solfläckstal" },
+            { id: "b", text: "Geomagnetisk aktivitet (aurora-sannolikhet)" },
+            { id: "c", text: "Jonosfärens höjd" },
+            { id: "d", text: "Signalstyrka" }
         ],
         correctAnswer: "b",
-        explanation: "S-enheter är relativa enheter för signalstyrka. Varje S-enhet motsvarar normalt 6 dB.",
+        explanation: "K-index (0-9) mäter geomagnetisk aktivitet. K > 4 innebär ökad aurora-sannolikhet och HF-störningar. K 7-9 = svår geomagnetisk storm.",
         difficulty: "medium"
     },
-
-    // ============================================
-    // KAPITEL 6: STÖRNINGAR (EMC)
-    // ============================================
     {
-        id: 51,
+        id: 89,
+        chapterId: 4,
+        question: "Vad är grålinjen (gray line)?",
+        options: [
+            { id: "a", text: "En antennanslutning" },
+            { id: "b", text: "Gränslinjen mellan dag och natt - utmärkt för HF-DX" },
+            { id: "c", text: "Ett frekvensområde" },
+            { id: "d", text: "En typ av kabel" }
+        ],
+        correctAnswer: "b",
+        explanation: "Grålinjen är gränsen mellan dag och natt (gryning/skymning). D-skiktet borta men F-skiktet kvar = perfekt för DX! Bäst på 40m och 80m.",
+        difficulty: "medium"
+    },
+    {
+        id: 90,
+        chapterId: 4,
+        question: "Vilket band fungerar bäst vid solar minimum (lågt SSN)?",
+        options: [
+            { id: "a", text: "10m och 15m" },
+            { id: "b", text: "40m, 80m och 160m" },
+            { id: "c", text: "6m och 2m" },
+            { id: "d", text: "Alla band lika bra" }
+        ],
+        correctAnswer: "b",
+        explanation: "Vid solar minimum är 10m, 15m oftast stängda. 40m, 80m och 160m är då bäst. 40m blir 'arbetshästen' som fungerar både dag och natt.",
+        difficulty: "medium"
+    },
+    
+// ============================================
+// KAPITEL 5: MÄTINSTRUMENT - SLUTPROV
+// ============================================
+{
+    id: 91,
+    chapterId: 5,
+    question: "Hur ska en voltmeter kopplas för att mäta spänning över en komponent?",
+    options: [
+        { id: "a", text: "I serie med komponenten" },
+        { id: "b", text: "Parallellt med komponenten" },
+        { id: "c", text: "Via en transformator" },
+        { id: "d", text: "Via en kondensator" }
+    ],
+    correctAnswer: "b",
+    explanation: "En voltmeter kopplas alltid parallellt med det som ska mätas. Den har hög ingångsimpedans (typiskt 10 MΩ) för att inte påverka kretsen.",
+    difficulty: "easy"
+},
+{
+    id: 92,
+    chapterId: 5,
+    question: "Hur ska en amperemeter kopplas för att mäta ström?",
+    options: [
+        { id: "a", text: "Parallellt med komponenten" },
+        { id: "b", text: "I serie med komponenten" },
+        { id: "c", text: "Via en transformator" },
+        { id: "d", text: "Direkt över batteriet" }
+    ],
+    correctAnswer: "b",
+    explanation: "En amperemeter kopplas alltid i serie så att strömmen passerar genom mätaren. Den har låg inre resistans för att inte bromsa strömmen.",
+    difficulty: "easy"
+},
+{
+    id: 93,
+    chapterId: 5,
+    question: "Vad händer om du kopplar en amperemeter parallellt över ett batteri?",
+    options: [
+        { id: "a", text: "Mätaren visar rätt ström" },
+        { id: "b", text: "Kortslutning - bränd säkring och risk för skada" },
+        { id: "c", text: "Inget händer" },
+        { id: "d", text: "Batteriet laddas" }
+    ],
+    correctAnswer: "b",
+    explanation: "Amperemeter har låg resistans. Parallellt över batteri = kortslutning! Enorm ström, bränd säkring, kan förstöra både mätare och batteri.",
+    difficulty: "easy"
+},
+{
+    id: 94,
+    chapterId: 5,
+    question: "Varför måste kretsen vara strömlös när man mäter resistans med ohmmeter?",
+    options: [
+        { id: "a", text: "För mätarens batteris livslängd" },
+        { id: "b", text: "Extern spänning ger felaktigt värde och kan skada mätaren" },
+        { id: "c", text: "Det är inte nödvändigt" },
+        { id: "d", text: "Endast för säkerheten" }
+    ],
+    correctAnswer: "b",
+    explanation: "Ohmmetern använder sitt eget batteri och skickar egen ström. Extern spänning stör mätningen totalt och kan skada mätaren. Koppla ALLTID från spänning!",
+    difficulty: "easy"
+},
+{
+    id: 95,
+    chapterId: 5,
+    question: "Vad mäter en SWR-mätare?",
+    options: [
+        { id: "a", text: "Endast sändareffekt" },
+        { id: "b", text: "Förhållandet mellan framåtgående och reflekterad effekt" },
+        { id: "c", text: "Frekvens" },
+        { id: "d", text: "Modulationsgrad" }
+    ],
+    correctAnswer: "b",
+    explanation: "SWR-mätaren visar förhållandet mellan framåtgående och reflekterad effekt. SWR 1:1 = perfekt anpassning, ingen reflektion.",
+    difficulty: "easy"
+},
+{
+    id: 96,
+    chapterId: 5,
+    question: "Vilket SWR-värde indikerar allvarliga problem som bör åtgärdas omedelbart?",
+    options: [
+        { id: "a", text: "SWR 1,5:1" },
+        { id: "b", text: "SWR 2:1" },
+        { id: "c", text: "SWR 3:1 eller högre" },
+        { id: "d", text: "SWR 1,2:1" }
+    ],
+    correctAnswer: "c",
+    explanation: "SWR >3:1 är problematiskt. Risk för slutstegsskada, stora förluster. <1,5:1 = utmärkt, 1,5-2:1 = bra, 2-3:1 = acceptabelt men bör förbättras.",
+    difficulty: "medium"
+},
+{
+    id: 97,
+    chapterId: 5,
+    question: "Vad är en dummyload?",
+    options: [
+        { id: "a", text: "En typ av antenn för testning" },
+        { id: "b", text: "En resistiv belastning (50Ω) som absorberar RF-effekt utan att stråla" },
+        { id: "c", text: "En förstärkare" },
+        { id: "d", text: "Ett filter" }
+    ],
+    correctAnswer: "b",
+    explanation: "En dummyload är ett 50Ω motstånd som absorberar sändareffekten och omvandlar den till värme utan att stråla ut signalen. Används för säker testning.",
+    difficulty: "easy"
+},
+{
+    id: 98,
+    chapterId: 5,
+    question: "Vad visar ett oscilloskops Y-axel respektive X-axel?",
+    options: [
+        { id: "a", text: "Y = frekvens, X = spänning" },
+        { id: "b", text: "Y = spänning, X = tid" },
+        { id: "c", text: "Y = tid, X = spänning" },
+        { id: "d", text: "Y = effekt, X = frekvens" }
+    ],
+    correctAnswer: "b",
+    explanation: "Oscilloskopet visar spänning (Y-axel vertikal) mot tid (X-axel horisontell). Detta visar signalens vågform över tiden.",
+    difficulty: "easy"
+},
+{
+    id: 99,
+    chapterId: 5,
+    question: "Varför används 10:1 prob istället för 1:1 prob vid RF-mätningar på oscilloskop?",
+    options: [
+        { id: "a", text: "Det är billigare" },
+        { id: "b", text: "10:1 prob har lägre kapacitans (10-15 pF vs 100 pF) och påverkar RF-kretsar mindre" },
+        { id: "c", text: "Det ger högre spänning" },
+        { id: "d", text: "Det kräver ingen kompensation" }
+    ],
+    correctAnswer: "b",
+    explanation: "10:1 prob har 10 gånger lägre kapacitans (10-15 pF istället för 100 pF). Vid RF är detta kritiskt - 100 pF kan ändra en VFO flera kHz!",
+    difficulty: "medium"
+},
+{
+    id: 100,
+    chapterId: 5,
+    question: "Vad är syftet med trigger-funktionen på ett oscilloskop?",
+    options: [
+        { id: "a", text: "Öka förstärkningen" },
+        { id: "b", text: "Synkronisera bilden så att vågformen står still" },
+        { id: "c", text: "Mäta frekvens" },
+        { id: "d", text: "Spara energi" }
+    ],
+    correctAnswer: "b",
+    explanation: "Trigger synkroniserar svepet så det alltid startar vid samma punkt på signalen. Detta får vågformen att 'frysa' och stå still på skärmen.",
+    difficulty: "easy"
+},
+{
+    id: 101,
+    chapterId: 5,
+    question: "Hur fungerar en frekvensräknare?",
+    options: [
+        { id: "a", text: "Mäter spänning över tid" },
+        { id: "b", text: "Räknar antal svängningar under en bestämd tid (grindtid)" },
+        { id: "c", text: "Mäter impedans" },
+        { id: "d", text: "Mäter effekt" }
+    ],
+    correctAnswer: "b",
+    explanation: "Frekvensräknaren räknar antalet pulser under grindtiden (t.ex. 1 sekund). Antal pulser = frekvens. 14 200 000 pulser/sekund = 14,200 MHz.",
+    difficulty: "medium"
+},
+{
+    id: 102,
+    chapterId: 5,
+    question: "Vilken är den lagstadgade frekvenstoleransen för VHF/UHF (>30 MHz) enligt PTS?",
+    options: [
+        { id: "a", text: "±100 ppm" },
+        { id: "b", text: "±20 ppm" },
+        { id: "c", text: "±5 ppm (±0,0005%)" },
+        { id: "d", text: "±1 ppm" }
+    ],
+    correctAnswer: "c",
+    explanation: "För VHF/UHF (>30 MHz): ±5 ppm. För HF (<30 MHz): ±20 ppm. Vid 144 MHz betyder ±5 ppm max ±720 Hz frekvensfel.",
+    difficulty: "medium"
+},
+{
+    id: 103,
+    chapterId: 5,
+    question: "Vad är PEP (Peak Envelope Power) vid SSB-sändning?",
+    options: [
+        { id: "a", text: "Medeleffekten under en transmission" },
+        { id: "b", text: "Den maximala momentana effekten vid topparna i modulationen" },
+        { id: "c", text: "Effekten vid kontinuerlig bärvåg" },
+        { id: "d", text: "Förlusteffekten" }
+    ],
+    correctAnswer: "b",
+    explanation: "PEP är den maximala momentana effekten som uppnås vid topparna i SSB-signalens kuvert. Medeleffekt vid normal tal är cirka 25-40% av PEP.",
+    difficulty: "medium"
+},
+{
+    id: 104,
+    chapterId: 5,
+    question: "Vad betyder S9 på en S-meter enligt standard?",
+    options: [
+        { id: "a", text: "-93 dBm" },
+        { id: "b", text: "-83 dBm" },
+        { id: "c", text: "-73 dBm (50 µV över 50Ω)" },
+        { id: "d", text: "-63 dBm" }
+    ],
+    correctAnswer: "c",
+    explanation: "S9 = -73 dBm (motsvarande 50 µV över 50Ω). Varje S-enhet motsvarar 6 dB. S8 = -79 dBm, S7 = -85 dBm etc.",
+    difficulty: "medium"
+},
+{
+    id: 105,
+    chapterId: 5,
+    question: "Hur många dB motsvarar varje S-enhet på en S-meter?",
+    options: [
+        { id: "a", text: "1 dB" },
+        { id: "b", text: "3 dB" },
+        { id: "c", text: "6 dB" },
+        { id: "d", text: "10 dB" }
+    ],
+    correctAnswer: "c",
+    explanation: "Varje S-enhet motsvarar 6 dB skillnad i signalstyrka. 6 dB är ungefär 4 gånger effekten. Många S-metrar är dock okalibrerade.",
+    difficulty: "medium"
+},
+{
+    id: 106,
+    chapterId: 5,
+    question: "Varför ska man använda dämpare mellan RF-signalgenerator och mottagare vid test?",
+    options: [
+        { id: "a", text: "För bättre frekvens" },
+        { id: "b", text: "För att skydda mottagaren från överbelastning med för stark signal" },
+        { id: "c", text: "För lägre SWR" },
+        { id: "d", text: "Det behövs inte" }
+    ],
+    correctAnswer: "b",
+    explanation: "RF-generator kan ge för stark signal som överbelastar mottagaren. Dämpare (t.ex. -20 dB eller -40 dB) ger realistisk svag signal för test.",
+    difficulty: "easy"
+},
+{
+    id: 107,
+    chapterId: 5,
+    question: "Vad betyder -20 dB dämpning i termer av effektreduktion?",
+    options: [
+        { id: "a", text: "Effekten halveras" },
+        { id: "b", text: "Effekten reduceras till 1/10" },
+        { id: "c", text: "Effekten reduceras till 1/100" },
+        { id: "d", text: "Effekten reduceras till 1/20" }
+    ],
+    correctAnswer: "c",
+    explanation: "-20 dB betyder att effekten reduceras till 1/100. 100W → 1W. -10 dB = ÷10, -30 dB = ÷1000, -3 dB = halvering.",
+    difficulty: "medium"
+},
+{
+    id: 108,
+    chapterId: 5,
+    question: "Vilken impedans ska en dummyload för amatörradio ha?",
+    options: [
+        { id: "a", text: "75 Ω" },
+        { id: "b", text: "50 Ω" },
+        { id: "c", text: "300 Ω" },
+        { id: "d", text: "Det spelar ingen roll" }
+    ],
+    correctAnswer: "b",
+    explanation: "50Ω är standard för amatörradio. Detta ger SWR 1:1 med sändaren. Vissa TV-system använder 75Ω, men amatörradio använder 50Ω.",
+    difficulty: "easy"
+},
+{
+    id: 109,
+    chapterId: 5,
+    question: "Vad är den största fördelen med en antennanalysator jämfört med enkel SWR-meter?",
+    options: [
+        { id: "a", text: "Den är billigare" },
+        { id: "b", text: "Den kan swepa hela bandet och visa SWR-kurva utan sändning" },
+        { id: "c", text: "Den är mindre" },
+        { id: "d", text: "Den kräver inget batteri" }
+    ],
+    correctAnswer: "b",
+    explanation: "Antennanalysator kan swepa hela bandet på sekunder och visa SWR-kurva + impedans utan att man behöver sända. Sparar enormt mycket tid vid antenntrimning!",
+    difficulty: "medium"
+},
+{
+    id: 110,
+    chapterId: 5,
+    question: "Vad indikerar impedans 50 + j15 Ω på en antenn?",
+    options: [
+        { id: "a", text: "Perfekt anpassning" },
+        { id: "b", text: "Resistans 50Ω OK, men induktiv reaktans - antennen är för lång" },
+        { id: "c", text: "Antennen är för kort" },
+        { id: "d", text: "SWR 15:1" }
+    ],
+    correctAnswer: "b",
+    explanation: "50Ω resistans är bra. +j15 betyder induktiv reaktans (för lång antenn). -j15 skulle betyda kapacitiv reaktans (för kort). Vid resonans är X = 0.",
+    difficulty: "hard"
+},
+    {
+        id: 111,
         chapterId: 6,
         question: "Vad betyder EMC?",
         options: [
@@ -741,7 +1577,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 52,
+        id: 112,
         chapterId: 6,
         question: "Vad är en övertonstörning?",
         options: [
@@ -755,7 +1591,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 53,
+        id: 113,
         chapterId: 6,
         question: "Vad är TVI?",
         options: [
@@ -769,7 +1605,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 54,
+        id: 114,
         chapterId: 6,
         question: "Hur kan man minska risken för övertonstörningar?",
         options: [
@@ -783,7 +1619,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 55,
+        id: 115,
         chapterId: 6,
         question: "Vad är intermodulation?",
         options: [
@@ -797,7 +1633,7 @@ const QUESTIONS = [
         difficulty: "hard"
     },
     {
-        id: 56,
+        id: 116,
         chapterId: 6,
         question: "Vad är syftet med en ferritkärna (choke) på kablar?",
         options: [
@@ -811,7 +1647,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 57,
+        id: 117,
         chapterId: 6,
         question: "Vad orsakar BCI (Broadcast Interference)?",
         options: [
@@ -825,7 +1661,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 58,
+        id: 118,
         chapterId: 6,
         question: "Vad är första steget vid felsökning av EMC-störningar?",
         options: [
@@ -839,7 +1675,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 59,
+        id: 119,
         chapterId: 6,
         question: "Hur kan jordning hjälpa mot störningar?",
         options: [
@@ -853,7 +1689,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 60,
+        id: 120,
         chapterId: 6,
         question: "Vad är skärmning?",
         options: [
@@ -866,12 +1702,152 @@ const QUESTIONS = [
         explanation: "Skärmning med ledande material (metallhölje) förhindrar RF-signaler att läcka in eller ut.",
         difficulty: "easy"
     },
+    {
+        id: 121,
+        chapterId: 6,
+        question: "Vilken är den viktigaste åtgärden mot mantelströmmar?",
+        options: [
+            { id: "a", text: "Öka sändareffekten" },
+            { id: "b", text: "Använda balun eller choke vid antennen" },
+            { id: "c", text: "Byta koaxkabel" },
+            { id: "d", text: "Sänka frekvensen" }
+        ],
+        correctAnswer: "b",
+        explanation: "Balun eller choke vid antennen stoppar RF-strömmar på koaxkabelns utsida (mantelströmmar) som annars kan stråla in i huset och orsaka störningar.",
+        difficulty: "medium"
+    },
+    {
+        id: 122,
+        chapterId: 6,
+        question: "Hur mycket måste oönskade utsändningar dämpas enligt lag?",
+        options: [
+            { id: "a", text: "Minst 20 dB" },
+            { id: "b", text: "Minst 30 dB" },
+            { id: "c", text: "Minst 40 dB" },
+            { id: "d", text: "Minst 60 dB" }
+        ],
+        correctAnswer: "c",
+        explanation: "Lagkravet är att oönskade utsändningar (övertoner) ska dämpas minst 40 dB under huvudsignalen. Detta motsvarar 0,01% av effekten.",
+        difficulty: "medium"
+    },
+    {
+        id: 123,
+        chapterId: 6,
+        question: "Vad är det största EMC-hotet mot amatörradio idag?",
+        options: [
+            { id: "a", text: "Åska och blixtar" },
+            { id: "b", text: "Switchade nätaggregat (SMPS) i modern elektronik" },
+            { id: "c", text: "Solstormar" },
+            { id: "d", text: "Mobiltelefoner" }
+        ],
+        correctAnswer: "b",
+        explanation: "Switchade nätaggregat (SMPS) finns i nästan all modern elektronik och ger kraftigt bredbandigt brus på HF-banden. Detta är det växande problemet för amatörradio.",
+        difficulty: "hard"
+    },
+    {
+        id: 124,
+        chapterId: 6,
+        question: "Hur beräknar du tredje ordningens intermodulation (IMD3)?",
+        options: [
+            { id: "a", text: "f₁ + f₂" },
+            { id: "b", text: "2×f₁ - f₂ och 2×f₂ - f₁" },
+            { id: "c", text: "f₁ - f₂" },
+            { id: "d", text: "f₁ × f₂" }
+        ],
+                correctAnswer: "b",
+explanation: "IMD3 beräknas som 2×f₁ - f₂ och 2×f₂ - f₁. Dessa 'spöksignaler' uppstår när två starka signaler blandas icke-linjärt i mottagaren.",
+difficulty: "hard"
+},
+{
+id: 125,
+chapterId: 6,
+question: "Vad visar huvudbrytartestet?",
+options: [
+{ id: "a", text: "Om huvudbrytaren fungerar" },
+{ id: "b", text: "Om störkällan är i ditt hus eller externt" },
+{ id: "c", text: "Spänningen i elnätet" },
+{ id: "d", text: "Om radion fungerar" }
+],
+correctAnswer: "b",
+explanation: "Huvudbrytartestet: Stäng av huvudbrytaren och lyssna med batteridrivet radio. Försvinner störningen? → Källan är i ditt hus. Kvarstår den? → Extern källa.",
+difficulty: "medium"
+},
+{
+id: 126,
+chapterId: 6,
+question: "Vilken ferrittyp (Mix) är bäst för HF-band?",
+options: [
+{ id: "a", text: "Mix 61 (VHF/UHF)" },
+{ id: "b", text: "Mix 43 (1-50 MHz)" },
+{ id: "c", text: "Mix 75 (MW)" },
+{ id: "d", text: "Mix 10 (HF)" }
+],
+correctAnswer: "b",
+explanation: "Mix 43 är bäst för HF-användning (1-50 MHz). Den fungerar bra över hela HF-området och är den mest populära för radioamatörer.",
+difficulty: "hard"
+},
+{
+id: 127,
+chapterId: 6,
+question: "Vad är korsmodulation?",
+options: [
+{ id: "a", text: "Korrekt modulering" },
+{ id: "b", text: "När en stark AM-signal överför sin modulation till andra signaler" },
+{ id: "c", text: "Digital modulation" },
+{ id: "d", text: "FM-modulation" }
+],
+correctAnswer: "b",
+explanation: "Korsmodulation uppstår när en mycket stark AM-signal (ofta MW-rundradio) driver mottagaren icke-linjärt så att modulationen 'överförs' till din önskade signal.",
+difficulty: "hard"
+},
+{
+id: 128,
+chapterId: 6,
+question: "Vilken är den bästa åtgärden mot korsmodulation från MW-rundradio?",
+options: [
+{ id: "a", text: "Lågpassfilter" },
+{ id: "b", text: "Högpassfilter med 2-3 MHz cutoff före mottagaren" },
+{ id: "c", text: "Bandpassfilter" },
+{ id: "d", text: "Notch-filter" }
+],
+correctAnswer: "b",
+explanation: "Ett högpassfilter med 2-3 MHz cutoff blockerar MW-rundradio (500-1600 kHz) men släpper igenom alla HF-amatörband, vilket eliminerar korsmodulationsproblemet.",
+difficulty: "medium"
+},
+{
+id: 129,
+chapterId: 6,
+question: "Hur mycket minskar fältstyrkan om du dubblar avståndet?",
+options: [
+{ id: "a", text: "Till hälften" },
+{ id: "b", text: "Till en fjärdedel" },
+{ id: "c", text: "Till en tiondel" },
+{ id: "d", text: "Ingen förändring" }
+],
+correctAnswer: "b",
+explanation: "Fältstyrkan minskar med 1/r² (kvadraten på avståndet). Dubbla avståndet ger en fjärdedel av fältstyrkan - en enkel och gratis åtgärd!",
+difficulty: "medium"
+},
+{
+id: 130,
+chapterId: 6,
+question: "Varför ska du testa EN åtgärd i taget vid felsökning?",
+options: [
+{ id: "a", text: "För att spara tid" },
+{ id: "b", text: "För att veta exakt vad som hjälpte" },
+{ id: "c", text: "För att det är lättare" },
+{ id: "d", text: "För att det kostar mindre" }
+],
+correctAnswer: "b",
+explanation: "Genom att testa EN åtgärd i taget och dokumentera resultatet vet du exakt vad som hjälpte. Annars vet du inte vilken av många åtgärder som faktiskt löste problemet.",
+difficulty: "easy"
+},
 
     // ============================================
     // KAPITEL 7: REGLER OCH BESTÄMMELSER
     // ============================================
     {
-        id: 61,
+        id: 131,
         chapterId: 7,
         question: "Vilken myndighet utfärdar amatörradiolicenser i Sverige?",
         options: [
@@ -885,7 +1861,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 62,
+        id: 132,
         chapterId: 7,
         question: "Vad är en anropssignal?",
         options: [
@@ -899,7 +1875,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 63,
+        id: 133,
         chapterId: 7,
         question: "Vad betyder CEPT-licens för radioamatörer?",
         options: [
@@ -913,7 +1889,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 64,
+        id: 134,
         chapterId: 7,
         question: "Hur ofta måste man identifiera sig med anropssignal under ett QSO?",
         options: [
@@ -927,7 +1903,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 65,
+        id: 135,
         chapterId: 7,
         question: "Får man sända krypterade meddelanden som radioamatör?",
         options: [
@@ -941,7 +1917,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 66,
+        id: 136,
         chapterId: 7,
         question: "Vad är maximal effekt för svenska radioamatörer med högsta behörighetsklassen?",
         options: [
@@ -955,7 +1931,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 67,
+        id: 137,
         chapterId: 7,
         question: "Får man sända reklam eller kommersiella meddelanden som radioamatör?",
         options: [
@@ -969,7 +1945,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 68,
+        id: 138,
         chapterId: 7,
         question: "Vad står ITU för?",
         options: [
@@ -983,7 +1959,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 69,
+        id: 139,
         chapterId: 7,
         question: "Vad menas med primär och sekundär status för frekvensband?",
         options: [
@@ -997,7 +1973,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 70,
+        id: 140,
         chapterId: 7,
         question: "Är det tillåtet att spela in och återutsända musik via amatörradio?",
         options: [
@@ -1015,7 +1991,7 @@ const QUESTIONS = [
     // KAPITEL 8: TRAFIKMETODER
     // ============================================
     {
-        id: 71,
+        id: 161,
         chapterId: 8,
         question: "Vad betyder Q-koden 'QTH'?",
         options: [
@@ -1029,7 +2005,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 72,
+        id: 162,
         chapterId: 8,
         question: "Vad betyder 'CQ' i amatörradio?",
         options: [
@@ -1043,7 +2019,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 73,
+        id: 163,
         chapterId: 8,
         question: "Vad står RST-systemet för?",
         options: [
@@ -1057,7 +2033,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 74,
+        id: 164,
         chapterId: 8,
         question: "Vad betyder 'QRZ'?",
         options: [
@@ -1071,7 +2047,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 75,
+        id: 165,
         chapterId: 8,
         question: "Hur bokstaveras 'S' i det fonetiska alfabetet?",
         options: [
@@ -1085,7 +2061,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 76,
+        id: 166,
         chapterId: 8,
         question: "Vad är ett QSO?",
         options: [
@@ -1099,7 +2075,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 77,
+        id: 167,
         chapterId: 8,
         question: "Vad är den internationella nödfrekvensen på HF?",
         options: [
@@ -1113,7 +2089,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 78,
+        id: 168,
         chapterId: 8,
         question: "Vad betyder 'MAYDAY' i radiosammanhang?",
         options: [
@@ -1127,7 +2103,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 79,
+        id: 169,
         chapterId: 8,
         question: "Vad är en repeater (relä)?",
         options: [
@@ -1141,7 +2117,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 80,
+        id: 170,
         chapterId: 8,
         question: "Vad betyder '73' i amatörradio?",
         options: [
@@ -1159,7 +2135,7 @@ const QUESTIONS = [
     // KAPITEL 9: ELSÄKERHET
     // ============================================
     {
-        id: 81,
+        id: 181,
         chapterId: 9,
         question: "Vid vilken strömstyrka anses elektrisk ström bli farlig för människor?",
         options: [
@@ -1173,7 +2149,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 82,
+        id: 182,
         chapterId: 9,
         question: "Varför är det viktigt med skyddsjord?",
         options: [
@@ -1187,7 +2163,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 83,
+        id: 183,
         chapterId: 9,
         question: "Vad ska man göra först om någon får en elektrisk stöt?",
         options: [
@@ -1201,7 +2177,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 84,
+        id: 184,
         chapterId: 9,
         question: "Var finns högspänning i en typisk HF-transceiver?",
         options: [
@@ -1215,7 +2191,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 85,
+        id: 185,
         chapterId: 9,
         question: "Vad är SAR-värde?",
         options: [
@@ -1229,7 +2205,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 86,
+        id: 186,
         chapterId: 9,
         question: "Hur skyddar man sig bäst mot åskskador på radioutrustning?",
         options: [
@@ -1243,7 +2219,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 87,
+        id: 187,
         chapterId: 9,
         question: "Vad är en säker avstånd från en HF-antenn vid sändning med hög effekt?",
         options: [
@@ -1257,7 +2233,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 88,
+        id: 188,
         chapterId: 9,
         question: "Varför är kondensatorer farliga även efter att strömmen stängts av?",
         options: [
@@ -1271,7 +2247,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 89,
+        id: 189,
         chapterId: 9,
         question: "Vad är syftet med en jordfelsbrytare?",
         options: [
@@ -1285,7 +2261,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 90,
+        id: 190,
         chapterId: 9,
         question: "Vad bör man tänka på vid arbete på tak eller master för antenninstallation?",
         options: [
@@ -1303,7 +2279,7 @@ const QUESTIONS = [
     // KAPITEL 10: PRAKTISK RADIOTRAFIK
     // ============================================
     {
-        id: 91,
+        id: 201,
         chapterId: 10,
         question: "Vilket band är bäst för lokala kontakter (inom ca 50 km)?",
         options: [
@@ -1317,7 +2293,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 92,
+        id: 202,
         chapterId: 10,
         question: "Vad är en lämplig första radio för en nybörjare?",
         options: [
@@ -1331,7 +2307,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 93,
+        id: 203,
         chapterId: 10,
         question: "Vad är CTCSS (subtoner) vid repeatertrafik?",
         options: [
@@ -1345,7 +2321,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 94,
+        id: 204,
         chapterId: 10,
         question: "Vad är FT8?",
         options: [
@@ -1359,7 +2335,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 95,
+        id: 205,
         chapterId: 10,
         question: "Vad är ett QSL-kort?",
         options: [
@@ -1373,7 +2349,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 96,
+        id: 206,
         chapterId: 10,
         question: "Vad är DXCC?",
         options: [
@@ -1387,7 +2363,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 97,
+        id: 207,
         chapterId: 10,
         question: "Vad är APRS?",
         options: [
@@ -1401,7 +2377,7 @@ const QUESTIONS = [
         difficulty: "medium"
     },
     {
-        id: 98,
+        id: 208,
         chapterId: 10,
         question: "Vilket band är populärast för DX (långdistans) på HF?",
         options: [
@@ -1415,7 +2391,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 99,
+        id: 209,
         chapterId: 10,
         question: "Vad innebär portabel radiotrafik (/P)?",
         options: [
@@ -1429,7 +2405,7 @@ const QUESTIONS = [
         difficulty: "easy"
     },
     {
-        id: 100,
+        id: 210,
         chapterId: 10,
         question: "Vad är SOTA?",
         options: [

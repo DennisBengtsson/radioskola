@@ -3838,4 +3838,511 @@
                     <br>• Dipol med koax: <strong>1:1 balun</strong> (strömsbalun)
                     <br>• Foldad dipol med koax: <strong>4:1 balun</strong> (transformerande)
                     <br>• Vertikal med koax: Inget eller <strong>1:1 unun</strong>
-                    <br>• Random wire med koax +
+                    <br>• Random wire med koax + tuner: <strong>4:1 eller 9:1 unun</strong>
+</div>
+            <h3>Var ska balun placeras?</h3>
+            
+            <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 3px solid #059669; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                <h4 style="margin-top: 0; color: #065f46;">✅ REKOMMENDERAD PLACERING</h4>
+                
+                <table style="width: 100%; margin-top: 1rem; background: white; border-radius: 8px;">
+                    <tr>
+                        <td style="padding: 1rem; width: 30%; font-weight: bold; color: #065f46;">
+                            <strong>1. Vid antennen (BÄST!)</strong>
+                        </td>
+                        <td style="padding: 1rem;">
+                            ✅ Primär placering - Viktigast!
+                            <br>• Blockerar mantelströmmar där de uppstår
+                            <br>• Skyddar hela koaxlängden
+                            <br>• Bästa möjliga prestanda
+                            <br><br>
+                            <em>Detta är DEN viktiga balun!</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; font-weight: bold; color: #065f46;">
+                            <strong>2. Vid radion (extra)</strong>
+                        </td>
+                        <td style="padding: 1rem;">
+                            ✅ Sekundärt skydd - Bra att ha
+                            <br>• Fångar upp resterande mantelströmmar
+                            <br>• Skyddar mot RF i shacket
+                            <br>• Enkel ferritkärn-choke funkar bra
+                            <br><br>
+                            <em>"Bälte och hängslen" - extra säkerhet</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; font-weight: bold; color: #065f46;">
+                            <strong>3. Båda platserna!</strong>
+                        </td>
+                        <td style="padding: 1rem;">
+                            ✅✅ Optimalt - Rekommenderat!
+                            <br>• Bästa skyddet mot mantelströmmar
+                            <br>• Balun vid antenn + choke vid radio
+                            <br>• Minimerar RF-problem
+                            <br><br>
+                            <em>Detta är professionell standard</em>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3>Testa om du har mantelströmmar</h3>
+            
+            <div class="example-box" style="border-left: 4px solid #dc2626;">
+                <strong>🔍 Enkla test för mantelströmmar:</strong>
+                <br><br>
+                <strong>Test 1 - Rörtest:</strong>
+                <br>• Sänd på låg effekt (10-20W)
+                <br>• Rör försiktigt koaxkabeln
+                <br>• Om SWR ändras → Du har mantelströmmar!
+                <br><br>
+                <strong>Test 2 - Mikrofon/nyckeltest:</strong>
+                <br>• Sänd på medelhög effekt (50W)
+                <br>• Rör mikrofonen eller nyckeln
+                <br>• Om du får stötar/brännskador → Mantelströmmar!
+                <br><br>
+                <strong>Test 3 - Ljudtest:</strong>
+                <br>• Sänd på SSB med mikrofon
+                <br>• Om du hör din egen röst i radions högtalare → Feedback från mantelströmmar!
+                <br><br>
+                <strong>Test 4 - Störningstest:</strong>
+                <br>• Sänd på normal effekt
+                <br>• Om datorn/TV/routern störs → RF läcker ut från koaxen!
+                <br><br>
+                <strong>Lösning för alla ovan:</strong>
+                <br>→ Installera balun vid antennen!
+            </div>
+            
+            <h3>Vanliga misstag med baluner</h3>
+            
+            <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+                <h4 style="margin-top: 0; color: #991b1b;">❌ VANLIGA FEL - Undvik dessa!</h4>
+                
+                <table style="width: 100%; margin-top: 1rem; background: white; border-radius: 8px;">
+                    <tr>
+                        <td style="padding: 1rem; width: 35%; font-weight: bold; color: #991b1b;">
+                            ❌ Ingen balun alls
+                        </td>
+                        <td style="padding: 1rem;">
+                            Den vanligaste felet! "Jag kopplar bara koaxen direkt till dipolen"
+                            <br>→ Garanterat mantelströmmar och problem
+                            <br><strong>Fixa:</strong> Installera åtminstone en enkel ferritkärn-choke
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; font-weight: bold; color: #991b1b;">
+                            ❌ Balun inomhus istället för vid antennen
+                        </td>
+                        <td style="padding: 1rem;">
+                            Hjälper inte! Mantelströmmarna flyter på hela koaxen
+                            <br>→ Balun måste sitta VID ANTENNEN där problemet uppstår
+                            <br><strong>Fixa:</strong> Flytta balun till matningspunkten
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; font-weight: bold; color: #991b1b;">
+                            ❌ För liten/för få ferritkärnor
+                        </td>
+                        <td style="padding: 1rem;">
+                            1-2 kärnor räcker inte, speciellt på HF
+                            <br>→ Insufficient choking impedance
+                            <br><strong>Fixa:</strong> Använd minst 5-8 st kärnor (typ FT240-43)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; font-weight: bold; color: #991b1b;">
+                            ❌ Fel typ av balun för frekvensen
+                        </td>
+                        <td style="padding: 1rem;">
+                            VHF-balun på HF eller tvärtom
+                            <br>→ Fungerar dåligt utanför designområdet
+                            <br><strong>Fixa:</strong> Använd rätt balun för ditt frekvensområde
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; font-weight: bold; color: #991b1b;">
+                            ❌ För högt SWR genom balun
+                        </td>
+                        <td style="padding: 1rem;">
+                            Balun kan överhettas och gå sönder vid högt SWR
+                            <br>→ Fixa SWR FÖRST, sedan balun
+                            <br><strong>Fixa:</strong> Trimma antennen för lågt SWR innan balun installeras
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            
+            <h3>Bygga egen balun - Sammanfattning</h3>
+            
+            <div class="info-box important" style="background: #dbeafe; border-left: 4px solid #3b82f6;">
+                <strong>🔧 ENKLASTE HEMMABYGGDA BALUN:</strong>
+                <br><br>
+                <strong>1:1 Strömsbalun (ferritkärn-choke)</strong>
+                <br><br>
+                <strong>Material:</strong>
+                <br>• 6-10 st ferritkärnor FT240-43 (HF) eller FT240-61 (bredare)
+                <br>• Koaxkabel (din befintliga)
+                <br>• Buntband eller UV-beständig tejp
+                <br>• Plastbox eller krympslang (vattenskydd)
+                <br><br>
+                <strong>Montering:</strong>
+                <br>1. Trä kärnorna på koaxen 10-30 cm från matningspunkten
+                <br>2. Packa tätt (2-5 cm mellan kärnor)
+                <br>3. Fäst med buntband
+                <br>4. Skydda från väder
+                <br><br>
+                <strong>Kostnad:</strong> ~200-400 kr
+                <br><strong>Tid:</strong> 15 minuter
+                <br><strong>Effekt:</strong> Fungerar utmärkt!
+                <br><br>
+                <em>💡 Detta är det första du ska göra vid en ny dipol-installation!</em>
+            </div>
+            
+            <h3>✅ Snabbtest - Balun och mantelströmmar</h3>
+            
+            <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+                <strong>✅ Kan du svara på dessa?</strong>
+                <ul style="margin-top: 0.5rem;">
+                    <li>Vad är skillnaden mellan balanserad och obalanserad?</li>
+                    <li>Vad är mantelströmmar?</li>
+                    <li>Vilka problem orsakar mantelströmmar?</li>
+                    <li>Vad står BALUN för?</li>
+                    <li>Vad är skillnaden mellan strömsbalun och transformerande balun?</li>
+                    <li>Var ska balun placeras?</li>
+                    <li>Hur bygger man en enkel balun?</li>
+                </ul>
+                <details style="margin-top: 0.5rem;">
+                    <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+                    <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                        <strong>Svar:</strong>
+                        <br>• Balanserad: båda sidor lika potential mot jord (dipol). Obalanserad: ena sidan jordad (vertikal, koax)
+                        <br>• RF-strömmar på utsidan av koaxskärmen
+                        <br>• RF i shacket, snedvridet strålningsmönster, felaktigt SWR, ökad brus, störningar
+                        <br>• BALanced to UNbalanced (balanserad till obalanserad)
+                        <br>• Strömsbalun blockerar bara mantelströmmar (1:1). Transformerande ändrar också impedans (4:1, 9:1)
+                        <br>• Primärt vid antennen (viktigast!), sekundärt vid radion (extra skydd)
+                        <br>• Trä 6-10 ferritkärnor (FT240-43) på koaxen nära matningspunkten
+                    </div>
+                </details>
+            </div>
+            
+            <div class="info-box important">
+                <strong>🎯 Viktigt för provet:</strong>
+                <br>• Balanserad: dipol, foldad dipol (båda sidor samma potential mot jord)
+                <br>• Obalanserad: vertikal, koax (ena sidan jordad)
+                <br>• Mantelströmmar: RF på utsidan av koaxskärm (oönskat!)
+                <br>• Problem: RF i shacket, snedvridet mönster, fel SWR, störningar
+                <br>• BALUN = BALanced to UNbalanced
+                <br>• Strömsbalun (choke): Blockerar mantelströmmar, 1:1 impedans
+                <br>• Transformerande balun: Blockerar + ändrar impedans (4:1, 9:1)
+                <br>• Placering: Viktigast VID ANTENNEN, sekundärt vid radion
+                <br>• Enkel lösning: 6-10 ferritkärnor på koax (fungerar utmärkt!)
+                <br>• UNUN: UNbalanced till UNbalanced (för vertikaler)
+            </div>
+        </div>
+
+        <!-- ============================================ -->
+        <!-- KAPITELSAMMANFATTNING -->
+        <!-- ============================================ -->
+        
+        <div class="content-section" id="sammanfattning">
+            <h2>📚 Kapitel 3 - Sammanfattning</h2>
+            
+            <p>Nu har du lärt dig grunderna om antenner! Här är en snabb sammanfattning av de viktigaste punkterna:</p>
+            
+            <div style="background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border: 3px solid #8b5cf6; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
+                <h3 style="margin-top: 0; color: #5b21b6;">🎯 VIKTIGA FORMLER</h3>
+                
+                <div style="background: white; border-radius: 8px; padding: 1.5rem; margin-top: 1rem;">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td style="padding: 0.5rem; width: 40%; font-weight: bold;">Våglängd och frekvens:</td>
+                            <td style="padding: 0.5rem;">λ (meter) = 300 / f (MHz)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; font-weight: bold;">Halvvågsdipol:</td>
+                            <td style="padding: 0.5rem;">L (meter) = 143 / f (MHz)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; font-weight: bold;">Kvartsvågs vertikal:</td>
+                            <td style="padding: 0.5rem;">H (meter) = 71,5 / f (MHz)</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.5rem; font-weight: bold;">5/8λ vertikal:</td>
+                            <td style="padding: 0.5rem;">H (meter) ≈ 187,5 / f (MHz)</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
+                <h3 style="margin-top: 0; color: #92400e;">📡 ANTENNTYPER - Snabböversikt</h3>
+                
+                <table style="width: 100%; margin-top: 1rem; background: white; border-radius: 8px;">
+                    <thead>
+                        <tr>
+                            <th style="width: 20%;">Typ</th>
+                            <th style="width: 25%;">Egenskaper</th>
+                            <th style="width: 25%;">Fördelar</th>
+                            <th style="width: 30%;">Användning</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Dipol</strong></td>
+                            <td>
+                                λ/2 lång
+                                <br>73 Ω
+                                <br>0 dBd
+                            </td>
+                            <td>
+                                Enkel, billig
+                                <br>Pålitlig
+                                <br>Bredbandig
+                            </td>
+                            <td>
+                                HF allmänt
+                                <br>Referensantenn
+                                <br>Hemmabruk
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Vertikal</strong></td>
+                            <td>
+                                λ/4 hög
+                                <br>36 Ω
+                                <br>Rundstrålande
+                            </td>
+                            <td>
+                                Kompakt
+                                <br>Låg vinkel
+                                <br>Bra för DX
+                            </td>
+                            <td>
+                                HF/VHF DX
+                                <br>Mobilt
+                                <br>Liten tomt
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Yagi</strong></td>
+                            <td>
+                                Riktantenn
+                                <br>6-15 dBd
+                                <br>Smalbandig
+                            </td>
+                            <td>
+                                Hög vinst
+                                <br>Bra F/B
+                                <br>Riktbar
+                            </td>
+                            <td>
+                                VHF/UHF
+                                <br>HF DX
+                                <br>Tävling
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quad</strong></td>
+                            <td>
+                                Loopar (1λ)
+                                <br>~1 dB mer än Yagi
+                                <br>Bredbandig
+                            </td>
+                            <td>
+                                Högre vinst
+                                <br>Lägre brus
+                                <br>Multiband
+                            </td>
+                            <td>
+                                HF DX
+                                <br>Low-noise
+                                <br>Hembygge
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Log-periodisk</strong></td>
+                            <td>
+                                Bredbandig
+                                <br>6-9 dBd
+                                <br>50 Ω
+                            </td>
+                            <td>
+                                Många band
+                                <br>Stabil
+                                <br>Ingen trimning
+                            </td>
+                            <td>
+                                VHF/UHF multi
+                                <br>Monitoring
+                                <br>Professionellt
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
+                <h3 style="margin-top: 0; color: #1e40af;">🔌 MATARLEDNINGAR - Viktiga punkter</h3>
+                
+                <div style="background: white; border-radius: 8px; padding: 1.5rem; margin-top: 1rem;">
+                    <strong>Standard koax: 50 Ω</strong>
+                    <br><br>
+                    <strong>Populära typer:</strong>
+                    <br>• RG-58: Kort sträcka, låg effekt, UNDVIK på VHF/UHF!
+                    <br>• RG-213: Standard HF/VHF, bra allround
+                    <br>• Aircell 7/Ecoflex 10: Låg förlust, bäst för VHF/UHF
+                    <br><br>
+                    <strong>Kom ihåg:</strong>
+                    <br>• Dämpning ökar kraftigt med frekvensen
+                    <br>• Kortare kabel = alltid bättre
+                    <br>• N-kontakt för VHF/UHF (PL-259 dåligt!)
+                    <br>• Hastighetsfaktor: 0,66 (solid PE), 0,80 (skum), 0,85 (luft)
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
+                <h3 style="margin-top: 0; color: #991b1b;">⚡ SWR - Standing Wave Ratio</h3>
+                
+                <div style="background: white; border-radius: 8px; padding: 1.5rem; margin-top: 1rem;">
+                    <strong>SWR-värden:</strong>
+                    <br>• 1,0:1 = Perfekt (0% reflektion)
+                    <br>• 1,5:1 = Utmärkt (4% reflektion) ← Sikta på detta!
+                    <br>• 2,0:1 = Acceptabelt (11% reflektion)
+                    <br>• 3,0:1 = Dåligt (25% reflektion) ← Fix detta!
+                    <br><br>
+                    <strong>Orsaker till högt SWR:</strong>
+                    <br>• Antenn fel längd/inte resonant
+                    <br>• Skadad kabel eller kontakter
+                    <br>• Närliggande metall
+                    <br>• Dåligt jordplan (vertikal)
+                    <br>• Saknad balun
+                    <br><br>
+                    <strong>Antenntuner:</strong>
+                    <br>• "Döljer" högt SWR för sändaren
+                    <br>• Förbättrar INTE antennen
+                    <br>• Placera vid antennen om möjligt (mindre förluster)
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 3px solid #059669; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
+                <h3 style="margin-top: 0; color: #065f46;">🔄 BALUN - Viktigt!</h3>
+                
+                <div style="background: white; border-radius: 8px; padding: 1.5rem; margin-top: 1rem;">
+                    <strong>Varför balun?</strong>
+                    <br>• Dipol är balanserad, koax är obalanserad
+                    <br>• Utan balun: Mantelströmmar garanterat!
+                    <br><br>
+                    <strong>Mantelströmsproblem:</strong>
+                    <br>• RF i shacket (stör elektronik)
+                    <br>• Snedvridet strålningsmönster
+                    <br>• Felaktigt SWR
+                    <br>• RF-brännskador
+                    <br><br>
+                    <strong>Lösning:</strong>
+                    <br>• Strömsbalun (1:1) - Blockerar mantelströmmar
+                    <br>• Placera VID ANTENNEN (viktigast!)
+                    <br>• Enklast: 6-10 ferritkärnor på koax
+                    <br><br>
+                    <strong>Hemmabyggd balun:</strong>
+                    <br>• FT240-43 kärnor (6-10 st)
+                    <br>• Trä på koax nära matningspunkt
+                    <br>• Säkra och vattentäta
+                    <br>• Fungerar utmärkt!
+                </div>
+            </div>
+            
+            <div style="background: linear-gradient(135deg, #fae8ff 0%, #f3e8ff 100%); border: 3px solid #a855f7; border-radius: 12px; padding: 2rem; margin: 2rem 0;">
+                <h3 style="margin-top: 0; color: #7e22ce;">✅ CHECKLISTA - Ny antenninstallation</h3>
+                
+                <div style="background: white; border-radius: 8px; padding: 1.5rem; margin-top: 1rem;">
+                    <strong>Före installation:</strong>
+                    <br>☐ Beräkna antennlängd (lägg till 5% för trimning)
+                    <br>☐ Välj rätt koaxkabel för frekvens
+                    <br>☐ Skaffa balun/ferritkärnor
+                    <br>☐ Planera upphängning (säker höjd)
+                    <br><br>
+                    <strong>Installation:</strong>
+                    <br>☐ Montera antennen (börja längre, trimma senare)
+                    <br>☐ Installera balun vid matningspunkten
+                    <br>☐ Anslut koax med bra kontakter
+                    <br>☐ Vattentäta alla anslutningar utomhus
+                    <br>☐ Säkra kabeln mekaniskt
+                    <br><br>
+                    <strong>Test och trimning:</strong>
+                    <br>☐ Mät SWR på målfrekvensen
+                    <br>☐ Om SWR > 2:1, trimma längden
+                    <br>☐ Testa på olika frekvenser (sweep)
+                    <br>☐ Testa för mantelströmmar
+                    <br>☐ Gör provkontakter!
+                    <br><br>
+                    <strong>Dokumentera:</strong>
+                    <br>☐ Notera antennlängd
+                    <br>☐ SWR-kurva över bandet
+                    <br>☐ Kabellängd och typ
+                    <br>☐ Datum för installation
+                </div>
+            </div>
+            
+            <div class="info-box important" style="background: #fffbeb; border-left: 4px solid #f59e0b; font-size: 1.1rem;">
+                <strong>🎓 DU ÄR NU REDO FÖR PROVET!</strong>
+                <br><br>
+                Du har lärt dig:
+                <br>✅ Grundprinciper för antenner
+                <br>✅ Beräkna dipol- och vertikallängder
+                <br>✅ Förstå riktantenner (Yagi, Quad, Log-periodisk)
+                <br>✅ Välja rätt koaxkabel
+                <br>✅ Tolka och åtgärda högt SWR
+                <br>✅ Förstå balun och undvika mantelströmmar
+                <br><br>
+                <strong>Nästa steg:</strong>
+                <br>1. Gör övningarna för varje delkapitel
+                <br>2. Testa dig själv med provfrågorna
+                <br>3. Bygg din första antenn!
+                <br><br>
+                <em>Lycka till! 73 de din studiekamrat! 📡</em>
+            </div>
+        </div>
+
+    </div> <!-- Slutar content-wrapper -->
+</div> <!-- Slutar container -->
+            
+
+                <!-- Navigation -->
+                <a href="kapitel-2-radioteknik.html" class="nav-button next">
+                    <span class="arrow">←</span>
+                    <span class="label">Kapitel 2: Radioteknik</span>
+                </a>
+                <a href="../test/ovning.html?chapter=3" class="nav-button practice">
+                    <span class="icon">📝</span>
+                    <span class="label">Öva på kapitel 3</span>
+                </a>
+                <a href="kapitel-4-vagutbredning.html" class="nav-button next">
+                    <span class="label">Kapitel 4: Vågutbredning</span>
+                    <span class="arrow">→</span>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Radioamatör Utbildning. Baserat på SSA:s utbildningsmaterial.</p>
+            <p>Skapat för att hjälpa blivande radioamatörer att klara certifikatsprovet.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script>
+        // Uppdatera progress för detta kapitel
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof ProgressTracker !== 'undefined') {
+                const progress = ProgressTracker.getChapterProgress(1);
+                document.getElementById('chapterProgress').textContent = `📊 ${progress}% genomfört`;
+            }
+        });
+    </script>
+</body>
+</html>

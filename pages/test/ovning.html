@@ -59,6 +59,14 @@
                         <div class="progress-dots" id="progressDots"></div>
                     </div>
                 </div>
+                
+                <!-- TEORI-KNAPP -->
+                <div style="margin-bottom: 1.5rem; text-align: center;">
+                    <button class="btn btn-secondary" onclick="goBackToTheory()" style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        📖 Läs teorin
+                    </button>
+                </div>
+                
                 <div id="questionContainer"></div>
             </div>
         </div>
@@ -90,6 +98,7 @@
                 <div id="resultMessage" class="result-message"></div>
 
                 <div class="result-actions">
+                    <button class="btn btn-secondary" onclick="goBackToTheory()">📖 Läs teorin</button>
                     <button class="btn btn-secondary" onclick="tryAgain()">🔄 Försök igen</button>
                     <button class="btn btn-primary" onclick="nextSubchapter()">➡️ Nästa delkapitel</button>
                     <button class="btn btn-secondary" onclick="backToChapters()">📚 Välj nytt kapitel</button>
