@@ -36,7 +36,7 @@
                 <h1>Säkerhet</h1>
                 <p>Lär dig arbeta säkert med elektricitet, antenner och RF-strålning</p>
                 <div class="chapter-meta">
-                    <span>⏱️ 2 timmar</span>
+                    <span>⏱️ 2-3 timmar</span>
                     <span>📝 30 frågor</span>
                     <span id="chapterProgress">📊 0% genomfört</span>
                 </div>
@@ -54,395 +54,1088 @@
                 </ol>
             </div>
 
-            <!-- Sektion 1: Elsäkerhet -->
-            <div class="content-section" id="elsaker">
-                <h2>9.1 Elsäkerhet</h2>
-                
-                <h3>Farliga spänningar</h3>
-                <p>Elektrisk ström genom kroppen kan vara dödlig. Risken beror på:</p>
-                <ul>
-                    <li><strong>Strömstyrka</strong> - viktigare än spänning</li>
-                    <li><strong>Strömväg</strong> - genom hjärtat är farligast</li>
-                    <li><strong>Exponeringstid</strong></li>
-                    <li><strong>Frekvens</strong> - 50 Hz (nätfrekvens) är särskilt farligt</li>
-                </ul>
-                
-                <table class="content-table">
-                    <thead>
-                        <tr>
-                            <th>Ström genom kroppen</th>
-                            <th>Effekt</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1 mA</td>
-                            <td>Knappt kännbar</td>
-                        </tr>
-                        <tr>
-                            <td>5 mA</td>
-                            <td>Obehaglig känsla</td>
-                        </tr>
-                        <tr>
-                            <td>10-15 mA</td>
-                            <td>Muskelkramp, kan inte släppa</td>
-                        </tr>
-                        <tr>
-                            <td>50-100 mA</td>
-                            <td>Hjärtflimmer möjligt - LIVSFARLIGT</td>
-                        </tr>
-                        <tr>
-                            <td>>100 mA</td>
-                            <td>Hjärtstillestånd troligt</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <div class="info-box warning">
-                    <strong>⚠️ Tumregel:</strong> Spänningar över 50V ska betraktas som livsfarliga! Nätspänningen 230V är mycket farlig.
-                </div>
-                
-                <h3>Säkerhetsregler</h3>
-                <ul>
-                    <li><strong>Bryt strömmen</strong> innan du arbetar inuti utrustning</li>
-                    <li><strong>Vänta</strong> på att kondensatorer laddas ur (kan ta minuter)</li>
-                    <li><strong>En hand i fickan</strong> vid mätning på spänningsförande delar</li>
-                    <li><strong>Använd isolerade verktyg</strong></li>
-                    <li><strong>Arbeta aldrig ensam</strong> med farliga spänningar</li>
-                    <li><strong>Säkringar</strong> ska vara rätt dimensionerade</li>
-                </ul>
-                
-                <h3>Farliga komponenter</h3>
-                
-                <h4>Kondensatorer</h4>
-                <p>Kan behålla farlig laddning länge efter att strömmen brutits!</p>
-                <ul>
-                    <li>Stora elektrolytkondensatorer i nätaggregat</li>
-                    <li>Avstämningskondensatorer i antenntuners</li>
-                    <li>Ladda alltid ur med lämplig resistor</li>
-                </ul>
-                
-                <h4>Rörutrustning</h4>
-                <p>Äldre sändare med elektronrör har mycket höga spänningar:</p>
-                <ul>
-                    <li>Anodspänning ofta 1000-3000V</li>
-                    <li>Dödlig vid beröring!</li>
-                    <li>Låt alltid kylas av efter avstängning</li>
-                </ul>
-                
-                <h3>Jordning</h3>
-                <ul>
-                    <li><strong>Skyddsjord</strong> ska alltid vara ansluten</li>
-                    <li><strong>Kontrollera</strong> att jordfelet i uttaget fungerar</li>
-                    <li><strong>RF-jord</strong> är inte samma sak som skyddsjord</li>
-                </ul>
-                
-                <h3>Första hjälpen vid elolycka</h3>
-                <ol>
-                    <li><strong>Bryt strömmen</strong> - dra ur kontakten eller slå av huvudbrytare</li>
-                    <li><strong>Rör inte</strong> den skadade om strömmen fortfarande är på</li>
-                    <li><strong>Ring 112</strong></li>
-                    <li><strong>HLR</strong> om personen är medvetslös och inte andas</li>
-                </ol>
-            </div>
+<!-- ============================================ -->
+<!-- SEKTION 9.1: ELSÄKERHET -->
+<!-- ============================================ -->
 
-            <!-- Sektion 2: Antennsäkerhet -->
-            <div class="content-section" id="antenner">
-                <h2>9.2 Antennsäkerhet</h2>
-                
-                <h3>Risker vid antennarbete</h3>
-                <ul>
-                    <li><strong>Fall</strong> från höjd (tak, master, stegar)</li>
-                    <li><strong>Fallande föremål</strong></li>
-                    <li><strong>Elledningar</strong></li>
-                    <li><strong>RF-brännskador</strong></li>
-                    <li><strong>Mekaniska skador</strong></li>
-                </ul>
-                
-                <h3>Säkerhetsåtgärder</h3>
-                
-                <h4>Arbete på höjd</h4>
-                <ul>
-                    <li><strong>Använd säkerhetssele</strong> och livlina</li>
-                    <li><strong>Aldrig ensam</strong> - ha alltid hjälp</li>
-                    <li><strong>Kontrollera utrustning</strong> före användning</li>
-                    <li><strong>Säkra verktyg</strong> mot fall (rep, väska)</li>
-                    <li><strong>Undvik</strong> arbete i dåligt väder</li>
-                </ul>
-                
-                <h4>Kraftledningar</h4>
-                <div class="info-box warning">
-                    <strong>⚠️ LIVSFARLIGT:</strong> En antenn får ALDRIG kunna komma i kontakt med kraftledningar!
-                </div>
-                <ul>
-                    <li><strong>Håll säkert avstånd</strong> - även vid fall av masten</li>
-                    <li><strong>Beakta vippning</strong> vid resning/fällning</li>
-                    <li><strong>Tänk på</strong> matarledningar och staglinor</li>
-                    <li>Om antennen faller på kraftledning: <strong>RÖR INGENTING</strong>, ring 112</li>
-                </ul>
-                
-                <h4>Mastresning</h4>
-                <ul>
-                    <li>Planera noga - tänk igenom varje steg</li>
-                    <li>Ha tillräckligt många hjälpare</li>
-                    <li>Kontrollera infästningar och stag</li>
-                    <li>Res aldrig mast i blåst</li>
-                </ul>
-                
-                <h3>Mekanisk säkerhet</h3>
-                <ul>
-                    <li><strong>Dimensionera</strong> för vindlast och islast</li>
-                    <li><strong>Kontrollera regelbundet</strong> stag, infästningar och korrosion</li>
-                    <li><strong>Rotor</strong> ska vara låst när den inte används</li>
-                </ul>
-            </div>
-
-            <!-- Sektion 3: RF-strålning -->
-            <div class="content-section" id="rf-strålning">
-                <h2>9.3 RF-strålning och Hälsa</h2>
-                
-                <h3>Biologiska effekter</h3>
-                <p>Radiofrekventa fält kan påverka kroppen genom:</p>
-                <ul>
-                    <li><strong>Uppvärmning</strong> - den primära effekten vid högre effektnivåer</li>
-                    <li><strong>Induktion av strömmar</strong> - vid lägre frekvenser</li>
-                </ul>
-                
-                <h3>Gränsvärden</h3>
-                <p>Strålsäkerhetsmyndigheten (SSM) och ICNIRP anger gränsvärden för allmänhetens exponering.</p>
-                
-                <table class="content-table">
-                    <thead>
-                        <tr>
-                            <th>Frekvensområde</th>
-                            <th>Referensvärde (E-fält)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>3-30 MHz (HF)</td>
-                            <td>27-61 V/m</td>
-                        </tr>
-                        <tr>
-                            <td>30-400 MHz (VHF/UHF)</td>
-                            <td>28 V/m</td>
-                        </tr>
-                        <tr>
-                            <td>400-2000 MHz</td>
-                            <td>28-61 V/m</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h3>Riskfaktorer</h3>
-                <ul>
-                    <li><strong>Effekt</strong> - högre effekt = högre fält</li>
-                    <li><strong>Avstånd</strong> - fältstyrkan minskar snabbt med avståndet</li>
-                    <li><strong>Antenntyp</strong> - riktantenner koncentrerar strålningen</li>
-                    <li><strong>Exponeringstid</strong></li>
-                    <li><strong>Frekvens</strong> - kroppen absorberar olika vid olika frekvenser</li>
-                </ul>
-                
-                <div class="formula-box">
-                    <strong>Tumregel:</strong> Fältstyrkan minskar med kvadraten på avståndet.
-                    <br>Dubbelt avstånd = 1/4 av fältstyrkan
-                </div>
-                
-                <h3>Säkerhetsåtgärder</h3>
-                <ul>
-                    <li><strong>Placera antenner högt</strong> - bort från vistelseytor</li>
-                    <li><strong>Undvik</strong> riktade antenner mot bostäder på nära håll</li>
-                    <li><strong>Begränsa effekten</strong> vid låga antenner</li>
-                    <li><strong>Sänd aldrig</strong> mot människor på nära håll</li>
-                    <li><strong>Stäng av sändaren</strong> vid antennarbete</li>
-                </ul>
-                
-                <h3>RF-brännskador</h3>
-                <p>Vid kontakt med strålande antennelement eller matarledning:</p>
-                <ul>
-                    <li>Redan några watt kan ge brännskador</li>
-                    <li>Särskilt på HF där kroppens impedans är låg</li>
-                    <li>Kan ge djupa brännskador som värkar länge</li>
-                </ul>
-                
-                <div class="info-box warning">
-                    <strong>⚠️ Varning:</strong> Rör aldrig antennelement eller oskärmade matarledningar under sändning!
-                </div>
-                
-                <h3>Beräkna säkert avstånd</h3>
-                <p>SSA och PTS har vägledning för att beräkna säkra avstånd. Faktorer:</p>
-                <ul>
-                    <li>Sändareffekt</li>
-                    <li>Antennvinst</li>
-                    <li>Matarledningsförluster</li>
-                    <li>Duty cycle (hur mycket av tiden som sändning sker)</li>
-                </ul>
-                
-                <div class="example-box">
-                    <strong>Tumregel för HF:</strong>
-                    <br>Med 100W och dipol behövs vanligen 1-2 meters avstånd.
-                    <br>Med 1000W och riktantenn kan 5-10 meter eller mer krävas i huvudlobens riktning.
-                </div>
-            </div>
-
-            <!-- Sektion 4: Åskskydd -->
-            <div class="content-section" id="blixskydd">
-                <h2>9.4 Åskskydd</h2>
-                
-                <h3>Varför åskskydd?</h3>
-                <p>Antenner och master drar till sig blixtar. En direktträff kan:</p>
-                <ul>
-                    <li>Förstöra all ansluten utrustning</li>
-                    <li>Orsaka brand</li>
-                    <li>Skada eller döda personer</li>
-                </ul>
-                
-                <h3>Skyddsåtgärder</h3>
-                
-                <h4>Jordning av antennsystem</h4>
-                <ul>
-                    <li><strong>Jordspett</strong> vid antennens/mastens fot</li>
-                    <li><strong>Tjock jordledare</strong> (minst 16 mm² koppar)</li>
-                    <li><strong>Kort och rak</strong> väg till jord</li>
-                    <li><strong>Anslut alla metalldelar</strong> till jordspettet</li>
-                </ul>
-                
-                <h4>Gnistgap och överspänningsskydd</h4>
-                <ul>
-                    <li>Gnistgap i antennledningen nära husinförningen</li>
-                    <li>Överspänningsskydd för koaxialkabel</li>
-                    <li>Överspänningsskydd i eluttaget</li>
-                </ul>
-                
-                <h4>Koppla bort vid åska</h4>
-                <ul>
-                    <li>Dra ur antennkablarna från utrustningen</li>
-                    <li>Jorda antennledningen</li>
-                    <li>Dra ur nätkontakten</li>
-                    <li>Gå inte nära utrustningen under åskvädret</li>
-                </ul>
-                
-                <div class="info-box important">
-                    <strong>🎯 Bästa skyddet:</strong> Koppla fysiskt bort antenn och nätanslutning vid åska. Inget elektroniskt skydd klarar en direktträff!
-                </div>
-                
-                <h3>Statisk elektricitet</h3>
-                <p>Även utan direktträff kan antenner ladda upp statiskt:</p>
-                <ul>
-                    <li>Ger obehagliga stötar vid beröring</li>
-                    <li>Kan skada känslig utrustning</li>
-                    <li><strong>Åtgärd:</strong> Jorda antennen via en resistor (ca 1 MΩ) eller drosselspole</li>
-                </ul>
-            </div>
-
-            <!-- Sektion 5: Batterier -->
-            <div class="content-section" id="batterier">
-                <h2>9.5 Batterier</h2>
-                
-                <h3>Risker med batterier</h3>
-                <ul>
-                    <li><strong>Explosionsrisk</strong> - vätgas vid laddning av blybatterier</li>
-                    <li><strong>Frätande syra</strong> - i blybatterier</li>
-                    <li><strong>Brand</strong> - speciellt litiumbaserade batterier</li>
-                    <li><strong>Kortslutning</strong> - hög ström kan orsaka bränder</li>
-                </ul>
-                
-                <h3>Blybatterier</h3>
-                <ul>
-                    <li>Ladda i ventilerat utrymme</li>
-                    <li>Ingen öppen eld eller gnistor i närheten</li>
-                    <li>Använd skyddsglasögon vid hantering</li>
-                    <li>Anslut plus först, minus sist (tvärtom vid bortkoppling)</li>
-                </ul>
-                
-                <h3>Litiumbatterier (Li-Ion, LiPo)</h3>
-                <ul>
-                    <li><strong>Ladda aldrig</strong> med fel laddare</li>
-                    <li><strong>Överlämna inte</strong> laddning utan tillsyn</li>
-                    <li><strong>Skadade batterier</strong> är brandfarliga</li>
-                    <li><strong>Förvara svalt</strong> och torrt</li>
-                    <li><strong>Transportera försiktigt</strong></li>
-                </ul>
-                
-                <div class="info-box warning">
-                    <strong>⚠️ LiPo-brand:</strong> Om ett litiumbatteri börjar pyra eller brinna, släck med vatten eller sand. Flytta det utomhus om möjligt. Rök är giftig!
-                </div>
-            </div>
-
-            <!-- Sammanfattning -->
-            <div class="content-section summary">
-                <h2>📝 Sammanfattning Kapitel 9</h2>
-                
-                <div class="key-points">
-                    <h3>Elsäkerhet:</h3>
-                    <ul>
-                        <li>Spänningar över 50V är livsfarliga</li>
-                        <li>Bryt strömmen före arbete</li>
-                        <li>Kondensatorer kan behålla laddning</li>
-                        <li>En hand i fickan vid mätning</li>
-                    </ul>
-                </div>
-                
-                <div class="key-points">
-                    <h3>Antennsäkerhet:</h3>
-                    <ul>
-                        <li>Säkerhetssele vid höjdarbete</li>
-                        <li>Aldrig ensam</li>
-                        <li>Håll avstånd till kraftledningar</li>
-                    </ul>
-                </div>
-                
-                <div class="key-points">
-                    <h3>RF-strålning:</h3>
-                    <ul>
-                        <li>Placera antenner högt och bort från människor</li>
-                        <li>Rör inte strålande element under sändning</li>
-                        <li>Fältstyrkan minskar med kvadraten på avståndet</li>
-                    </ul>
-                </div>
-                
-                <div class="key-points">
-                    <h3>Åskskydd:</h3>
-                    <ul>
-                        <li>Jorda master och antenner</li>
-                        <li>Koppla bort fysiskt vid åska</li>
-                        <li>Inget elektroniskt skydd klarar direktträff</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Navigation -->
-            <div class="chapter-navigation">
-                <a href="kapitel-8-trafikmetoder.html" class="nav-button prev">
-                    <span class="arrow">←</span>
-                    <span class="label">Kapitel 8: Trafikmetoder</span>
-                </a>
-                <a href="../test/ovning.html?chapter=9" class="nav-button practice">
-                    <span class="icon">📝</span>
-                    <span class="label">Öva på kapitel 9</span>
-                </a>
-                <a href="kapitel-10-praktisk-trafik.html" class="nav-button next">
-                    <span class="label">Kapitel 10: Praktisk trafik</span>
-                    <span class="arrow">→</span>
-                </a>
-            </div>
+<div class="content-section" id="elsaker">
+    <h2>9.1 Elsäkerhet</h2>
+    
+    <h3>Varför är elektricitet farligt?</h3>
+    <p>Elektricitet är en fantastisk energiform som driver vår radiostation - men den är också potentiellt <strong>livsfarlig</strong>. Det är inte spänningen i sig som dödar, utan <strong>strömmen genom kroppen</strong>. Även en liten ström kan vara dödlig om den går genom hjärtat!</p>
+    
+    <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+        <strong>💡 Vattentryck-analogin:</strong>
+        <br><br>
+        Tänk dig elektricitet som vatten i ett rörsystem:
+        <br><br>
+        <strong>Spänning (Volt):</strong> Vattentrycket - hur hårt vattnet trycker
+        <br><strong>Ström (Ampere):</strong> Vattenflödet - hur mycket vatten som faktiskt rinner
+        <br><strong>Resistans (Ohm):</strong> Rörets tjocklek - hur lätt vattnet kan flöda
+        <br><br>
+        Ett högt tryck (hög spänning) är farligt om det finns en väg för vattnet att flöda (låg resistans). Din kropp är som ett rör - elektricitet kan flöda igenom den med potentiellt dödlig effekt!
+    </div>
+    
+    <h3>Vad är farligt med elektrisk ström?</h3>
+    
+    <p>Fyra faktorer avgör hur farlig en elektrisk stöt är:</p>
+    
+    <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #991b1b;">⚡ FYRA KRITISKA FAKTORER</h4>
+        
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Faktor</th>
+                    <th style="width: 35%;">Varför det spelar roll</th>
+                    <th style="width: 40%;">Praktisk betydelse</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>1. Strömstyrka</strong></td>
+                    <td>Hur många elektroner som flödar genom kroppen</td>
+                    <td>Viktigare än spänningen! Redan 50-100 mA kan döda.</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>2. Strömväg</strong></td>
+                    <td>Vilken väg strömmen tar genom kroppen</td>
+                    <td>Hand-till-hand genom hjärtat = FARLIGAST. Hand-till-fot = näst farligast.</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>3. Exponeringstid</strong></td>
+                    <td>Hur länge strömmen flödar</td>
+                    <td>Längre tid = större skada. Kan inte släppa = mycket farligt!</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>4. Frekvens</strong></td>
+                    <td>AC påverkar kroppen annorlunda än DC</td>
+                    <td>50 Hz (nätfrekvens) är SÄRSKILT farligt för hjärtat!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <h3>Strömstyrka och effekter på kroppen</h3>
+    
+    <p>Här är vad som händer vid olika strömstyrkor genom kroppen:</p>
+    
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">📊 STRÖMSTYRKA OCH BIOLOGISKA EFFEKTER</h4>
+        
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Strömstyrka</th>
+                    <th style="width: 30%;">Effekt</th>
+                    <th style="width: 50%;">Vad händer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #d1fae5;">
+                    <td><strong>1 mA</strong></td>
+                    <td>Knappt kännbar</td>
+                    <td>En svag stickande känsla. Inte farligt, men obehagligt.</td>
+                </tr>
+                <tr style="background: #dbeafe;">
+                    <td><strong>5 mA</strong></td>
+                    <td>Tydligt obehaglig</td>
+                    <td>Klar stickande känsla. Smärtsam men inte direkt farlig.</td>
+                </tr>
+                <tr style="background: #fef3c7;">
+                    <td><strong>10-15 mA</strong></td>
+                    <td>Muskelkramp</td>
+                    <td><strong>"Kan inte släppa!"</strong> - Musklerna krampar och du kan inte släppa ledningen. FARLIGT!</td>
+                </tr>
+                <tr style="background: #fed7aa;">
+                    <td><strong>20-50 mA</strong></td>
+                    <td>Kraftig muskelkramp</td>
+                    <td>Svår att andas (bröstmuskler krampar). Hjärtpåverkan. Kan vara dödligt!</td>
+                </tr>
+                <tr style="background: #fecaca;">
+                    <td><strong>50-100 mA</strong></td>
+                    <td>Hjärtflimmer möjligt</td>
+                    <td><strong>LIVSFARLIGT!</strong> Hjärtat slutar pumpa ordentligt (ventrikelflimmer).</td>
+                </tr>
+                <tr style="background: #fee2e2;">
+                    <td><strong>>100 mA</strong></td>
+                    <td>Hjärtstillestånd troligt</td>
+                    <td><strong>EXTREMT FARLIGT!</strong> Hjärtat stannar helt. Brännskador. Död trolig.</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+            <strong style="color: #92400e;">💡 Viktig insikt:</strong>
+            <br><br>
+            Det är inte högspänningen i sig som dödar - det är strömmen! Men högre spänning driver större ström genom kroppens resistans. Det är därför 230V nätspänning är så farlig - den driver tillräckligt stor ström för att orsaka hjärtflimmer.
         </div>
-    </main>
-
-    <footer class="main-footer">
-        <div class="footer-content">
-            <p>&copy; 2025 Radioamatör Utbildning. Baserat på SSA:s utbildningsmaterial.</p>
+    </div>
+    
+    <h3>🧮 Ohms lag och kroppens resistans</h3>
+    
+    <p>Hur stor ström som flödar genom kroppen beror på <strong>Ohms lag</strong>:</p>
+    
+    <div class="formula-box" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white;">
+        <strong>Ohms lag:</strong>
+        <br><br>
+        <strong>I = U / R</strong>
+        <br><br>
+        I = Ström (Ampere)
+        <br>U = Spänning (Volt)
+        <br>R = Resistans (Ohm)
+        <br><br>
+        Högre spänning eller lägre resistans → större ström → farligare!
+    </div>
+    
+    <h3>Kroppens resistans - varierande skydd</h3>
+    
+    <p>Kroppens resistans varierar dramatiskt beroende på förhållandena:</p>
+    
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th style="width: 30%;">Situation</th>
+                <th style="width: 25%;">Resistans</th>
+                <th style="width: 45%;">Förklaring</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: #d1fae5;">
+                <td><strong>Torr hud, bra kontakt</strong></td>
+                <td>~100 kΩ (100 000 Ω)</td>
+                <td>Bästa skyddet. Torr hud är en ganska bra isolator.</td>
+            </tr>
+            <tr style="background: #fef3c7;">
+                <td><strong>Fuktig hud</strong></td>
+                <td>~10 kΩ (10 000 Ω)</td>
+                <td>Svett eller fukt sänker resistansen drastiskt!</td>
+            </tr>
+            <tr style="background: #fecaca;">
+                <td><strong>Våt hud / sår</strong></td>
+                <td>~1 kΩ (1 000 Ω)</td>
+                <td>Mycket farligt! Minimal resistans = stor ström.</td>
+            </tr>
+            <tr style="background: #fee2e2;">
+                <td><strong>Direkt kontakt (internt)</strong></td>
+                <td>~500 Ω</td>
+                <td>Om strömmen kommer förbi huden (t.ex. elektroder) - extremt farligt!</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="example-box" style="border-left: 4px solid #dc2626;">
+        <strong>⚡ Exempel 1 - Varför 230V nätspänning är dödlig:</strong> Du råkar röra vid en nätspänningsförande ledare med fuktig hand. Hur stor blir strömmen genom kroppen?
+        <br><br>
+        <strong>Givna värden:</strong>
+        <br>• Spänning: U = 230V (nätspänning)
+        <br>• Kroppens resistans (fuktig hud): R = 10 kΩ = 10 000 Ω
+        <br><br>
+        <strong>Beräkning med Ohms lag:</strong>
+        <br>I = U / R = 230V / 10 000Ω = 0,023 A = <strong>23 mA</strong>
+        <br><br>
+        <strong>Resultat:</strong>
+        <br>23 mA är tillräckligt för kraftig muskelkramp - du kan INTE släppa ledningen!
+        <br>Om exponeringen fortsätter några sekunder kan hjärtflimmer inträffa.
+        <br><br>
+        <strong>Med torr hud (100 kΩ):</strong>
+        <br>I = 230V / 100 000Ω = 0,0023 A = 2,3 mA (obehagligt men inte direkt farligt)
+        <br><br>
+        <em>🎯 Detta visar varför du ALDRIG ska arbeta med elektricitet med våta händer!</em>
+    </div>
+    
+    <div class="example-box" style="border-left: 4px solid #dc2626;">
+        <strong>⚡ Exempel 2 - Varför 50V-gränsen finns:</strong> Vid vilken spänning når vi den farliga gränsen på 10 mA med torr hud?
+        <br><br>
+        <strong>Givna värden:</strong>
+        <br>• Önskad maxström: I = 10 mA = 0,01 A (gränsen för muskelkramp)
+        <br>• Kroppens resistans (torr hud): R = 100 kΩ = 100 000 Ω
+        <br><br>
+        <strong>Beräkning (omställd Ohms lag):</strong>
+        <br>U = I × R = 0,01 A × 100 000 Ω = 1000V
+        <br><br>
+        <strong>Men... med fuktig hud (10 kΩ):</strong>
+        <br>U = 0,01 A × 10 000 Ω = 100V
+        <br><br>
+        <strong>Och med våt hud (1 kΩ):</strong>
+        <br>U = 0,01 A × 1 000 Ω = 10V
+        <br><br>
+        <em>🎯 Därför sätts säkerhetsgränsen vid 50V - en säkerhetsmarginal som täcker olika hudförhållanden!</em>
+    </div>
+    
+    <h3>⚠️ Tumregeln: 50V-gränsen</h3>
+    
+    <div class="info-box warning" style="background: #fee2e2; border-left: 4px solid #dc2626;">
+        <strong>⚠️ KRITISK SÄKERHETSREGEL:</strong>
+        <br><br>
+        <h4 style="margin-top: 0.5rem;">Spänningar över 50V ska ALLTID betraktas som livsfarliga!</h4>
+        <br>
+        <strong>Varför just 50V?</strong>
+        <br>• Säkerhetsmarginal som täcker olika hudförhållanden
+        <br>• Under 50V: Relativt säkert även med fuktig hud
+        <br>• Över 50V: Risk för dödlig ström
+        <br><br>
+        <strong>Särskilt farliga spänningar:</strong>
+        <br>• <strong>230V nätspänning:</strong> Mycket farlig! Dödlig vid längre exponering
+        <br>• <strong>1000-3000V (rörutrustning):</strong> Extremt farlig! Direkt dödlig
+        <br>• <strong>12V bilbatteri:</strong> Normalt säkert, men farligt vid kortslutning (hög ström!)
+    </div>
+    
+    <h3>🛡️ Säkerhetsregler för arbete med elektricitet</h3>
+    
+    <p>Följ ALLTID dessa regler när du arbetar med din radioutrustning:</p>
+    
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">🔷 DE FEM GYLLENE SÄKERHETSREGLERNA</h4>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+            <h4 style="color: #1e40af; margin-top: 0;">1️⃣ Bryt strömmen INNAN du öppnar utrustningen</h4>
+            <p>Dra ur nätkontakten! En avstängd strömbrytare räcker inte alltid.</p>
+            <br>
+            
+            <h4 style="color: #1e40af;">2️⃣ Vänta på att kondensatorer laddas ur</h4>
+            <p>Stora kondensatorer i nätaggregat kan behålla farlig laddning i MINUTER eller till och med TIMMAR efter avstängning!</p>
+            <ul>
+                <li>Vänta minst 5-10 minuter</li>
+                <li>Eller ladda ur aktivt med urladdningsresistor (10 kΩ, 10W)</li>
+                <li>Mät alltid med voltmeter innan du rör komponenter</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #1e40af;">3️⃣ En hand i fickan vid mätning</h4>
+            <p>Om du MÅSTE mäta på spänningsförande delar:</p>
+            <ul>
+                <li>Håll en hand bakom ryggen eller i fickan</li>
+                <li>Då kan strömmen inte gå hand-till-hand genom hjärtat</li>
+                <li>Använd isolerade mätprobr med fingerskydd</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #1e40af;">4️⃣ Använd isolerade verktyg och arbetsmatta</h4>
+            <p>Verktyg med isolerade handtag, gummimatta under fötterra, inga metallarmband eller klockor!</p>
+            <br>
+            
+            <h4 style="color: #1e40af;">5️⃣ Arbeta ALDRIG ensam med farliga spänningar</h4>
+            <p>Ha alltid någon i närheten som kan:</p>
+            <ul>
+                <li>Bryta strömmen om något händer</li>
+                <li>Ringa 112</li>
+                <li>Utföra HLR</li>
+            </ul>
         </div>
-    </footer>
+    </div>
+    
+    <h3>⚡ Farliga komponenter - Var extra försiktig!</h3>
+    
+    <h4>Kondensatorer - "Elektriska minnen"</h4>
+    
+    <p>Kondensatorer är som små batterier som kan lagra elektrisk laddning länge efter att strömmen brutits!</p>
+    
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">⚠️ KONDENSATOR-RISKER</h4>
+        
+        <table style="width: 100%; margin-top: 1rem; background: white; border-radius: 8px;">
+            <tr>
+                <td style="padding: 1rem; border-right: 2px solid #f59e0b;">
+                    <strong style="color: #92400e;">FARLIGA KONDENSATORER:</strong>
+                    <br><br>
+                    <strong>1. Elektrolytkondensatorer i nätaggregat:</strong>
+                    <br>• Stora värden: 1000-10000 µF
+                    <br>• Höga spänningar: 350-450V
+                    <br>• Kan lagra dödlig energi!
+                    <br><br>
+                    <strong>2. Avstämningskondensatorer:</strong>
+                    <br>• I antenntuners och PI-filter
+                    <br>• Kan ha 1000V+ över sig
+                    <br>• Ger smärtsam stöt!
+                </td>
+                <td style="padding: 1rem;">
+                    <strong style="color: #92400e;">SÄKER URLADDNING:</strong>
+                    <br><br>
+                    <strong>Urladdningsmetod:</strong>
+                    <br>1. Stäng av och dra ur nätkabeln
+                    <br>2. Vänta 5-10 minuter
+                    <br>3. Anslut urladdningsresistor (10 kΩ, 10W)
+                    <br>4. Kortslut kondensatorns ben genom resistorn
+                    <br>5. Vänta 30 sekunder
+                    <br>6. Mät spänningen med voltmeter
+                    <br><br>
+                    <strong>ALDRIG kortsluta direkt med skruvmejsel!</strong> Risk för explosion och gnistor!
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="example-box" style="border-left: 4px solid #f59e0b;">
+        <strong>🔧 Exempel 3 - Energi i kondensator:</strong> Ett nätaggregat har en 4700 µF kondensator laddad till 350V. Hur mycket energi lagras?
+        <br><br>
+        <strong>Formel för energi i kondensator:</strong>
+        <br>E = ½ × C × U²
+        <br><br>
+        <strong>Givna värden:</strong>
+        <br>• C = 4700 µF = 0,0047 F
+        <br>• U = 350V
+        <br><br>
+        <strong>Beräkning:</strong>
+        <br>E = ½ × 0,0047 F × (350V)²
+        <br>E = 0,5 × 0,0047 × 122 500
+        <br>E = <strong>288 Joule</strong>
+        <br><br>
+        <strong>Jämförelse:</strong>
+        <br>• En defibrilator använder ~200-360 Joule
+        <br>• Detta är alltså lika mycket energi som en hjärtstartare!
+        <br><br>
+        <em>🎯 En kondensator på 350V kan bokstavligen stoppa ditt hjärta!</em>
+    </div>
+    
+    <h4>Rörutrustning - Den gamla tidens högspänning</h4>
+    
+    <p>Äldre sändare med elektronrör (fram till 1970-80-talet) använder MYCKET höga spänningar:</p>
+    
+    <div class="info-box warning" style="background: #fee2e2; border-left: 4px solid #dc2626;">
+        <strong>⚠️ RÖRUTRUSTNING - EXTREMT FARLIGT!</strong>
+        <br><br>
+        <strong>Anodspänningar i rörsutrustning:</strong>
+        <br>• Små rör: 200-500V
+        <br>• Större rör: 1000-2000V
+        <br>• Stora sändarrör: 2000-5000V (!)
+        <br><br>
+        <strong>Varför så farligt?</strong>
+        <br>Dessa spänningar driver dödlig ström även genom torr hud:
+        <br>• 2000V / 100 kΩ (torr hud) = 20 mA → Muskelkramp!
+        <br>• 2000V / 10 kΩ (fuktig hud) = 200 mA → Hjärtstillestånd!
+        <br><br>
+        <strong>Säkerhetsregler för rörutrustning:</strong>
+        <br>✅ Låt ALLTID kylas av i minst 10 minuter
+        <br>✅ Ladda ur HT-kondensatorer med urladdningsstav
+        <br>✅ Mät spänningen innan du rör något
+        <br>✅ Arbeta ALDRIG ensam
+        <br>✅ En hand i fickan vid mätning
+    </div>
+    
+    <h3>🔌 Jordning - Skydd mot elfel</h3>
+    
+    <p>Jordning är ditt viktigaste skydd mot elektriska olyckor!</p>
+    
+    <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 3px solid #059669; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #065f46;">🔷 JORDNING - Ditt livsviktiga skydd</h4>
+        
+        <div style="text-align: center; margin: 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" style="max-width: 800px; width: 100%;">
+                <style>
+                    .wire { stroke: #1f2937; stroke-width: 3; fill: none; }
+                    .live-wire { stroke: #dc2626; stroke-width: 4; fill: none; }
+                    .neutral-wire { stroke: #3b82f6; stroke-width: 4; fill: none; }
+                    .ground-wire { stroke: #059669; stroke-width: 4; fill: none; }
+                    .label { font-family: Arial, sans-serif; font-size: 14px; fill: #1f2937; font-weight: bold; }
+                    .device { fill: #e5e7eb; stroke: #1f2937; stroke-width: 2; }
+                </style>
+                
+                <!-- Normal drift (vänster) -->
+                <text class="label" x="100" y="30" text-anchor="middle">NORMAL DRIFT:</text>
+                <rect class="device" x="50" y="50" width="100" height="150" rx="5"/>
+                <text class="label" x="100" y="130" text-anchor="middle" font-size="12">Transceiver</text>
+                
+                <!-- Kablar -->
+                <line class="live-wire" x1="100" y1="200" x2="100" y2="250"/>
+                <text class="label" x="130" y="225" fill="#dc2626" font-size="12">Fas (L)</text>
+                
+                <line class="neutral-wire" x1="80" y1="200" x2="80" y2="250"/>
+                <text class="label" x="50" y="225" fill="#3b82f6" font-size="12">N</text>
+                
+                <line class="ground-wire" x1="120" y1="200" x2="120" y2="270"/>
+                <text class="label" x="150" y="265" fill="#059669" font-size="12">Jord (PE)</text>
+                
+                <!-- Jordning -->
+                <line class="ground-wire" x1="90" y1="270" x2="150" y2="270"/>
+                <line class="ground-wire" x1="100" y1="270" x2="100" y2="280"/>
+                <line class="ground-wire" x1="110" y1="280" x2="130" y2="280"/>
+                <line class="ground-wire" x1="115" y1="290" x2="125" y2="290"/>
+                
+                <text class="label" x="100" y="320" text-anchor="middle" fill="#059669">Allt OK ✓</text>
+                
+                <!-- Felfall (höger) -->
+                <text class="label" x="550" y="30" text-anchor="middle">VID ISOLATIONSFEL:</text>
+                <rect class="device" x="500" y="50" width="100" height="150" rx="5"/>
+                <text class="label" x="550" y="130" text-anchor="middle" font-size="12">Transceiver</text>
+                
+                <!-- Fel i enheten -->
+                <circle cx="550" cy="100" r="15" fill="#dc2626" opacity="0.3"/>
+                <text class="label" x="550" y="105" text-anchor="middle" fill="#dc2626" font-size="20">⚡</text>
+                <text class="label" x="620" y="100" fill="#dc2626" font-size="11">Isolationsfel!</text>
+                
+                <!-- Kablar -->
+                <line class="live-wire" x1="550" y1="200" x2="550" y2="250"/>
+                <line class="neutral-wire" x1="530" y1="200" x2="530" y2="250"/>
+                
+                <!-- Felström genom jord -->
+                <line class="ground-wire" x1="570" y1="200" x2="570" y2="270" stroke-dasharray="5,5"/>
+                <text class="label" x="620" y="235" fill="#dc2626" font-size="11">Felström!</text>
+                <text class="label" x="620" y="250" fill="#dc2626" font-size="11">→ Jordfels-</text>
+                <text class="label" x="620" y="265" fill="#dc2626" font-size="11">bryt löser ut</text>
+                
+                <!-- Jordning -->
+                <line class="ground-wire" x1="540" y1="270" x2="600" y2="270"/>
+                <line class="ground-wire" x1="550" y1="270" x2="550" y2="280"/>
+                <line class="ground-wire" x1="560" y1="280" x2="580" y2="280"/>
+                <line class="ground-wire" x1="565" y1="290" x2="575" y2="290"/>
+                
+                <text class="label" x="550" y="320" text-anchor="middle" fill="#059669">Jord räddar liv! ✓</text>
+            </svg>
+        </div>
+        
+        <table style="width: 100%; margin-top: 1rem; background: white; border-radius: 8px;">
+            <tr>
+                <td style="padding: 1rem; border-right: 2px solid #059669;">
+                    <strong style="color: #065f46;">HUR JORDNING SKYDDAR DIG:</strong>
+                    <br><br>
+                    <strong>1. Vid isolationsfel:</strong>
+                    <br>• Fas-ledaren råkar röra vid metallhöljet
+                    <br>• Utan jord: Höljet blir 230V - dödligt!
+                    <br>• Med jord: Strömmen går till jord → jordfelsbrytare löser ut
+                    <br><br>
+                    <strong>2. Jordfelsbrytaren:</strong>
+                    <br>• Mäter skillnad mellan fas och nolla
+                    <br>• Skillnad > 30 mA → Bryter strömmen på 0,03 sekunder!
+                    <br>• Räddar liv!
+                </td>
+                <td style="padding: 1rem;">
+                    <strong style="color: #065f46;">KONTROLLERA JORDNING:</strong>
+                    <br><br>
+                    <strong>1. Visuell kontroll:</strong>
+                    <br>• Tre stift i kontakten (L, N, PE)
+                    <br>• Gul-grön kabel synlig
+                    <br><br>
+                    <strong>2. Testa jordfelsbrytaren:</strong>
+                    <br>• Tryck på TEST-knappen varje månad
+                    <br>• Ska lösa ut direkt
+                    <br>• Fungerar inte? Ring elektriker!
+                    <br><br>
+                    <strong>3. Mät med multimeter:</strong>
+                    <br>• Mät mellan jord och noll: ska vara ~0V
+                    <br>• Mät mellan jord och fas: ska vara ~230V
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="info-box important" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+        <strong>⚠️ VIKTIGT - RF-jord vs Skyddsjord:</strong>
+        <br><br>
+        <strong>Skyddsjord (PE):</strong>
+        <br>• Grön-gul kabel från eluttaget
+        <br>• Skyddar mot elektriska fel
+        <br>• LIVSVIK TIG - aldrig koppla bort!
+        <br><br>
+        <strong>RF-jord:</strong>
+        <br>• Separat jordledare för radiotekniska skäl
+        <br>• Minskar brus och förbättrar antennsystem
+        <br>• Viktigt för prestanda men EJ för säkerhet
+        <br><br>
+        <em>🎯 Båda behövs - de har olika funktioner och ersätter inte varandra!</em>
+    </div>
+    
+    <h3>🚑 Första hjälpen vid elolycka</h3>
+    
+    <p>Om någon får en elektrisk stöt - agera snabbt men säkert!</p>
+    
+    <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #991b1b;">🚨 AKUTA ÅTGÄRDER - STEG FÖR STEG</h4>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+            <h4 style="color: #991b1b; margin-top: 0;">1️⃣ BRYT STRÖMMEN FÖRST!</h4>
+            <p><strong>⚠️ RÖR INTE den drabbade medan strömmen är på!</strong></p>
+            <ul>
+                <li>Dra ur nätkontakten</li>
+                <li>Slå av huvudbrytare i elskåpet</li>
+                <li>Eller använd torrt träföremål (kvaststil, trästol) för att knuffa personen från strömkällan</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #991b1b;">2️⃣ BEDÖM SITUATIONEN</h4>
+            <ul>
+                <li><strong>Är personen vid medvetande?</strong> Fråga högt: "Hör du mig?"</li>
+                <li><strong>Andas personen?</strong> Titta, lyssna, känn</li>
+                <li><strong>Synliga skador?</strong> Brännskador, fall-skador</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #991b1b;">3️⃣ RING 112</h4>
+            <p><strong>Larma ALLTID vid elolycka!</strong> Även om personen verkar OK.</p>
+            <ul>
+                <li>Berätta att det är en elolycka</li>
+                <li>Ange adress och plats</li>
+                <li>Följ operatörens instruktioner</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #991b1b;">4️⃣ GE HJÄRT-LUNGRÄDDNING (HLR) OM NÖDVÄNDIGT</h4>
+            <p><strong>Om personen inte andas:</strong></p>
+            <ul>
+                <li>Starta hjärtkompressioner: 30 kompressioner</li>
+                <li>Ge 2 inblåsningar</li>
+                <li>Fortsätt tills ambulansen kommer</li>
+                <li><strong>Använd hjärtstartare (AED) om tillgänglig!</strong></li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #991b1b;">5️⃣ STABILISERA OCH VÄNTA</h4>
+            <p><strong>Om personen andas men är medvetslös:</strong></p>
+            <ul>
+                <li>Lägg i stabilt sidoläge</li>
+                <li>Håll koll på andning</li>
+                <li>Täck över med filt (chock ger ofta kyla)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3>✅ Snabbtest - Elsäkerhet</h3>
+    
+    <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+        <strong>✅ Kan du svara på dessa?</strong>
+        <ul style="margin-top: 0.5rem;">
+            <li>Varför är det strömstyrkan och inte spänningen som dödar?</li>
+            <li>Vid vilken strömstyrka får du muskelkramper och kan inte släppa?</li>
+            <li>Varför är 50V säkerhetsgränsen för "livsfarlig spänning"?</li>
+            <li>Hur länge kan en kondensator behålla farlig laddning?</li>
+            <li>Vad ska du göra FÖRST vid en elolycka?</li>
+            <li>Vad är skillnaden mellan skyddsjord och RF-jord?</li>
+        </ul>
+        <details style="margin-top: 0.5rem;">
+            <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+            <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                <strong>Svar:</strong>
+                <br>• Spänningen driver strömmen genom kroppens resistans (Ohms lag: I=U/R). Det är strömmen genom hjärtat som orskar hjärtflimmer och död.
+                <br>• Vid 10-15 mA får du muskelkramp och kan inte släppa (= "can't let go" threshold)
+                <br>• 50V är en säkerhetsmarginal. Med fuktig hud (10 kΩ resistans) ger 50V cirka 5 mA - smärtsamt men inte direkt dödligt. Vid högre spänningar ökar risken snabbt.
+                <br>• Flera minuter till timmar! Stora elektrolytkondensatorer i nätaggregat kan behålla farlig laddning väldigt länge.
+                <br>• BRYT STRÖMMEN! Rör inte den skadade medan strömmen fortfarande är på. Dra ur kontakt eller slå av huvudbrytare.
+                <br>• Skyddsjord (PE, grön-gul) skyddar mot elfel och är livsviktig. RF-jord är en separat teknisk jordning för att förbättra antennsystemet - viktigt för prestanda men ersätter INTE skyddsjorden.
+            </div>
+        </details>
+    </div>
+</div>
 
-    <script src="../../js/main.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            if (typeof ProgressTracker !== 'undefined') {
-                const progress = ProgressTracker.getChapterProgress(9);
-                document.getElementById('chapterProgress').textContent = `📊 ${progress}% genomfört`;
-            }
-        });
-    </script>
-</body>
-</html>
+<!-- ============================================ -->
+<!-- SEKTION 9.2: ANTENNSÄKERHET -->
+<!-- ============================================ -->
+
+<div class="content-section" id="antenner">
+    <h2>9.2 Antennsäkerhet</h2>
+    
+    <h3>Varför är antennarbete så farligt?</h3>
+    <p>Antennmontering kombinerar flera riskfaktorer: arbete på höjd, tunga föremål, väderexponering och närhet till kraftledningar. Det är EN av de farligaste aktiviteterna inom amatörradio!</p>
+    
+    <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+        <strong>💡 Bygg-analogin:</strong>
+        <br><br>
+        Tänk dig antennarbete som att bygga ett hus:
+        <br><br>
+        <strong>Takmontage:</strong> Som att jobba på ett hustak - fall från 5-10m kan vara dödligt
+        <br><strong>Mastresning:</strong> Som att resa en tung bjälke - kräver planering och många hjälpare
+        <br><strong>Kraftledningar:</strong> Som högspänningsledningar på byggarbetsplats - håll avstånd!
+        <br><br>
+        Professionella byggarbetare har säkerhetsutrustning och utbildning - du behöver samma försiktighet!
+    </div>
+    
+    <h3>🎯 De fem största riskerna</h3>
+    
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">⚠️ RISKER VID ANTENNARBETE</h4>
+        
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Risk</th>
+                    <th style="width: 35%;">Vad kan hända</th>
+                    <th style="width: 45%;">Konsekvenser</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #fee2e2;">
+                    <td><strong>1. Fall från höjd</strong></td>
+                    <td>Halka på tak, stege välter, förlora balansen</td>
+                    <td>Fall från 3m+ kan ge allvarliga skador eller död. Benbrott, ryggmärgsskador, huvudtrauma.</td>
+                </tr>
+                <tr style="background: #fecaca;">
+                    <td><strong>2. Fallande föremål</strong></td>
+                    <td>Antenn, verktyg eller muttrar faller ner</td>
+                    <td>Kan träffa person nedanför. Skallskada, brutna ben. En 1 kg skiftnyckel från 10m höjd har dödlig kraft!</td>
+                </tr>
+                <tr style="background: #fee2e2;">
+                    <td><strong>3. Elledningar</strong></td>
+                    <td>Antenn/mast kommer i kontakt med kraftledning</td>
+                    <td>OMEDELBAR DÖD möjlig! Kraftledningar har 10 000-400 000V. Enorma strömmar (100+ ampere).</td>
+                </tr>
+                <tr style="background: #fecaca;">
+                    <td><strong>4. RF-brännskador</strong></td>
+                    <td>Rör vid antenn under sändning</td>
+                    <td>Djupa brännskador på HF. Redan 10-50W kan ge allvarliga brännskador. Känns inte direkt utan "bränner inifrån".</td>
+                </tr>
+                <tr style="background: #fee2e2;">
+                    <td><strong>5. Mekaniska skador</strong></td>
+                    <td>Mast/antenn rasar, staglinor brister</td>
+                    <td>Stora krafter vid mastfall. Kan träffa människor, bilar, hus. Materialkostnader + personskador.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <h3>🪜 Arbete på höjd - Den största risken</h3>
+    
+    <p>Fall från höjd är den vanligaste orsaken till allvarliga olyckor vid antennarbete!</p>
+    
+    <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #991b1b;">⚠️ FALLHÖJDER OCH RISKER</h4>
+        
+        <table style="width: 100%; margin-top: 1rem; background: white; border-radius: 8px;">
+            <tr>
+                <td style="padding: 1rem; border-right: 2px solid #dc2626;">
+                    <strong style="color: #991b1b;">FALLHÖJD → KONSEKVENSER:</strong>
+                    <br><br>
+                    <strong>1-2 meter:</strong> Stukning, möjliga benbrott
+                    <br><strong>3-4 meter:</strong> Benbrott troliga, ryggskador möjliga
+                    <br><strong>5-7 meter:</strong> Allvarliga skador, ryggmärgsskador, dödsfall möjliga
+                    <br><strong>8+ meter:</strong> Mycket stor risk för dödsfall
+                    <br><br>
+                    <em>💡 Ett vanligt småhus har takhöjd 6-8 meter - redan här är risken mycket stor!</em>
+                </td>
+                <td style="padding: 1rem;">
+                    <strong style="color: #991b1b;">VARFÖR FALL SKER:</strong>
+                    <br><br>
+                    • <strong>Halka:</strong> Våta/isiga tak, lösa takpannor
+                    <br>• <strong>Balansförlust:</strong> Räcker sig för långt, tung antenn
+                    <br>• <strong>Stege glider:</strong> Dålig placering, mjuk mark
+                    <br>• <strong>Utmattning:</strong> Längre arbetspass → sämre koncentration
+                    <br>• <strong>Väder:</strong> Vind, regn, is
+                    <br>• <strong>Material brister:</strong> Ruttet trä, korroderat metall
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <h3>🛡️ Säkerhetsutrustning för höjdarbete</h3>
+    
+    <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 3px solid #059669; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #065f46;">✅ OBLIGATORISK SÄKERHETSUTRUSTNING</h4>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+            <h4 style="color: #065f46; margin-top: 0;">1️⃣ SÄKERHETSSELE (Fallskyddssele)</h4>
+            <p><strong>Absolut obligatorisk vid arbete över 2 meters höjd!</strong></p>
+            <ul>
+                <li><strong>Typ:</strong> Full kroppssele (ej enbart midjesele!)</li>
+                <li><strong>Certifiering:</strong> CE-märkt enligt EN 361</li>
+                <li><strong>Fästpunkt:</strong> På ryggen mellan skulderbladen</li>
+                <li><strong>Kontroll:</strong> Inspektera innan varje användning</li>
+                <li><strong>Kostnad:</strong> ~1000-2000 kr (VÄRT DET!)</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #065f46;">2️⃣ LIVLINA (Falldämpare)</h4>
+            <p>Ansluter selen till fast förankring</p>
+            <ul>
+                <li><strong>Typ:</strong> Med stötabsorberare (falldämpare)</li>
+                <li><strong>Längd:</strong> Anpassad så du inte kan nå över kanten</li>
+                <li><strong>Förankring:</strong> Måste tåla minst 1200 kg!</li>
+                <li><strong>VIKTIGT:</strong> Aldrig anslut till skorsten eller antennmast - de kan rasa!</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #065f46;">3️⃣ HJÄLM</h4>
+            <p>Skyddar mot fallande föremål OCH vid eget fall</p>
+            <ul>
+                <li><strong>Typ:</strong> Bygghjälm eller klätterhjälm</li>
+                <li><strong>Certifiering:</strong> EN 397 (bygg) eller EN 12492 (klättring)</li>
+                <li><strong>OBS:</strong> Cykelhjälm räcker INTE!</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #065f46;">4️⃣ SKOR</h4>
+            <p>Ordentliga skor med bra grepp</p>
+            <ul>
+                <li>Helst arbetsstövlar med gummisula</li>
+                <li>Aldrig sandaler, tofflor eller bara skor!</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #065f46;">5️⃣ VERKTYGSFODRAL</h4>
+            <p>Så verktyg inte kan falla ner</p>
+            <ul>
+                <li>Bältesfodral eller verktygsbälte</li>
+                <li>Eller hink som dras upp med rep</li>
+                <li><strong>Aldrig lägga lösa verktyg på taket!</strong></li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="example-box" style="border-left: 4px solid #dc2626;">
+        <strong>🔧 Exempel 1 - Fallenergi:</strong> Du står på ett tak 8 meter över marken och väger 80 kg. Vilken energi frigörs om du faller?
+        <br><br>
+        <strong>Formel för potentiell energi:</strong>
+        <br>E = m × g × h
+        <br><br>
+        <strong>Givna värden:</strong>
+        <br>• m = 80 kg (din vikt)
+        <br>• g = 9,81 m/s² (tyngdaccelerationen)
+        <br>• h = 8 meter (fallhöjd)
+        <br><br>
+        <strong>Beräkning:</strong>
+        <br>E = 80 kg × 9,81 m/s² × 8 m
+        <br>E = <strong>6 278 Joule ≈ 6,3 kJ</strong>
+        <br><br>
+        <strong>Jämförelse:</strong>
+        <br>• En .22-kaliberkulateckning har ~200 J energi
+        <br>• Ett fall från 8m har ~30 gånger mer energi än en kulskott!
+        <br><br>
+        <strong>Hastighet vid markkontakt:</strong>
+        <br>v = √(2 × g × h) = √(2 × 9,81 × 8) ≈ 12,5 m/s = <strong>45 km/h!</strong>
+        <br><br>
+        <em>🎯 Du slår i marken med samma kraft som att krocka med bilen i 45 km/h!</em>
+    </div>
+    
+    <h3>⚡ Kraftledningar - Den absolut farligaste risken</h3>
+    
+    <p>Kontakt med kraftledningar är nästan alltid OMEDELBART DÖDLIG. Detta kan inte nog betonas!</p>
+    
+    <div style="background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%); border: 3px solid #450a0a; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; color: white;">
+        <h4 style="margin-top: 0; color: white;">💀 KRAFTLEDNINGAR - EXTREMT LIVSFARLIGT!</h4>
+        
+        <table style="width: 100%; margin-top: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; color: white;">
+            <tr>
+                <td style="padding: 1rem; border-right: 2px solid rgba(255,255,255,0.3);">
+                    <strong>SPÄNNINGSNIVÅER:</strong>
+                    <br><br>
+                    <strong>Lågspänning (starkström):</strong>
+                    <br>• 230V (hemmet): Farlig
+                    <br>• 400V (trefas): Mycket farlig
+                    <br><br>
+                    <strong>Mellanspänning:</strong>
+                    <br>• 10 kV (10 000V): Extremt farlig
+                    <br>• 20 kV: Distribution i stad
+                    <br><br>
+                    <strong>Högspänning:</strong>
+                    <br>• 130 kV: Regionala ledningar
+                    <br>• 400 kV: Stamnät
+                    <br><br>
+                    <strong>Alla är dödliga vid kontakt!</strong>
+                </td>
+                <td style="padding: 1rem;">
+                    <strong>VAD HÄNDER VID KONTAKT:</strong>
+                    <br><br>
+                    <strong>10 kV (10 000V) genom kroppen:</strong>
+                    <br>• Ström: ~100 ampere eller mer!
+                    <br>• Jämför: Normal elolycka är 0,01-0,1 A
+                    <br>• <strong>Resultat:</strong> Omedelbar död
+                    <br>• Svåra brännskador
+                    <br>• Ofta explosion/gnista
+                    <br><br>
+                    <strong>400 kV stamnät:</strong>
+                    <br>• Kan skapa ljusbåge flera meter!
+                    <br>• Behöver inte ens röra ledningen
+                    <br>• Omedelbar död garanterad
+                </td>
+            </tr>
+        </table>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.2); border-radius: 8px;">
+            <strong>⚠️ ABSOLUT REGEL:</strong>
+            <br><br>
+            <h4 style="color: white; margin: 0.5rem 0;">EN ANTENN FÅR ALDRIG, UNDER NÅGRA OMSTÄNDIGHETER, KUNNA KOMMA I KONTAKT MED KRAFTLEDNINGAR!</h4>
+            <br>
+            Detta inkluderar:
+            <br>• Normal drift
+            <br>• Om masten faller (åt något håll)
+            <br>• Om masten tippar vid resning
+            <br>• Om staglinor brister
+            <br>• Om antennelement svänger i vinden
+        </div>
+    </div>
+    
+    <h3>📏 Säkerhetsavstånd till kraftledningar</h3>
+    
+    <p>Det räcker inte att "inte röra" - du måste hålla SÄKERT AVSTÅND!</p>
+    
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">📊 MINSTA SÄKERHETSAVSTÅND</h4>
+        
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 30%;">Ledningstyp</th>
+                    <th style="width: 20%;">Spänning</th>
+                    <th style="width: 25%;">Minsta avstånd</th>
+                    <th style="width: 25%;">Rekommenderat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #fef3c7;">
+                    <td><strong>Lågspänning</strong></td>
+                    <td>230/400V</td>
+                    <td>2 meter</td>
+                    <td>3 meter</td>
+                </tr>
+                <tr style="background: #fed7aa;">
+                    <td><strong>Mellanspänning</strong></td>
+                    <td>10-20 kV</td>
+                    <td>3 meter</td>
+                    <td>5 meter</td>
+                </tr>
+                <tr style="background: #fecaca;">
+                    <td><strong>Högspänning (regional)</strong></td>
+                    <td>130 kV</td>
+                    <td>5 meter</td>
+                    <td>10 meter</td>
+                </tr>
+                <tr style="background: #fee2e2;">
+                    <td><strong>Stamnät</strong></td>
+                    <td>400 kV</td>
+                    <td>10 meter</td>
+                    <td>15-20 meter</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+            <strong style="color: #92400e;">🎯 BEAKTA OCKSÅ:</strong>
+            <br><br>
+            <strong>1. Mastens fällriktning:</strong>
+            <br>Om masten faller - når den ledningen? Beräkna fallzon!
+            <br><br>
+            <strong>2. Mastens vippning vid resning:</strong>
+            <br>När masten reser sig svänger toppen i en båge - kommer den nära ledningar?
+            <br><br>
+            <strong>3. Staglinor och matarledningar:</strong>
+            <br>Dessa kan också leda ström till kraftledningar!
+            <br><br>
+            <strong>4. Vind:</strong>
+            <br>Antenner kan svänga flera meter i hård vind!
+        </div>
+    </div>
+    
+    <div class="example-box" style="border-left: 4px solid #dc2626;">
+        <strong>⚡ Exempel 2 - Fallzon-beräkning:</strong> Du har en 12 meter hög mast på 5 meters avstånd från en 10 kV mellanspänningsledning. Är det säkert?
+        <br><br>
+        <strong>Analys:</strong>
+        <br><br>
+        <strong>1. Avstånd vid normal drift:</strong>
+        <br>• 5 meter till ledningen
+        <br>• Minsta krav för 10 kV: 3 meter
+        <br>• ✓ OK för normal drift
+        <br><br>
+        <strong>2. Fallzon om masten faller:</strong>
+        <br>• Masthöjd: 12 meter
+        <br>• Avstånd till ledning: 5 meter
+        <br>• <strong>Om masten faller mot ledningen når den 12 - 5 = 7 meter FÖRBI ledningen!</strong>
+        <br>• ❌ INTE SÄKERT!
+        <br><br>
+        <strong>3. Minsta säkra avstånd:</strong>
+        <br>• Masthöjd (12m) + säkerhetsmarginal (3m) = 15 meter från ledningen
+        <br><br>
+        <em>🎯 Denna mast måste stå minst 15 meter från kraftledningen!</em>
+    </div>
+    
+    <div class="info-box warning" style="background: #fee2e2; border-left: 4px solid #dc2626;">
+        <strong>🚨 OM ANTENNEN FALLER PÅ KRAFTLEDNING:</strong>
+        <br><br>
+        <h4 style="margin-top: 0.5rem;">RÖR INGENTING!</h4>
+        <br>
+        <strong>1. Håll avstånd:</strong>
+        <br>• Minst 20 meter från masten
+        <br>• Marken kan vara strömförande!
+        <br><br>
+        <strong>2. Varna andra:</strong>
+        <br>• Ropa varningar
+        <br>• Hindra andra från att komma nära
+        <br><br>
+        <strong>3. Ring 112 omedelbart:</strong>
+        <br>• Berätta att antenn ligger på kraftledning
+        <br>• Stanna på säkert avstånd tills räddningstjänst kommer
+        <br><br>
+        <strong>4. FÖRSÖK INTE FLYTTA ANTENNEN!</strong>
+        <br>• Kraftledningar har enorma strömmar
+        <br>• Du kommer dö omedelbart vid kontakt
+        <br>• Bara utbildad personal med speciell utrustning kan hantera detta
+    </div>
+    
+    <h3>🏗️ Mastresning - Kräver planering!</h3>
+    
+    <p>Att resa en mast är som att resa en flaggstång - men tyngre och med större konsekvenser vid fel!</p>
+    
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">🔷 CHECKLISTA FÖR SÄKER MASTRESNING</h4>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+            <h4 style="color: #1e40af; margin-top: 0;">📋 FÖRE RESNINGEN:</h4>
+            
+            <strong>1. Planering:</strong>
+            <ul>
+                <li>Rita en skiss ovanifrån - markera fällriktning</li>
+                <li>Beräkna fallzoner åt alla håll</li>
+                <li>Identifiera riskområden (kraftledningar, hus, vägar)</li>
+                <li>Bestäm vem som gör vad</li>
+            </ul>
+            <br>
+            
+            <strong>2. Väder:</strong>
+            <ul>
+                <li><strong>Vindstyrka under 5 m/s (svag vind)</strong></li>
+                <li>Inget regn (halt, elrisk)</li>
+                <li>Ingen åska inom 10 km</li>
+                <li>Ej is/snö på masten</li>
+            </ul>
+            <br>
+            
+            <strong>3. Hjälpare:</strong>
+            <ul>
+                <li>Minst 3 personer för master upp till 10m</li>
+                <li>Minst 4-5 personer för master över 10m</li>
+                <li>En "dirigent" som har överblick</li>
+                <li>Alla måste förstå planen!</li>
+            </ul>
+            <br>
+            
+            <strong>4. Utrustning:</strong>
+            <ul>
+                <li>Alla stag kontrollerade (inga skador, rätt längd)</li>
+                <li>Turnbuckles för fininjustering</li>
+                <li>Reser-rep (minst 2x mastens längd)</li>
+                <li>Hjälmar på alla!</li>
+                <li>Handskar (skydd mot vassa kanter)</li>
+            </ul>
+            <br>
+            
+            <strong>5. Infästning:</strong>
+            <ul>
+                <li>Fundament/fäste kontrollerat</li>
+                <li>Alla bultar åtdragna</li>
+                <li>Gångjärn/pivot smort</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #1e40af;">🚀 UNDER RESNINGEN:</h4>
+            <ul>
+                <li>Långsam och kontrollerad rörelse</li>
+                <li>Pausa om något känns fel</li>
+                <li>Kommunicera hela tiden</li>
+                <li>En person övervakar närhet till kraftledningar</li>
+                <li>Håll reser-repet spänt hela tiden</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #1e40af;">✅ EFTER RESNINGEN:</h4>
+            <ul>
+                <li>Kontrollera att alla stag är lika spända</li>
+                <li>Masten ska vara helt vertikal (kolla med vattenpass)</li>
+                <li>Dubbel-kontrollera alla bultar och fästen</li>
+                <li>Ta bort reser-rep om det kan fladdra mot antennen</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3>🔧 Mekanisk säkerhet - Underhåll är A och O</h3>
+    
+    <p>En master står ute i all slags väder och utsätts för enorma krafter. Regelbundet underhåll är kritiskt!</p>
+    
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Vad ska kontrolleras</th>
+                <th style="width: 30%;">Hur ofta</th>
+                <th style="width: 45%;">Vad att titta efter</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: #dbeafe;">
+                <td><strong>Stag och vajrar</strong></td>
+                <td>2 gånger/år (vår & höst)</td>
+                <td>Rostiga trådar, utfrynsta delar, spänning. Byt om det finns tecken på slitage!</td>
+            </tr>
+            <tr style="background: #fef3c7;">
+                <td><strong>Bultar och fästen</strong></td>
+                <td>2 gånger/år</td>
+                <td>Rost, lösa bultar. Dra åt och smörj med kopparpasta.</td>
+            </tr>
+            <tr style="background: #d1fae5;">
+                <td><strong>Mastmaterial</strong></td>
+                <td>1 gång/år</td>
+                <td>Rost på stålmaster, sprickor i aluminiummaster. Måla om vid behov.</td>
+            </tr>
+            <tr style="background: #fce7f3;">
+                <td><strong>Fundament</strong></td>
+                <td>1 gång/år</td>
+                <td>Sprickor i betong, rörelser i fästet. Särskilt viktigt första året efter installation!</td>
+            </tr>
+            <tr style="background: #ede9fe;">
+                <td><strong>Rotor</strong></td>
+                <td>Före och efter vintern</td>
+                <td>Fungerar den smidigt? Ovanliga ljud? Vatteninträngning? Lås rotorn när den inte används!</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h3>💨 Vindlast - Underskattas ofta!</h3>
+    
+    <p>Vinden utövar enorma krafter på antenner och master. En stor yagi-antenn kan ha flera kvadratmeter "vindfångstyta"!</p>
+    
+    <div class="example-box" style="border-left: 4px solid #3b82f6;">
+        <strong>💨 Exempel 3 - Kraft från vinden:</strong> En yagi-antenn har 2 m² vindfångsyta. Hur stor kraft utövar en storm på 25 m/s (90 km/h)?
+        <br><br>
+        <strong>Förenklad formel för vindtryck:</strong>
+        <br>F ≈ 0,6 × A × v²
+        <br><br>
+        <strong>Givna värden:</strong>
+        <br>• A = 2 m² (antennens yta)
+        <br>• v = 25 m/s (vindhastighet)
+        <br><br>
+        <strong>Beräkning:</strong>
+        <br>F = 0,6 × 2 × (25)²
+        <br>F = 0,6 × 2 × 625
+        <br>F = <strong>750 Newton ≈ 75 kg kraft!</strong>
+        <br><br>
+        <strong>Vid orkan (35 m/s, 126 km/h):</strong>
+        <br>F = 0,6 × 2 × (35)² = <strong>1470 N ≈ 150 kg kraft!</strong>
+        <br><br>
+        <em>🎯 Det är som att ha en person på 75 kg hänga i antennen! Vid orkan två personer!</em>
+    </div>
+    
+    <div class="info-box important" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+        <strong>💡 Dimensionering för vind och is:</strong>
+        <br><br>
+        <strong>I Sverige måste master dimensioneras för:</strong>
+        <br>• <strong>Vindlast:</strong> 25-35 m/s beroende på område
+        <br>• <strong>Islast:</strong> 10-20 mm istjocklek på alla ytor
+        <br>• <strong>Kombination:</strong> Is + vind samtidigt!
+        <br><br>
+        <strong>Praktiska råd:</strong>
+        <br>• Använd tillverkarens specifikationer
+        <br>• Lägg till säkerhetsmarginal (20-30%)
+        <br>• Konsultera mastleverantör vid stora installationer
+        <br>• Försäkra dig om att fundamentet klarar krafterna
+    </div>
+    
+    <h3>✅ Snabbtest - Antennsäkerhet</h3>
+    
+    <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+        <strong>✅ Kan du svara på dessa?</strong>
+        <ul style="margin-top: 0.5rem;">
+            <li>Vilken är den vanligaste allvarliga olyckan vid antennarbete?</li>
+            <li>Vilken säkerhetsutrustning är absolut nödvändig vid arbete över 2 meters höjd?</li>
+            <li>Hur stort säkerhetsavstånd ska du hålla till en 10 kV mellanspänningsledning?</li>
+            <li>Vad ska du göra om din antenn faller på en kraftledning?</li>
+            <li>Hur många hjälpare behövs för att resa en 10-meters mast säkert?</li>
+            <li>Hur ofta ska du kontrollera stag och vajrar?</li>
+        </ul>
+        <details style="margin-top: 0.5rem;">
+            <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+            <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                <strong>Svar:</strong>
+                <br>• Fall från höjd (tak, stege, mast)
+                <br>• Säkerhetssele (full kroppssele) med livlina, hjälm, ordentliga skor
+                <br>• Minst 3 meter (rekommenderat 5 meter). Dessutom måste fallzonen beräknas - masten får inte kunna nå ledningen om den faller!
+                <br>• RÖR INGENTING! Håll minst 20 meters avstånd. Varna andra. Ring 112 omedelbart. Vänta på räddningstjänst.
+                <br>• Minst 3 personer (för master upp till 10m). Helst 4-5 personer för större säkerhet och bättre kontroll.
+                <br>• 2 gånger per år (vår och höst). Kontrollera rost, utfransning, spänning. Byt vid minsta tecken på slitage!
+            </div>
+        </details>
+    </div>
+</div>

@@ -2127,9 +2127,11 @@ difficulty: "easy"
     difficulty: "medium"
 },
 
+// ============================================
+    // KAPITEL 8: TRAFIKMETODER OCH OPERATÖRSTEKNIK
     // ============================================
-    // KAPITEL 8: TRAFIKMETODER
-    // ============================================
+    // Behåller befintliga frågor 151-160 och lägger till 10 nya (161-170)
+    
     {
         id: 151,
         chapterId: 8,
@@ -2270,7 +2272,149 @@ difficulty: "easy"
         explanation: "'73' är amatörkod för 'bästa hälsningar' och används ofta i slutet av ett QSO.",
         difficulty: "easy"
     },
-
+    
+    // NYA FRÅGOR 161-170
+    {
+        id: 161,
+        chapterId: 8,
+        question: "Vilken anropssignal används på 2m simplex-anropsfrekvensen i Sverige?",
+        options: [
+            { id: "a", text: "144,800 MHz" },
+            { id: "b", text: "145,500 MHz" },
+            { id: "c", text: "145,000 MHz" },
+            { id: "d", text: "146,000 MHz" }
+        ],
+        correctAnswer: "b",
+        explanation: "145,500 MHz är den europeiska simplex-anropsfrekvensen på 2m-bandet. Här anropar man och sedan QSY (flyttar) till annan frekvens för QSO.",
+        difficulty: "medium"
+    },
+    {
+        id: 162,
+        chapterId: 8,
+        question: "Vad betyder 'QRM'?",
+        options: [
+            { id: "a", text: "Atmosfäriska störningar (åska)" },
+            { id: "b", text: "Störningar från andra stationer" },
+            { id: "c", text: "Svag signal" },
+            { id: "d", text: "Hög effekt" }
+        ],
+        correctAnswer: "b",
+        explanation: "QRM = störningar från andra stationer (man-made interference). QRN = atmosfäriska störningar (åska, brus).",
+        difficulty: "easy"
+    },
+    {
+        id: 163,
+        chapterId: 8,
+        question: "På HF-banden, när används LSB (Lower Sideband)?",
+        options: [
+            { id: "a", text: "Alltid på alla HF-band" },
+            { id: "b", text: "På band under 10 MHz (160m, 80m, 40m)" },
+            { id: "c", text: "Endast på 20m-bandet" },
+            { id: "d", text: "Aldrig - USB används alltid" }
+        ],
+        correctAnswer: "b",
+        explanation: "Tradition: LSB används under 10 MHz (160m, 80m, 40m-banden). USB används på 10 MHz och högre (20m, 15m, 10m). Minnesregel: 'Över tio, övre (USB)'.",
+        difficulty: "medium"
+    },
+    {
+        id: 164,
+        chapterId: 8,
+        question: "Vad betyder RST-rapporten '59' på foni (SSB)?",
+        options: [
+            { id: "a", text: "Läsbarhet 5, Styrka 9, Ton 9" },
+            { id: "b", text: "Läsbarhet 5 (perfekt), Styrka 9 (mycket stark)" },
+            { id: "c", text: "Läsbarhet 5, Ton 9" },
+            { id: "d", text: "59 procent signal" }
+        ],
+        correctAnswer: "b",
+        explanation: "På foni används bara RS (två siffror). R=5 (perfekt läsbar), S=9 (mycket stark signal). På CW används RST (tre siffror) där T=ton.",
+        difficulty: "medium"
+    },
+    {
+        id: 165,
+        chapterId: 8,
+        question: "Vad ska du FÖRST göra innan du börjar sända på en ny frekvens?",
+        options: [
+            { id: "a", text: "Börja sända direkt" },
+            { id: "b", text: "Lyssna minst 30 sekunder och fråga om frekvensen är ledig" },
+            { id: "c", text: "Kalla CQ omedelbart" },
+            { id: "d", text: "Identifiera dig med anropssignal" }
+        ],
+        correctAnswer: "b",
+        explanation: "ALLTID lyssna först (minst 30 sek), sedan fråga 'QRL?' eller 'Is this frequency in use?' och vänta på svar. Detta förhindrar att du stör pågående kontakter.",
+        difficulty: "easy"
+    },
+    {
+        id: 166,
+        chapterId: 8,
+        question: "Vad är standard shift på 2m-bandet för repeatrar?",
+        options: [
+            { id: "a", text: "±1,6 MHz" },
+            { id: "b", text: "±600 kHz" },
+            { id: "c", text: "±7,6 MHz" },
+            { id: "d", text: "Ingen shift" }
+        ],
+        correctAnswer: "b",
+        explanation: "2m-band: ±600 kHz (0,6 MHz). 70cm-band: ±1,6 MHz eller ±7,6 MHz. Exempel: Repeater 145,700 med -600 kHz shift → du sänder 145,100, lyssnar 145,700.",
+        difficulty: "medium"
+    },
+    {
+        id: 167,
+        chapterId: 8,
+        question: "Vilket digitalt trafiksätt är mest populärt för svaga signaler och DX?",
+        options: [
+            { id: "a", text: "RTTY" },
+            { id: "b", text: "PSK31" },
+            { id: "c", text: "FT8" },
+            { id: "d", text: "Packet radio" }
+        ],
+        correctAnswer: "c",
+        explanation: "FT8 är extremt populärt sedan 2017. Fungerar ner till -24 dB under brusnivån! Automatiserad drift, 15-sekunders perioder, perfekt för liten antenn/låg effekt.",
+        difficulty: "medium"
+    },
+    {
+        id: 168,
+        chapterId: 8,
+        question: "Vad betyder 'PAN PAN' i nödtrafik?",
+        options: [
+            { id: "a", text: "Omedelbar livsfara (samma som MAYDAY)" },
+            { id: "b", text: "Ilmeddelande - brådskande men inte omedelbar livsfara" },
+            { id: "c", text: "Säkerhetsinformation" },
+            { id: "d", text: "Test av nödsignal" }
+        ],
+        correctAnswer: "b",
+        explanation: "PAN PAN = ilmeddelande (brådskande men inte akut livsfara). MAYDAY = omedelbar livsfara. SECURITÉ = säkerhetsinformation. Prioritet: MAYDAY > PAN PAN > SECURITÉ.",
+        difficulty: "medium"
+    },
+    {
+        id: 169,
+        chapterId: 8,
+        question: "Hur bokstaveras siffran '9' fonetiskt?",
+        options: [
+            { id: "a", text: "Nain" },
+            { id: "b", text: "Nine" },
+            { id: "c", text: "Niner (NAJ-NER)" },
+            { id: "d", text: "Novem" }
+        ],
+        correctAnswer: "c",
+        explanation: "9 = 'Niner' (NAJ-NER), INTE 'nain'! Detta för att undvika förväxling med 5 (FAJF). Alla siffror uttalas med engelsk betoning även på svenska.",
+        difficulty: "easy"
+    },
+    {
+        id: 170,
+        chapterId: 8,
+        question: "Vid verklig nödsituation, vilka frekvenser och effekter får du använda?",
+        options: [
+            { id: "a", text: "Endast licensierade frekvenser och din tillåtna effekt" },
+            { id: "b", text: "ALLA frekvenser och ALL effekt där du har bäst chans att bli hörd" },
+            { id: "c", text: "Endast nödfrekvenser" },
+            { id: "d", text: "Ingen ändring - normala regler gäller alltid" }
+        ],
+        correctAnswer: "b",
+        explanation: "Vid verklig nöd: ALLA frekvenser OK, ALL effekt OK, alla trafiksätt OK! Liv går före regler. Dokumentera och förklara efteråt. Nödtrafik har ALLTID absolut prioritet.",
+        difficulty: "medium"
+    },
+    
     // ============================================
     // KAPITEL 9: ELSÄKERHET
     // ============================================

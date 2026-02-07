@@ -5736,13 +5736,966 @@ const certChapters = [
         }
     ]
 },
-    {
+{
         id: 8,
         number: 8,
         title: 'Trafikmetoder och Operatörsteknik',
         slug: 'kapitel-8-trafikmetoder',
         icon: '🎙️',
-        subchapters: []
+        subchapters: [
+            {
+                id: '8.1',
+                title: '8.1 Q-koder och förkortningar',
+                exercises: [
+                    {
+                        id: 'c8-1-e1',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder Q-koden QTH?',
+                        options: [
+                            'Vilken tid är det?',
+                            'Position/plats - Var befinner du dig?',
+                            'Ska jag öka effekten?',
+                            'Vilken frekvens?'
+                        ],
+                        correct: 1,
+                        explanation: 'QTH = Position/plats. Exempel: "Mitt QTH är Stockholm" = Jag befinner mig i Stockholm. QTR = tid, QRO = öka effekt, QRG = frekvens.'
+                    },
+                    {
+                        id: 'c8-1-e2',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder QRZ?',
+                        options: [
+                            'Vem anropar mig?',
+                            'Ska jag byta frekvens?',
+                            'Är du redo?',
+                            'Sluta sända'
+                        ],
+                        correct: 0,
+                        explanation: 'QRZ = "Vem anropar mig?" Används efter CQ när du hört någon svara men inte uppfattat anropssignalen. QSY = byt frekvens, QRV = redo, QRT = sluta sända.'
+                    },
+                    {
+                        id: 'c8-1-e3',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder QRM och QRN?',
+                        options: [
+                            'QRM = atmosfäriska störningar, QRN = störningar från stationer',
+                            'QRM = störningar från andra stationer, QRN = atmosfäriska störningar (åska)',
+                            'Båda betyder samma sak',
+                            'QRM = svag signal, QRN = stark signal'
+                        ],
+                        correct: 1,
+                        explanation: 'QRM = Man-made interference (störningar från andra stationer). QRN = Natural noise (atmosfäriska störningar - åska, brus). Kom ihåg: RM = Radio/Man-made, RN = Radio/Natural.'
+                    },
+                    {
+                        id: 'c8-1-e4',
+                        type: 'true-false',
+                        question: 'QRP betyder "Ska jag minska effekten?" som fråga, och "Låg effekt (≤5W)" som påstående.',
+                        correct: true,
+                        explanation: 'SANT! QRP används både som fråga ("Ska jag minska effekten?") och påstående ("Jag kör låg effekt"). QRP-entusiaster kör ofta ≤5W. Motsatsen: QRO = öka effekt/hög effekt.'
+                    },
+                    {
+                        id: 'c8-1-e5',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder "73" i amatörradio?',
+                        options: [
+                            'Nödanrop',
+                            'Bästa hälsningar / Vänliga hälsningar',
+                            'Kom igen',
+                            'Jag förstår'
+                        ],
+                        correct: 1,
+                        explanation: '"73" = Bästa hälsningar. Används ALLTID vid avslut av QSO. "88" = Kramar och kyssar (används till YL - kvinnliga radioamatörer). Exempel: "Thanks for QSO, 73!"'
+                    },
+                    {
+                        id: 'c8-1-e6',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder CQ?',
+                        options: [
+                            'Nödanrop',
+                            'Allmänt anrop - söker kontakt med vem som helst',
+                            'Slut på kontakt',
+                            'Tystnad på frekvensen'
+                        ],
+                        correct: 1,
+                        explanation: 'CQ = "Seek You" - allmänt anrop till VEM SOM HELST. Exempel: "CQ CQ CQ de SM5XYZ". Används för att initiera kontakt. CQ DX = söker långdistans-kontakt.'
+                    },
+                    {
+                        id: 'c8-1-e7',
+                        type: 'matching',
+                        question: 'Para ihop Q-kod med betydelse:',
+                        pairs: [
+                            { left: 'QSL', right: 'Bekräftelse / QSL-kort' },
+                            { left: 'QSY', right: 'Byt frekvens' },
+                            { left: 'QSO', right: 'Radiokontakt' },
+                            { left: 'QRT', right: 'Sluta sända / Stäng' }
+                        ]
+                    },
+                    {
+                        id: 'c8-1-e8',
+                        type: 'true-false',
+                        question: 'DE betyder "detta är" (from) och används i anrop, t.ex. "CQ DE SM5XYZ".',
+                        correct: true,
+                        explanation: 'SANT! DE (från franskans "de" = from) = "detta är". Format: CQ DE [din signal]. Skiljer på vem som kallar (före DE) och vem du är (efter DE).'
+                    },
+                    {
+                        id: 'c8-1-e9',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder förkortningen "OM"?',
+                        options: [
+                            'Old Man - manlig radioamatör',
+                            'Original Message',
+                            'Operator Manual',
+                            'On Mode'
+                        ],
+                        correct: 0,
+                        explanation: 'OM = "Old Man" (manlig radioamatör, används även till unga!). YL = "Young Lady" (kvinnlig radioamatör). XYL = "Ex-Young Lady" (gift mans fru). Lite gammaldags men används fortfarande!'
+                    },
+                    {
+                        id: 'c8-1-e10',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder WX i amatörradio?',
+                        options: [
+                            'Utrustning',
+                            'Väder (Weather)',
+                            'Frekvens',
+                            'Antenn'
+                        ],
+                        correct: 1,
+                        explanation: 'WX = Weather (väder). Andra vanliga: RIG = utrustning/radio, ANT = antenn, PSE = please (var snäll), TNX/TKS = thanks (tack), UR = your (din).'
+                    }
+                ]
+            },
+            {
+                id: '8.2',
+                title: '8.2 Fonetiska alfabetet',
+                exercises: [
+                    {
+                        id: 'c8-2-e1',
+                        type: 'multiple-choice',
+                        question: 'Hur bokstaveras "A" i det internationella fonetiska alfabetet?',
+                        options: [
+                            'Adam',
+                            'Alfa',
+                            'Andrew',
+                            'Anton'
+                        ],
+                        correct: 1,
+                        explanation: 'A = Alfa (AL-FA). Använd ALLTID ITU/NATO-alfabetet, ALDRIG svenska ord som "Adam" eller "Anton"!'
+                    },
+                    {
+                        id: 'c8-2-e2',
+                        type: 'multiple-choice',
+                        question: 'Hur bokstaveras "M" fonetiskt?',
+                        options: [
+                            'Mary',
+                            'Mike',
+                            'Martin',
+                            'Metro'
+                        ],
+                        correct: 1,
+                        explanation: 'M = Mike (MAJK). Andra viktiga: N = November, S = Sierra, T = Tango.'
+                    },
+                    {
+                        id: 'c8-2-e3',
+                        type: 'multiple-choice',
+                        question: 'Hur uttalas siffran "9" fonetiskt?',
+                        options: [
+                            'Nain',
+                            'Nine',
+                            'Niner (NAJ-NER)',
+                            'Novem'
+                        ],
+                        correct: 2,
+                        explanation: '9 = "Niner" (NAJ-NER), INTE "nain"! Detta för att undvika förväxling med 5 (FAJF). Alla siffror uttalas med engelsk betoning.'
+                    },
+                    {
+                        id: 'c8-2-e4',
+                        type: 'true-false',
+                        question: 'När man bokstaverar sin anropssignal ska man alltid använda fonetiskt alfabet första gången.',
+                        correct: true,
+                        explanation: 'SANT! Första gången: Alltid fonetiskt för tydlighet. Exempel: "SM5XYZ - Sierra Mike Five X-ray Yankee Zulu". Senare i QSO kan man förkorta om signalen är bra.'
+                    },
+                    {
+                        id: 'c8-2-e5',
+                        type: 'multiple-choice',
+                        question: 'SM5ABC bokstaveras fonetiskt som:',
+                        options: [
+                            'Sigurd Martin Fem Adam Bertil Cesar',
+                            'Sierra Mike Five Alfa Bravo Charlie',
+                            'Sweden Mike Five Alfa Bravo Charlie',
+                            'Sierra Mike Fem Alfa Bravo Charlie'
+                        ],
+                        correct: 1,
+                        explanation: 'Korrekt: "Sierra Mike Five Alfa Bravo Charlie". Använd ALDRIG svenska ord (Sigurd, Bertil). Siffror på engelska men bokstäver på ITU/NATO-standard!'
+                    },
+                    {
+                        id: 'c8-2-e6',
+                        type: 'multiple-choice',
+                        question: 'Hur bokstaveras "Q" fonetiskt?',
+                        options: [
+                            'Queen',
+                            'Quebec (KE-BECK)',
+                            'Quaker',
+                            'Quick'
+                        ],
+                        correct: 1,
+                        explanation: 'Q = Quebec (uttalas KE-BECK, inte "kweebek"). Andra svåra: J = Juliet (DJU-li-ett), X = X-ray (EKKS-REJ).'
+                    },
+                    {
+                        id: 'c8-2-e7',
+                        type: 'matching',
+                        question: 'Para ihop bokstav med fonetiskt ord:',
+                        pairs: [
+                            { left: 'C', right: 'Charlie' },
+                            { left: 'D', right: 'Delta' },
+                            { left: 'F', right: 'Foxtrot' },
+                            { left: 'W', right: 'Whiskey' }
+                        ]
+                    },
+                    {
+                        id: 'c8-2-e8',
+                        type: 'multiple-choice',
+                        question: 'Varför använder vi fonetiskt alfabet?',
+                        options: [
+                            'Det är bara tradition',
+                            'För att bokstäver som B/D, M/N, F/S lätt förväxlas vid dålig signal',
+                            'Det är ett lagkrav',
+                            'För att låta professionell'
+                        ],
+                        correct: 1,
+                        explanation: 'Fonetiskt alfabet förhindrar förväxlingar! B och D, M och N, F och S låter mycket lika. "Bravo" vs "Delta" är tydligt! Särskilt viktigt vid svag signal eller störningar.'
+                    },
+                    {
+                        id: 'c8-2-e9',
+                        type: 'true-false',
+                        question: 'Siffror ska alltid uttalas med engelsk betoning (Ze-ro, Wan, Tu...) även när man pratar svenska.',
+                        correct: true,
+                        explanation: 'SANT! Alltid engelsk betoning för siffror: 0=Ze-ro, 1=Wan, 2=Tu, 3=Tri, 4=Fo-er, 5=Fajf, 6=Siks, 7=Sev-en, 8=Ejt, 9=Naj-ner. Detta är INTERNATIONELL standard!'
+                    },
+                    {
+                        id: 'c8-2-e10',
+                        type: 'multiple-choice',
+                        question: 'Vad är den största fördelen med att kunna fonetiskt alfabet utantill?',
+                        options: [
+                            'Det imponerar på andra',
+                            'Man kan snabbt och tydligt bokstavera sin signal utan att tänka',
+                            'Det är lättare än vanligt alfabet',
+                            'Det är obligatoriskt för licens'
+                        ],
+                        correct: 1,
+                        explanation: 'När det sitter i ryggmärgen kan du fokusera på QSO istället för att tänka "hur var det nu S hette...". Öva 10 min/dag i 2 veckor så sitter det!'
+                    }
+                ]
+            },
+            {
+                id: '8.3',
+                title: '8.3 RST-systemet',
+                exercises: [
+                    {
+                        id: 'c8-3-e1',
+                        type: 'multiple-choice',
+                        question: 'Vad står RST för?',
+                        options: [
+                            'Radio Signal Transmission',
+                            'Readability, Strength, Tone',
+                            'Receiver Sensitivity Test',
+                            'Remote Station Transfer'
+                        ],
+                        correct: 1,
+                        explanation: 'RST = Readability (läsbarhet 1-5), Strength (signalstyrka 1-9), Tone (ton 1-9, endast CW). Standard sedan 1930-talet!'
+                    },
+                    {
+                        id: 'c8-3-e2',
+                        type: 'multiple-choice',
+                        question: 'Hur många siffror används i RST-rapport på foni (SSB/FM)?',
+                        options: [
+                            'En siffra',
+                            'Två siffror (RS)',
+                            'Tre siffror (RST)',
+                            'Fyra siffror'
+                        ],
+                        correct: 1,
+                        explanation: 'FONI: Bara RS (två siffror) - t.ex. "59". CW: RST (tre siffror) - t.ex. "599". T (ton) är bara relevant för CW/morsekod!'
+                    },
+                    {
+                        id: 'c8-3-e3',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder RST-rapporten "59" på SSB?',
+                        options: [
+                            'Läsbarhet 5, Styrka 9',
+                            'Läsbarhet 5, Styrka 9, Ton 9',
+                            'Bara styrka 59',
+                            '59 procent signal'
+                        ],
+                        correct: 0,
+                        explanation: '"59" på foni = R5 (perfekt läsbar), S9 (mycket stark signal). Bästa möjliga rapport på foni! På CW skulle det vara "599" (med ton).'
+                    },
+                    {
+                        id: 'c8-3-e4',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder "R5" i RST?',
+                        options: [
+                            'Oläsbar',
+                            'Knappt läsbar',
+                            'Perfekt läsbar',
+                            'Läsbar med stor svårighet'
+                        ],
+                        correct: 2,
+                        explanation: 'R (Readability): R1=oläsbar, R2=knappt läsbar, R3=svår, R4=läsbar, R5=perfekt läsbar. R5 är bäst!'
+                    },
+                    {
+                        id: 'c8-3-e5',
+                        type: 'true-false',
+                        question: 'S9+20dB betyder att signalen är 20 dB starkare än S9 (ungefär 4 gånger starkare upplevd styrka).',
+                        correct: true,
+                        explanation: 'SANT! När signalen är starkare än S9 använder man +dB. S9+10dB ≈ dubbelt så stark, S9+20dB ≈ 4x, S9+30dB ≈ 8x. Exempel: "Du är 59 plus tjugo!"'
+                    },
+                    {
+                        id: 'c8-3-e6',
+                        type: 'multiple-choice',
+                        question: 'Varför är det viktigt att ge ärlig RST-rapport istället för alltid "59"?',
+                        options: [
+                            'Det är lagen',
+                            'Ger användbar information om signalkvalitet och utrustning',
+                            'Det spelar ingen roll',
+                            'För att inte vara för snäll'
+                        ],
+                        correct: 1,
+                        explanation: 'Ärlig rapport hjälper andra förstå sina signalförhållanden! "57" eller "44" är mer användbart än falsk "59". Hjälper optimera utrustning/antenn.'
+                    },
+                    {
+                        id: 'c8-3-e7',
+                        type: 'matching',
+                        question: 'Para ihop S-värde med betydelse:',
+                        pairs: [
+                            { left: 'S1', right: 'Knappt märkbar signal' },
+                            { left: 'S5', right: 'Ganska god signal' },
+                            { left: 'S7', right: 'Stark signal' },
+                            { left: 'S9', right: 'Mycket stark signal (max på meter)' }
+                        ]
+                    },
+                    {
+                        id: 'c8-3-e8',
+                        type: 'multiple-choice',
+                        question: 'Vad är T-värdet i RST 599 (CW)?',
+                        options: [
+                            'Tid',
+                            'Temperatur',
+                            'Ton - hur ren morsesignalen låter',
+                            'Trafik'
+                        ],
+                        correct: 2,
+                        explanation: 'T (Tone) = tonkvalitet på CW. T9 = perfekt ren sinuston. T1 = råskrapig ton. Nästan alla moderna CW-sändare har T9.'
+                    },
+                    {
+                        id: 'c8-3-e9',
+                        type: 'true-false',
+                        question: 'På CW används alltid tre siffror (RST), till exempel "599" eller "579".',
+                        correct: true,
+                        explanation: 'SANT! CW = alltid RST (tre siffror). Foni = RS (två siffror). Exempel CW: "UR RST 599 599" (upprepa ofta för säkerhet).'
+                    },
+                    {
+                        id: 'c8-3-e10',
+                        type: 'multiple-choice',
+                        question: 'Du hör en station som fäder mellan S5 och S9. Vad säger du?',
+                        options: [
+                            '"Du är 59"',
+                            '"Du är 57 med QSB" (QSB = fädning)',
+                            '"Du är 55"',
+                            '"Du varierar mycket"'
+                        ],
+                        correct: 1,
+                        explanation: 'Ge genomsnittet och nämn fädning! "57 med QSB" (eller "with fading") är korrekt. QSB = signalen fäder (varierar i styrka).'
+                    }
+                ]
+            },
+            {
+                id: '8.4',
+                title: '8.4 Anrop och QSO',
+                exercises: [
+                    {
+                        id: 'c8-4-e1',
+                        type: 'multiple-choice',
+                        question: 'Vad är det FÖRSTA du ska göra innan du börjar sända på en ny frekvens?',
+                        options: [
+                            'Börja sända direkt',
+                            'Lyssna minst 30 sekunder och fråga om frekvensen är ledig',
+                            'Säga din anropssignal',
+                            'Kalla CQ omedelbart'
+                        ],
+                        correct: 1,
+                        explanation: 'ALLTID lyssna först (minst 30 sek)! Sedan fråga "QRL?" eller "Is this frequency in use?" och VÄNTA på svar. Detta förhindrar att du stör pågående trafik!'
+                    },
+                    {
+                        id: 'c8-4-e2',
+                        type: 'multiple-choice',
+                        question: 'Hur gör man ett korrekt CQ-anrop på engelska?',
+                        options: [
+                            '"CQ SM5XYZ"',
+                            '"CQ CQ CQ, this is SM5XYZ, Sierra Mike Five X-ray Yankee Zulu, calling CQ and standing by"',
+                            '"Hello, is anyone there?"',
+                            'Bara säga sin signal'
+                        ],
+                        correct: 1,
+                        explanation: 'Format: "CQ CQ CQ" (3x), "this is" (detta är), [signal fonetiskt], [signal normalt], "calling CQ and standing by". Tydligt och standardiserat!'
+                    },
+                    {
+                        id: 'c8-4-e3',
+                        type: 'true-false',
+                        question: 'I en pile-up (många anropar samtidigt) ska du bara säga din signal EN gång kort, inte upprepa i flera minuter.',
+                        correct: true,
+                        explanation: 'SANT! Pile-up-etikett: Anropa KORT (bara signal en gång), VÄNTA 30-60 sek, försök igen. INTE "tailgate" (anropa upprepat utan paus). Tålamod och respekt!'
+                    },
+                    {
+                        id: 'c8-4-e4',
+                        type: 'multiple-choice',
+                        question: 'Vad innebär "split operation" i en DX pile-up?',
+                        options: [
+                            'DX-stationen sänder och lyssnar på samma frekvens',
+                            'DX-stationen sänder på en frekvens men lyssnar på EN ANNAN frekvens',
+                            'Två personer delar på sändningen',
+                            'Dela upp anropssignalen'
+                        ],
+                        correct: 1,
+                        explanation: 'Split = DX sänder t.ex. 14.195, lyssnar 14.200-14.210 ("listening 5 up"). Du ställer VFO-A=14.195 (lyssna), VFO-B=14.200 (sända), aktiverar SPLIT-läge!'
+                    },
+                    {
+                        id: 'c8-4-e5',
+                        type: 'multiple-choice',
+                        question: 'Hur svarar du på ett CQ-anrop från SM5XYZ?',
+                        options: [
+                            '"SM5XYZ, this is SM0ABC, Sierra Mike Zero Alfa Bravo Charlie, over"',
+                            '"Hello SM5XYZ"',
+                            'Bara säga din signal',
+                            '"CQ CQ CQ"'
+                        ],
+                        correct: 0,
+                        explanation: 'Format: [Hans signal], this is [din signal normalt], [din signal fonetiskt], over. Säg HAN signal FÖRST så han vet att DU svarar på HONOM!'
+                    },
+                    {
+                        id: 'c8-4-e6',
+                        type: 'matching',
+                        question: 'Para ihop QSO-fas med vad som händer:',
+                        pairs: [
+                            { left: 'Inledning', right: 'RST + QTH' },
+                            { left: 'Presentation', right: 'Namn' },
+                            { left: 'Utrustning', right: 'Radio + antenn' },
+                            { left: 'Avslutning', right: '73 + signaler' }
+                        ]
+                    },
+                    {
+                        id: 'c8-4-e7',
+                        type: 'true-false',
+                        question: 'DX-kontakter är ofta mycket kortare än lokala QSO (bara signal, rapport, QTH, 73).',
+                        correct: true,
+                        explanation: 'SANT! DX-QSO: Signal + Rapport + QTH + 73 = KLART (1-2 min). Många vill prata, signalen kan vara svag, propagation kan försvinna. Respektera detta!'
+                    },
+                    {
+                        id: 'c8-4-e8',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder "listening 5 up" i en pile-up?',
+                        options: [
+                            'Lyssnar 5 minuter senare',
+                            'Lyssnar 5 kHz HÖGRE än sin sändningsfrekvens',
+                            'Lyssnar 5 stationer',
+                            'Väntar 5 sekunder'
+                        ],
+                        correct: 1,
+                        explanation: '"5 up" = +5 kHz (0.005 MHz). Om DX sänder 14.195, lyssnar han 14.200. "10 down" = -10 kHz. Detta sprider pile-upen över större område!'
+                    },
+                    {
+                        id: 'c8-4-e9',
+                        type: 'multiple-choice',
+                        question: 'Vad ska du INTE göra i en pile-up?',
+                        options: [
+                            'Lyssna på instruktioner',
+                            'Anropa kort och vänta',
+                            'Anropa upprepade gånger utan paus ("tailgating")',
+                            'Respektera "EU only" eller liknande restriktioner'
+                        ],
+                        correct: 2,
+                        explanation: 'ALDRIG "tailgate" (anropa upprepat utan paus)! ALDRIG anropa om du inte hört DX själv. ALDRIG ignorera instruktioner ("JA only" etc). Respekt och tålamod!'
+                    },
+                    {
+                        id: 'c8-4-e10',
+                        type: 'true-false',
+                        question: 'Innan du flyttar (QSY) till annan frekvens efter CQ ska du alltid lyssna och fråga om den nya frekvensen är ledig.',
+                        correct: true,
+                        explanation: 'SANT! ALLTID lyssna på nya frekvensen först! "Ska vi QSY till 14.250?" → byt → lyssna 30 sek → fråga "QRL?" → OK, fortsätt QSO. Respekt för andra!'
+                    }
+                ]
+            },
+            {
+                id: '8.5',
+                title: '8.5 Foni (tal)',
+                exercises: [
+                    {
+                        id: 'c8-5-e1',
+                        type: 'multiple-choice',
+                        question: 'Vilken modulation används på HF-banden för taltrafik?',
+                        options: [
+                            'AM',
+                            'FM',
+                            'SSB (Single Sideband)',
+                            'PM'
+                        ],
+                        correct: 2,
+                        explanation: 'HF (kortvåg): SSB standard! LSB under 10 MHz (160m/80m/40m), USB på 10 MHz och högre (20m/15m/10m). SSB är 3x effektivare än AM, smalare bandbredd.'
+                    },
+                    {
+                        id: 'c8-5-e2',
+                        type: 'multiple-choice',
+                        question: 'På 7 MHz (40m-bandet), använder man LSB eller USB?',
+                        options: [
+                            'LSB (Lower Sideband)',
+                            'USB (Upper Sideband)',
+                            'Spelar ingen roll',
+                            'AM'
+                        ],
+                        correct: 0,
+                        explanation: '7 MHz = 40m = UNDER 10 MHz → LSB! Regel: Under 10 MHz = LSB. På och över 10 MHz = USB. Minnesregel: "Över tio, övre (USB)".'
+                    },
+                    {
+                        id: 'c8-5-e3',
+                        type: 'multiple-choice',
+                        question: 'Vilket avstånd från mikrofonen är optimalt?',
+                        options: [
+                            '1-2 cm (mycket nära)',
+                            '5-10 cm',
+                            '20-30 cm',
+                            'Spelar ingen roll'
+                        ],
+                        correct: 1,
+                        explanation: '5-10 cm är optimalt! För nära (<3 cm) → bas-överbelastning, puffljud. För långt (>15 cm) → svag signal, bakgrundsljud. Testa genom att lyssna på din egen signal!'
+                    },
+                    {
+                        id: 'c8-5-e4',
+                        type: 'true-false',
+                        question: 'ALC-metern ska helst INTE slå i taket när du pratar - det indikerar övermodulering.',
+                        correct: true,
+                        explanation: 'SANT och KRITISKT! ALC slår i taket = övermodulering = distorsion = "splatter" = störningar på närliggande frekvenser = folk blir arga! ALC ska röra sig LITE (10-30%).'
+                    },
+                    {
+                        id: 'c8-5-e5',
+                        type: 'multiple-choice',
+                        question: 'Vilken är simplex-anropsfrekvensen på 2m-bandet?',
+                        options: [
+                            '144,800 MHz',
+                            '145,000 MHz',
+                            '145,500 MHz',
+                            '146,000 MHz'
+                        ],
+                        correct: 2,
+                        explanation: '145,500 MHz = 2m simplex-anropsfrekvens (europeisk standard)! Anropa här, sedan QSY (flytta) till annan frekvens (t.ex. 145,525) för QSO. Detta frigör anropsfrekvensen!'
+                    },
+                    {
+                        id: 'c8-5-e6',
+                        type: 'multiple-choice',
+                        question: 'Vad är standard shift på 2m-repeatrar?',
+                        options: [
+                            '±600 kHz',
+                            '±1,6 MHz',
+                            '±7,6 MHz',
+                            'Ingen shift'
+                        ],
+                        correct: 0,
+                        explanation: '2m: ±600 kHz (0,6 MHz). 70cm: ±1,6 MHz eller ±7,6 MHz. Exempel: Repeater 145,700 med shift -600 → du sänder 145,100, lyssnar 145,700.'
+                    },
+                    {
+                        id: 'c8-5-e7',
+                        type: 'multiple-choice',
+                        question: 'Vad är CTCSS-ton (subton)?',
+                        options: [
+                            'Volymkontroll',
+                            'Låg ton (t.ex. 123,0 Hz) som öppnar repeatern',
+                            'Effektkontroll',
+                            'Frekvensavvikelse'
+                        ],
+                        correct: 1,
+                        explanation: 'CTCSS = "nyckel" till repeatern. Låg, ohörbar ton (t.ex. 123,0 Hz, 88,5 Hz) som måste skickas för att repeatern ska öppna. Förhindrar oavsiktliga öppningar från störningar.'
+                    },
+                    {
+                        id: 'c8-5-e8',
+                        type: 'matching',
+                        question: 'Para ihop band med modulation:',
+                        pairs: [
+                            { left: '40m (7 MHz)', right: 'SSB (LSB)' },
+                            { left: '20m (14 MHz)', right: 'SSB (USB)' },
+                            { left: '2m (145 MHz) lokal', right: 'FM' },
+                            { left: '70cm (432 MHz)', right: 'FM' }
+                        ]
+                    },
+                    {
+                        id: 'c8-5-e9',
+                        type: 'true-false',
+                        question: 'FM används främst på VHF/UHF (2m, 70cm) för lokal trafik och repeatrar.',
+                        correct: true,
+                        explanation: 'SANT! FM = standard på VHF/UHF. Fördelar: Bra ljudkvalitet, störningståligt. Nackdel: Stor bandbredd (12-16 kHz). Därför INTE använd på HF (för trångt!).'
+                    },
+                    {
+                        id: 'c8-5-e10',
+                        type: 'multiple-choice',
+                        question: 'Varför används SSB på HF istället för FM?',
+                        options: [
+                            'SSB låter bättre',
+                            'SSB har mycket smalare bandbredd (2,4 kHz vs 15 kHz) - viktigt på trånga HF-band',
+                            'FM är förbjudet',
+                            'SSB är lättare'
+                        ],
+                        correct: 1,
+                        explanation: 'HF-banden är TRÅNGA! SSB: 2,4 kHz. FM: 12-16 kHz (5x bredare!). På 20m-bandet (350 kHz) får plats: 116 SSB-stationer ELLER bara 23 FM-stationer. Val är enkelt!'
+                    }
+                ]
+            },
+            {
+                id: '8.6',
+                title: '8.6 CW (telegrafi)',
+                exercises: [
+                    {
+                        id: 'c8-6-e1',
+                        type: 'true-false',
+                        question: 'CW (morsekod) är INTE längre krav för att få HAREC-certifikat i Sverige.',
+                        correct: true,
+                        explanation: 'SANT! Kravet togs bort 2004. Men: CW är värdefullt att kunna! Smalast bandbredd (100-500 Hz), fungerar med extremt svaga signaler, populärt i tävlingar.'
+                    },
+                    {
+                        id: 'c8-6-e2',
+                        type: 'multiple-choice',
+                        question: 'Vad står CW för?',
+                        options: [
+                            'Code Wave',
+                            'Continuous Wave',
+                            'Carrier Wave',
+                            'Communication Wireless'
+                        ],
+                        correct: 1,
+                        explanation: 'CW = Continuous Wave. Tekniskt namn för morsekod över radio. Bärvågen slås på (dit/dah) och av (paus) för att bilda bokstäver.'
+                    },
+                    {
+                        id: 'c8-6-e3',
+                        type: 'multiple-choice',
+                        question: 'Varför fungerar CW bättre än SSB med svaga signaler?',
+                        options: [
+                            'CW är högre effekt',
+                            'CW har mycket smalare bandbredd (100-500 Hz vs 2400 Hz) - mindre brus kommer igenom',
+                            'CW är lättare att höra',
+                            'CW är nyare teknik'
+                        ],
+                        correct: 1,
+                        explanation: 'CW: 100-500 Hz bandbredd. SSB: 2400 Hz (5x bredare!). Smalare = mindre brus = bättre signal-till-brus. CW kan läsas ner till -20 dB under brusnivån!'
+                    },
+                    {
+                        id: 'c8-6-e4',
+                        type: 'true-false',
+                        question: 'När man lär sig morse ska man lära sig LJUDEN (di-DAH), inte visuella prickar och streck.',
+                        correct: true,
+                        explanation: 'SANT och viktigt! Lär dig LJUDEN, inte prickar/streck. "A" = inte "punkt-streck" utan ljudet "di-DAH". Erfarna hör bokstäver direkt, som du läser ord!'
+                    },
+                    {
+                        id: 'c8-6-e5',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder prosign "SK" i CW?',
+                        options: [
+                            'Slut på kontakt',
+                            'Starta kontakt',
+                            'Svensk kod',
+                            'Ska fortsätta'
+                        ],
+                        correct: 0,
+                        explanation: 'SK (· · · − · −) = "End of contact" / Slut på kontakten. Andra viktiga: K = kom (över), AR = slut på meddelande, BK = break (avbrott).'
+                    },
+                    {
+                        id: 'c8-6-e6',
+                        type: 'multiple-choice',
+                        question: 'Hur många siffror i RST-rapport på CW?',
+                        options: [
+                            'En (R)',
+                            'Två (RS)',
+                            'Tre (RST)',
+                            'Fyra (RSTQ)'
+                        ],
+                        correct: 2,
+                        explanation: 'CW: TRE siffror (RST). Exempel: "UR RST 599 599". T = Ton (hur ren CW-signalen är). Foni: Bara RS (två siffror).'
+                    },
+                    {
+                        id: 'c8-6-e7',
+                        type: 'matching',
+                        question: 'Para ihop CW-förkortning med betydelse:',
+                        pairs: [
+                            { left: 'K', right: 'Kom (över till dig)' },
+                            { left: 'R', right: 'Roger (mottaget)' },
+                            { left: 'TU', right: 'Thank you (tack)' },
+                            { left: 'SK', right: 'Slut på kontakt' }
+                        ]
+                    },
+                    {
+                        id: 'c8-6-e8',
+                        type: 'true-false',
+                        question: 'CW-QSO är ofta mycket kortare och mer standardiserade än foni-QSO.',
+                        correct: true,
+                        explanation: 'SANT! CW: Mer förkortningar (TNX, FER, UR), standardformat, ingen "small talk". Fokus på signal, rapport, namn, QTH, 73. Snabbare än foni!'
+                    },
+                    {
+                        id: 'c8-6-e9',
+                        type: 'multiple-choice',
+                        question: 'Varför säger man "When all else fails, CW prevails"?',
+                        options: [
+                            'CW är lättast',
+                            'CW fungerar med extremt svaga signaler när SSB/FM inte fungerar',
+                            'CW är obligatoriskt',
+                            'CW är snabbast'
+                        ],
+                        correct: 1,
+                        explanation: 'CW fungerar när inget annat gör det! Extremt smal bandbredd + enkel utrustning + låg effekt räcker långt. 5W CW ≈ 50W SSB effektivitet!'
+                    },
+                    {
+                        id: 'c8-6-e10',
+                        type: 'multiple-choice',
+                        question: 'Vad är en typisk hastighet för nybörjare i CW?',
+                        options: [
+                            '50-60 WPM',
+                            '5-15 WPM (Words Per Minute)',
+                            '100 WPM',
+                            '1 WPM'
+                        ],
+                        correct: 1,
+                        explanation: 'Nybörjare: 5-15 WPM. Bekvämt QSO: 15-20 WPM. Erfarna: 25-35 WPM. Tävlingar: 40+ WPM. Börja långsamt (5 WPM) och öka gradvis!'
+                    }
+                ]
+            },
+            {
+                id: '8.7',
+                title: '8.7 Digitala trafiksätt',
+                exercises: [
+                    {
+                        id: 'c8-7-e1',
+                        type: 'multiple-choice',
+                        question: 'Vilket är det populäraste digitala modet idag?',
+                        options: [
+                            'RTTY',
+                            'PSK31',
+                            'FT8',
+                            'Packet radio'
+                        ],
+                        correct: 2,
+                        explanation: 'FT8 är EXTREMT populärt sedan 2017! Fungerar ner till -24 dB under brusnivån. 15-sekunders perioder, automatiserad, perfekt för liten antenn/låg effekt.'
+                    },
+                    {
+                        id: 'c8-7-e2',
+                        type: 'true-false',
+                        question: 'FT8 kräver att datorn är tidssynkroniserad med atomur via internet.',
+                        correct: true,
+                        explanation: 'SANT! FT8 kräver exakt tidssynk (inom 1-2 sekunder). Sändningar i 15-sek "slots": 0:00, 0:15, 0:30, 0:45. Programmet (WSJT-X) synkar automatiskt via internet.'
+                    },
+                    {
+                        id: 'c8-7-e3',
+                        type: 'multiple-choice',
+                        question: 'Vilket digitalt mode är bäst för långa, fria keyboard-to-keyboard konversationer?',
+                        options: [
+                            'FT8 (bara standardmeddelanden)',
+                            'PSK31 eller JS8Call',
+                            'RTTY',
+                            'CW'
+                        ],
+                        correct: 1,
+                        explanation: 'PSK31 eller JS8Call! Båda tillåter fria meddelanden (skriv vad du vill). FT8 = bara standardiserade meddelanden (signal, rapport, 73). PSK31: smal bandbredd, real-time.'
+                    },
+                    {
+                        id: 'c8-7-e4',
+                        type: 'multiple-choice',
+                        question: 'Vad behöver du för att köra digitala modes?',
+                        options: [
+                            'Bara en radio',
+                            'Dator, transceiver, interface (eller USB-kabel), programvara',
+                            'Bara dator',
+                            'Speciell digital-radio'
+                        ],
+                        correct: 1,
+                        explanation: 'Behövs: 1) Dator, 2) Transceiver (SSB-läge), 3) Interface (kopplar dator↔radio, t.ex. Signalink USB), 4) Programvara (ofta gratis: WSJT-X, Fldigi).'
+                    },
+                    {
+                        id: 'c8-7-e5',
+                        type: 'true-false',
+                        question: 'Vid digitala modes är rätt ljudnivå KRITISKT - ALC ska INTE slå i taket.',
+                        correct: true,
+                        explanation: 'SANT och VIKTIGT! För högt → övermodulering, splatter, stör andra. För lågt → svag signal. Rätt: ALC rör sig LITE (10-30%), effektmeter visar önskad effekt.'
+                    },
+                    {
+                        id: 'c8-7-e6',
+                        type: 'multiple-choice',
+                        question: 'Vilken frekvens används för APRS (positionsspårning)?',
+                        options: [
+                            '144,800 MHz',
+                            '145,500 MHz',
+                            '433,500 MHz',
+                            '14,300 MHz'
+                        ],
+                        correct: 0,
+                        explanation: '144,800 MHz = APRS-frekvens! APRS = Automatic Packet Reporting System (positionsspårning, meddelanden). Använder paketradio-teknik på 2m-bandet.'
+                    },
+                    {
+                        id: 'c8-7-e7',
+                        type: 'matching',
+                        question: 'Para ihop digitalt mode med egenskap:',
+                        pairs: [
+                            { left: 'FT8', right: 'Mest populärt, -24 dB' },
+                            { left: 'PSK31', right: 'Keyboard-to-keyboard, 31 Hz' },
+                            { left: 'RTTY', right: 'Radio TeleTYpe, tävling' },
+                            { left: 'APRS', right: 'Positionsspårning, 144.800' }
+                        ]
+                    },
+                    {
+                        id: 'c8-7-e8',
+                        type: 'multiple-choice',
+                        question: 'Varför kritiseras FT8 av vissa radioamatörer?',
+                        options: [
+                            'Det är för svårt',
+                            '"Inte riktiga QSO - bara datorer som pratar, ingen personlig kontakt"',
+                            'Det är för dyrt',
+                            'Det är förbjudet'
+                        ],
+                        correct: 1,
+                        explanation: 'Kritik: "För automatiserat, ingen riktig konversation, bara standardmeddelanden". Försvar: "Öppnar radio för fler, perfekt för liten antenn, gör DX tillgängligt". Båda sidor har poänger!'
+                    },
+                    {
+                        id: 'c8-7-e9',
+                        type: 'true-false',
+                        question: 'Digitala modes kan automatiskt logga alla kontakter (datum, tid, frekvens, mode).',
+                        correct: true,
+                        explanation: 'SANT och praktiskt! Program som WSJT-X, Fldigi loggar automatiskt. Kan skicka till online-loggböcker (QRZ.com, eQSL, LoTW). Sparar mycket tid!'
+                    },
+                    {
+                        id: 'c8-7-e10',
+                        type: 'multiple-choice',
+                        question: 'Hur lång är en FT8-period?',
+                        options: [
+                            '5 sekunder',
+                            '10 sekunder',
+                            '15 sekunder',
+                            '30 sekunder'
+                        ],
+                        correct: 2,
+                        explanation: 'FT8: 15 sekunder. En komplett QSO tar ~60 sekunder (4 perioder). FT4 (snabbare): 7,5 sekunder. PSK31: real-time (ingen period).'
+                    }
+                ]
+            },
+            {
+                id: '8.8',
+                title: '8.8 Nödtrafik',
+                exercises: [
+                    {
+                        id: 'c8-8-e1',
+                        type: 'multiple-choice',
+                        question: 'Vad betyder MAYDAY?',
+                        options: [
+                            'Maj-dagen (första maj)',
+                            'Internationellt nödanrop vid omedelbar livsfara',
+                            'Säkerhetsinformation',
+                            'Test av nödsignal'
+                        ],
+                        correct: 1,
+                        explanation: 'MAYDAY = OMEDELBAR LIVSFARA! Från franskans "m\'aidez" (hjälp mig). Används vid sjunkande båt, allvarlig skada, brand med risk för liv. HÖGSTA prioritet!'
+                    },
+                    {
+                        id: 'c8-8-e2',
+                        type: 'multiple-choice',
+                        question: 'Vad är skillnaden mellan MAYDAY och PAN PAN?',
+                        options: [
+                            'Ingen skillnad',
+                            'MAYDAY = omedelbar livsfara, PAN PAN = brådskande men ej omedelbar fara',
+                            'PAN PAN är allvarligare',
+                            'MAYDAY är på svenska, PAN PAN på engelska'
+                        ],
+                        correct: 1,
+                        explanation: 'MAYDAY = omedelbar livsfara (sjunker, någon dör). PAN PAN = brådskande men inte akut (motor havererad, behöver bogsering). SECURITÉ = säkerhetsinformation.'
+                    },
+                    {
+                        id: 'c8-8-e3',
+                        type: 'multiple-choice',
+                        question: 'Vilken är den internationella nödfrekvensen på amatörband?',
+                        options: [
+                            '7,110 MHz',
+                            '14,300 MHz',
+                            '145,500 MHz',
+                            '3,760 MHz'
+                        ],
+                        correct: 1,
+                        explanation: '14,300 MHz = internationell nödfrekvens på 20m-bandet! Övervakad av många stationer, bra räckvidd. Andra: 3,760 (80m), 7,110 (40m), 145,500 (2m lokal).'
+                    },
+                    {
+                        id: 'c8-8-e4',
+                        type: 'true-false',
+                        question: 'Vid verklig nöd får du använda ALLA frekvenser och ALL effekt - reglerna ger vika för att rädda liv.',
+                        correct: true,
+                        explanation: 'SANT och KRITISKT! Vid nöd: Alla frekvenser OK (även utanför amatörband), all effekt OK, alla trafiksätt OK. LIV går före regler. Dokumentera och förklara efteråt.'
+                    },
+                    {
+                        id: 'c8-8-e5',
+                        type: 'multiple-choice',
+                        question: 'Hur många gånger säger man MAYDAY i början av nödanropet?',
+                        options: [
+                            'En gång',
+                            'Två gånger',
+                            'Tre gånger',
+                            'Tio gånger'
+                        ],
+                        correct: 2,
+                        explanation: 'TRE gånger! "MAYDAY MAYDAY MAYDAY, this is [signal] [signal] [signal], MAYDAY [signal], My position is..." Detta säkerställer att alla hör att det är NÖD!'
+                    },
+                    {
+                        id: 'c8-8-e6',
+                        type: 'multiple-choice',
+                        question: 'Om du hör MAYDAY, vad ska du göra FÖRST?',
+                        options: [
+                            'Fortsätt din QSO',
+                            'Sluta sända OMEDELBART och lyssna',
+                            'Byt frekvens',
+                            'Stäng av radion'
+                        ],
+                        correct: 1,
+                        explanation: '1) SLUTA SÄNDA omedelbart! 2) Anteckna all info. 3) Vänta - kanske svarar kustradio/närmare station. 4) Svara om ingen annan gör det. 5) Ring 112. 6) Assistera.'
+                    },
+                    {
+                        id: 'c8-8-e7',
+                        type: 'matching',
+                        question: 'Para ihop nödsignal med betydelse:',
+                        pairs: [
+                            { left: 'MAYDAY', right: 'Omedelbar livsfara' },
+                            { left: 'PAN PAN', right: 'Brådskande, ej akut' },
+                            { left: 'SECURITÉ', right: 'Säkerhetsinformation' },
+                            { left: 'SOS (CW)', right: '· · · − − − · · ·' }
+                        ]
+                    },
+                    {
+                        id: 'c8-8-e8',
+                        type: 'true-false',
+                        question: 'Om du hör MAYDAY ska du ringa 112 (nödnummer) och informera om situationen.',
+                        correct: true,
+                        explanation: 'SANT! Ring 112, berätta att du hört MAYDAY-anrop på radio, ge ALL information (position, situation, antal personer). SOS Alarm kopplar till rätt myndighet (kustbevakning, polis, ambulans).'
+                    },
+                    {
+                        id: 'c8-8-e9',
+                        type: 'multiple-choice',
+                        question: 'Vad ska ingå i ett MAYDAY-anrop?',
+                        options: [
+                            'Bara anropssignal',
+                            'MAYDAY × 3, signal × 3, position, situation, hjälpbehov, antal personer',
+                            'Bara position',
+                            'Bara "hjälp"'
+                        ],
+                        correct: 1,
+                        explanation: 'Format: MAYDAY × 3, this is [signal] × 3, MAYDAY [signal], position (GPS/beskrivning), I have [situation], I require [hjälp], [antal personer], [annan info], Over.'
+                    },
+                    {
+                        id: 'c8-8-e10',
+                        type: 'true-false',
+                        question: 'Nödtrafik har ALLTID absolut prioritet - all annan trafik måste avbrytas omedelbart.',
+                        correct: true,
+                        explanation: 'SANT och lag! Nödtrafik > allt annat. Alla tystnar, lyssnar, hjälper om möjligt. Säg "SM5XYZ clear för nödtrafik". Återuppta normal trafik först när nödsituationen löst.'
+                    }
+                ]
+            }
+        ]
     },
     {
         id: 9,
@@ -5768,7 +6721,7 @@ function getCertChapter(chapterId) {
 }
 
 function getSubchapter(chapterId, subchapterId) {
-    const chapter = getCertChapter(chapterId);
+      const chapter = getCertChapter(chapterId);
     if (!chapter) return null;
     return chapter.subchapters.find(sub => sub.id === subchapterId);
 }
