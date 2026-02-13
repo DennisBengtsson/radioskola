@@ -30,14 +30,15 @@
 
     <main class="chapter-page">
         <div class="chapter-content">
+
             <!-- Kapitel Hero -->
             <div class="chapter-hero">
                 <div class="chapter-badge">Kapitel 10</div>
                 <h1>Praktisk Trafik</h1>
-                <p>Sätt ihop allt du lärt dig - från första QSO till DX-expeditioner</p>
+                <p>Sätt ihop allt du lärt dig – från att bygga din station till ditt första QSO, DX-expeditioner och allt däremellan</p>
                 <div class="chapter-meta">
-                    <span>⏱️ 2 timmar</span>
-                    <span>📝 25 frågor</span>
+                    <span>⏱️ 3–4 timmar</span>
+                    <span>📝 35 frågor</span>
                     <span id="chapterProgress">📊 0% genomfört</span>
                 </div>
             </div>
@@ -46,7 +47,7 @@
             <div class="content-section toc">
                 <h2>📑 Innehåll</h2>
                 <ol class="toc-list">
-                    <li><a href="#station">Stationsuppbyggnad</a></li>
+                    <li><a href="#station">Stationsuppbyggnad – Ditt shack</a></li>
                     <li><a href="#forsta-qso">Ditt första QSO</a></li>
                     <li><a href="#dx">DX och tävlingar</a></li>
                     <li><a href="#diplom">Diplom och utmärkelser</a></li>
@@ -55,397 +56,1901 @@
                 </ol>
             </div>
 
-            <!-- Sektion 1: Stationsuppbyggnad -->
-            <div class="content-section" id="station">
-                <h2>10.1 Stationsuppbyggnad</h2>
-                
-                <h3>Grundutrustning</h3>
-                <p>En komplett amatörradiostation behöver:</p>
-                
-                <h4>Transceiver (sändare/mottagare)</h4>
-                <ul>
-                    <li><strong>HF-transceiver:</strong> För kortvågsbanden (160m-10m)</li>
-                    <li><strong>VHF/UHF-transceiver:</strong> För 2m, 70cm m.fl.</li>
-                    <li><strong>Allbandsradio:</strong> Täcker både HF och VHF/UHF</li>
-                    <li><strong>Handhållen radio:</strong> Portabel för VHF/UHF</li>
-                </ul>
-                
-                <h4>Nätaggregat</h4>
-                <ul>
-                    <li>De flesta radioapparater körs på 13,8V likström</li>
-                    <li>Dimensionera för radioapparatens strömförbrukning + marginal</li>
-                    <li>En 100W HF-radio drar ca 20-22A vid sändning</li>
-                </ul>
-                
-                <h4>Antenn</h4>
-                <ul>
-                    <li>Anpassad för de band du vill använda</li>
-                    <li>Dipol är enkelt och fungerar bra</li>
-                    <li>Vertikal för begränsad plats</li>
-                    <li>Riktantenn för seriöst DX</li>
-                </ul>
-                
-                <h4>Matarledning</h4>
-                <ul>
-                    <li>Koaxialkabel (50Ω) vanligast</li>
-                    <li>Välj kvalitet för låga förluster</li>
-                    <li>Vattentäta kontakter utomhus</li>
-                </ul>
-                
-                <h4>SWR/Effektmätare</h4>
-                <ul>
-                    <li>Kontrollera anpassningen</li>
-                    <li>Verifiera uteffekten</li>
-                </ul>
-                
-                <h4>Antennavstämningsenhet (ATU)</h4>
-                <ul>
-                    <li>Anpassar antennens impedans till 50Ω</li>
-                    <li>Inbyggd i många moderna transceivrar</li>
-                </ul>
-                
-                <h3>Ergonomi i shacket</h3>
-                <ul>
-                    <li>Bekväm sittställning</li>
-                    <li>Bra belysning</li>
-                    <li>Kontroller inom räckhåll</li>
-                    <li>Mikrofon i rätt höjd</li>
-                    <li>Hörlurar för bättre koncentration</li>
-                </ul>
-                
-                <h3>Loggning</h3>
-                <p>Även om det inte är obligatoriskt rekommenderas loggning:</p>
-                <ul>
-                    <li><strong>Papperslogg:</strong> Traditionellt, fungerar alltid</li>
-                    <li><strong>Datorlogg:</strong> Sökbart, kan laddas upp till LoTW/eQSL</li>
-                    <li>Populära loggprogram: Log4OM, N1MM+, Ham Radio Deluxe</li>
-                </ul>
-            </div>
+<!-- ============================================ -->
+<!-- SEKTION 10.1: STATIONSUPPBYGGNAD -->
+<!-- ============================================ -->
 
-            <!-- Sektion 2: Första QSO -->
-            <div class="content-section" id="forsta-qso">
-                <h2>10.2 Ditt Första QSO</h2>
-                
-                <h3>Förberedelser</h3>
-                <ol>
-                    <li>Kontrollera att allt fungerar (gärna med dummyload först)</li>
-                    <li>Kontrollera SWR på antennen</li>
-                    <li>Ha papper och penna redo</li>
-                    <li>Ha Q-koder och fonetiska alfabetet tillgängligt</li>
-                    <li>Bestäm vilket band som är öppet</li>
-                </ol>
-                
-                <h3>Lyssna först!</h3>
-                <p>Innan du sänder, lyssna och lär dig hur andra gör:</p>
-                <ul>
-                    <li>Hur låter ett CQ-anrop?</li>
-                    <li>Hur svarar man?</li>
-                    <li>Vilken information utbyts?</li>
-                    <li>Hur avslutas kontakten?</li>
-                </ul>
-                
-                <h3>Svara på CQ - enklaste sättet att börja</h3>
-                <p>Att svara på någon annans CQ är mindre nervöst än att ropa CQ själv:</p>
-                
-                <div class="example-box">
-                    <strong>Du hör:</strong>
-                    <br>"CQ CQ CQ, this is DL1ABC, Delta Lima One Alfa Bravo Charlie, calling CQ"
+<div class="content-section" id="station">
+    <h2>10.1 Stationsuppbyggnad – Ditt Shack</h2>
+
+    <h3>Vad är ett "shack"?</h3>
+    <p>Ett <strong>shack</strong> är radioamatörens ord för den plats där stationen finns – ett rum, ett skrivbord, ett hörn av garaget eller en bärbar låda man tar med ut i naturen. Oavsett storlek gäller samma grundprinciper: rätt utrustning, ordning och god jordning.</p>
+
+    <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+        <strong>💡 Snickeri-analogin:</strong>
+        <br><br>
+        Att bygga ett shack liknar att sätta ihop en verktygsbod:
+        <br><br>
+        <strong>Transceivern</strong> = Din viktigaste maskin (svarven/borrmaskinen)
+        <br><strong>Nätaggregatet</strong> = Elnätet – utan det händer ingenting
+        <br><strong>Antennen</strong> = Hantverksskickligheten som når ut i världen
+        <br><strong>Matarledningen</strong> = Förlängningskabeln – kvalitet spelar roll!
+        <br><strong>SWR-mätaren</strong> = Skjutmåttet – kontrollera att allt stämmer
+        <br><br>
+        Precis som med verktyg: ett bra grundsortiment räcker långt i början!
+    </div>
+
+    <h3>Blockschema – Hur allt hänger ihop</h3>
+
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">🔷 STATIONENS SIGNALVÄG</h4>
+
+        <div style="text-align: center; margin: 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" style="max-width: 900px; width: 100%;">
+                <defs>
+                    <marker id="arr1" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                        <polygon points="0 0,10 3,0 6" fill="#1f2937"/>
+                    </marker>
+                </defs>
+                <!-- Elnät / Batteri -->
+                <rect x="10" y="120" width="90" height="60" rx="8" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+                <text x="55" y="145" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">Nätaggregat</text>
+                <text x="55" y="160" text-anchor="middle" fill="white" font-family="Arial" font-size="11">13,8 V DC</text>
+                <text x="55" y="195" text-anchor="middle" fill="#1f2937" font-family="Arial" font-size="10">⚡ Strömförsörjning</text>
+
+                <!-- Pil ned från nätaggregat till transceiver -->
+                <line x1="55" y1="180" x2="55" y2="210" stroke="#1f2937" stroke-width="2" marker-end="url(#arr1)"/>
+                <line x1="55" y1="210" x2="170" y2="210" stroke="#1f2937" stroke-width="2"/>
+                <line x1="170" y1="210" x2="170" y2="185" stroke="#1f2937" stroke-width="2" marker-end="url(#arr1)"/>
+
+                <!-- Transceiver -->
+                <rect x="120" y="110" width="110" height="80" rx="8" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
+                <text x="175" y="140" text-anchor="middle" fill="white" font-family="Arial" font-size="13" font-weight="bold">Transceiver</text>
+                <text x="175" y="158" text-anchor="middle" fill="white" font-family="Arial" font-size="11">(TX + RX)</text>
+                <text x="175" y="207" text-anchor="middle" fill="#1f2937" font-family="Arial" font-size="10">🎛️ Hjärtat i stationen</text>
+
+                <!-- Pil från TX till SWR-mätare -->
+                <line x1="230" y1="150" x2="290" y2="150" stroke="#1f2937" stroke-width="2" marker-end="url(#arr1)"/>
+
+                <!-- SWR-mätare -->
+                <rect x="290" y="120" width="100" height="60" rx="8" fill="#059669" stroke="#047857" stroke-width="2"/>
+                <text x="340" y="145" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">SWR/Effekt-</text>
+                <text x="340" y="160" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">mätare</text>
+                <text x="340" y="198" text-anchor="middle" fill="#1f2937" font-family="Arial" font-size="10">📊 Kontrollera anpassning</text>
+
+                <!-- Pil till ATU -->
+                <line x1="390" y1="150" x2="450" y2="150" stroke="#1f2937" stroke-width="2" marker-end="url(#arr1)"/>
+                <text x="420" y="140" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">(optional)</text>
+
+                <!-- ATU -->
+                <rect x="450" y="120" width="90" height="60" rx="8" fill="#8b5cf6" stroke="#6d28d9" stroke-width="2"/>
+                <text x="495" y="145" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">ATU</text>
+                <text x="495" y="162" text-anchor="middle" fill="white" font-family="Arial" font-size="11">Antennanp.</text>
+                <text x="495" y="198" text-anchor="middle" fill="#1f2937" font-family="Arial" font-size="10">🎯 Matcha 50Ω</text>
+
+                <!-- Pil till koaxialkabel -->
+                <line x1="540" y1="150" x2="610" y2="150" stroke="#1f2937" stroke-width="2" marker-end="url(#arr1)"/>
+
+                <!-- Koaxialkabel -->
+                <rect x="610" y="120" width="100" height="60" rx="8" fill="#dc2626" stroke="#991b1b" stroke-width="2"/>
+                <text x="660" y="145" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">Koaxial-</text>
+                <text x="660" y="162" text-anchor="middle" fill="white" font-family="Arial" font-size="12" font-weight="bold">kabel</text>
+                <text x="660" y="198" text-anchor="middle" fill="#1f2937" font-family="Arial" font-size="10">🔌 50Ω matarledning</text>
+
+                <!-- Pil till antenn -->
+                <line x1="710" y1="150" x2="780" y2="150" stroke="#1f2937" stroke-width="2" marker-end="url(#arr1)"/>
+
+                <!-- Antenn -->
+                <line x1="820" y1="70" x2="820" y2="185" stroke="#f59e0b" stroke-width="4"/>
+                <line x1="790" y1="100" x2="850" y2="100" stroke="#f59e0b" stroke-width="3"/>
+                <line x1="795" y1="120" x2="845" y2="120" stroke="#f59e0b" stroke-width="2"/>
+                <line x1="800" y1="140" x2="840" y2="140" stroke="#f59e0b" stroke-width="2"/>
+                <text x="820" y="210" text-anchor="middle" fill="#1f2937" font-family="Arial" font-size="10">📡 Antenn</text>
+                <text x="820" y="220" text-anchor="middle" fill="#6b7280" font-family="Arial" font-size="9">(ut i världen!)</text>
+
+                <!-- Mikrofon / Nyckel -->
+                <ellipse cx="175" cy="80" rx="30" ry="20" fill="#374151" stroke="#1f2937" stroke-width="2"/>
+                <text x="175" y="85" text-anchor="middle" fill="white" font-family="Arial" font-size="11">🎤 Mic</text>
+                <line x1="175" y1="100" x2="175" y2="110" stroke="#1f2937" stroke-width="2" marker-end="url(#arr1)"/>
+
+                <!-- Hörlurar -->
+                <ellipse cx="285" cy="80" rx="30" ry="20" fill="#374151" stroke="#1f2937" stroke-width="2"/>
+                <text x="285" y="85" text-anchor="middle" fill="white" font-family="Arial" font-size="11">🎧 Hörl.</text>
+                <line x1="265" y1="100" x2="230" y2="110" stroke="#1f2937" stroke-width="2" marker-end="url(#arr1)"/>
+            </svg>
+        </div>
+        <p style="text-align: center; color: #6b7280; font-size: 0.9rem; margin-top: 0;">Signalvägen: Mikrofon → Transceiver → SWR-mätare → ATU → Koaxialkabel → Antenn → Världen!</p>
+    </div>
+
+    <h3>1️⃣ Transceivern – Stationens hjärta</h3>
+
+    <p>Transceivern är den viktigaste komponenten i din station. Den kombinerar sändare och mottagare i ett och samma hölje (se Kapitel 2.4). Vad passar din situation?</p>
+
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">🎛️ VÄLJ RÄTT TRANSCEIVER</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Typ</th>
+                    <th style="width: 35%;">Passar för</th>
+                    <th style="width: 20%;">Typisk effekt</th>
+                    <th style="width: 20%;">Typisk kostnad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #fff7ed;">
+                    <td><strong>HF-transceiver</strong><br><em>t.ex. Icom IC-7300</em></td>
+                    <td>Kortvåg (160m–10m), DX, SSB, CW, digitalt</td>
+                    <td>100 W</td>
+                    <td>8 000–25 000 kr</td>
+                </tr>
+                <tr style="background: #dbeafe;">
+                    <td><strong>VHF/UHF-transceiver</strong><br><em>t.ex. Icom IC-9700</em></td>
+                    <td>Lokalradio, repeatrar, satellit, 2m/70cm</td>
+                    <td>50–100 W</td>
+                    <td>6 000–20 000 kr</td>
+                </tr>
+                <tr style="background: #d1fae5;">
+                    <td><strong>Allbandsradio</strong><br><em>t.ex. Yaesu FT-991A</em></td>
+                    <td>Täcker HF + VHF/UHF i en enhet – perfekt för nybörjare</td>
+                    <td>100 W (HF), 50 W (VHF)</td>
+                    <td>10 000–18 000 kr</td>
+                </tr>
+                <tr style="background: #fce7f3;">
+                    <td><strong>Handhållen (HT)</strong><br><em>t.ex. Baofeng UV-5R, Yaesu FT-60</em></td>
+                    <td>Portabelt, FM, repeatrar, enkel att börja med</td>
+                    <td>5 W</td>
+                    <td>500–3 000 kr</td>
+                </tr>
+                <tr style="background: #ede9fe;">
+                    <td><strong>SDR-transceiver</strong><br><em>t.ex. ANAN, Flex Radio</em></td>
+                    <td>Experimentellt, bred täckning, datorbaserat</td>
+                    <td>10–100 W</td>
+                    <td>5 000–50 000 kr</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+            <strong style="color: #92400e;">💡 Rekommendation för nybörjare:</strong>
+            <br>Börja med en <strong>allbandsradio</strong> eller en <strong>handhållen VHF-radio</strong>.
+            Allbanden ger dig tillgång till HF-DX och lokal VHF direkt. Handhållna är billiga och bra för att lära sig grunderna på 2m-bandet.
+        </div>
+    </div>
+
+    <h3>2️⃣ Nätaggregat – Strömförsörjningen</h3>
+
+    <p>De flesta transceivrar är byggda för 13,8 V likström (DC). Du behöver antingen ett nätaggregat (om du kör hemma) eller ett batteri (portabelt). Dimensionera ALLTID med marginal!</p>
+
+    <div class="example-box" style="border-left: 4px solid #f59e0b;">
+        <strong>⚡ Exempel – Beräkna strömförbrukning:</strong>
+        <br><br>
+        Du har en 100 W HF-transceiver. Slutstegets verkningsgrad är ca 50% (klass AB, se Kapitel 2.8).
+        <br><br>
+        <strong>Ineffekt vid sändning:</strong>
+        <br>P<sub>in</sub> = P<sub>ut</sub> / verkningsgrad = 100 W / 0,5 = <strong>200 W</strong>
+        <br><br>
+        <strong>Ström vid 13,8 V:</strong>
+        <br>I = P / U = 200 W / 13,8 V ≈ <strong>14,5 A</strong>
+        <br><br>
+        <strong>Val av nätaggregat:</strong>
+        <br>• 14,5 A vid sändning → välj minst <strong>20 A</strong> (30% marginal)
+        <br>• En 100 W radio: köp ett 20–25 A nätaggregat
+        <br>• Dubbla den siffran om du planerar en linjärförstärkare!
+        <br><br>
+        <em>🎯 Tumregel: 1 W RF-effekt ≈ 0,2 A vid 13,8 V</em>
+    </div>
+
+    <div class="info-box warning" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+        <strong>⚠️ Nätaggregat-tips:</strong>
+        <br><br>
+        <strong>Linjärt nätaggregat</strong> (t.ex. Kenwood PS-53):
+        <br>• Tyst, inga störningar
+        <br>• Tungt och dyrt men bra för radio
+        <br><br>
+        <strong>Switch-mode nätaggregat</strong> (SMPS):
+        <br>• Lätt och billigt
+        <br>• Kan generera RF-störningar – köp ett av god kvalitet (t.ex. MFJ, Samlex)
+        <br>• Billiga modeller kan förstöra mottagningen på HF!
+        <br><br>
+        <em>💡 Investera i ett bra nätaggregat – det är billigare än att jaga störningar!</em>
+    </div>
+
+    <h3>3️⃣ Antenn – Viktigaste komponenten av alla!</h3>
+
+    <p>Många erfarna amatörer säger: <em>"En enkel antenn med hög effekt slår en avancerad radio med dålig antenn – varje gång."</em> Antennen är avgörande för hur långt och bra du når.</p>
+
+    <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 3px solid #059669; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #065f46;">📡 ANTENNÖVERSIKT FÖR NYBÖRJARE</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Antenntyp</th>
+                    <th style="width: 30%;">Hur den fungerar</th>
+                    <th style="width: 25%;">Fördelar</th>
+                    <th style="width: 25%;">Nackdelar</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>Halvvågsdipol</strong><br><em>λ/2</em></td>
+                    <td>Två lika långa ledare i linje, matad i mitten. Längd = 143/f(MHz) meter per arm.</td>
+                    <td>• Enkelt att bygga<br>• Bra strålningsmönster<br>• Billigt – bara tråd!</td>
+                    <td>• Fungerar bara på ett band<br>• Kräver upphängningspunkter</td>
+                </tr>
+                <tr style="background: #f0f9ff;">
+                    <td><strong>Vertikal antenn</strong><br><em>λ/4</em></td>
+                    <td>En vertikal stav (kvartsvåg) med jordplan (radialer)</td>
+                    <td>• Lågt antenntag<br>• Låg vinkel = bra DX<br>• En upphängningspunkt</td>
+                    <td>• Kräver bra jordplan<br>• Mer brus från marken<br>• Behöver radialer</td>
+                </tr>
+                <tr style="background: #fff7ed;">
+                    <td><strong>G5RV / Zepp</strong></td>
+                    <td>Multibandantenn med balun och matchningssektion (ca 31m + matarledning)</td>
+                    <td>• Multiband (3,5–28 MHz)<br>• Relativt enkel<br>• Populär</td>
+                    <td>• Behöver ATU på vissa band<br>• SWR inte perfekt på alla band</td>
+                </tr>
+                <tr style="background: #fce7f3;">
+                    <td><strong>Yagi-riktantenn</strong></td>
+                    <td>Driven dipol + reflektorer + direktorer ger riktning och förstärkning</td>
+                    <td>• Hög förstärkning (6–12 dBd)<br>• Riktad = mer mot DX<br>• Undertrycker störningar</td>
+                    <td>• Kräver mast och rotor<br>• Dyr och komplicerad<br>• Stor vindyta</td>
+                </tr>
+                <tr style="background: #ede9fe;">
+                    <td><strong>Loopantenn</strong><br><em>Magnetisk loop</em></td>
+                    <td>Liten kompakt loop med kondensator – resonant trots liten fysisk storlek</td>
+                    <td>• Liten och diskret<br>• Bra i lägenheter<br>• Låg brusupptagning</td>
+                    <td>• Smal bandbredd<br>• Ständig omsömning<br>• Hög Q = noggrann avstämning</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="example-box" style="border-left: 4px solid #059669;">
+        <strong>📻 Exempel – Beräkna dipolens längd för 40m-bandet:</strong>
+        <br><br>
+        40m-bandet har mittenfrekvens ca <strong>7,100 MHz</strong>.
+        <br><br>
+        <strong>Formel för varje arm (λ/4):</strong>
+        <br>Armlängd = 143 / f(MHz) = 143 / 7,1 ≈ <strong>20,1 meter per arm</strong>
+        <br><br>
+        <strong>Total dipollängd:</strong>
+        <br>2 × 20,1 = <strong>40,2 meter</strong>
+        <br><br>
+        <strong>Praktiskt:</strong>
+        <br>• Skär lite längre (t.ex. 21 m per arm) och stäm sedan av med SWR-mätare
+        <br>• Kortare = högre resonansfrekvens; längre = lägre resonansfrekvens
+        <br>• Höjd påverkar också – ju högre, desto bättre!
+        <br><br>
+        <em>🎯 En enkel 40m-dipol + 100W kan nå hela Europa utan problem!</em>
+    </div>
+
+    <h3>4️⃣ Matarledning – Koaxialkabeln</h3>
+
+    <p>Matarledningen transporterar RF-signal mellan transceivern och antennen. Alla kablar har <strong>förluster</strong> som ökar med frekvensen och kabellängden. Välj rätt kabel!</p>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th style="width: 20%;">Kabeltyp</th>
+                <th style="width: 20%;">Impedans</th>
+                <th style="width: 30%;">Förlust (per 100m)</th>
+                <th style="width: 30%;">Användning</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: #d1fae5;">
+                <td><strong>RG-213</strong></td>
+                <td>50 Ω</td>
+                <td>~4 dB vid 30 MHz<br>~10 dB vid 145 MHz</td>
+                <td>HF (kortvåg) – bra balans pris/prestanda</td>
+            </tr>
+            <tr style="background: #fef3c7;">
+                <td><strong>RG-58</strong></td>
+                <td>50 Ω</td>
+                <td>~8 dB vid 30 MHz<br>~20 dB vid 145 MHz</td>
+                <td>Korta kablar, portabelt, lättare – ej VHF/UHF långt</td>
+            </tr>
+            <tr style="background: #dbeafe;">
+                <td><strong>Aircom Plus / LMR-400</strong></td>
+                <td>50 Ω</td>
+                <td>~2 dB vid 30 MHz<br>~5 dB vid 145 MHz</td>
+                <td>VHF/UHF och längre sträckor – lägre förlust</td>
+            </tr>
+            <tr style="background: #fce7f3;">
+                <td><strong>Öppen linje (ladder-line)</strong></td>
+                <td>300–600 Ω</td>
+                <td>&lt;1 dB vid 30 MHz</td>
+                <td>Multiband med ATU, långt avstånd till antenn – billigast och bäst!</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="info-box important" style="background: #fee2e2; border-left: 4px solid #dc2626;">
+        <strong>⚠️ Koaxialkabel-vanliga misstag:</strong>
+        <br><br>
+        <strong>1. Vattenintrång:</strong>
+        <br>• Täta ALLA kontakter ute med självvulkaniserande tejp!
+        <br>• Vatten i koaxen = förluster och korrosion = trasig antenn
+        <br><br>
+        <strong>2. För tunn kabel på VHF/UHF:</strong>
+        <br>• RG-58 + 15m + 144 MHz = ca 3 dB förlust = halva effekten försvinner!
+        <br>• Använd LMR-400 eller Aircom Plus på VHF/UHF
+        <br><br>
+        <strong>3. Dåliga PL-259-kontakter:</strong>
+        <br>• En dålig lödning kan ge mer förlust än hela kabeln!
+        <br>• Lär dig löda ordentligt eller använd klämkontakter av god kvalitet
+    </div>
+
+    <h3>5️⃣ SWR-mätare – Ditt viktigaste kontrollinstrument</h3>
+
+    <p>SWR (Standing Wave Ratio, stående vågförhållande) visar hur väl din antenn är anpassad till 50 Ω. SWR = 1:1 är perfekt, SWR = 3:1 börjar bli problematiskt.</p>
+
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">📊 SWR-TABELL – Vad betyder mätvärdena?</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">SWR</th>
+                    <th style="width: 25%;">Reflekterad effekt</th>
+                    <th style="width: 25%;">Status</th>
+                    <th style="width: 30%;">Åtgärd</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #d1fae5;">
+                    <td><strong>1,0 : 1</strong></td>
+                    <td>0%</td>
+                    <td>✅ Perfekt!</td>
+                    <td>Ingenting – kör på!</td>
+                </tr>
+                <tr style="background: #d1fae5;">
+                    <td><strong>1,5 : 1</strong></td>
+                    <td>4%</td>
+                    <td>✅ Utmärkt</td>
+                    <td>Ingenting krävs</td>
+                </tr>
+                <tr style="background: #fef3c7;">
+                    <td><strong>2,0 : 1</strong></td>
+                    <td>11%</td>
+                    <td>⚠️ Acceptabelt</td>
+                    <td>ATU kan hjälpa, transceiver klarar det</td>
+                </tr>
+                <tr style="background: #fef3c7;">
+                    <td><strong>3,0 : 1</strong></td>
+                    <td>25%</td>
+                    <td>⚠️ Högt</td>
+                    <td>ATU behövs, kabelförluster ökar</td>
+                </tr>
+                <tr style="background: #fee2e2;">
+                    <td><strong>5,0 : 1</strong></td>
+                    <td>44%</td>
+                    <td>❌ För högt</td>
+                    <td>Justera antenn, riskerar transceiverskada</td>
+                </tr>
+                <tr style="background: #fee2e2;">
+                    <td><strong>∞ : 1</strong></td>
+                    <td>100%</td>
+                    <td>❌ Öppen krets!</td>
+                    <td>Kontrollera antennkabeln – något är av!</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size: 0.9rem; color: #92400e; margin-top: 1rem;">
+            <strong>💡 Kom ihåg:</strong> SWR mäts vid transceivern. En lång kabel med förluster kan "dölja" ett dåligt SWR vid antennen – kabeln absorberar den reflekterade effekten. Det är inte en lösning!
+        </p>
+    </div>
+
+    <h3>6️⃣ Loggning – Håll ordning på dina QSO:n</h3>
+
+    <p>Loggning är inte längre obligatorisk i Sverige, men det är starkt rekommenderat. Loggen är ditt minne – och nyckeln till alla diplom!</p>
+
+    <div class="info-box tip">
+        <strong>💡 Vad ska du logga?</strong>
+        <br><br>
+        Minst detta för varje QSO:
+        <br>• <strong>Datum och tid (UTC)</strong>
+        <br>• <strong>Anropssignal</strong> (den du pratade med)
+        <br>• <strong>Band och frekvens</strong>
+        <br>• <strong>Mode</strong> (SSB, CW, FT8, FM...)
+        <br>• <strong>RST-rapport</strong> (given och mottagen)
+        <br>• <strong>Namn och QTH</strong> (om utbytt)
+        <br><br>
+        Populära gratisprogram: <strong>Log4OM</strong> (rekommenderas!), N1MM+, Ham Radio Deluxe
+        <br><br>
+        Ladda sedan upp till <strong>LoTW</strong> (ARRL Logbook of the World) för digitala QSL-bekräftelser och diplomjakt!
+    </div>
+
+    <h3>7️⃣ Jordning och EMC</h3>
+
+    <p>En bra RF-jord är viktig för god prestanda och för att undvika RF i högtalarana, brummande audio och "pratig" mikrofon.</p>
+
+    <div class="info-box important" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+        <strong>🔌 Grundregler för jord:</strong>
+        <br><br>
+        <strong>1. Stationsjord:</strong>
+        <br>• Kortaste möjliga väg till ett bra jordtag (jordspjut, vattenledning)
+        <br>• Bred koppartape eller tjock kabel (inte smal tråd – den har induktans!)
+        <br><br>
+        <strong>2. Gemensam jord för all utrustning:</strong>
+        <br>• Alla enheter jordas till EN gemensam punkt (stjärnjord)
+        <br>• Undviker jordloopar som skapar brum
+        <br><br>
+        <strong>3. Balun vid dipol:</strong>
+        <br>• En 1:1 balun (strömbalun) förhindrar RF på koaxens yttersida
+        <br>• Annars kan RF "följa kabeln in" och orsaka störningar i shacket
+        <br><br>
+        <strong>4. Ferritkärnor:</strong>
+        <br>• Sätt ferritkärnor på USB-kablar, nätkablar, audiokablar
+        <br>• Stoppar RF från att ta sig in i datorn och orsaka digitalt brus
+    </div>
+
+    <h3>✅ Snabbtest – Stationsuppbyggnad</h3>
+
+    <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+        <strong>✅ Kan du svara på dessa?</strong>
+        <ul style="margin-top: 0.5rem;">
+            <li>Vilken spänning kör de flesta HF-transceivrar på?</li>
+            <li>Hur beräknar du ett nätaggregats ström för en 100W radio?</li>
+            <li>Hur lång är varje arm på en 80m-dipol (mitt på bandet, 3,6 MHz)?</li>
+            <li>Vad innebär SWR 2:1 – hur stor andel effekt reflekteras?</li>
+            <li>Varför är jordning viktigt i ett shack?</li>
+        </ul>
+        <details style="margin-top: 0.5rem;">
+            <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+            <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                <strong>Svar:</strong>
+                <br>• 13,8 V DC
+                <br>• P = 200W (50% verkningsgrad), I = 200/13,8 ≈ 14,5A → välj 20A nätaggregat
+                <br>• 143/3,6 ≈ 39,7 meter per arm (totalt ca 80m – därav bandnamnet!)
+                <br>• 11% av effekten reflekteras (acceptabelt)
+                <br>• Undviker RF i shacket, brum, störningar i audio och datorproblem
+            </div>
+        </details>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SEKTION 10.2: DITT FÖRSTA QSO -->
+<!-- ============================================ -->
+
+<div class="content-section" id="forsta-qso">
+    <h2>10.2 Ditt Första QSO</h2>
+
+    <h3>Nervöst? Det är helt normalt!</h3>
+    <p>Nästan varje radioamatör minns sitt allra första QSO – lite svettiga händer, röst som darrar, och en känsla av att man har glömt allt man läst. Det är normalt! Alla erfarna amatörer var nybörjare en gång, och hobby-andan i etern är generellt väldigt välkomnande och tålmodig.</p>
+
+    <div class="info-box tip" style="background: #d1fae5; border-left: 4px solid #059669;">
+        <strong>💡 Strategin: Börja med att LYSSNA</strong>
+        <br><br>
+        Minst en vecka innan ditt första QSO – slå på radion och lyssna:
+        <br><br>
+        • Hur låter ett typiskt CQ-anrop?
+        <br>• Vad säger folk när de svarar?
+        <br>• Vilken information utbyts normalt?
+        <br>• Hur låter det i en pile-up?
+        <br>• Hur avslutas en kontakt?
+        <br><br>
+        2m FM-repeatrar är PERFEKTA för nybörjare – trafiken är lokal, signalerna är starka, och det är ett förlåtande format!
+    </div>
+
+    <h3>Förberedelser innan du trycker PTT första gången</h3>
+
+    <div style="background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border: 3px solid #8b5cf6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #5b21b6;">📋 CHECKLISTA FÖRE FÖRSTA QSO</h4>
+
+        <table style="width: 100%; margin-top: 1rem; background: white; border-radius: 8px;">
+            <tr>
+                <td style="padding: 1rem; border-right: 2px solid #8b5cf6; vertical-align: top;">
+                    <strong style="color: #5b21b6;">Tekniskt:</strong>
                     <br><br>
-                    <strong>Du svarar:</strong>
-                    <br>"DL1ABC, this is SM5XYZ, Sierra Mike Five X-ray Yankee Zulu"
+                    ☐ Licens klar – du har fått din anropssignal
+                    <br>☐ Transceiver testad med dummyload
+                    <br>☐ SWR kontrollerat på bandet (&lt; 2:1)
+                    <br>☐ Mikrofonvinkel och nivå inställd
+                    <br>☐ VOX eller PTT – vet du vilket?
+                    <br>☐ Rätt band (är bandet öppet nu?)
+                    <br>☐ Frekvensen ledig? (fråga QRL?)
+                    <br>☐ Mode rätt (SSB = USB på 20m, LSB på 40/80m)
+                </td>
+                <td style="padding: 1rem; vertical-align: top;">
+                    <strong style="color: #5b21b6;">Praktiskt:</strong>
                     <br><br>
-                    <strong>DL1ABC:</strong>
-                    <br>"SM5XYZ, thanks for the call. You are 59, name is Hans, QTH Munich. How copy?"
+                    ☐ Papper och penna redo
+                    <br>☐ Loggbok öppen
+                    <br>☐ Fonetiska alfabetet tillgängligt (om du är osäker)
+                    <br>☐ Klocka synlig (UTC-tid!)
+                    <br>☐ Karta eller globe (för att se var motparten är)
+                    <br>☐ Du vet din QTH (ort och locator)
+                    <br>☐ Du vet vad du ska säga (öva högt hemma!)
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <h3>Tre vägar till ditt första QSO</h3>
+
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">🛤️ VÄLJ DIN INGÅNG</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 30%;">Metod</th>
+                    <th style="width: 35%;">Hur</th>
+                    <th style="width: 35%;">Svårighetsgrad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #d1fae5;">
+                    <td><strong>1. FM-repeater</strong><br>⭐ Enklast!</td>
+                    <td>Ställ in repeaterfrekvens + CTCSS-ton, säg din signal och "goddag" på svenska</td>
+                    <td>🟢 Mycket lätt – lokal, klar signal, vardagligt prat på svenska</td>
+                </tr>
+                <tr style="background: #dbeafe;">
+                    <td><strong>2. Svara på CQ</strong></td>
+                    <td>Lyssna tills du hör ett CQ, vänta tills det är slut, säg din signal en gång</td>
+                    <td>🟡 Lätt – ingen stress att hitta frekvens, följ motpartens tempo</td>
+                </tr>
+                <tr style="background: #fee2e2;">
+                    <td><strong>3. Ropa CQ själv</strong></td>
+                    <td>Hitta ledig frekvens, fråga QRL?, ropa CQ</td>
+                    <td>🔴 Lite mer – du styr samtalet, måste hitta ledig frekvens</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Steg för steg – Svara på ett CQ (Rekommenderat!)</h3>
+
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">📡 ETT KOMPLETT QSO – Steg för steg</h4>
+
+        <div style="background: white; border-radius: 8px; padding: 1.5rem; margin-top: 1rem;">
+            <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1rem;"><em>Scenario: Du lyssnar på 14,225 MHz (20m, USB). En tysk station ropar CQ.</em></p>
+
+            <div style="border-left: 4px solid #059669; padding: 0.5rem 1rem; margin: 0.5rem 0; background: #f0fdf4;">
+                <strong>DL1ABC sänder (du LYSSNAR):</strong>
+                <br><em>"CQ CQ CQ, this is DL1ABC, Delta Lima One Alpha Bravo Charlie, calling CQ and listening."</em>
+                <br><small style="color: #6b7280;">→ Han är klar. Nu är det din tur!</small>
+            </div>
+
+            <div style="border-left: 4px solid #3b82f6; padding: 0.5rem 1rem; margin: 0.5rem 0; background: #eff6ff;">
+                <strong>DU svarar (tryck PTT):</strong>
+                <br><em>"DL1ABC, DL1ABC, this is SM5XYZ, Sierra Mike Five X-ray Yankee Zulu, over."</em>
+                <br><small style="color: #6b7280;">→ Upprepa hans signal 1–2 gånger, din signal med fonetik, säg "over". Släpp PTT!</small>
+            </div>
+
+            <div style="border-left: 4px solid #059669; padding: 0.5rem 1rem; margin: 0.5rem 0; background: #f0fdf4;">
+                <strong>DL1ABC svarar dig:</strong>
+                <br><em>"SM5XYZ, good morning! You are 5 and 9 here in Munich. My name is Hans, Hans. QTH is Munich, Germany. How do you copy? Over."</em>
+                <br><small style="color: #6b7280;">→ Du fick en 59-rapport! Nu ger du din rapport och din info.</small>
+            </div>
+
+            <div style="border-left: 4px solid #3b82f6; padding: 0.5rem 1rem; margin: 0.5rem 0; background: #eff6ff;">
+                <strong>DU svarar:</strong>
+                <br><em>"DL1ABC, thank you Hans, good morning from Sweden! You are 5 and 8 here in Stockholm. My name is Erik, Erik. QTH Stockholm, Sweden. Lovely to have this contact. Over."</em>
+                <br><small style="color: #6b7280;">→ Du ger RST-rapport, namn och QTH. Glöm inte "over"!</small>
+            </div>
+
+            <div style="border-left: 4px solid #059669; padding: 0.5rem 1rem; margin: 0.5rem 0; background: #f0fdf4;">
+                <strong>DL1ABC avslutar:</strong>
+                <br><em>"SM5XYZ, thank you for the QSO Erik! 73 and good luck. DL1ABC clear."</em>
+            </div>
+
+            <div style="border-left: 4px solid #3b82f6; padding: 0.5rem 1rem; margin: 0.5rem 0; background: #eff6ff;">
+                <strong>DU avslutar:</strong>
+                <br><em>"73 Hans, thanks! SM5XYZ clear."</em>
+                <br><small style="color: #6b7280;">→ Grattis – du har gjort ditt första HF QSO! Logga det direkt!</small>
+            </div>
+        </div>
+    </div>
+
+    <h3>RST-rapportsystemet</h3>
+
+    <p>RST-rapporten är ett standardiserat sätt att berätta hur bra du hör den andra stationen. Du måste förstå detta och kunna ge en rapport snabbt!</p>
+
+    <div style="background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); border: 3px solid #db2777; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #9f1239;">📊 RST-SYSTEMET (Readability – Strength – Tone)</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Bokstav</th>
+                    <th style="width: 25%;">Betyder</th>
+                    <th style="width: 60%;">Skala</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #fdf2f8;">
+                    <td><strong>R</strong><br>Readability</td>
+                    <td>Läsbarhet<br>(hur tydlig är signalen?)</td>
+                    <td>
+                        R1 = Oläsbar<br>
+                        R2 = Knappt läsbar<br>
+                        R3 = Läsbar med svårighet<br>
+                        R4 = Läsbar med lite svårighet<br>
+                        <strong>R5 = Perfekt läsbar ⭐</strong>
+                    </td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>S</strong><br>Signal Strength</td>
+                    <td>Signalstyrka<br>(S-mätaren!)</td>
+                    <td>
+                        S1 = Knappt märkbar<br>
+                        S3 = Svag<br>
+                        S5 = Ganska god<br>
+                        S7 = Måttligt stark<br>
+                        <strong>S9 = Extremt stark ⭐</strong><br>
+                        S9+10dB, S9+20dB = Ännu starkare
+                    </td>
+                </tr>
+                <tr style="background: #fdf2f8;">
+                    <td><strong>T</strong><br>Tone</td>
+                    <td>Ton (bara CW!)<br>Hur ren är CW-tonen?</td>
+                    <td>
+                        T1 = Mycket brusig ton<br>
+                        T5 = Ganska god ton<br>
+                        <strong>T9 = Perfekt ren ton ⭐</strong><br>
+                        (SSB: utelämna T, använd bara RS)
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+            <strong style="color: #9f1239;">💡 Praktisk guide:</strong>
+            <br><br>
+            • <strong>"59" (Five Nine)</strong> = Perfekt rapport – vanligast i tävlingar (ibland lite optimistiskt!)
+            <br>• <strong>"57"</strong> = Stark men lite grumlig – vanlig vid distans
+            <br>• <strong>"44"</strong> = Svag och lite svårläst – vanlig vid DX med dålig propagation
+            <br>• <strong>"599"</strong> = CW-rapport, perfekt ton
+            <br><br>
+            SSB-rapporter är alltid <strong>RS</strong> (två siffror), CW är <strong>RST</strong> (tre siffror).
+        </div>
+    </div>
+
+    <h3>Ropa CQ – Så gör du rätt</h3>
+
+    <p>När du är redo att ropa CQ är det viktigt att göra det rätt. Felaktigt CQ-ropande är ett vanligt nybörjarmisstag!</p>
+
+    <div class="example-box" style="border-left: 4px solid #8b5cf6;">
+        <strong>📻 Korrekt CQ på HF (SSB):</strong>
+        <br><br>
+        <em>"CQ CQ CQ, this is SM5XYZ, Sierra Mike Five X-ray Yankee Zulu, Sierra Mike Five X-ray Yankee Zulu, calling CQ and standing by."</em>
+        <br><br>
+        <strong>Regler:</strong>
+        <br>• Säg "CQ" 3 gånger (varken 1 gång eller 10 gånger!)
+        <br>• Din signal minst 2 gånger med fonetik
+        <br>• Avsluta med "standing by" eller "listening"
+        <br>• Vänta minst 5–10 sekunder
+        <br>• Upprepa om ingen svarar
+        <br><br>
+        <strong>CQ DX:</strong>
+        <br><em>"CQ DX, CQ DX, this is SM5XYZ calling CQ DX..."</em>
+        <br>= Du söker bara DX (långa avstånd), inte lokal trafik
+        <br><br>
+        <strong>CQ Contest:</strong>
+        <br><em>"CQ Contest SM5XYZ"</em>
+        <br>= Kort och snabbt under tävling
+    </div>
+
+    <div class="info-box warning" style="background: #fee2e2; border-left: 4px solid #dc2626;">
+        <strong>⚠️ Vanliga nybörjarmisstag att undvika:</strong>
+        <br><br>
+        <strong>1. Kolla alltid om frekvensen är ledig:</strong>
+        <br>• Säg "QRL?" (är denna frekvens i bruk?) och vänta 5 sekunder
+        <br>• Ibland hör du halva ett QSO – fortsätt lyssna innan du sänder!
+        <br><br>
+        <strong>2. Sluta inte tala när du trycker ner PTT:</strong>
+        <br>• Många nya amatörer pratar medan de trycker ner PTT men glömmer att vänta tills sändaren är uppe
+        <br>• Typisk regel: tryck PTT, räkna till 2, börja tala
+        <br><br>
+        <strong>3. Säg inte "Break break" om det inte är nöd:</strong>
+        <br>• I Europa används "Break" sällan – det tolkas som nöd!
+        <br>• Vänta på en paus i QSO:t och säg din signal istället
+        <br><br>
+        <strong>4. Säg inte "over and out" – det är hollywoodjargong!</strong>
+        <br>• "Over" = jag väntar på svar (konversationen fortsätter)
+        <br>• "Out" = konversationen är avslutad
+        <br>• Aldrig "over and out" – det är motsägelsefullt
+    </div>
+
+    <h3>2m FM och repeatrar – Perfekt för nybörjare</h3>
+
+    <p>Repeatrar (reläer) på 2m och 70cm är som "radiostyrda högtalaranläggningar" som förstärker och vidaresänder din signal. Perfekta för lokal trafik och att öva utan prestation!</p>
+
+    <div class="info-box tip">
+        <strong>💡 Hur en repeater fungerar:</strong>
+        <br><br>
+        • Du sänder på <strong>infrekvensen</strong> (input)
+        <br>• Repeatern tar emot och sänder ut på <strong>utfrekvensen</strong> (output) – ofta 600 kHz skift på 2m
+        <br>• Alla som lyssnar på utfrekvensen hör dig
+        <br>• Du lyssnar på utfrekvensen (din radio ställer in skiftet automatiskt med +/- 600 kHz)
+        <br>• Repeatern öppnas med en <strong>CTCSS-subtonen</strong> (tonkvitter, t.ex. 67 Hz eller 71,9 Hz)
+        <br><br>
+        <strong>Hitta lokala repeatrar:</strong>
+        <br>• <strong>repeaterbook.com</strong> – karta med alla repeatrar
+        <br>• <strong>SSA:s repeaterregister</strong> på ssa.se
+        <br>• Fråga din lokala klubb!
+        <br><br>
+        <strong>Typisk 2m-repeater:</strong>
+        <br>• Utfrekvens: t.ex. 145,650 MHz
+        <br>• Infrekvens: 145,650 - 0,600 = 145,050 MHz
+        <br>• CTCSS-ton: 71,9 Hz (beror på repeatern)
+    </div>
+
+    <h3>✅ Snabbtest – Ditt första QSO</h3>
+
+    <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+        <strong>✅ Kan du svara på dessa?</strong>
+        <ul style="margin-top: 0.5rem;">
+            <li>Vad betyder RST "59"?</li>
+            <li>Vad säger du INNAN du ropar CQ för att kolla att frekvensen är ledig?</li>
+            <li>Hur länge väntar du efter att du tryckt PTT innan du börjar tala?</li>
+            <li>Vad är skillnaden mellan "over" och "out"?</li>
+            <li>Vad är CTCSS och varför behövs det på en repeater?</li>
+        </ul>
+        <details style="margin-top: 0.5rem;">
+            <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+            <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                <strong>Svar:</strong>
+                <br>• Readability 5 (perfekt) + Signal Strength 9 (extremt stark) = utmärkt kontakt
+                <br>• "QRL?" (är denna frekvens i bruk?) – vänta minst 5 sekunder
+                <br>• Räkna till 2 (ca 2 sekunder) – sändaren behöver tid att rampa upp
+                <br>• "Over" = byt, jag lyssnar (samtalet fortsätter). "Out" = konversationen är avslutad.
+                <br>• CTCSS = en subton (t.ex. 71,9 Hz) som öppnar repeatern – förhindrar oavsiktlig aktivering av störningar
+            </div>
+        </details>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SEKTION 10.3: DX OCH TÄVLINGAR -->
+<!-- ============================================ -->
+
+<div class="content-section" id="dx">
+    <h2>10.3 DX och Tävlingar</h2>
+
+    <h3>Vad är DX?</h3>
+    <p><strong>DX</strong> (förkortning av "Distance" – härstammar från telegrafiperiodens "DX" = "okänd destination") syftar på kontakter med avlägsna länder eller ovanliga platser. Att arbeta DX är för många amatörer det absoluta hjärtat av hobbyn – känslan av att nå en liten ö i Stilla havet med 100W och en tråd i ett träd är svårslagen!</p>
+
+    <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+        <strong>💡 Varför DX är så fascinerade:</strong>
+        <br><br>
+        Att jobba DX är som att skjuta en pappersflygplan rakt runt jordklotet och faktiskt träffa någon som skickar den tillbaka. Du behöver inte satellit, inte internet, inte telefonnät – bara din radio, din antenn och ett bra propagationsläge. Det är rent magi.
+    </div>
+
+    <h3>Propagation – Nyckeln till DX</h3>
+
+    <p>Utan rätt propagation kan du ha 1000W och en Yagi – och ändå inte nå 500 km. Med rätt propagation kan 5W och en dipol nå hela världen. Förstå banden!</p>
+
+    <div style="background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); border: 3px solid #db2777; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #9f1239;">🌍 BANDEN OCH NÄR DE ÄR ÖPPNA</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Band</th>
+                    <th style="width: 15%;">Frekvens</th>
+                    <th style="width: 35%;">Typisk räckvidd och öppettider</th>
+                    <th style="width: 35%;">Tips</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>160m</strong></td>
+                    <td>1,8 MHz</td>
+                    <td>Natt: Europa. Vinter: intercontinentalt möjligt vid solminimum</td>
+                    <td>Krävande! Stor antenn. Extremt låga effekter räcker ibland.</td>
+                </tr>
+                <tr style="background: #f0fdf4;">
+                    <td><strong>80m</strong></td>
+                    <td>3,5 MHz</td>
+                    <td>Natt: Europa + Nordafrika. Tidiga morgnar: USA möjligt</td>
+                    <td>Kvällarnas band. SSA:s nätverkning 09:00 UTC söndagar på 3,755 MHz!</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>40m</strong></td>
+                    <td>7 MHz</td>
+                    <td>Dag: Europa. Natt: Amerika, Asien, Stilla havet</td>
+                    <td>Utmärkt DX-band dygnet runt! Trångt – lär dig köra split.</td>
+                </tr>
+                <tr style="background: #f0fdf4;">
+                    <td><strong>20m</strong></td>
+                    <td>14 MHz</td>
+                    <td>Dag: Världen! Alltid öppet vid solmaximum. Natt: Stänger ibland.</td>
+                    <td>Det klassiska DX-bandet! 14,195 MHz brukar vara fyllt av DX.</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>15m</strong></td>
+                    <td>21 MHz</td>
+                    <td>Dag: Utmärkt under solmaximum. Kan vara stängt vid solminimum.</td>
+                    <td>Fantastiskt DX-band vid hög solaktivitet (2024–2026 är bra år!)</td>
+                </tr>
+                <tr style="background: #f0fdf4;">
+                    <td><strong>10m</strong></td>
+                    <td>28 MHz</td>
+                    <td>Dag: Världen i ett enda hopp vid solmaximum. Kan vara stängt månader.</td>
+                    <td>Solmaximum 2025 – 10m är magiskt just nu! 100mW kan nå Australien!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="info-box important" style="background: #dbeafe; border-left: 4px solid #3b82f6;">
+        <strong>🌞 Grålinjen – DX-guld!</strong>
+        <br><br>
+        <strong>Grålinjen</strong> (grey line / terminator) är gränsen mellan dag och natt på jordklotet. Vid soluppgång och solnedgång sker något speciellt: D-lagret i jonosfären (som absorberar HF-signaler) är tillfälligt borta, medan F-lagret (som reflekterar signaler) fortfarande är aktivt.
+        <br><br>
+        <strong>Effekt:</strong>
+        <br>• Signaler längs grålinjen kan färdas extremt långt med låg dämpning
+        <br>• Soluppgång/nedgång är de BÄSTA tiderna för DX
+        <br>• En minut kan vara skillnaden mellan att höra och inte höra
+        <br><br>
+        <strong>Verktyg:</strong> Sök "grey line map" online eller installera DX Atlas!
+    </div>
+
+    <h3>DX Cluster – Hitta DX i realtid</h3>
+
+    <p>DX Cluster är ett globalt nätverk av radioamatörer som delar information om DX-stationer i realtid. Om någon i Spanien hör en station från Heard Island och spottar den, ser du det omedelbart i ditt loggprogram!</p>
+
+    <div class="example-box" style="border-left: 4px solid #3b82f6;">
+        <strong>📡 Läsa en DX Cluster-spot:</strong>
+        <br><br>
+        <code style="background: #1f2937; color: #10b981; padding: 0.5rem 1rem; display: block; border-radius: 6px; font-size: 0.9rem;">
+            DX de SM5ABC:     14.025,0  VK9DX         CW 599 QSX UP5           1234Z
+        </code>
+        <br>
+        Läses som:
+        <br>• <strong>DX de SM5ABC:</strong> Spottad av SM5ABC (en svensk amatör)
+        <br>• <strong>14.025,0:</strong> Frekvens 14,025 MHz
+        <br>• <strong>VK9DX:</strong> Anropssignalen på den sällsynta stationen (Norfolk Island!)
+        <br>• <strong>CW:</strong> Mode är CW (morsekod)
+        <br>• <strong>599:</strong> RST-rapport SM5ABC gav
+        <br>• <strong>QSX UP5:</strong> Lyssnar 5 kHz upp (split-trafik – du ska sända på 14.030!)
+        <br>• <strong>1234Z:</strong> Klockan 12:34 UTC
+        <br><br>
+        <em>🎯 Nu vet du var DX-stationen är, på vilket mode, och att du ska sända 5 kHz upp!</em>
+    </div>
+
+    <h3>Pile-up – Konsten att bryta igenom</h3>
+
+    <p>En <strong>pile-up</strong> är när hundratals eller tusentals stationer försöker nå en och samma sällsynta DX-station samtidigt. Det kan låta som ett kaos av överlappande signaler – men det finns metod i galenskapen!</p>
+
+    <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #991b1b;">📢 PILE-UP TEKNIK – Steg för steg</h4>
+
+        <table style="width: 100%; margin-top: 1rem; background: white; border-radius: 8px;">
+            <tr>
+                <td style="padding: 1rem;">
+                    <strong style="color: #991b1b;">STEG 1 – Lyssna NOGA:</strong>
+                    <br>• Lyssna ut DX-stationens mönster
+                    <br>• Ropar han/hon "Europe only"? "Japan only"?
+                    <br>• Lyssnar han split? Var lyssnar han (5 up? 10 up? "spread")?
+                    <br>• Vilket prefix verkar han jobba just nu? (plockar han slumpmässigt, eller systematiskt?)
                     <br><br>
-                    <strong>Du:</strong>
-                    <br>"DL1ABC, thanks for the 59. You are also 59. Name here is Erik, QTH Stockholm. 73 and thanks for the QSO!"
+                    <strong style="color: #991b1b;">STEG 2 – Ställ in rätt:</strong>
+                    <br>• Ställ in TX på rätt frekvens (t.ex. 5 kHz upp om han kör "up 5")
+                    <br>• Kontrollera att VFO-B är på hans lyssnarfrekvens om du kör split
+                    <br>• Ha din anropssignal klar – den ska sägas TYDLIGT men KORT
                     <br><br>
-                    <strong>DL1ABC:</strong>
-                    <br>"SM5XYZ, 73 and good luck! DL1ABC clear."
-                </div>
-                
-                <h3>Ropa CQ</h3>
-                <p>När du känner dig redo:</p>
-                <ol>
-                    <li>Hitta en ledig frekvens</li>
-                    <li>Fråga "Is this frequency in use?" eller "QRL?"</li>
-                    <li>Vänta några sekunder</li>
-                    <li>Ropa CQ (se kapitel 8)</li>
-                    <li>Lyssna efter svar</li>
-                    <li>Upprepa om ingen svarar</li>
-                </ol>
-                
-                <h3>Tips för nybörjare</h3>
-                <ul>
-                    <li><strong>Var inte nervös</strong> - alla har varit nybörjare</li>
-                    <li><strong>Tala långsamt och tydligt</strong></li>
-                    <li><strong>Be om repetition</strong> om du inte förstår</li>
-                    <li><strong>Håll det enkelt</strong> i början</li>
-                    <li><strong>Prova olika band och tider</strong></li>
-                    <li><strong>2m FM repeater</strong> är bra för övning</li>
-                </ul>
-                
-                <div class="info-box tip">
-                    <strong>💡 SSA:s nätverkningar:</strong> Söndagar kl 09:00 på 3,755 kHz finns SSA:s nätverkning där du kan öva i lugn och ro bland vänligt sinnade!
-                </div>
-            </div>
-
-            <!-- Sektion 3: DX och tävlingar -->
-            <div class="content-section" id="dx">
-                <h2>10.3 DX och Tävlingar</h2>
-                
-                <h3>DX - Långdistansförbindelser</h3>
-                <p>DX (Distance) syftar på kontakter med avlägsna länder. Det finns en speciell tjusning i att nå andra sidan jorden med egna medel!</p>
-                
-                <h4>Tips för DX</h4>
-                <ul>
-                    <li><strong>Lär dig banden:</strong> När är de öppna och vart?</li>
-                    <li><strong>Använd DX Cluster:</strong> Se var DX-stationer är aktiva i realtid</li>
-                    <li><strong>Lyssna på pile-ups:</strong> Lär dig tekniken innan du ropar</li>
-                    <li><strong>Timing:</strong> Grålinjen, soluppgång/nedgång är ofta bäst</li>
-                    <li><strong>Tålamod:</strong> Ibland krävs många försök</li>
-                </ul>
-                
-                <h4>Pile-up-teknik</h4>
-                <ol>
-                    <li>Lyssna ut DX-stationens mönster</li>
-                    <li>Vänta på rätt tillfälle</li>
-                    <li>Ropa bara din signal - en gång</li>
-                    <li>Lyssna om du blev hörd</li>
-                    <li>Om inte - vänta och försök igen</li>
-                </ol>
-                
-                <h4>Split-trafik</h4>
-                <p>Sällsynta DX-stationer kör ofta split:</p>
-                <ul>
-                    <li>DX sänder på en frekvens, lyssnar på en annan</li>
-                    <li>"Listening 5-10 up" = lyssnar 5-10 kHz högre</li>
-                    <li>Ställ in VFO A för att lyssna, VFO B för att sända</li>
-                </ul>
-                
-                <h3>Tävlingar (Contest)</h3>
-                <p>Radiotävlingar är ett roligt sätt att träna snabb och effektiv trafik.</p>
-                
-                <h4>Populära tävlingar</h4>
-                <ul>
-                    <li><strong>CQ WW DX Contest</strong> - Världens största, oktober/november</li>
-                    <li><strong>CQ WPX</strong> - Samla prefix</li>
-                    <li><strong>ARRL DX Contest</strong> - Mot USA/Kanada</li>
-                    <li><strong>SAC (Scandinavian Activity Contest)</strong> - Skandinavisk</li>
-                    <li><strong>SM-veckan</strong> - Svenskt mästerskap</li>
-                </ul>
-                
-                <h4>Tävlingsutbyte</h4>
-                <p>I tävlingar utbyts oftast:</p>
-                <ul>
-                    <li>RST-rapport (ofta 59/599)</li>
-                    <li>Löpnummer eller zon/distrikt</li>
-                </ul>
-                
-                <div class="example-box">
-                    <strong>Typiskt tävlings-QSO:</strong>
+                    <strong style="color: #991b1b;">STEG 3 – Ropa vid rätt tillfälle:</strong>
+                    <br>• Vänta tills DX-stationen avslutat ett QSO och är redo att lyssna
+                    <br>• Säg din signal EN gång – tydligt men utan att skrika
+                    <br>• Alltid din fullständiga signal (SM5XYZ – inte bara XYZ!)
+                    <br>• LYSSNA sedan – hör han dig?
                     <br><br>
-                    CQ CONTEST SM5XYZ
-                    <br>SM5XYZ 59 14 (RST 59, zon 14)
-                    <br>TU 59 05 (Tack, RST 59, löpnummer 05)
-                    <br>TU SM5XYZ CQ CONTEST
-                </div>
-                
-                <h4>Tips för tävling</h4>
-                <ul>
-                    <li>Börja med att S&P (Search and Pounce) - leta och svara</li>
-                    <li>Använd tävlingsloggprogram (N1MM+, etc.)</li>
-                    <li>Lär dig snabbtangenter</li>
-                    <li>Ha kul - det är inte nödvändigt att köra hela tävlingen</li>
-                </ul>
-            </div>
+                    <strong style="color: #991b1b;">STEG 4 – Tålamod:</strong>
+                    <br>• Om du inte hörs – vänta och försök igen
+                    <br>• Förändra tajmingen (lite före, lite efter)
+                    <br>• Ropa ALDRIG upprepade gånger i rad – det irriterar alla och hjälper inte
+                    <br>• Ibland krävs timmar av försök för sällsynta DX
+                </td>
+            </tr>
+        </table>
+    </div>
 
-            <!-- Sektion 4: Diplom -->
-            <div class="content-section" id="diplom">
-                <h2>10.4 Diplom och Utmärkelser</h2>
-                
-                <h3>Varför diplom?</h3>
-                <p>Diplom ger mål att sträva mot och dokumenterar dina prestationer.</p>
-                
-                <h3>Populära diplom</h3>
-                
-                <h4>DXCC (DX Century Club)</h4>
-                <p>Det klassiska DX-diplomet från ARRL.</p>
-                <ul>
-                    <li>Bekräfta kontakt med 100 olika "entiteter" (länder/områden)</li>
-                    <li>Det finns ca 340 entiteter</li>
-                    <li>Olika nivåer och endorsements</li>
-                </ul>
-                
-                <h4>WAS (Worked All States)</h4>
-                <p>Kontakt med alla 50 amerikanska delstater.</p>
-                
-                <h4>WAZ (Worked All Zones)</h4>
-                <p>Kontakt med alla 40 CQ-zoner i världen.</p>
-                
-                <h4>Svenska diplom</h4>
-                <ul>
-                    <li><strong>SM-diplomet:</strong> Kontakt med svenska distrikt</li>
-                    <li><strong>Riksfyrar:</strong> Kontakt med svenska fyrplatser</li>
-                    <li><strong>SMLA:</strong> Svenska län</li>
-                </ul>
-                
-                <h4>Europeiska diplom</h4>
-                <ul>
-                    <li><strong>WAE (Worked All Europe)</strong></li>
-                    <li><strong>IOTA (Islands On The Air)</strong> - Öar runt om i världen</li>
-                    <li><strong>SOTA (Summits On The Air)</strong> - Bergstopp-aktivering</li>
-                    <li><strong>WWFF (World Wide Flora & Fauna)</strong> - Naturreservat</li>
-                </ul>
-                
-                <h3>QSL-bekräftelse</h3>
-                <p>För de flesta diplom krävs bekräftelse av kontakterna:</p>
-                <ul>
-                    <li><strong>Papperskort:</strong> Traditionellt, via QSL-byrå eller direkt</li>
-                    <li><strong>LoTW (Logbook of The World):</strong> ARRLs digitala system</li>
-                    <li><strong>eQSL:</strong> Elektroniska QSL-kort</li>
-                    <li><strong>Club Log:</strong> För DXCC och mer</li>
-                </ul>
-            </div>
+    <div class="info-box warning" style="background: #fee2e2; border-left: 4px solid #dc2626;">
+        <strong>⚠️ Pile-up-etikett – Bryt INTE mot dessa regler:</strong>
+        <br><br>
+        <strong>1. Ropa ALDRIG på DX-stationens sändfrekvens</strong> (om han kör split)
+        <br>• Det kallas "lid behaviour" och är mycket respektlöst
+        <br>• Du stör andras QSO och håller DX-stationen blockerad
+        <br><br>
+        <strong>2. Säg ALDRIG "QRZ?" i en pile-up</strong>
+        <br>• QRZ = "vem ropade mig?" – det är DX-stationens ord, inte ditt!
+        <br><br>
+        <strong>3. Ropa inte ständigt</strong>
+        <br>• Håll en naturlig paus och lyssna om DX-stationen svarade någon annan
+        <br><br>
+        <strong>4. Lyssna på DX-stationens instruktioner</strong>
+        <br>• "Europe only" = ropa INTE om du inte är i Europa
+        <br>• "Last two letters" = säg bara de sista 2 bokstäverna i din signal
+    </div>
 
-            <!-- Sektion 5: Aktiviteter -->
-            <div class="content-section" id="aktiviteter">
-                <h2>10.5 Aktiviteter och Evenemang</h2>
-                
-                <h3>SOTA (Summits On The Air)</h3>
-                <p>Aktivera bergtoppar och få poäng - både för aktiverare och jägare.</p>
-                <ul>
-                    <li>Minst 4 QSO:n för giltig aktivering</li>
-                    <li>Portabel, lätt utrustning</li>
-                    <li>Friluftsradio på riktigt!</li>
-                </ul>
-                
-                <h3>POTA (Parks On The Air)</h3>
-                <p>Liknande koncept men från parker och naturreservat.</p>
-                
-                <h3>Field Day</h3>
-                <p>Årligt evenemang där man sätter upp station utomhus.</p>
-                <ul>
-                    <li>Öva nödkommunikation</li>
-                    <li>Testa portabel utrustning</li>
-                    <li>Social aktivitet</li>
-                </ul>
-                
-                <h3>Specialevenemang</h3>
-                <ul>
-                    <li><strong>JOTA (Jamboree On The Air):</strong> Scouter världen över</li>
-                    <li><strong>Museum Ships Weekend:</strong> Från historiska fartyg</li>
-                    <li><strong>Castles On The Air:</strong> Från slott och borgar</li>
-                    <li><strong>Specialsignaler:</strong> Jubileer, minnen, etc.</li>
-                </ul>
-                
-                <h3>Klubbverksamhet</h3>
-                <p>Gå med i en lokal radioamatörklubb!</p>
-                <ul>
-                    <li>Lär av erfarna amatörer</li>
-                    <li>Tillgång till klubbstation</li>
-                    <li>Kurser och föreläsningar</li>
-                    <li>Fältdagar och gemensamma aktiviteter</li>
-                    <li>Hitta klubbar via <strong>SSA.se</strong></li>
-                </ul>
-            </div>
+    <h3>Split-operation – Standardtekniken för DX</h3>
 
-            <!-- Sektion 6: Resurser -->
-            <div class="content-section" id="resurser">
-                <h2>10.6 Resurser och Fortsatt Lärande</h2>
-                
-                <h3>Organisationer</h3>
-                <ul>
-                    <li><strong>SSA (Sveriges Sändareamatörer):</strong> ssa.se - Nationell organisation</li>
-                    <li><strong>IARU:</strong> Internationell organisation</li>
-                    <li><strong>ARRL:</strong> Amerikansk organisation med mycket resurser</li>
-                </ul>
-                
-                <h3>Online-resurser</h3>
-                <ul>
-                    <li><strong>QRZ.com:</strong> Anropssignaldatabas, loggbok</li>
-                    <li><strong>DX Cluster:</strong> dxwatch.com, dxsummit.fi</li>
-                    <li><strong>PSK Reporter:</strong> pskreporter.info - Se var din signal hörs</li>
-                    <li><strong>VOACAP:</strong> Propagationsprognoser</li>
-                    <li><strong>Repeaterkartor:</strong> repeaterbook.com</li>
-                </ul>
-                
-                <h3>Programvara</h3>
-                <ul>
-                    <li><strong>WSJT-X:</strong> FT8, FT4 och andra weak-signal modes</li>
-                    <li><strong>Fldigi:</strong> Digitala modes</li>
-                    <li><strong>JTDX:</strong> Alternativ för FT8</li>
-                    <li><strong>SDR#, HDSDR:</strong> SDR-programvara</li>
-                    <li><strong>N1MM+:</strong> Tävlingslogg</li>
-                    <li><strong>Log4OM:</strong> Allmän loggprogramvara</li>
-                </ul>
-                
-                <h3>Tidningar och media</h3>
-                <ul>
-                    <li><strong>QTC:</strong> SSA:s medlemstidning</li>
-                    <li><strong>CQ Magazine, QST:</strong> Internationella tidningar</li>
-                    <li><strong>YouTube:</strong> Massor av amatörradioinnehåll</li>
-                    <li><strong>Podcasts:</strong> Ham Radio Workbench, QSO Today, etc.</li>
-                </ul>
-                
-                <h3>Fortsätt lära dig</h3>
-                <ul>
-                    <li><strong>Experimentera!</strong> Bygg antenner, prova nya modes</li>
-                    <li><strong>Utmana dig själv:</strong> Prova CW, digitalt, satellit, EME</li>
-                    <li><strong>Dela med dig:</strong> Hjälp nya amatörer</li>
-                    <li><strong>Ha roligt!</strong> Det är det viktigaste</li>
-                </ul>
-                
-                <div class="info-box tip">
-                    <strong>💡 Slutord:</strong> Radioamatör är en hobby för livet. Det finns alltid något nytt att lära sig, nya länder att jobba, nya tekniker att prova. Välkommen till världens bästa hobby!
-                    <br><br>
-                    <strong>73 de utbildningsteamet!</strong>
-                </div>
-            </div>
+    <p>Sällsynta DX-stationer kör nästan alltid split – de sänder på EN frekvens och lyssnar på EN ANNAN. Varför? För att undvika att pile-up-kaos täcker deras sändning!</p>
 
-            <!-- Sammanfattning -->
-            <div class="content-section summary">
-                <h2>📝 Sammanfattning Kapitel 10</h2>
-                
-                <div class="key-points">
-                    <h3>Kom igång:</h3>
-                    <ul>
-                        <li>Lyssna först - lär av andra</li>
-                        <li>Svara på CQ innan du ropar själv</li>
-                        <li>2m FM och repeatrar är bra övning</li>
-                    </ul>
-                </div>
-                
-                <div class="key-points">
-                    <h3>Utvecklas:</h3>
-                    <ul>
-                        <li>Prova DX på HF-banden</li>
-                        <li>Delta i tävlingar</li>
-                        <li>Samla diplom och utmärkelser</li>
-                        <li>Prova portabel trafik (SOTA, POTA)</li>
-                    </ul>
-                </div>
-                
-                <div class="key-points">
-                    <h3>Gemenskap:</h3>
-                    <ul>
-                        <li>Gå med i en klubb</li>
-                        <li>Delta i evenemang</li>
-                        <li>Hjälp nya amatörer</li>
-                    </ul>
-                </div>
-            </div>
+    <div class="example-box" style="border-left: 4px solid #8b5cf6;">
+        <strong>🎯 Exempel – Jobba en split DX-station:</strong>
+        <br><br>
+        <strong>Situation:</strong> DX-stationen sänder på 14,195 MHz, lyssnar "up 5" (dvs 14,200 MHz).
+        <br><br>
+        <strong>Steg 1:</strong> Lyssna på 14,195 MHz – du hör DX-stationen direkt.
+        <br><strong>Steg 2:</strong> Ställ VFO-A = 14,195 MHz (lyssna), VFO-B = 14,200 MHz (sänder)
+        <br><strong>Steg 3:</strong> Aktivera SPLIT-läge i transceivern
+        <br><br>
+        <strong>Nu:</strong>
+        <br>• Du LYSSNAR på 14,195 (hör DX-stationen)
+        <br>• Du SÄNDER på 14,200 (där DX lyssnar!)
+        <br><br>
+        <strong>Varning:</strong> Kolla alltid att split är aktiverat INNAN du sänder! Råkar du sända på DX-stationens TX-frekvens är det ett allvarligt brott mot etikett.
+        <br><br>
+        <em>🎯 Tumregel: DX spot + "UP x" = Starta alltid split!</em>
+    </div>
 
-            <!-- Avslutning -->
-            <div class="content-section" style="text-align: center; padding: 3rem;">
-                <h2>🎉 Grattis!</h2>
-                <p style="font-size: 1.2rem;">Du har nu gått igenom hela utbildningsmaterialet. Dags att testa dina kunskaper!</p>
-                <br>
-                <a href="../test/prov.html" class="nav-button practice" style="display: inline-flex; font-size: 1.2rem; padding: 1rem 2rem;">
-                    <span class="icon">📝</span>
-                    <span class="label">Gör ett övningsprov</span>
-                </a>
+    <h3>Tävlingar (Contest)</h3>
+
+    <p>Radiotävlingar är strukturerade evenemang där du försöker göra så många validerade kontakter som möjligt under en begränsad tid. Det kan vara allt från ett par timmar till 48 timmar i sträck!</p>
+
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">🏆 POPULÄRA TÄVLINGAR</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Tävling</th>
+                    <th style="width: 20%;">Tid</th>
+                    <th style="width: 30%;">Mål</th>
+                    <th style="width: 25%;">Svårighetsgrad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>CQ WW DX</strong><br><em>Världens största!</em></td>
+                    <td>Oktober (SSB) och November (CW)</td>
+                    <td>Flest länder och CQ-zoner</td>
+                    <td>🔴 Avancerad – enorma pile-ups</td>
+                </tr>
+                <tr style="background: #f0f9ff;">
+                    <td><strong>SAC (Scandinavian Activity Contest)</strong></td>
+                    <td>September</td>
+                    <td>Skandinaviska stationer mot världen</td>
+                    <td>🟡 Medel – bra för SM/LA/OH-stationer</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>SM-veckan</strong></td>
+                    <td>Oktober</td>
+                    <td>Flest SM-distrikt och punkter</td>
+                    <td>🟢 Nybörjarvänlig – på svenska!</td>
+                </tr>
+                <tr style="background: #f0f9ff;">
+                    <td><strong>ARRL DX Contest</strong></td>
+                    <td>Februari (CW), Mars (SSB)</td>
+                    <td>Europa mot USA/Kanada</td>
+                    <td>🟡 Medel</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>YOTA Contest</strong><br><em>Ungdomstävling</em></td>
+                    <td>December</td>
+                    <td>Kontakter med unga amatörer</td>
+                    <td>🟢 Nybörjarvänlig – trevlig stämning</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="example-box" style="border-left: 4px solid #059669;">
+        <strong>📻 Typiskt tävlings-QSO (SSB):</strong>
+        <br><br>
+        <strong>Du ropar CQ i tävlingen:</strong>
+        <br><em>"CQ Contest, CQ Contest, SM5XYZ"</em>
+        <br><br>
+        <strong>En station svarar:</strong>
+        <br><em>"SM5XYZ, G3ABC"</em>
+        <br><br>
+        <strong>Du svarar med utbytet:</strong>
+        <br><em>"G3ABC, 59 14"</em>
+        <br>(RST 59, CQ-zon 14 för Sverige)
+        <br><br>
+        <strong>G3ABC svarar med sitt utbyte:</strong>
+        <br><em>"59 14, TU"</em>
+        <br>(RST 59, CQ-zon 14 för England – TU = Thank you)
+        <br><br>
+        <strong>Du bekräftar och fortsätter:</strong>
+        <br><em>"TU, CQ Contest SM5XYZ"</em>
+        <br><br>
+        <em>🎯 Hela QSO:t tog ca 15 sekunder! I tävling gäller snabbhet.</em>
+    </div>
+
+    <div class="info-box tip">
+        <strong>💡 Tips för din första tävling:</strong>
+        <br><br>
+        <strong>Börja med S&amp;P (Search and Pounce):</strong>
+        <br>• Sök längs bandet och svara på CQ-rop
+        <br>• Enklare än att köra CQ och hantera pile-up
+        <br>• Bra sätt att lära sig tävlingstempon
+        <br><br>
+        <strong>Använd tävlingsloggprogram:</strong>
+        <br>• N1MM+ (gratis, standard för tävling)
+        <br>• Logger32
+        <br>• Programmet kontrollerar dubbletter och räknar poäng!
+        <br><br>
+        <strong>Delta i SM-veckan:</strong>
+        <br>• Den är på svenska!
+        <br>• Vänlig atmosfär
+        <br>• Lokal, inte lika hårt tryck som CQ WW
+    </div>
+
+    <h3>✅ Snabbtest – DX och tävlingar</h3>
+
+    <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+        <strong>✅ Kan du svara på dessa?</strong>
+        <ul style="margin-top: 0.5rem;">
+            <li>Vilket band är bäst för DX dagtid?</li>
+            <li>Vad är grålinjen och varför är den viktig för DX?</li>
+            <li>En DX-spot säger "UP 5" – vad ska du ställa in?</li>
+            <li>Vad är S&amp;P i tävlingssammanhang?</li>
+            <li>Varför kör sällsynta DX-stationer split?</li>
+        </ul>
+        <details style="margin-top: 0.5rem;">
+            <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+            <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                <strong>Svar:</strong>
+                <br>• 20m (14 MHz) – alltid öppet vid solmaximum, världsomspännande räckvidd dagtid
+                <br>• Gränsen dag/natt – D-lagret (absorberande) försvinner vid soluppgång/nedgång medan F-lagret är aktivt. Signaler längs linjen kan färdas extremt långt.
+                <br>• Aktivera split, sänd 5 kHz högre (t.ex. 14.200 om DX sänder på 14.195)
+                <br>• Search and Pounce – sök längs bandet och svara på andras CQ (kontra att ropa CQ själv)
+                <br>• För att hundratals stationer i pile-upen inte ska täcka DX-stationens egen sändning
             </div>
+        </details>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SEKTION 10.4: DIPLOM OCH UTMÄRKELSER -->
+<!-- ============================================ -->
+
+<div class="content-section" id="diplom">
+    <h2>10.4 Diplom och Utmärkelser</h2>
+
+    <h3>Varför jaga diplom?</h3>
+    <p>Diplom ger dig <strong>mål att sträva mot</strong> och strukturerar din radioaktivitet. Att söka ett nytt land för DXCC ger en extra skjuts av energi till ett annars lugnt DX-pass. Många amatörer uppger att diplomjakten räddade dem från att tröttna på hobbyn!</p>
+
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">🏆 STORA INTERNATIONELLA DIPLOM</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Diplom</th>
+                    <th style="width: 30%;">Krav</th>
+                    <th style="width: 25%;">Antal entiteter/mål</th>
+                    <th style="width: 25%;">Utfärdas av</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #fffbeb;">
+                    <td><strong>DXCC</strong><br><em>DX Century Club</em><br>⭐ Det klassiska!</td>
+                    <td>Bekräftade kontakter med 100 DXCC-entiteter</td>
+                    <td>~340 entiteter totalt – en livstids mål!</td>
+                    <td>ARRL (USA)</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>WAZ</strong><br><em>Worked All Zones</em></td>
+                    <td>Bekräftade kontakter med alla 40 CQ-zoner</td>
+                    <td>40 zoner – Sverige är zon 18</td>
+                    <td>CQ Magazine</td>
+                </tr>
+                <tr style="background: #fffbeb;">
+                    <td><strong>WAS</strong><br><em>Worked All States</em></td>
+                    <td>Alla 50 amerikanska delstater bekräftade</td>
+                    <td>50 delstater</td>
+                    <td>ARRL (USA)</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>WAE</strong><br><em>Worked All Europe</em></td>
+                    <td>Kontakter med alla europeiska länder</td>
+                    <td>~70 europeiska entiteter</td>
+                    <td>DARC (Tyskland)</td>
+                </tr>
+                <tr style="background: #fffbeb;">
+                    <td><strong>IOTA</strong><br><em>Islands On The Air</em></td>
+                    <td>Kontakter med öar runt världen</td>
+                    <td>1200+ ögrupper registrerade</td>
+                    <td>RSGB (UK)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Svenska och nordiska diplom</h3>
+
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">🇸🇪 SVENSKA OCH NORDISKA DIPLOM</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Diplom</th>
+                    <th style="width: 40%;">Krav</th>
+                    <th style="width: 35%;">Tips</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>SM-diplomet</strong></td>
+                    <td>Kontakter med SM-distrikt A–O (alla 15 distrikten)</td>
+                    <td>Lätt att börja med! Många aktiva SM-stationer.</td>
+                </tr>
+                <tr style="background: #f0f9ff;">
+                    <td><strong>SMLA</strong><br><em>Swedish Municipalities / Localities Award</em></td>
+                    <td>Kontakter med svenska kommuner</td>
+                    <td>290 kommuner – engagerande projekt för SM-intresserade</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>Riksfyrar</strong></td>
+                    <td>Kontakter med stationer vid registrerade svenska fyrar</td>
+                    <td>Fyraktiviteter annonseras på DX Cluster och FB-grupper</td>
+                </tr>
+                <tr style="background: #f0f9ff;">
+                    <td><strong>Nordic Activity</strong><br><em>NRAU</em></td>
+                    <td>VHF/UHF-kontakter med nordiska stationer (SM, LA, OH, OZ, TF)</td>
+                    <td>Varje tisdagskväll är det NAC (Nordic Activity Contest) på 2m!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Aktivitetsdiplom – Ut med radion!</h3>
+
+    <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 3px solid #059669; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #065f46;">🏕️ AKTIVITETSDIPLOM</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Program</th>
+                    <th style="width: 35%;">Vad det innebär</th>
+                    <th style="width: 20%;">Roller</th>
+                    <th style="width: 25%;">Webbplats</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>SOTA</strong><br><em>Summits On The Air</em></td>
+                    <td>Aktivera registrerade bergstopp – minst 4 QSO krävs. Poäng beroende på höjd.</td>
+                    <td><strong>Aktiverare</strong> (tar med sig radion uppför) och <strong>Jägare</strong> (arbetar dem hemifrån)</td>
+                    <td>sota.org.uk</td>
+                </tr>
+                <tr style="background: #f0fdf4;">
+                    <td><strong>POTA</strong><br><em>Parks On The Air</em></td>
+                    <td>Aktivera nationalparker och naturreservat – minst 10 QSO krävs per park.</td>
+                    <td>Aktiverare och Jägare</td>
+                    <td>parksontheair.com</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>WWFF</strong><br><em>World Wide Flora &amp; Fauna</em></td>
+                    <td>Liknar POTA men internationellt, inkl. svenska naturreservat (SMFF)</td>
+                    <td>Aktiverare och Jägare</td>
+                    <td>wwff.co</td>
+                </tr>
+                <tr style="background: #f0fdf4;">
+                    <td><strong>IOTA</strong><br><em>Islands On The Air</em></td>
+                    <td>Aktivera öar (eller jaga öar) – tusentals ögrupper registrerade</td>
+                    <td>Aktiverare och Jägare</td>
+                    <td>iota-world.org</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="info-box tip">
+        <strong>💡 SOTA – Perfekt kombination av friluftsliv och radio!</strong>
+        <br><br>
+        <strong>Som aktiverare:</strong>
+        <br>• Hitta ett registrerat SOTA-toppar i Sverige (sota.org.uk/summit-list)
+        <br>• Klättra upp med din portabla utrustning (QRP + liten antenn)
+        <br>• Anmäl aktivering i förväg via SOTAwatch – "alert"
+        <br>• Gör minst 4 QSO:n på toppen
+        <br>• Ladda upp loggen på SOTAwatch – du får poäng!
+        <br><br>
+        <strong>Utrustning:</strong>
+        <br>• QRP-transceiver (t.ex. Elecraft KX2, ICOM IC-705) – 5–10 W räcker!
+        <br>• Batteripack (LiPo 3–5 Ah)
+        <br>• Tunn tråd + fiberstav = enkel men effektiv antenn
+        <br>• Total stationsvikt: 2–4 kg
+        <br><br>
+        <em>🎯 Att nå Japan med 5W från en fjälltopp är en upplevelse du aldrig glömmer!</em>
+    </div>
+
+    <h3>QSL-bekräftelse – Bevis för kontakten</h3>
+
+    <p>För de flesta diplom krävs bekräftelse på att kontakten verkligen skett. Detta kallas <strong>QSL</strong> och kan ske på flera sätt.</p>
+
+    <div style="background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border: 3px solid #8b5cf6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #5b21b6;">📬 QSL-METODER</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Metod</th>
+                    <th style="width: 35%;">Hur det fungerar</th>
+                    <th style="width: 20%;">Kostnad</th>
+                    <th style="width: 20%;">Giltigt för</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>Pappers-QSL</strong><br><em>Traditionellt</em></td>
+                    <td>Skicka ett tryckt kort med dina uppgifter. Via QSL-byrån (SSA sköter utdelning) eller direkt.</td>
+                    <td>Porto + ev. SAE</td>
+                    <td>Nästan alla diplom, samlarkort</td>
+                </tr>
+                <tr style="background: #f5f3ff;">
+                    <td><strong>LoTW</strong><br><em>Logbook of the World</em></td>
+                    <td>Digital bekräftelse via ARRL. Båda stationerna laddar upp loggen och systemet matchar automatiskt.</td>
+                    <td>Gratis*</td>
+                    <td>DXCC, WAS, WAZ och fler</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>eQSL</strong></td>
+                    <td>Elektroniskt QSL-kort med bild. Ladda upp logg, ta emot digitala kort.</td>
+                    <td>Gratis (basic)</td>
+                    <td>Egna diplom på eQSL.cc</td>
+                </tr>
+                <tr style="background: #f5f3ff;">
+                    <td><strong>Club Log</strong></td>
+                    <td>Loggdatabas med OQRS (online QSL request system) – begär QSL via webbform</td>
+                    <td>Gratis</td>
+                    <td>DXCC via Club Log</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="margin-top: 1rem; padding: 1rem; background: white; border-radius: 8px; font-size: 0.9rem; color: #5b21b6;">
+            <strong>💡 Rekommendation:</strong> Registrera dig på <strong>LoTW</strong> direkt när du fått din licens! Det är standardmetoden för DXCC och många andra diplom. Ladda upp din logg regelbundet – du kan plötsligt få en bekräftelse på ett QSO du gjort för månader sedan.
+        </div>
+    </div>
+
+    <h3>✅ Snabbtest – Diplom och utmärkelser</h3>
+
+    <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+        <strong>✅ Kan du svara på dessa?</strong>
+        <ul style="margin-top: 0.5rem;">
+            <li>Hur många bekräftade entiteter krävs för grundläggande DXCC?</li>
+            <li>Hur många CQ-zoner finns och vilken tillhör Sverige?</li>
+            <li>Hur många QSO:n krävs för en giltig SOTA-aktivering?</li>
+            <li>Vad är LoTW och vad är det bra för?</li>
+            <li>Vad skiljer en SOTA-aktiverare från en SOTA-jägare?</li>
+        </ul>
+        <details style="margin-top: 0.5rem;">
+            <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+            <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                <strong>Svar:</strong>
+                <br>• 100 bekräftade DXCC-entiteter (av ~340 möjliga)
+                <br>• 40 CQ-zoner; Sverige är zon 18
+                <br>• Minst 4 QSO:n
+                <br>• ARRLs digitala loggbekräftelsesystem – standardmetod för DXCC och många andra diplom
+                <br>• Aktiveraren tar radion till bergstoppen och sänder. Jägaren arbetar aktiveraren hemifrån.
+            </div>
+        </details>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SEKTION 10.5: AKTIVITETER OCH EVENEMANG -->
+<!-- ============================================ -->
+
+<div class="content-section" id="aktiviteter">
+    <h2>10.5 Aktiviteter och Evenemang</h2>
+
+    <h3>Radioamatörhobbyn är större än du tror</h3>
+    <p>Amatörradio är inte bara "prata i radio". Det finns en oändlig mängd aktiviteter, tekniska grenar, händelser och gemenskaper att delta i. Här är ett urval av det som väntar!</p>
+
+    <div style="background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); border: 3px solid #db2777; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #9f1239;">🗺️ AKTIVITETER FÖR ALLA INTRESSEN</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Aktivitet</th>
+                    <th style="width: 40%;">Vad det är</th>
+                    <th style="width: 20%;">Passar</th>
+                    <th style="width: 20%;">Mer info</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>EME</strong><br><em>Moonbounce</em></td>
+                    <td>Studsa signaler via månen! Kräver stora antenner och starka signaler – den ultimata VHF-utmaningen</td>
+                    <td>Tekniska entusiaster</td>
+                    <td>OK1TEH, VK3UM-resurser</td>
+                </tr>
+                <tr style="background: #fdf2f8;">
+                    <td><strong>Meteor Scatter</strong></td>
+                    <td>Kommunicera via meteorregnens joniserade spår i atmosfären. Millisekunder av propagation!</td>
+                    <td>VHF-entusiaster, digitala modes (MSK144)</td>
+                    <td>WSJT-X</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>Satelliter (OSCAR)</strong></td>
+                    <td>Kommunicera via amatörradiosatelliter i låg omloppsbana. Korta fönster (10–15 min per pass)</td>
+                    <td>Teknikintresserade</td>
+                    <td>amsat.org</td>
+                </tr>
+                <tr style="background: #fdf2f8;">
+                    <td><strong>QRP</strong><br><em>Low Power</em></td>
+                    <td>Sända med max 5W. Utmaningen är att göra längsta möjliga kontakter med minst möjliga effekt</td>
+                    <td>Alla!</td>
+                    <td>qrp.pota, g-qrp.com</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>Bygga egen utrustning</strong></td>
+                    <td>Bygga transceivrar, antenner, förstärkare från grunden. Kombination av elektronik och radio.</td>
+                    <td>Teknikbyggare</td>
+                    <td>Elecraft, Softrock SDR kit</td>
+                </tr>
+                <tr style="background: #fdf2f8;">
+                    <td><strong>WSPR</strong><br><em>Whisper</em></td>
+                    <td>Sända automatiska beacons på milliwatt-nivå och se var du hörs via ett globalt nät av mottagare</td>
+                    <td>Propagationsstudie</td>
+                    <td>wsprnet.org</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>APRS</strong><br><em>Position</em></td>
+                    <td>Skicka GPS-position via radio på 144,800 MHz. Spåra fordon, ballonger, höjdare.</td>
+                    <td>Teknik/friluftsradiare</td>
+                    <td>aprs.fi</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Planerade evenemang – Sätt i almanackan!</h3>
+
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">📅 ÅTERKOMMANDE EVENEMANG</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Evenemang</th>
+                    <th style="width: 20%;">När</th>
+                    <th style="width: 55%;">Vad händer</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>JOTA</strong><br><em>Jamboree On The Air</em></td>
+                    <td>3:e helgen i oktober</td>
+                    <td>Världens scouter kommunicerar via radio. Radioamatörer ställer upp med stationer för scoutkårer. Fantastiskt att introducera barn/ungdomar till hobbyn!</td>
+                </tr>
+                <tr style="background: #eff6ff;">
+                    <td><strong>Field Day</strong><br><em>SSA:s Fältdag</em></td>
+                    <td>Maj/Juni (varierar)</td>
+                    <td>Nätter utomhus med portabel station – öva nödkommunikation, testa utrustning, socialt. ARRL Field Day i USA är en av världens största radioaktiviteter!</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>VHF/UHF Trophy</strong></td>
+                    <td>Tre lördagar/år</td>
+                    <td>Nordisk VHF/UHF-tävling. Exceptionellt för att öva portabel VHF/UHF-trafik från tillfälliga placeringar.</td>
+                </tr>
+                <tr style="background: #eff6ff;">
+                    <td><strong>NAC</strong><br><em>Nordic Activity Contest</em></td>
+                    <td>Varje tisdag kväll!</td>
+                    <td>3 timmars aktivitetstävling på VHF/UHF. Varje vecka byter band: 2m, 70cm, 23cm etc. Perfekt för att bygga VHF-kontakter!</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>Fyrarhelger</strong></td>
+                    <td>Midsommar + höst</td>
+                    <td>Internationella Fyrdagen (International Lighthouse and Lightship Weekend) – aktivera fyrar från radio.</td>
+                </tr>
+                <tr style="background: #eff6ff;">
+                    <td><strong>Museum Ships Weekend</strong></td>
+                    <td>Juni</td>
+                    <td>Amatörer aktiverar historiska fartyg. Unika anropssignaler!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Din lokala radioamatörklubb</h3>
+
+    <p>Att gå med i en <strong>lokal radioamatörklubb</strong> är förmodligen det enskilt bästa du kan göra som nybörjare. Du lär dig snabbare, får tillgång till utrustning och nätverkar med erfarna amatörer.</p>
+
+    <div class="info-box tip" style="background: #d1fae5; border-left: 4px solid #059669;">
+        <strong>💡 Vad du får i en klubb:</strong>
+        <br><br>
+        <strong>Lärande:</strong>
+        <br>• Erfarna amatörer som svarar på frågor (ingen fråga är för dum!)
+        <br>• Tekniska kvällar, föreläsningar, kurser
+        <br>• Tillgång till klubbens verkstad och mätinstrument
+        <br><br>
+        <strong>Utrustning:</strong>
+        <br>• Tillgång till <strong>klubbstationen</strong> – kör med stor antennpark!
+        <br>• Lana utrustning för att prova innan du köper
+        <br><br>
+        <strong>Gemenskap:</strong>
+        <br>• Hittar snabbt en Elmer (erfaren mentor)
+        <br>• Gemensamma aktiviteter: Field Day, JOTA, utflykter
+        <br>• Loppis och byte av utrustning
+        <br><br>
+        <strong>Hitta din klubb:</strong>
+        <br>• <strong>SSA.se/klubbar</strong> – lista med alla svenska amatörradioklubbar
+        <br>• Sök på din ort!
+    </div>
+
+    <h3>Digital radio och moderna modes</h3>
+
+    <p>Amatörradio är långt ifrån gammaldags – de digitala modes förnyar hobbyn kontinuerligt. Här är en djupare titt på de viktigaste digitala modes du bör känna till.</p>
+
+    <div style="background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%); border: 3px solid #8b5cf6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #5b21b6;">💻 DIGITALA MODES – Djupdykning</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 15%;">Mode</th>
+                    <th style="width: 15%;">Bandbredd</th>
+                    <th style="width: 30%;">Hur det fungerar</th>
+                    <th style="width: 20%;">Typisk frekvens</th>
+                    <th style="width: 20%;">Populäritet</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #d1fae5;">
+                    <td><strong>FT8</strong></td>
+                    <td>50 Hz</td>
+                    <td>15-sekunders cykler. Datorn avkodar signaler långt under brusnivån (-24 dB). Automatiserat utbyte: signal + lokator.</td>
+                    <td>14.074 MHz (20m)</td>
+                    <td>⭐⭐⭐⭐⭐ Populärast just nu!</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>FT4</strong></td>
+                    <td>90 Hz</td>
+                    <td>Snabbare variant av FT8 (7,5s cykler) – mer lämpad för tävling</td>
+                    <td>14.080 MHz (20m)</td>
+                    <td>⭐⭐⭐⭐</td>
+                </tr>
+                <tr style="background: #dbeafe;">
+                    <td><strong>JS8Call</strong></td>
+                    <td>50 Hz</td>
+                    <td>Baserat på FT8-tekniken men med fri textkonversation. "FT8 med mänsklig touch"</td>
+                    <td>14.078 MHz</td>
+                    <td>⭐⭐⭐</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>PSK31</strong></td>
+                    <td>31 Hz</td>
+                    <td>Phase Shift Keying. Fri textkonversation med tangentbordet. Smal bandbredd = bra vid trängt band.</td>
+                    <td>14.070 MHz</td>
+                    <td>⭐⭐⭐</td>
+                </tr>
+                <tr style="background: #fef3c7;">
+                    <td><strong>RTTY</strong></td>
+                    <td>250 Hz</td>
+                    <td>Gammal teleteknik, fortfarande populärt i tävlingar. Två frekvenser (mark/space).</td>
+                    <td>14.080 MHz</td>
+                    <td>⭐⭐ (tävling)</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>WSPR</strong></td>
+                    <td>6 Hz</td>
+                    <td>Sänder automatiska "fyrar" på milliwatt-nivå och rapporteras globalt. Smalast mode av alla.</td>
+                    <td>14.0956 MHz</td>
+                    <td>⭐⭐⭐ (propagation)</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="example-box" style="border-left: 4px solid #8b5cf6;">
+        <strong>💻 Komma igång med FT8 – Steg för steg:</strong>
+        <br><br>
+        <strong>Vad du behöver:</strong>
+        <br>• Transceiver med SSB (USB)
+        <br>• Dator (Windows, Mac eller Linux)
+        <br>• Ljudkabel eller USB-gränssnitt (t.ex. Signalink USB) från radio till dator
+        <br>• Programvara WSJT-X (gratis – physics.princeton.edu/pulsar/k1jt/wsjtx.html)
+        <br><br>
+        <strong>Inställningar:</strong>
+        <br>• Ställ transceivern på 14.074 MHz USB (20m FT8-frekvens)
+        <br>• Starta WSJT-X och konfigurera ljudenheten
+        <br>• Synkronisera datorklockan exakt (FT8 kräver &lt;1 sekunds noggrannhet!)
+        <br>• Windows: Använd internet time sync. Mac: systemklocka via NTP.
+        <br><br>
+        <strong>Starta:</strong>
+        <br>• Klicka "Monitor" – du börjar se avkodade signaler dyka upp!
+        <br>• Dubbelklicka en station du vill anropa
+        <br>• WSJT-X sköter resten automatiskt
+        <br><br>
+        <em>🎯 Du kan ha ditt första FT8-QSO inom 30 minuter från att du startar programmet!</em>
+    </div>
+
+    <h3>✅ Snabbtest – Aktiviteter</h3>
+
+    <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+        <strong>✅ Kan du svara på dessa?</strong>
+        <ul style="margin-top: 0.5rem;">
+            <li>Hur många QSO:n krävs för en giltig POTA-aktivering?</li>
+            <li>Vad är APRS och vad används det till?</li>
+            <li>När är NAC (Nordic Activity Contest) och vilket band?</li>
+            <li>Varför kräver FT8 att datorklockan är exakt synkroniserad?</li>
+            <li>Vad innebär JOTA och för vem arrangeras det?</li>
+        </ul>
+        <details style="margin-top: 0.5rem;">
+            <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+            <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                <strong>Svar:</strong>
+                <br>• Minst 10 QSO:n (POTA kräver 10, SOTA kräver 4)
+                <br>• Automatic Position Reporting System – skickar GPS-position via radio på 144,800 MHz. Används för spårning av fordon, ballonger och nödsignalering.
+                <br>• Varje tisdagskväll; byter band varje vecka (2m, 70cm, 23cm etc.)
+                <br>• FT8 använder 15-sekunders cykler som måste vara exakt synkroniserade globalt – 1 sekunds fel och stationerna "missar" varandra
+                <br>• Jamboree On The Air – arrangeras tredje helgen i oktober för världens scouter att kommunicera via radioamatörstationer
+            </div>
+        </details>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SEKTION 10.6: RESURSER OCH FORTSATT LÄRANDE -->
+<!-- ============================================ -->
+
+<div class="content-section" id="resurser">
+    <h2>10.6 Resurser och Fortsatt Lärande</h2>
+
+    <h3>Organisationer att känna till</h3>
+
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">🏛️ VIKTIGA ORGANISATIONER</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Organisation</th>
+                    <th style="width: 25%;">Land/Nivå</th>
+                    <th style="width: 30%;">Vad de gör</th>
+                    <th style="width: 25%;">Webbplats</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #fffbeb;">
+                    <td><strong>SSA</strong><br><em>Sveriges Sändareamatörer</em></td>
+                    <td>Sverige (nationell)</td>
+                    <td>Radioamatörernas riksorganisation. Kurser, tidning (QTC), klubbstöd, frekvensplanering, representerar Sverige i IARU.</td>
+                    <td>ssa.se</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>IARU</strong></td>
+                    <td>Internationell</td>
+                    <td>Internationella amatörradiounionen – samlar 150+ nationella organisationer. Förhandlar bandplaner och frekvenstilldelningar med ITU.</td>
+                    <td>iaru.org</td>
+                </tr>
+                <tr style="background: #fffbeb;">
+                    <td><strong>ARRL</strong></td>
+                    <td>USA</td>
+                    <td>Amerikanska amatörorganisationen. Producerar massor av utbildningsmaterial, hanterar DXCC, LoTW, QST-magasinet. Mycket resurser tillgängliga internationellt.</td>
+                    <td>arrl.org</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>DARC</strong></td>
+                    <td>Tyskland</td>
+                    <td>Tyskt och stort. Organiserar WAE-tävling och utfärdar WAE-diplomet.</td>
+                    <td>darc.de</td>
+                </tr>
+                <tr style="background: #fffbeb;">
+                    <td><strong>RSGB</strong></td>
+                    <td>Storbritannien</td>
+                    <td>Brittisk organisation. Hanterar IOTA-programmet.</td>
+                    <td>rsgb.org</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Oumbärliga webbplatser</h3>
+
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Webbplats</th>
+                <th style="width: 40%;">Vad du hittar där</th>
+                <th style="width: 35%;">URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: #dbeafe;">
+                <td><strong>QRZ.com</strong></td>
+                <td>Söka anropssignaler (namn, QTH, bild på stationen!), logga QSO:n, forum</td>
+                <td>qrz.com</td>
+            </tr>
+            <tr style="background: white;">
+                <td><strong>DX Summit</strong></td>
+                <td>Realtids DX Cluster – se var DX-stationer är aktiva nu</td>
+                <td>dxsummit.fi</td>
+            </tr>
+            <tr style="background: #dbeafe;">
+                <td><strong>PSK Reporter</strong></td>
+                <td>Se var din signal hörs i hela världen (baserat på FT8/PSK31-avkodningar)</td>
+                <td>pskreporter.info</td>
+            </tr>
+            <tr style="background: white;">
+                <td><strong>VOACAP Online</strong></td>
+                <td>Propagationsprognoser – se vilka band som öppnar mot vilka riktningar och tider</td>
+                <td>voacap.com</td>
+            </tr>
+            <tr style="background: #dbeafe;">
+                <td><strong>Repeaterbook</strong></td>
+                <td>Världens repeatrar på karta – hitta lokala repeatrar med frekvens och CTCSS</td>
+                <td>repeaterbook.com</td>
+            </tr>
+            <tr style="background: white;">
+                <td><strong>SOTAwatch</strong></td>
+                <td>Planerade SOTA-aktiveringar, alerts, spots – se vilka toppar som aktiveras idag</td>
+                <td>sotawatch.org</td>
+            </tr>
+            <tr style="background: #dbeafe;">
+                <td><strong>APRS.fi</strong></td>
+                <td>Realtidskarta med APRS-stationer, fordon och fältaktiviteter i hela världen</td>
+                <td>aprs.fi</td>
+            </tr>
+            <tr style="background: white;">
+                <td><strong>Club Log</strong></td>
+                <td>Loggdatabas, DXCC-bekräftelse, OQRS (beställ QSL online)</td>
+                <td>clublog.org</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>Programvara du bör ha</h3>
+
+    <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 3px solid #059669; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #065f46;">💻 PROGRAMVARA FÖR RADIOAMATÖRER</h4>
+
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 20%;">Program</th>
+                    <th style="width: 20%;">Kategori</th>
+                    <th style="width: 35%;">Vad det gör</th>
+                    <th style="width: 15%;">OS</th>
+                    <th style="width: 10%;">Kostnad</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>WSJT-X</strong></td>
+                    <td>Digitala modes</td>
+                    <td>FT8, FT4, WSPR, JT65 och fler. Standardprogrammet för weak-signal kommunikation.</td>
+                    <td>Win/Mac/Linux</td>
+                    <td>Gratis</td>
+                </tr>
+                <tr style="background: #f0fdf4;">
+                    <td><strong>Log4OM</strong></td>
+                    <td>Loggning</td>
+                    <td>Avancerad loggbok med DX Cluster-integration, LoTW-synk, statistik, karta</td>
+                    <td>Windows</td>
+                    <td>Gratis</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>N1MM+</strong></td>
+                    <td>Tävlingslogg</td>
+                    <td>Standard för tävlingar. Stöder 1000+ tävlingar, snabbtangenter, statistik.</td>
+                    <td>Windows</td>
+                    <td>Gratis</td>
+                </tr>
+                <tr style="background: #f0fdf4;">
+                    <td><strong>Fldigi</strong></td>
+                    <td>Digitala modes</td>
+                    <td>PSK31, RTTY, Olivia och 30+ modes. Fri textkonversation digitalt.</td>
+                    <td>Win/Mac/Linux</td>
+                    <td>Gratis</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>SDR# (SDRSharp)</strong></td>
+                    <td>SDR-mottagare</td>
+                    <td>Lyssna på allt från AM till DAB+ med en billig RTL-SDR-dongel (200–400 kr!)</td>
+                    <td>Windows</td>
+                    <td>Gratis</td>
+                </tr>
+                <tr style="background: #f0fdf4;">
+                    <td><strong>APRS-droid</strong></td>
+                    <td>Mobil APRS</td>
+                    <td>APRS via Android-telefon – se och sänder positionsdata</td>
+                    <td>Android</td>
+                    <td>Gratis</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>VOACAP</strong></td>
+                    <td>Propagation</td>
+                    <td>Avancerad propagationsanalys och prognoser för HF-kommunikation</td>
+                    <td>Webb/Win</td>
+                    <td>Gratis</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Litteratur och lärande</h3>
+
+    <div class="info-box tip">
+        <strong>📚 Rekommenderade böcker (välj på din nivå):</strong>
+        <br><br>
+        <strong>Nybörjare:</strong>
+        <br>• <strong>ARRL Ham Radio License Manual</strong> – Det bästa engelskspråkiga nybörjarverket
+        <br>• <strong>SSA:s Utbildningsbok</strong> – Det officiella svenska grundmaterialet (du har det nu!)
+        <br><br>
+        <strong>Teknisk fördjupning:</strong>
+        <br>• <strong>ARRL Handbook</strong> – Bibeln inom amatörradioteknik. Ny utgåva varje år.
+        <br>• <strong>Antennas (ARRL)</strong> – Allt om antenner, djupgående och bred.
+        <br><br>
+        <strong>DX och trafik:</strong>
+        <br>• <strong>The DX Magazine</strong> – Fokus på DX-världen
+        <br>• <strong>CQ Magazine</strong> – Bredare täckning, tävlingar, ny teknik
+        <br>• <strong>QTC (SSA)</strong> – Svensk tidning för SSA-medlemmar
+        <br><br>
+        <strong>YouTube-kanaler att följa:</strong>
+        <br>• <strong>Ham Radio Crash Course</strong> – Tydliga grundgenomgångar
+        <br>• <strong>DX Commander</strong> – Antennbygge och DX
+        <br>• <strong>Thomas (K4SWL)</strong> – QRP, SOTA och portabelt
+    </div>
+
+    <h3>Nästa steg i din radioresa</h3>
+
+    <div style="background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%); border: 3px solid #db2777; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #9f1239;">🗺️ DIN RADIORESA – Möjliga riktningar</h4>
+
+        <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem;">
+            <div style="flex: 1; min-width: 200px; background: white; padding: 1rem; border-radius: 8px; border-top: 4px solid #f59e0b;">
+                <strong style="color: #92400e;">📡 DX-entusiasten</strong>
+                <br><br>
+                • DXCC → 100 länder
+                <br>• DX peditioner
+                <br>• Yagi + rotor
+                <br>• Klass A licens!
+                <br>• WAZ, DXCC Honor Roll
+            </div>
+            <div style="flex: 1; min-width: 200px; background: white; padding: 1rem; border-radius: 8px; border-top: 4px solid #3b82f6;">
+                <strong style="color: #1e40af;">🏔️ Friluftsentusiasten</strong>
+                <br><br>
+                • SOTA, POTA, WWFF
+                <br>• QRP-utrustning
+                <br>• Portabla antenner
+                <br>• Hembyggda kit
+                <br>• Vandring + radio!
+            </div>
+            <div style="flex: 1; min-width: 200px; background: white; padding: 1rem; border-radius: 8px; border-top: 4px solid #059669;">
+                <strong style="color: #065f46;">💻 Teknikbyggaren</strong>
+                <br><br>
+                • Bygg din egen TRX
+                <br>• SDR-experimenterande
+                <br>• Digital mode-dev
+                <br>• EME och MS scatter
+                <br>• Satellitkommunikation
+            </div>
+            <div style="flex: 1; min-width: 200px; background: white; padding: 1rem; border-radius: 8px; border-top: 4px solid #8b5cf6;">
+                <strong style="color: #5b21b6;">🏆 Tävlaren</strong>
+                <br><br>
+                • Contest efter contest
+                <br>• SM och nordisk toppning
+                <br>• Multi-op stationer
+                <br>• CW-träning
+                <br>• N1MM+ mastering
+            </div>
+        </div>
+    </div>
+
+    <div class="info-box important" style="background: #d1fae5; border-left: 4px solid #059669;">
+        <strong>🎯 Kom ihåg det viktigaste:</strong>
+        <br><br>
+        Amatörradio är en hobby för nyfikna. Det finns alltid:
+        <br><br>
+        • Ett nytt land att arbeta
+        <br>• En ny antenn att prova
+        <br>• En ny teknik att lära sig
+        <br>• En ny aktivitet att delta i
+        <br>• En ny kompis att göra QSO med
+        <br><br>
+        Det spelar ingen roll om du bor i lägenhet eller har en stor tomt. Det spelar ingen roll om du är pensionär eller student. Det spelar ingen roll om du gillar teknik eller bara gillar att prata med folk världen runt.
+        <br><br>
+        <strong>Det finns en plats i amatörradiohobbyn för dig!</strong>
+        <br><br>
+        <em>73 de utbildningsteamet på Radioskola.se!</em>
+    </div>
+
+    <h3>✅ Snabbtest – Resurser</h3>
+
+    <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+        <strong>✅ Kan du svara på dessa?</strong>
+        <ul style="margin-top: 0.5rem;">
+            <li>Vad heter den svenska amatörradiounionen?</li>
+            <li>Vilken webbplats använder du för att hitta information om en okänd anropssignal?</li>
+            <li>Vilket program används för FT8?</li>
+            <li>Vilken webbplats visar i realtid var din FT8-signal hörs i världen?</li>
+            <li>Vad heter det internationella organet som representerar radioamatörerna mot ITU?</li>
+        </ul>
+        <details style="margin-top: 0.5rem;">
+            <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+            <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                <strong>Svar:</strong>
+                <br>• SSA – Sveriges Sändareamatörer (ssa.se)
+                <br>• QRZ.com
+                <br>• WSJT-X (gratis, av Joe Taylor K1JT)
+                <br>• PSK Reporter (pskreporter.info)
+                <br>• IARU – International Amateur Radio Union (iaru.org)
+            </div>
+        </details>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SLUTSAMMANFATTNING -->
+<!-- ============================================ -->
+
+<div class="content-section summary">
+    <h2>📝 Sammanfattning Kapitel 10 – Praktisk Trafik</h2>
+
+    <div class="key-points">
+        <h3>🎯 Viktigast att komma ihåg:</h3>
+        <br>
+        <strong>STATIONSUPPBYGGNAD:</strong>
+        <br>• 13,8 V DC – dimensionera nätaggregat med marginal (tumregel: 1W RF ≈ 0,2A)
+        <br>• Antennen är viktigaste komponenten – enkel antenn + stor effekt slår avancerad radio + dålig antenn
+        <br>• Dipolens armlängd = 143 / f(MHz) meter
+        <br>• SWR under 2:1 är acceptabelt, under 1,5:1 är utmärkt
+        <br>• Logga alltid dina QSO:n – registrera dig på LoTW
+        <br><br>
+        <strong>DITT FÖRSTA QSO:</strong>
+        <br>• Lyssna MINST en vecka innan du sänder
+        <br>• Kolla alltid frekvensen med "QRL?" innan du sänder
+        <br>• RST: Readability (1–5) + Signal Strength (1–9) + Tone (1–9, bara CW)
+        <br>• "Over" = jag lyssnar. "Out" = kontakten avslutad. Aldrig "over and out"!
+        <br>• Tryck PTT, räkna till 2, börja tala
+        <br><br>
+        <strong>DX OCH TÄVLINGAR:</strong>
+        <br>• 20m (14 MHz) = bästa DX-bandet dagtid
+        <br>• Grålinjen (soluppgång/nedgång) = bästa DX-tillfällen
+        <br>• Split = sänder på annan frekvens än du lyssnar (standard för DX pile-up)
+        <br>• Pile-up: Lyssna NOGA – ropa en gång – vänta tålmodigt
+        <br>• S&P (Search and Pounce) = bra metod för nybörjare i tävling
+        <br><br>
+        <strong>DIPLOM:</strong>
+        <br>• DXCC = 100 bekräftade entiteter (grunddiplom)
+        <br>• WAZ = alla 40 CQ-zoner (Sverige = zon 18)
+        <br>• SOTA aktivering kräver 4 QSO, POTA kräver 10 QSO
+        <br>• LoTW = standard för digital QSL-bekräftelse
+        <br><br>
+        <strong>DIGITALA MODES:</strong>
+        <br>• FT8 = 15s cykler, extremt svaga signaler (-24 dB), 14.074 MHz på 20m
+        <br>• PSK31 = fri textkonversation, smal bandbredd (31 Hz)
+        <br>• WSPR = automatisk fyrfunktion, propagationsstudie
+        <br>• FT8 kräver exakt synkroniserad datorklocka!
+        <br><br>
+        <strong>ORGANISATIONER:</strong>
+        <br>• SSA = Sverige, ssa.se
+        <br>• IARU = internationell, representerar mot ITU
+        <br>• ARRL = USA, hanterar DXCC och LoTW
+    </div>
+</div>
+
+<!-- Avslutning och navigation -->
+<div class="content-section" style="text-align: center; padding: 3rem; background: linear-gradient(135deg, #1e3a5f 0%, #2d5a8e 100%); border-radius: 12px; color: white; margin: 2rem 0;">
+    <h2 style="color: white;">🎉 Grattis – Du är nu redo!</h2>
+    <p style="font-size: 1.2rem; color: #bfdbfe;">Du har gått igenom hela utbildningsmaterialet. Nu är det dags att prova dina kunskaper – och sedan ta din licens och komma ut i etern!</p>
+    <br>
+    <p style="color: #93c5fd; font-size: 1.3rem; font-style: italic;">73 och välkommen till världens bästa hobby!</p>
+    <br>
+    <a href="../test/prov.html" class="nav-button practice" style="display: inline-flex; font-size: 1.2rem; padding: 1rem 2rem; background: #f59e0b; color: #1f2937; border-radius: 8px; text-decoration: none; font-weight: bold;">
+        <span class="icon">📝</span>&nbsp;
+        <span class="label">Gör ett övningsprov</span>
+    </a>
+</div>
 
             <!-- Navigation -->
             <div class="chapter-navigation">

@@ -2417,7 +2417,7 @@ difficulty: "easy"
     
     // ============================================
     // KAPITEL 9: ELSÄKERHET
-    // ============================================
+    // ============================================    
     {
         id: 171,
         chapterId: 9,
@@ -2429,7 +2429,7 @@ difficulty: "easy"
             { id: "d", text: "Ström är aldrig farlig" }
         ],
         correctAnswer: "b",
-        explanation: "Strömmar från ca 10 mA kan ge muskelkramper, 30-50 mA kan vara livshotande. Spänning och väg genom kroppen spelar också roll.",
+        explanation: "Strömmar från ca 10-15 mA kan ge muskelkramper och förhindra att du kan släppa. 50-100 mA kan orsaka hjärtflimmer och vara livshotande.",
         difficulty: "easy"
     },
     {
@@ -2443,13 +2443,13 @@ difficulty: "easy"
             { id: "d", text: "För bättre ljudkvalitet" }
         ],
         correctAnswer: "b",
-        explanation: "Skyddsjord säkerställer att felströmmar leds bort säkert och att säkringen löser ut vid fel.",
+        explanation: "Skyddsjord säkerställer att felströmmar leds bort säkert och att jordfelsbrytaren löser ut vid fel, vilket räddar liv.",
         difficulty: "easy"
     },
     {
         id: 173,
         chapterId: 9,
-        question: "Vad ska man göra först om någon får en elektrisk stöt?",
+        question: "Vad ska man göra FÖRST om någon får en elektrisk stöt?",
         options: [
             { id: "a", text: "Ringa ambulans direkt" },
             { id: "b", text: "Bryta strömmen om möjligt" },
@@ -2457,21 +2457,21 @@ difficulty: "easy"
             { id: "d", text: "Kyla ned personen" }
         ],
         correctAnswer: "b",
-        explanation: "Första åtgärden är att bryta strömmen för att avbryta fortsatt skada. Sedan tillkalla hjälp och ge första hjälpen.",
+        explanation: "Första åtgärden är alltid att bryta strömmen. Rör ALDRIG den skadade medan strömmen fortfarande är på - du riskerar att själv bli offer!",
         difficulty: "easy"
     },
     {
         id: 174,
         chapterId: 9,
-        question: "Var finns högspänning i en typisk HF-transceiver?",
+        question: "Var finns farliga höga spänningar i en typisk HF-transceiver med rörslutsteg?",
         options: [
-            { id: "a", text: "Ingenstans" },
-            { id: "b", text: "I nätaggregat och möjligen i slutsteget" },
+            { id: "a", text: "Ingenstans - de är alltid säkra" },
+            { id: "b", text: "I nätaggregat och rörslutsteg - ofta 1000-3000 volt" },
             { id: "c", text: "Endast i antennen" },
             { id: "d", text: "Endast i mikrofonen" }
         ],
         correctAnswer: "b",
-        explanation: "Nätaggregatet innehåller livsfarliga spänningar. Rörslutsteg kan ha flera kilovolt. Öppna aldrig utrustning utan kunskap!",
+        explanation: "Nätaggregat innehåller livsfarliga spänningar. Rörslutsteg kan ha anodspänningar på 1000-3000V - extremt livsfarliga även efter avstängning!",
         difficulty: "medium"
     },
     {
@@ -2493,27 +2493,27 @@ difficulty: "easy"
         chapterId: 9,
         question: "Hur skyddar man sig bäst mot åskskador på radioutrustning?",
         options: [
-            { id: "a", text: "Stänga av radion" },
-            { id: "b", text: "Koppla bort antenner och nätanslutning vid åskväder" },
-            { id: "c", text: "Använda högre effekt" },
-            { id: "d", text: "Sända kontinuerligt" }
+            { id: "a", text: "Stänga av radion med strömknappen" },
+            { id: "b", text: "Koppla bort antenner och nätanslutning fysiskt vid åskväder" },
+            { id: "c", text: "Använda högre effekt under åskvädret" },
+            { id: "d", text: "Sända kontinuerligt för att hålla antennen aktiv" }
         ],
         correctAnswer: "b",
-        explanation: "Det säkraste är att fysiskt koppla bort antenner och nätanslutning. Åsköverspänningar kan förstöra utrustning även om den är avstängd.",
+        explanation: "Det enda garanterade skyddet är att fysiskt koppla bort antenner och nätanslutning. Inget elektroniskt överspänningsskydd klarar en direktträff!",
         difficulty: "easy"
     },
     {
         id: 177,
         chapterId: 9,
-        question: "Vad är en säker avstånd från en HF-antenn vid sändning med hög effekt?",
+        question: "Vilket minsta säkerhetsavstånd bör hållas till en HF-dipol vid sändning med 100W?",
         options: [
-            { id: "a", text: "Man kan röra antennen" },
-            { id: "b", text: "Minst några meter, beroende på effekt och frekvens" },
-            { id: "c", text: "Endast 10 cm" },
-            { id: "d", text: "Avstånd spelar ingen roll" }
+            { id: "a", text: "Man kan röra antennen utan risk" },
+            { id: "b", text: "Minst 1-2 meter beroende på frekvens" },
+            { id: "c", text: "Endast 10 cm räcker" },
+            { id: "d", text: "Avstånd spelar ingen roll vid 100W" }
         ],
         correctAnswer: "b",
-        explanation: "RF-fält nära antennen kan vara starka. Säkerhetsavståndet beror på effekt, frekvens och antenntyp.",
+        explanation: "Vid 100W och en HF-dipol bör du hålla minst 1-2 meters avstånd. Med riktantenn (yagi) krävs 3-5 meter framför antennen. RF-brännskador kan uppstå vid direktkontakt!",
         difficulty: "medium"
     },
     {
@@ -2521,13 +2521,13 @@ difficulty: "easy"
         chapterId: 9,
         question: "Varför är kondensatorer farliga även efter att strömmen stängts av?",
         options: [
-            { id: "a", text: "De är inte farliga" },
-            { id: "b", text: "De kan behålla laddning och avge farlig stöt" },
-            { id: "c", text: "De blir heta" },
-            { id: "d", text: "De avger strålning" }
+            { id: "a", text: "De är inte farliga alls efter avstängning" },
+            { id: "b", text: "De kan behålla laddning i minuter till timmar och avge farlig stöt" },
+            { id: "c", text: "De blir heta och kan orsaka brännskador" },
+            { id: "d", text: "De avger radioaktiv strålning" }
         ],
         correctAnswer: "b",
-        explanation: "Stora kondensatorer, särskilt i nätaggregat, kan behålla livsfarlig laddning länge efter att strömmen brutits.",
+        explanation: "Stora elektrolytkondensatorer i nätaggregat kan lagra dödlig energi och behålla farlig laddning länge. En 4700 µF kondensator på 350V lagrar ca 288 Joule - lika mycket som en hjärtstartare!",
         difficulty: "medium"
     },
     {
@@ -2536,12 +2536,12 @@ difficulty: "easy"
         question: "Vad är syftet med en jordfelsbrytare?",
         options: [
             { id: "a", text: "Att bryta strömmen vid överbelastning" },
-            { id: "b", text: "Att snabbt bryta strömmen om den läcker till jord" },
-            { id: "c", text: "Att stabilisera spänningen" },
+            { id: "b", text: "Att snabbt bryta strömmen om ström läcker till jord" },
+            { id: "c", text: "Att stabilisera matningsspänningen" },
             { id: "d", text: "Att minska elförbrukningen" }
         ],
         correctAnswer: "b",
-        explanation: "En jordfelsbrytare detekterar om ström läcker (t.ex. genom en människa) och bryter inom millisekunder.",
+        explanation: "Jordfelsbrytaren detekterar om ström läcker (t.ex. genom en människa till jord) och bryter kretsen på ca 0,03 sekunder vid mer än 30 mA läckström.",
         difficulty: "easy"
     },
     {
@@ -2549,14 +2549,154 @@ difficulty: "easy"
         chapterId: 9,
         question: "Vad bör man tänka på vid arbete på tak eller master för antenninstallation?",
         options: [
-            { id: "a", text: "Inget speciellt" },
-            { id: "b", text: "Fallskydd, avstånd till kraftledningar, väderförhållanden" },
-            { id: "c", text: "Endast väder" },
-            { id: "d", text: "Endast effekten på radion" }
+            { id: "a", text: "Inget speciellt - det är ett enkelt arbete" },
+            { id: "b", text: "Fallskydd, avstånd till kraftledningar och väderförhållanden" },
+            { id: "c", text: "Endast väderförhållanden" },
+            { id: "d", text: "Endast antennens prestanda" }
         ],
         correctAnswer: "b",
-        explanation: "Arbete på höjd kräver fallskydd, medvetenhet om kraftledningar, bra väder och helst en medhjälpare.",
+        explanation: "Arbete på höjd kräver säkerhetssele och hjälm, medvetenhet om kraftledningar (beräkna fallzon!), bra väder och alltid en medhjälpare.",
         difficulty: "easy"
+    },
+    {
+        id: 181,
+        chapterId: 9,
+        question: "Du råkar röra en spänningsförande ledare med fuktig hand. Kroppens resistans är ca 10 000 Ω och spänningen är 230V. Hur stor ström flödar genom kroppen?",
+        options: [
+            { id: "a", text: "Ca 0,23 mA - knappt kännbart" },
+            { id: "b", text: "Ca 23 mA - muskelkramp, kan inte släppa!" },
+            { id: "c", text: "Ca 2,3 A - omedelbar död" },
+            { id: "d", text: "Ca 0,023 µA - omärkbart" }
+        ],
+        correctAnswer: "b",
+        explanation: "Ohms lag: I = U/R = 230V / 10 000Ω = 0,023A = 23 mA. Det räcker för kraftig muskelkramp - du kan inte släppa ledaren! Fuktig hud sänker resistansen från ca 100 kΩ till 10 kΩ, vilket gör fuktig hud mycket farligare.",
+        difficulty: "hard"
+    },
+    {
+        id: 182,
+        chapterId: 9,
+        question: "Varför ska du alltid ha 'en hand i fickan' när du mäter på spänningsförande delar?",
+        options: [
+            { id: "a", text: "För att hålla balansen" },
+            { id: "b", text: "För att förhindra att ström flödar hand-till-hand genom hjärtat" },
+            { id: "c", text: "Det är bara en gammal tradition utan egentligt syfte" },
+            { id: "d", text: "För att ha en hand fri att hålla i mätproben" }
+        ],
+        correctAnswer: "b",
+        explanation: "Om du håller i något ledande med båda händerna kan ström flöda hand-till-hand rakt genom bröstet och hjärtat. Den strömvägen är extremt farlig. Med en hand i fickan är den enda möjliga vägen hand-till-fot, vilket är farligare men inte lika omedelbart dödligt.",
+        difficulty: "medium"
+    },
+    {
+        id: 183,
+        chapterId: 9,
+        question: "Din antennmast är 10 meter hög och står 4 meter från en 10 kV kraftledning. Är detta säkert?",
+        options: [
+            { id: "a", text: "Ja, 4 meter är mer än minimikravet på 3 meter" },
+            { id: "b", text: "Nej - om masten faller mot ledningen når den 10m bort, alltså 6 meter förbi ledningen" },
+            { id: "c", text: "Ja, kraftledningar är alltid säkra på mer än 2 meters avstånd" },
+            { id: "d", text: "Det beror på antennens vikt" }
+        ],
+        correctAnswer: "b",
+        explanation: "Du måste räkna på FALLZONEN! En 10m mast kan falla 10m. Om ledningen är 4m bort, når masten hela 6m förbi ledningen om den faller åt det hållet. Masten bör stå minst mastens höjd + säkerhetsmarginal (3m) = 13m från ledningen.",
+        difficulty: "hard"
+    },
+    {
+        id: 184,
+        chapterId: 9,
+        question: "Din antenn faller på en kraftledning. Vad ska du göra?",
+        options: [
+            { id: "a", text: "Dra bort antennen med hjälp av ett torrt träspö" },
+            { id: "b", text: "Ringa elnätsbolaget och be dem stänga av strömmen" },
+            { id: "c", text: "Röra ingenting, hålla minst 20 meters avstånd och ringa 112" },
+            { id: "d", text: "Snabbt dra bort antennen med ett rep" }
+        ],
+        correctAnswer: "c",
+        explanation: "RÖR INGENTING! Kraftledningar har enorma strömmar (100+ ampere). Marken kan vara strömförande! Håll minst 20 meters avstånd, varna andra och ring 112. Vänta på räddningstjänst med rätt utrustning.",
+        difficulty: "easy"
+    },
+    {
+        id: 185,
+        chapterId: 9,
+        question: "Varför är RF-brännskador från HF-antenner (3-30 MHz) extra farliga jämfört med andra brännskador?",
+        options: [
+            { id: "a", text: "De är inte farligare - alla brännskador är likadana" },
+            { id: "b", text: "De värmer inifrån ut, ger fördröjd smärta och kan skada djup vävnad utan att huden känns varm" },
+            { id: "c", text: "De orsakar alltid omedelbar stark smärta som varnar dig" },
+            { id: "d", text: "De är farliga bara vid effekter över 1000W" }
+        ],
+        correctAnswer: "b",
+        explanation: "RF-energi på HF absorberas djupt i vävnaden och värmer inifrån ut. Huden kan kännas sval medan muskler och senor skadas. Smärtan kan komma timmar senare. Redan 10-50W på HF kan ge allvarliga djupbrännskador!",
+        difficulty: "medium"
+    },
+    {
+        id: 186,
+        chapterId: 9,
+        question: "Varför kräver en 3-elements yagi-antenn större säkerhetsavstånd än en dipol vid samma sändareffekt?",
+        options: [
+            { id: "a", text: "Yagin är tyngre och farligare mekaniskt" },
+            { id: "b", text: "Yagin koncentrerar energin i en riktning och ger betydligt högre fältstyrka framåt" },
+            { id: "c", text: "Yagin sänder på högre frekvens" },
+            { id: "d", text: "Det är ingen skillnad - effekten är densamma" }
+        ],
+        correctAnswer: "b",
+        explanation: "En 3-elements yagi har ca 8 dBi antennvinst = 6,3 gångers förstärkning av fältstyrkan i frontrikttningen jämfört med en isotrop antenn. Dipoler har 2,15 dBi. Mer koncentrerad energi = mer fältstyrka på ett ställe = större säkerhetsavstånd behövs!",
+        difficulty: "medium"
+    },
+    {
+        id: 187,
+        chapterId: 9,
+        question: "Vad är minimikravet på jordledarens tvärsnitt vid jordning av en antennmast mot blixtnedslag?",
+        options: [
+            { id: "a", text: "1,5 mm² räcker (som vanlig elkabel)" },
+            { id: "b", text: "Minst 16 mm² koppar" },
+            { id: "c", text: "6 mm² räcker om ledaren är kort" },
+            { id: "d", text: "Tjockleken spelar ingen roll om kabeln är kort" }
+        ],
+        correctAnswer: "b",
+        explanation: "Minst 16 mm² koppar krävs. En blixt har 10 000-100 000 Ampere ström - en tunnare ledare ångformar eller fattar eld omedelbart! Dessutom ska ledaren vara kortast möjlig och gå rakt utan böjar (böjar skapar induktans som ger spänningspikar).",
+        difficulty: "medium"
+    },
+    {
+        id: 188,
+        chapterId: 9,
+        question: "Varför måste blybatterier laddas i välventilerat utrymme?",
+        options: [
+            { id: "a", text: "Batterierna avger koldioxid som kan kväva" },
+            { id: "b", text: "Vid laddning bildas vätgas (H₂) som är explosiv och kan antändas av en gnista" },
+            { id: "c", text: "Batterierna avger värme som behöver ventileras bort" },
+            { id: "d", text: "Det är bara en gammal rekommendation utan verklig grund" }
+        ],
+        correctAnswer: "b",
+        explanation: "Vid laddning sönderdelas vatten i elektrolyten: H₂O → H₂ + ½O₂. Vätgas (H₂) är extremt brandfarlig och explosiv. En liten gnista - t.ex. från en kortslutning eller ett lättare - räcker för att antända blandningen med explosivt resultat!",
+        difficulty: "medium"
+    },
+    {
+        id: 189,
+        chapterId: 9,
+        question: "I vilken ordning ska kablar anslutas till ett blybatteri?",
+        options: [
+            { id: "a", text: "Minus (-) först, sedan Plus (+)" },
+            { id: "b", text: "Plus (+) först, sedan Minus (-)" },
+            { id: "c", text: "Ordningen spelar ingen roll" },
+            { id: "d", text: "Båda simultant för att undvika gnistor" }
+        ],
+        correctAnswer: "b",
+        explanation: "Anslut PLUS (+) först, sedan MINUS (-). Om du råkar kortsluta plusledaren mot karossen/ramen medan minuset INTE är anslutet - händer ingenting. Men om minuset är anslutet och du nuddar kaross med plus = kortslutning! Vid bortkoppling: Minus FÖRST, sedan Plus.",
+        difficulty: "medium"
+    },
+    {
+        id: 190,
+        chapterId: 9,
+        question: "Vad ska du göra om ett litiumbatteri (LiPo/Li-Ion) börjar pyra eller brinna?",
+        options: [
+            { id: "a", text: "Häll CO₂-pulver på det direkt - som vid vanlig elektrisk brand" },
+            { id: "b", text: "Flytta ut det om möjligt, kyl med vatten, evakuera om inte möjligt och ring 112 - röken är giftig" },
+            { id: "c", text: "Täck det med en filt för att kväva elden" },
+            { id: "d", text: "Lägg det i frysen omedelbart" }
+        ],
+        correctAnswer: "b",
+        explanation: "Litiumbrand kan INTE kvävs konventionellt - batteriet innehåller egen syrereserv i kemin. Bär ut batteriet med tång till ett metallkärl med sand/vatten om det är säkert. Annars: evakuera och ring 112. Rök innehåller litiumfluorid och kolmonoxid - andas INTE röken!",
+        difficulty: "medium"
     },
 
     // ============================================
@@ -2701,6 +2841,152 @@ difficulty: "easy"
         correctAnswer: "a",
         explanation: "SOTA (Summits On The Air) är ett populärt diplom- och aktivitetsprogram för portabel radiotrafik från bergstoppar.",
         difficulty: "medium"
+    },
+    // ============================================
+// KAPITEL 10: PRAKTISK RADIOTRAFIK
+// ============================================
+// De 10 befintliga frågorna (id 191–200) behålls oförändrade.
+// Lägg till följande 10 NYA frågor direkt efter fråga 200:
+
+    {
+        id: 201,
+        chapterId: 10,
+        question: "Vilken spänning (DC) kräver de flesta HF-transceivrar?",
+        options: [
+            { id: "a", text: "5 V" },
+            { id: "b", text: "13,8 V" },
+            { id: "c", text: "24 V" },
+            { id: "d", text: "48 V" }
+        ],
+        correctAnswer: "b",
+        explanation: "De allra flesta transceivrar är konstruerade för 13,8 V DC – samma spänning som ett fulladdat bilbatteri. Det möjliggör enkel portabel drift. Tumregel: 1W RF-effekt ≈ 0,2A vid 13,8V.",
+        difficulty: "easy"
+    },
+    {
+        id: 202,
+        chapterId: 10,
+        question: "Vad ska du ALLTID göra INNAN du börjar sända på en frekvens?",
+        options: [
+            { id: "a", text: "Ropa CQ direkt" },
+            { id: "b", text: "Lyssna noga och fråga 'QRL?' för att kontrollera att frekvensen är ledig" },
+            { id: "c", text: "Sända din anropssignal tre gånger som varning" },
+            { id: "d", text: "Ange din effekt och antenntyp" }
+        ],
+        correctAnswer: "b",
+        explanation: "Lyssna alltid noga och säg 'QRL?' (är denna frekvens i bruk?) innan du sänder. Vänta minst 5 sekunder. Du kanske hör bara halva ett pågående QSO – den andra stationen kan vara utom hörhåll för dig men hörs perfekt av motparten.",
+        difficulty: "easy"
+    },
+    {
+        id: 203,
+        chapterId: 10,
+        question: "Vad är skillnaden mellan 'Over' och 'Out' i radiotrafik?",
+        options: [
+            { id: "a", text: "Ingen skillnad – de är synonymer" },
+            { id: "b", text: "'Over' = jag lyssnar, konversationen fortsätter. 'Out' = kontakten avslutad" },
+            { id: "c", text: "'Over' används bara på VHF, 'Out' bara på HF" },
+            { id: "d", text: "'Out' = jag lyssnar, konversationen fortsätter" }
+        ],
+        correctAnswer: "b",
+        explanation: "'Over' (byt) = jag är klar, nu är det din tur – samtalet fortsätter. 'Out' = kontakten är avslutad, vi lyssnar inte mer. 'Over and out' är ett Hollywood-uttryck som aldrig används i riktig radiotrafik – det är en logisk motsägelse.",
+        difficulty: "easy"
+    },
+    {
+        id: 204,
+        chapterId: 10,
+        question: "En DX-spot lyder 'VK9DX 14025.0 CW QSX UP5'. Vad innebär 'UP5'?",
+        options: [
+            { id: "a", text: "Signalstyrka 5 – svag signal" },
+            { id: "b", text: "DX-stationen lyssnar 5 kHz högre – du ska sända på 14.030 MHz" },
+            { id: "c", text: "Repetera anropet 5 gånger" },
+            { id: "d", text: "Effekten är 5 watt" }
+        ],
+        correctAnswer: "b",
+        explanation: "QSX UP5 = lyssnar 5 kHz uppåt. DX-stationen sänder på 14.025 MHz men lyssnar på 14.030 MHz. Du ska sända på 14.030 – aktivera split-läget i din transceiver! Att sända på DX-stationens TX-frekvens är ett allvarligt etikettsbrott.",
+        difficulty: "medium"
+    },
+    {
+        id: 205,
+        chapterId: 10,
+        question: "Varför kör sällsynta DX-stationer nästan alltid split-trafik i en pile-up?",
+        options: [
+            { id: "a", text: "För att undvika att behöva ange sin frekvens" },
+            { id: "b", text: "För att hundratals stationer i pile-upen annars täcker och blockerar DX-stationens egen sändning" },
+            { id: "c", text: "Det krävs enligt bandplanen" },
+            { id: "d", text: "För att öka räckvidden" }
+        ],
+        correctAnswer: "b",
+        explanation: "Om alla svarade på DX-stationens sändfrekvens skulle den starka pile-upen täcka stationens egna signaler och göra det omöjligt att höra vem man arbetar. Med split sänder DX på en frekvens och lyssnar på en annan – pile-upen stör då inte stationens sändning.",
+        difficulty: "medium"
+    },
+    {
+        id: 206,
+        chapterId: 10,
+        question: "Vad är 'S&P' (Search and Pounce) i en radiotävling?",
+        options: [
+            { id: "a", text: "En speciell antennkonfiguration" },
+            { id: "b", text: "Att söka längs bandet och svara på andras CQ-anrop istället för att ropa CQ själv" },
+            { id: "c", text: "En typ av digital modulation" },
+            { id: "d", text: "Att sända med hög effekt (Strength and Power)" }
+        ],
+        correctAnswer: "b",
+        explanation: "S&P (Search and Pounce) = du söker längs bandet och svarar på stationer som ropar CQ. Kontra att själv ropa CQ och vänta på svar (Run). S&P är enklare för nybörjare i tävlingar – du styr inte tempot, följer den andres.",
+        difficulty: "medium"
+    },
+    {
+        id: 207,
+        chapterId: 10,
+        question: "Vad är LoTW (Logbook of The World) och vad används det till?",
+        options: [
+            { id: "a", text: "En webbplats för att köpa radioutrustning" },
+            { id: "b", text: "ARRLs system för digital QSL-bekräftelse – standard för DXCC och många andra diplom" },
+            { id: "c", text: "Ett program för att planera DX-expeditioner" },
+            { id: "d", text: "En databas med bandplaner och frekvensallokering" }
+        ],
+        correctAnswer: "b",
+        explanation: "LoTW (Logbook of The World) drivs av ARRL och låter amatörer ladda upp sina loggar digitalt. Systemet matchar automatiskt QSO:n från båda stationerna och bekräftar kontakten – giltig för DXCC, WAS, WAZ och fler diplom. Registrera dig direkt när du fått din licens!",
+        difficulty: "medium"
+    },
+    {
+        id: 208,
+        chapterId: 10,
+        question: "Vilket band brukar vara bäst för DX under tidig morgon i Sverige, tack vare grålinjen?",
+        options: [
+            { id: "a", text: "2m (144 MHz) – VHF öppnar vid soluppgång" },
+            { id: "b", text: "40m och 80m – grålinjen ger utmärkt long-path DX vid soluppgång" },
+            { id: "c", text: "70cm (432 MHz)" },
+            { id: "d", text: "160m – det enda nattbandet" }
+        ],
+        correctAnswer: "b",
+        explanation: "Vid soluppgång befinner sig grålinjen (terminator) nära Sverige. D-lagret (som dämpar HF-signaler) försvinner, medan F-lagret fortfarande är aktivt. 40m och 80m ger då utmärkta long-path DX-möjligheter mot Asien och Stilla havet – ibland bara under några minuter!",
+        difficulty: "hard"
+    },
+    {
+        id: 209,
+        chapterId: 10,
+        question: "Varför kräver FT8 att datorklockan är exakt synkroniserad (inom 1 sekund)?",
+        options: [
+            { id: "a", text: "För att loggen ska få rätt datum" },
+            { id: "b", text: "FT8 arbetar med exakta 15-sekunders cykler globalt – om klockan är fel 'missar' stationerna varandras sändningsperioder" },
+            { id: "c", text: "Det är ett licenskrav vid digital trafik" },
+            { id: "d", text: "För att undvika att krocka med CW-trafik" }
+        ],
+        correctAnswer: "b",
+        explanation: "FT8 delar tiden i exakta 15-sekunders perioder (0–15s, 15–30s osv.) som alla stationer globalt måste följa. Om din klocka är 2 sekunder fel sänder du mitt i motpartens lyssnarperiod och ingen hör dig. Synkronisera alltid klockan via internet (NTP) innan du kör FT8.",
+        difficulty: "medium"
+    },
+    {
+        id: 210,
+        chapterId: 10,
+        question: "Hur många bekräftade DXCC-entiteter krävs för grundläggande DXCC-diplom?",
+        options: [
+            { id: "a", text: "50 entiteter" },
+            { id: "b", text: "100 entiteter" },
+            { id: "c", text: "200 entiteter" },
+            { id: "d", text: "340 entiteter (alla)" }
+        ],
+        correctAnswer: "b",
+        explanation: "Grundläggande DXCC kräver bekräftade kontakter med 100 DXCC-entiteter (av totalt ~340 möjliga). Det är 'DX Century Club' – därav namnet. Högre nivåer finns: 150, 200, 250 enheter och slutligen Honor Roll (alla utom de 9 svåraste).",
+        difficulty: "easy"
     }
 ];
 

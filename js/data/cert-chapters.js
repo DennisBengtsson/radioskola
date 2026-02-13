@@ -4163,7 +4163,7 @@ const certChapters = [
         subchapters: [
             {
                 id: '6.1',
-                title: '6.1 EMC-grundbegrepp',
+                title: 'EMC-grundbegrepp',
                 exercises: [
                     {
                         id: 'c6-1-e1',
@@ -4285,7 +4285,7 @@ const certChapters = [
             },
             {
                 id: '6.2',
-                title: '6.2 Störningskällor',
+                title: 'Störningskällor',
                 exercises: [
                     {
                         id: 'c6-2-e1',
@@ -4407,7 +4407,7 @@ const certChapters = [
             },
             {
                 id: '6.3',
-                title: '6.3 Störningar från din sändare',
+                title: 'Störningar från din sändare',
                 exercises: [
                     {
                         id: 'c6-3-e1',
@@ -4529,7 +4529,7 @@ const certChapters = [
             },
             {
                 id: '6.4',
-                title: '6.4 Störningar på mottagare',
+                title: 'Störningar på mottagare',
                 exercises: [
                     {
                         id: 'c6-4-e1',
@@ -4651,7 +4651,7 @@ const certChapters = [
             },
             {
                 id: '6.5',
-                title: '6.5 Förebyggande och åtgärder',
+                title: 'Förebyggande och åtgärder',
                 exercises: [
                     {
                         id: 'c6-5-e1',
@@ -4773,7 +4773,7 @@ const certChapters = [
             },
             {
                 id: '6.6',
-                title: '6.6 Filter och skärmning i praktiken',
+                title: 'Filter och skärmning i praktiken',
                 exercises: [
                     {
                         id: 'c6-6-e1',
@@ -4895,7 +4895,7 @@ const certChapters = [
             },
             {
                 id: '6.7',
-                title: '6.7 Systematisk felsökning',
+                title: 'Systematisk felsökning',
                 exercises: [
                     {
                         id: 'c6-7-e1',
@@ -5026,7 +5026,7 @@ const certChapters = [
     subchapters: [
         {
             id: '7.1',
-            title: '7.1 Regelverkets uppbyggnad',
+            title: 'Regelverkets uppbyggnad',
             exercises: [
                 {
                     id: 'c7-1-e1',
@@ -5154,7 +5154,7 @@ const certChapters = [
         },
         {
             id: '7.2',
-            title: '7.2 Anropssignaler',
+            title: 'Anropssignaler',
             exercises: [
                 {
                     id: 'c7-2-e1',
@@ -5278,7 +5278,7 @@ const certChapters = [
         },
         {
             id: '7.3',
-            title: '7.3 Frekvenser och effekt',
+            title: 'Frekvenser och effekt',
             exercises: [
                 {
                     id: 'c7-3-e1',
@@ -5400,7 +5400,7 @@ const certChapters = [
         },
         {
             id: '7.4',
-            title: '7.4 Tillåtet innehåll',
+            title: 'Tillåtet innehåll',
             exercises: [
                 {
                     id: 'c7-4-e1',
@@ -5504,7 +5504,7 @@ const certChapters = [
         },
         {
             id: '7.5',
-            title: '7.5 Internationell trafik',
+            title: 'Internationell trafik',
             exercises: [
                 {
                     id: 'c7-5-e1',
@@ -5620,7 +5620,7 @@ const certChapters = [
         },
         {
             id: '7.6',
-            title: '7.6 Loggbok, QSL och repeatrar',
+            title: 'Loggbok, QSL och repeatrar',
             exercises: [
                 {
                     id: 'c7-6-e1',
@@ -5745,7 +5745,7 @@ const certChapters = [
         subchapters: [
             {
                 id: '8.1',
-                title: '8.1 Q-koder och förkortningar',
+                title: 'Q-koder och förkortningar',
                 exercises: [
                     {
                         id: 'c8-1-e1',
@@ -5867,7 +5867,7 @@ const certChapters = [
             },
             {
                 id: '8.2',
-                title: '8.2 Fonetiska alfabetet',
+                title: 'Fonetiska alfabetet',
                 exercises: [
                     {
                         id: 'c8-2-e1',
@@ -5989,7 +5989,7 @@ const certChapters = [
             },
             {
                 id: '8.3',
-                title: '8.3 RST-systemet',
+                title: 'RST-systemet',
                 exercises: [
                     {
                         id: 'c8-3-e1',
@@ -6111,7 +6111,7 @@ const certChapters = [
             },
             {
                 id: '8.4',
-                title: '8.4 Anrop och QSO',
+                title: 'Anrop och QSO',
                 exercises: [
                     {
                         id: 'c8-4-e1',
@@ -6227,7 +6227,7 @@ const certChapters = [
             },
             {
                 id: '8.5',
-                title: '8.5 Foni (tal)',
+                title: 'Foni (tal)',
                 exercises: [
                     {
                         id: 'c8-5-e1',
@@ -6349,7 +6349,7 @@ const certChapters = [
             },
             {
                 id: '8.6',
-                title: '8.6 CW (telegrafi)',
+                title: 'CW (telegrafi)',
                 exercises: [
                     {
                         id: 'c8-6-e1',
@@ -6465,7 +6465,7 @@ const certChapters = [
             },
             {
                 id: '8.7',
-                title: '8.7 Digitala trafiksätt',
+                title: 'Digitala trafiksätt',
                 exercises: [
                     {
                         id: 'c8-7-e1',
@@ -6581,7 +6581,7 @@ const certChapters = [
             },
             {
                 id: '8.8',
-                title: '8.8 Nödtrafik',
+                title: 'Nödtrafik',
                 exercises: [
                     {
                         id: 'c8-8-e1',
@@ -6697,13 +6697,634 @@ const certChapters = [
             }
         ]
     },
-    {
+{
         id: 9,
         number: 9,
-        title: 'Elsäkerhet',
+        title: 'Säkerhet',
         slug: 'kapitel-9-sakerhet',
         icon: '⚠️',
-        subchapters: []
+        subchapters: [
+            {
+                id: '9.1',
+                title: 'Elsäkerhet',
+                exercises: [
+                    {
+                        id: 'c9-1-e1',
+                        type: 'multiple-choice',
+                        question: 'Vad är det som faktiskt dödar vid en elektrisk stöt?',
+                        options: [
+                            'Spänningen (Volt)',
+                            'Strömmen (Ampere) genom kroppen',
+                            'Resistansen (Ohm)',
+                            'Frekvensen (Hz)'
+                        ],
+                        correct: 1,
+                        explanation: 'Det är STRÖMMEN som dödar! Spänningen driver strömmen genom kroppens resistans (Ohms lag: I=U/R). Redan 50-100 mA kan orsaka hjärtflimmer och dödsfall.'
+                    },
+                    {
+                        id: 'c9-1-e2',
+                        type: 'multiple-choice',
+                        question: 'Vid vilken strömstyrka uppstår muskelkramp som gör att du inte kan släppa ledaren?',
+                        options: [
+                            '1 mA',
+                            '5 mA',
+                            '10-15 mA',
+                            '100 mA'
+                        ],
+                        correct: 2,
+                        explanation: '"Can\'t let go"-gränsen ligger vid 10-15 mA. Musklerna krampar ofrivilligt och du kan inte släppa ledaren - vilket förlänger exponeringen och ökar risken dramatiskt!'
+                    },
+                    {
+                        id: 'c9-1-e3',
+                        type: 'multiple-choice',
+                        question: 'Du rör vid en 230V-ledare med fuktig hand (resistans 10 000 Ω). Hur stor ström flödar?',
+                        options: [
+                            '0,23 mA - knappt kännbart',
+                            '23 mA - muskelkramp, kan inte släppa!',
+                            '2,3 A - omedelbar död',
+                            '0,023 µA - omärkbart'
+                        ],
+                        correct: 1,
+                        explanation: 'Ohms lag: I = U/R = 230V / 10 000Ω = 0,023A = 23 mA. Det räcker för kraftig muskelkramp! Med torr hud (100 kΩ) blir det bara 2,3 mA - därför är fuktig hud så farligare.'
+                    },
+                    {
+                        id: 'c9-1-e4',
+                        type: 'multiple-choice',
+                        question: 'Varför är säkerhetsgränsen satt till 50V?',
+                        options: [
+                            'Det är ett godtyckligt val',
+                            'Under 50V kan ingen ström flöda',
+                            'Det är en säkerhetsmarginal som täcker olika hudförhållanden - under 50V är risken liten även med fuktig hud',
+                            '50V är maxspänning i alla radioapparater'
+                        ],
+                        correct: 2,
+                        explanation: 'Med fuktig hud (10 kΩ) ger 50V: I = 50/10 000 = 5 mA - smärtsamt men inte direkt dödligt. Säkerhetsgränsen täcker alltså de flesta vardagssituationer med viss marginal.'
+                    },
+                    {
+                        id: 'c9-1-e5',
+                        type: 'true-false',
+                        question: 'En kondensator i ett nätaggregat kan vara farlig även flera minuter efter att du stängt av strömmen.',
+                        correct: true,
+                        explanation: 'SANT och kritiskt! Stora elektrolytkondensatorer kan behålla laddning i minuter till timmar. En 4700 µF kondensator på 350V lagrar ~288 Joule - lika mycket som en hjärtstartare. Vänta och MÄT alltid!'
+                    },
+                    {
+                        id: 'c9-1-e6',
+                        type: 'multiple-choice',
+                        question: 'Varför ska du ha "en hand i fickan" när du mäter på spänningsförande delar?',
+                        options: [
+                            'För att hålla balansen',
+                            'Det är bara en gammal vana utan praktisk betydelse',
+                            'För att förhindra att ström flödar hand-till-hand rakt genom hjärtat',
+                            'För att ha en hand fri för mätproben'
+                        ],
+                        correct: 2,
+                        explanation: 'Om du håller i något ledande med båda händerna kan ström flöda hand-till-hand genom bröstet och hjärtat - den farligaste strömvägen. Med en hand i fickan elimineras den vägen!'
+                    },
+                    {
+                        id: 'c9-1-e7',
+                        type: 'multiple-choice',
+                        question: 'Vad ska du göra ABSOLUT FÖRST om någon fått en elektrisk stöt?',
+                        options: [
+                            'Ringa 112 direkt',
+                            'Bryta strömmen - rör INTE den skadade medan strömmen är på',
+                            'Starta hjärt-lungräddning',
+                            'Kyla ner personen med vatten'
+                        ],
+                        correct: 1,
+                        explanation: 'BRYT STRÖMMEN FÖRST! Rör aldrig den drabbade medan strömmen fortfarande är på - du riskerar att själv bli offer. Dra ur kontakten eller slå av huvudbrytaren. Sedan: 112, bedömning, HLR vid behov.'
+                    },
+                    {
+                        id: 'c9-1-e8',
+                        type: 'true-false',
+                        question: 'Skyddsjord (PE) och RF-jord har samma funktion och kan ersätta varandra.',
+                        correct: false,
+                        explanation: 'FALSKT! Skyddsjord (grön-gul kabel) skyddar mot elfel och är livsviktig - koppla aldrig bort den! RF-jord är en separat teknisk jordning för att förbättra antennsystemets prestanda. Båda behövs men av helt olika anledningar.'
+                    },
+                    {
+                        id: 'c9-1-e9',
+                        type: 'multiple-choice',
+                        question: 'Varför är rörutrustning (rörslutsteg) extra farlig?',
+                        options: [
+                            'Den är tyngre och kan falla',
+                            'Anodspänningarna kan vara 1000-5000V - dödligt även genom torr hud',
+                            'Den avger mer RF-strålning',
+                            'Den är äldre och opålitlig'
+                        ],
+                        correct: 1,
+                        explanation: '2000V genom torr hud (100 kΩ) ger 20 mA = muskelkramp. Genom fuktig hud (10 kΩ) ger det 200 mA = hjärtstillestånd. Dessutom behåller kondensatorer i HT-kretsen laddningen länge efter avstängning!'
+                    },
+                    {
+                        id: 'c9-1-e10',
+                        type: 'multiple-choice',
+                        question: 'Vad är syftet med en jordfelsbrytare?',
+                        options: [
+                            'Skydda mot överbelastning',
+                            'Stabilisera nätspänningen',
+                            'Snabbt bryta strömmen om den börjar läcka till jord, t.ex. genom en människa',
+                            'Minska elförbrukningen'
+                        ],
+                        correct: 2,
+                        explanation: 'Jordfelsbrytaren mäter skillnaden mellan fas och nolla. Vid mer än 30 mA skillnad (ström som "försvinner" - t.ex. genom en människa) bryter den kretsen på ~0,03 sekunder. Räddar liv!'
+                    }
+                ]
+            },
+            {
+                id: '9.2',
+                title: 'Antennsäkerhet',
+                exercises: [
+                    {
+                        id: 'c9-2-e1',
+                        type: 'multiple-choice',
+                        question: 'Vilken säkerhetsutrustning är absolut obligatorisk vid arbete på höjder över 2 meter?',
+                        options: [
+                            'Bara hjälm',
+                            'Full kroppssele med livlina och hjälm',
+                            'Säkerhetsskor räcker',
+                            'Ingen speciell utrustning om man är försiktig'
+                        ],
+                        correct: 1,
+                        explanation: 'Full kroppssele (EN 361) med livlina/falldämpare + hjälm (EN 397 eller EN 12492) är obligatoriskt. OBS: Enbart midjesele räcker INTE. En cykelhjälm räcker INTE. Investera i rätt utrustning!'
+                    },
+                    {
+                        id: 'c9-2-e2',
+                        type: 'multiple-choice',
+                        question: 'Du har en 12 meter hög mast på 5 meters avstånd från en 10 kV kraftledning. Vad är problemet?',
+                        options: [
+                            'Inget problem - 5 meter är mer än säkerhetskravet på 3 meter',
+                            'Masten kan falla och nå ledningen - fallzonen är 12 meter, mer än de 5 meter som skiljer',
+                            'Problemet är att kraftledningen stör mottagningen',
+                            'Det finns inget problem om masten är ordentligt stagad'
+                        ],
+                        correct: 1,
+                        explanation: 'FALLZONEN! En 12m mast kan falla 12m - om ledningen är 5m bort når masten hela 7m förbi den! Minsta säkra avstånd = masthöjd + säkerhetsmarginal = 12 + 3 = 15 meter!'
+                    },
+                    {
+                        id: 'c9-2-e3',
+                        type: 'multiple-choice',
+                        question: 'Din antenn faller och hamnar på en kraftledning. Vad gör du?',
+                        options: [
+                            'Drar bort antennen med ett torrt träspö',
+                            'Ringer elnätsbolaget och ber dem stänga av',
+                            'Rör ingenting, håller minst 20 meters avstånd och ringer 112 omedelbart',
+                            'Kapar antennkabeln inne i huset för att bryta förbindelsen'
+                        ],
+                        correct: 2,
+                        explanation: 'RÖR INGENTING! Kraftledningar har enorma strömmar (100+ A). Marken kan vara strömförande! Håll 20 meters avstånd, varna andra och ring 112. Vänta på räddningstjänst med rätt utrustning.'
+                    },
+                    {
+                        id: 'c9-2-e4',
+                        type: 'true-false',
+                        question: 'Det räcker att hålla sig på mer än 3 meters avstånd från en 10 kV ledning - det är säkert.',
+                        correct: false,
+                        explanation: 'FALSKT! 3 meter är minimiavståndet för normal drift. Du måste OCKSÅ beräkna fallzonen - om masten kan falla mot ledningen spelar det ingen roll hur långt du står ifrån! Masten måste stå mastens höjd + 3 meter bort.'
+                    },
+                    {
+                        id: 'c9-2-e5',
+                        type: 'multiple-choice',
+                        question: 'Hur många hjälpare behövs minst för att säkert resa en 10 meters mast?',
+                        options: [
+                            'Det går bra ensam med block och talja',
+                            '2 personer räcker',
+                            'Minst 3 personer',
+                            'Minst 10 personer'
+                        ],
+                        correct: 2,
+                        explanation: 'Minst 3 personer för master upp till 10m. En "dirigent" med överblick, minst 2 som hanterar masten. För master över 10m: 4-5 personer. Alla måste förstå planen INNAN arbetet börjar!'
+                    },
+                    {
+                        id: 'c9-2-e6',
+                        type: 'multiple-choice',
+                        question: 'Hur ofta ska stag och vajrar på en antennmast kontrolleras?',
+                        options: [
+                            'Aldrig om de ser bra ut',
+                            'En gång per år',
+                            'Två gånger per år - vår och höst',
+                            'Var tionde år'
+                        ],
+                        correct: 2,
+                        explanation: 'Stag och vajrar ska kontrolleras 2 gånger per år, vår och höst. Titta efter: rost, utfrynsta trådar, rätt spänning. BYT vid minsta tecken på slitage - ett brutet stag kan fälla hela masten!'
+                    },
+                    {
+                        id: 'c9-2-e7',
+                        type: 'multiple-choice',
+                        question: 'Du ska resa en mast. Vilken vindstyrka är maxgränsen för säker mastresning?',
+                        options: [
+                            '15 m/s (54 km/h)',
+                            '10 m/s (36 km/h)',
+                            '5 m/s (18 km/h)',
+                            'Vinden spelar ingen roll om man är försiktig'
+                        ],
+                        correct: 2,
+                        explanation: 'Under 5 m/s (svag vind)! Vid högre vind är risken för okontrollerade rörelser stor. En 10m mast med yagi-antenn kan ha enorma vindkrafter - vid 25 m/s kan vindtrycket motsvara 75 kg på antennen!'
+                    },
+                    {
+                        id: 'c9-2-e8',
+                        type: 'true-false',
+                        question: 'En yagi-antenn med 2 m² vindfångstyta utsätts för ungefär 75 kg kraft vid en storm med 25 m/s vind.',
+                        correct: true,
+                        explanation: 'SANT! F = 0,6 × A × v² = 0,6 × 2 × 625 = 750 Newton ≈ 75 kg kraft. Vid orkan (35 m/s) ökar det till ~150 kg! Därför måste mast, stag och fundament dimensioneras ordentligt.'
+                    },
+                    {
+                        id: 'c9-2-e9',
+                        type: 'multiple-choice',
+                        question: 'Vilket av dessa alternativ är ett exempel på fel vid livlinan fästpunkt vid höjdarbete på mast?',
+                        options: [
+                            'Fästa livlinan i ett stagfäste av stål',
+                            'Fästa livlinan i mastens topp via en karbinhake',
+                            'Fästa livlinan i skorstenen',
+                            'Fästa livlinan i ett dedikerat fallskyddsankare'
+                        ],
+                        correct: 2,
+                        explanation: 'Fäst ALDRIG livlinan i skorstenen eller antenmasten - de kan rasa! Fästpunkten måste tåla minst 1200 kg och vara strukturellt säker. Använd dedikerade fallskyddsankare eller certifierade fästpunkter i byggnadsstrukturen.'
+                    },
+                    {
+                        id: 'c9-2-e10',
+                        type: 'multiple-choice',
+                        question: 'Vilket är det FARLIGASTE vid ett fall från 8 meters höjd?',
+                        options: [
+                            'Fallet tar lång tid',
+                            'Du träffar marken med ~45 km/h - samma kraft som en bilkrock i 45 km/h',
+                            'Luftmotståndet är farligt',
+                            'Det är inte farligt om du landar rätt'
+                        ],
+                        correct: 1,
+                        explanation: 'v = √(2 × 9,81 × 8) ≈ 12,5 m/s = 45 km/h vid markkontakt. Energin är ~6 300 Joule - 30 gånger mer än en pistolkula. Fall från 8m kan vara direkt dödligt!'
+                    }
+                ]
+            },
+            {
+                id: '9.3',
+                title: 'RF-strålning och hälsa',
+                exercises: [
+                    {
+                        id: 'c9-3-e1',
+                        type: 'multiple-choice',
+                        question: 'Vad är skillnaden mellan joniserande och icke-joniserande strålning?',
+                        options: [
+                            'Det är samma sak',
+                            'Joniserande (röntgen, gamma) kan slå sönder DNA. Icke-joniserande (RF) kan värma vävnad men skadar inte DNA direkt',
+                            'Icke-joniserande är farligare',
+                            'RF-strålning är joniserande vid hög effekt'
+                        ],
+                        correct: 1,
+                        explanation: 'RF-strålning är icke-joniserande - den kan INTE slå sönder DNA som röntgen kan. Primärrisken är uppvärmning av vävnad (som i mikrovågsugn). Farlig vid nära kontakt men inte cancerframkallande på samma sätt.'
+                    },
+                    {
+                        id: 'c9-3-e2',
+                        type: 'multiple-choice',
+                        question: 'Du fördubblar avståndet från en HF-antenn. Vad händer med fältstyrkan?',
+                        options: [
+                            'Den halveras',
+                            'Den minskar till en fjärdedel',
+                            'Den förblir densamma',
+                            'Den minskar till en åttondel'
+                        ],
+                        correct: 1,
+                        explanation: 'Inversa kvadratlagen: E₂ = E₁ × (r₁/r₂)². Dubbelt avstånd → (1/2)² = 1/4 av fältstyrkan! Tre gånger avstånd → 1/9 av fältstyrkan. Avstånd är ditt absolut bästa skydd!'
+                    },
+                    {
+                        id: 'c9-3-e3',
+                        type: 'multiple-choice',
+                        question: 'Fältstyrkan vid 1 meter från en antenn är 60 V/m. Vad är fältstyrkan på 3 meters avstånd?',
+                        options: [
+                            '30 V/m',
+                            '20 V/m',
+                            '6,7 V/m',
+                            '3 V/m'
+                        ],
+                        correct: 2,
+                        explanation: 'E₂ = 60 × (1/3)² = 60 × 1/9 = 6,7 V/m. ICNIRP-gränsvärdet för VHF är 28 V/m - 6,7 V/m är alltså långt under gränsen. Tre gånger avstånd = nio gånger lägre fältstyrka!'
+                    },
+                    {
+                        id: 'c9-3-e4',
+                        type: 'multiple-choice',
+                        question: 'Vad är SAR?',
+                        options: [
+                            'Signal-to-Antenna Ratio - ett mått på antenneffektivitet',
+                            'Specific Absorption Rate - hur mycket RF-energi som absorberas i kroppsvävnad, mätt i W/kg',
+                            'Static Antenna Resistance - antennens DC-resistans',
+                            'Safe Antenna Range - det säkra avståndet till en antenn'
+                        ],
+                        correct: 1,
+                        explanation: 'SAR = Specific Absorption Rate = hur snabbt RF-energi absorberas och omvandlas till värme i kroppsvävnad. EU-gräns: 2 W/kg för huvud/kropp (allmänheten). Mest känt från mobiltelefoner men gäller även handhållen amatörradio!'
+                    },
+                    {
+                        id: 'c9-3-e5',
+                        type: 'multiple-choice',
+                        question: 'Vilket SAR-gränsvärde gäller för huvud och kropp för allmänheten i EU?',
+                        options: [
+                            '0,2 W/kg',
+                            '2 W/kg per 10g vävnad',
+                            '20 W/kg',
+                            '200 W/kg'
+                        ],
+                        correct: 1,
+                        explanation: '2 W/kg per 10g vävnad för huvud och kropp (allmänheten). För händer/handleder/fötter är gränsen 4 W/kg. Yrkesmässig exponering: 10 W/kg. Gränsvärdena är satta med stor säkerhetsmarginal.'
+                    },
+                    {
+                        id: 'c9-3-e6',
+                        type: 'multiple-choice',
+                        question: 'Varför är RF-brännskador på HF-banden (3-30 MHz) extra farliga?',
+                        options: [
+                            'De är inte farligare än vanliga brännskador',
+                            'De värmer inifrån ut, ger fördröjd smärta och kan skada djup vävnad utan att huden känns varm',
+                            'De är bara farliga vid effekter över 1000W',
+                            'De ger omedelbar kraftig smärta som varnar dig i tid'
+                        ],
+                        correct: 1,
+                        explanation: 'RF-energi på HF absorberas djupt i vävnaden. Huden kan kännas sval medan muskler och senor skadas. Smärtan kan komma timmar senare - du märker inte skadan förrän det är försent. Redan 10-50W kan ge allvarliga skador!'
+                    },
+                    {
+                        id: 'c9-3-e7',
+                        type: 'true-false',
+                        question: 'En yagi-antenn med 8 dBi antennvinst kräver ungefär dubbelt så stort säkerhetsavstånd som en dipol vid samma sändareffekt.',
+                        correct: true,
+                        explanation: 'SANT! 8 dBi = 6,3x förstärkning jämfört med isotrop (dipol har 2,15 dBi). Yagi ger ~3,8x mer EIRP än dipol. Erforderligt avstånd ökar med √3,8 ≈ 2x. Riktad energi = mycket högre fältstyrka framåt!'
+                    },
+                    {
+                        id: 'c9-3-e8',
+                        type: 'multiple-choice',
+                        question: 'Vad är "duty cycle" och varför spelar det roll för RF-exponering?',
+                        options: [
+                            'Det är antennens verkningsgrad - påverkar inte exponering',
+                            'Det är hur stor del av tiden du faktiskt sänder - SSB ~30%, FM 100%. Lägre duty cycle = lägre genomsnittlig exponering',
+                            'Det är sändarens effektivitet - påverkar bara batteriförbrukning',
+                            'Det är en antenninställning som inte har med säkerhet att göra'
+                        ],
+                        correct: 1,
+                        explanation: 'Duty cycle = andel av tiden med aktiv sändning. SSB-tal ~20-50%, CW ~40%, FM konstant ton 100%. Lägre duty cycle ger lägre genomsnittlig exponering, vilket påverkar säkerhetsavståndsberäkningarna!'
+                    },
+                    {
+                        id: 'c9-3-e9',
+                        type: 'true-false',
+                        question: 'ICNIRP:s gränsvärden för RF-fältstyrka är satta med en säkerhetsfaktor på 50 gånger under nivåer som ger påvisbar uppvärmning.',
+                        correct: true,
+                        explanation: 'SANT! Gränsvärdena är satta med 50x säkerhetsmarginal under nivåer som ger mätbar biologisk effekt. Det innebär att du kan vara nära gränsen utan omedelbar risk - men det är fortfarande god sed att hålla sig under!'
+                    },
+                    {
+                        id: 'c9-3-e10',
+                        type: 'multiple-choice',
+                        question: 'Varför är SAR extra relevant för handhållna radioamatörsändare (handies)?',
+                        options: [
+                            'Det är det inte - SAR gäller bara mobiltelefoner',
+                            'Antennen på en handie befinner sig nära kroppen under sändning, vilket ger direkt RF-absorption i vävnaden',
+                            'Handies sänder på högre effekt än stationära sändare',
+                            'SAR gäller bara vid mottagning, inte sändning'
+                        ],
+                        correct: 1,
+                        explanation: 'Precis som en mobiltelefon är antennen på en handie nära kroppen under sändning. SAR-gränsen på 2 W/kg är relevant! Tips: använd extern antenn för lägre SAR, håll handien bort från kroppen under sändning.'
+                    }
+                ]
+            },
+            {
+                id: '9.4',
+                title: 'Åskskydd',
+                exercises: [
+                    {
+                        id: 'c9-4-e1',
+                        type: 'multiple-choice',
+                        question: 'Varför kan inget elektroniskt överspänningsskydd ensamt skydda mot en direkt blixtnedslag?',
+                        options: [
+                            'De är för dyra för att vara effektiva',
+                            'En blixt har 10-100 kA ström och varar längre än elektroniska komponenter klarar',
+                            'De måste bytas efter varje åskväder',
+                            'De fungerar bara på lågspänning'
+                        ],
+                        correct: 1,
+                        explanation: 'En blixt har 10 000-100 000 Ampere ström! Elektroniska skydd klarar kanske 20-60 kA i kortvariga pulser. Men en blixt varar längre. Energimängden är helt enkelt för stor. Det enda garanterade skyddet är fysisk bortkoppling!'
+                    },
+                    {
+                        id: 'c9-4-e2',
+                        type: 'multiple-choice',
+                        question: 'Vad är skillnaden mellan direktträff och närhetseffekter?',
+                        options: [
+                            'Det är samma sak - bara olika namn',
+                            'Direktträff: blixten slår i antennen (dödlig kraft). Närhetseffekter: blixt i närheten inducerar spänningspikar via EMP',
+                            'Närhetseffekter är farligare',
+                            'Direktträff drabbar bara utomhus'
+                        ],
+                        correct: 1,
+                        explanation: 'Direktträff: 10-100 kA direkt i antennen - förstör allt, brandrisk, livsfarligt. Närhetseffekter: blixt upp till 1-2 km bort skapar EMP som inducerar spänningspikar i antennen - förstör känslig elektronik men minder dramatiskt.'
+                    },
+                    {
+                        id: 'c9-4-e3',
+                        type: 'multiple-choice',
+                        question: 'Varför ska jordledaren till mastens jordspett vara rak utan böjar?',
+                        options: [
+                            'Det ser snyggare ut',
+                            'Böjar är svåra att installera',
+                            'Böjar skapar induktans - blixten är extremt snabb och induktansen ger farliga spänningspikar i böjarna',
+                            'Böjar ökar resistansen'
+                        ],
+                        correct: 2,
+                        explanation: 'Blixten är extremt snabb (mikrosekunder). Induktans i böjar skapar spänningspikar precis i böjarna - kan skada kabeln och ge gnistor. Principen: kortast möjlig, tjockast möjlig, rakast möjlig!'
+                    },
+                    {
+                        id: 'c9-4-e4',
+                        type: 'multiple-choice',
+                        question: 'Vilket är minimikravet på jordledarens tvärsnitt för antennmastens åskskyddsjordning?',
+                        options: [
+                            '1,5 mm² (som vanlig elkabel)',
+                            '6 mm²',
+                            '16 mm² koppar',
+                            '2,5 mm²'
+                        ],
+                        correct: 2,
+                        explanation: 'Minst 16 mm² koppar! En blixt med 30 000A genom 1,5 mm² kabel: ledaren ångas omedelbart och orsakar brand. 16 mm² klarar kortvarig blixtström. Professionellt: 25-50 mm². Tjockare är alltid bättre!'
+                    },
+                    {
+                        id: 'c9-4-e5',
+                        type: 'true-false',
+                        question: 'Gnistgap och gasurladdningsrör (GDT) ska placeras vid husinföringen och jordas till SAMMA jordsystem som masten.',
+                        correct: true,
+                        explanation: 'SANT och avgörande! Alla jordpunkter måste vara sammankopplade till ett gemensamt jordsystem. Om gnistgapet jordar till ett annat system än masten kan spänningsskillnader uppstå som leder ström genom utrustningen!'
+                    },
+                    {
+                        id: 'c9-4-e6',
+                        type: 'multiple-choice',
+                        question: 'Vad gäller 30/30-regeln vid åska?',
+                        options: [
+                            'Vänta 30 minuter innan åskvädret börjar',
+                            'Koppla bort om det är under 30 sekunder mellan blixt och åska. Vänta 30 minuter efter sista åskan',
+                            'Håll 30 meters avstånd från antennen',
+                            'Byt frekvens var 30:e minut under åskväder'
+                        ],
+                        correct: 1,
+                        explanation: '30 sekunder mellan blixt och åska = under 10 km! Koppla bort omedelbart. Vänta sedan 30 minuter efter sista blixt/åska - åskvädret kan återvända! Kolla SMHI och lightningmaps.org proaktivt.'
+                    },
+                    {
+                        id: 'c9-4-e7',
+                        type: 'multiple-choice',
+                        question: 'Hur kan en antenn ladda upp statisk elektricitet, och vad kan det orsaka?',
+                        options: [
+                            'Det kan antenner inte göra',
+                            'Vind för elektriskt laddade partiklar som träffar antennen - laddning byggs upp och kan skada mottagarens ingångstransistorer',
+                            'Statisk elektricitet bildas bara i torrt väder och är ofarlig',
+                            'Det uppstår bara om antennen är otillräcklig jordad för RF'
+                        ],
+                        correct: 1,
+                        explanation: 'Vind transporterar laddade partiklar som laddas ur mot antennen. Antennen saknar DC-väg för att avleda laddningen. Resultatet: spänning byggs upp tills det slår igenom och skadar känsliga transistorer. Åtgärd: jorda via 1 MΩ resistor.'
+                    },
+                    {
+                        id: 'c9-4-e8',
+                        type: 'true-false',
+                        question: 'Det räcker att stänga av transceivern med strömknappen för att skydda utrustningen vid åska.',
+                        correct: false,
+                        explanation: 'FALSKT! Utrustning kan förstöras även när den är "av" om antennkabeln fortfarande är ansluten. Åsköverspänningar bryr sig inte om strömbrytare. Fysisk bortkoppling av antennkablar (och gärna nätkabel) är det enda säkra skyddet.'
+                    },
+                    {
+                        id: 'c9-4-e9',
+                        type: 'multiple-choice',
+                        question: 'I vilken ordning ska åskskyddsåtgärder rangordnas från viktigast?',
+                        options: [
+                            'Koax-överspänningsskydd → Jordning → Bortkoppling',
+                            'Bortkoppling vid åska → Mastjordning → Gnistgap/GDT → Koax-skydd → Nätskydd',
+                            'Nätöverspänningsskydd → Jordning → Koax-skydd',
+                            'Alla åtgärder är lika viktiga'
+                        ],
+                        correct: 1,
+                        explanation: 'Bortkoppling är det enda garanterade skyddet. Sedan i lager: mastjordning (avleder direktträff), gnistgap/GDT vid husinföring (närhetseffekter), koax-överspänningsskydd inomhus (restskydd), nätskydd (via elnätet).'
+                    },
+                    {
+                        id: 'c9-4-e10',
+                        type: 'multiple-choice',
+                        question: 'En blixt har ca 100-300 miljoner Volt och 10 000-100 000 Ampere. Hur jämförs energin med hushållsanvändning?',
+                        options: [
+                            'En blixt har ungefär lika mycket energi som ett vanligt hushåll förbrukar på ett år',
+                            'En blixt har ~250 kWh - ungefär en hel dags hushållsel - frigiven på en bråkdels sekund',
+                            'En blixt har bara lika mycket energi som ett bilbatteri',
+                            'Blixtar har inte mätbar energi'
+                        ],
+                        correct: 1,
+                        explanation: '~250 kWh på en bråkdels sekund - ett genomsnittshushåll förbrukar ca 5 000-8 000 kWh på ett år. En blixt = en hel dags hushållsel frigiven på microsekunder. Ingen elektronik kan absorbera detta!'
+                    }
+                ]
+            },
+            {
+                id: '9.5',
+                title: 'Batterier',
+                exercises: [
+                    {
+                        id: 'c9-5-e1',
+                        type: 'multiple-choice',
+                        question: 'Varför måste blybatterier alltid laddas i välventilerat utrymme?',
+                        options: [
+                            'De avger koldioxid som kan kväva',
+                            'Vid laddning bildas vätgas (H₂) som är explosiv och kan antändas av en liten gnista',
+                            'De avger värme som måste ventileras',
+                            'Det är bara en rekommendation, inte ett krav'
+                        ],
+                        correct: 1,
+                        explanation: 'H₂O → H₂ + ½O₂ sker vid laddning. Vätgas är extremt brandfarlig och explosiv. En gnista från kortslutning, en tändare eller en cigarett räcker. Ladda i garage med öppen dörr eller utomhus!'
+                    },
+                    {
+                        id: 'c9-5-e2',
+                        type: 'multiple-choice',
+                        question: 'I vilken ordning ansluter du kablarna till ett blybatteri?',
+                        options: [
+                            'Minus (-) först, sedan Plus (+)',
+                            'Plus (+) först, sedan Minus (-)',
+                            'Ordningen spelar ingen roll',
+                            'Båda kablar samtidigt'
+                        ],
+                        correct: 1,
+                        explanation: 'Plus (+) FÖRST, sedan Minus (-). Varför? Om skruvmejseln nuddar karossen när minuset EJ är anslutet händer ingenting. Men om minuset är anslutet och du nuddar karossen med plusledaren = kortslutning med 1000+ A!'
+                    },
+                    {
+                        id: 'c9-5-e3',
+                        type: 'multiple-choice',
+                        question: 'Du lägger råkar lägga en skiftnyckel tvärs över ett 100Ah bilbatteri (12V, inre resistans 10 mΩ). Hur stor ström flödar?',
+                        options: [
+                            '12 A - lite varmt',
+                            '120 A - farligt',
+                            '1200 A - skiftnyckeln smälter på sekunder, explosionsrisk!',
+                            '0,12 A - ofarligt'
+                        ],
+                        correct: 2,
+                        explanation: 'I = U/R = 12V / 0,010Ω = 1200 Ampere! Skiftnyckeln glöder och smälter, enorma gnistor, batteriet kan explodera om vätgas finns. Ta AV armband, klocka och ringar innan du arbetar nära batterier!'
+                    },
+                    {
+                        id: 'c9-5-e4',
+                        type: 'true-false',
+                        question: 'Vid bortkoppling av ett blybatteri ska du koppla loss minuskabeln (-) först.',
+                        correct: true,
+                        explanation: 'SANT! Vid bortkoppling: Minus FÖRST, Plus SIST. Om du kopplar loss plus först och det lösa pluset nuddar karossen/chassis = kortslutning! Med minuset bortkopplat är kretsen bruten oavsett vad pluset rör vid.'
+                    },
+                    {
+                        id: 'c9-5-e5',
+                        type: 'multiple-choice',
+                        question: 'Vad är "thermal runaway" i ett litiumbatteri?',
+                        options: [
+                            'Batteriet laddas ur för snabbt i värme',
+                            'En okontrollerbar kedjerektion: skada → temperaturökning → snabbare kemisk reaktion → mer värme → brand/explosion',
+                            'Att batteriet hettas upp vid normal användning',
+                            'Att laddaren blir för varm'
+                        ],
+                        correct: 1,
+                        explanation: 'Thermal runaway är en ond cirkel som inte kan stoppas: skada/fel → temperatur stiger → kemisk reaktion accelererar → mer värme → ännu snabbare reaktion → brand eller explosion. Utlöses av mekanisk skada, överladdning, överhettning eller intern kortslutning.'
+                    },
+                    {
+                        id: 'c9-5-e6',
+                        type: 'multiple-choice',
+                        question: 'Vad ska du göra om ett litiumbatteri (LiPo) börjar brinna?',
+                        options: [
+                            'Häll CO₂-pulver på det - som vid elektrisk brand',
+                            'Täck det med en brandskyddsfilt',
+                            'Bär ut det om säkert, kyl med vatten, evakuera om ej möjligt, ring 112 - andas INTE röken',
+                            'Lägg det i frysen för att kyla ner det'
+                        ],
+                        correct: 2,
+                        explanation: 'Litiumbrand kan INTE kvävs - batteriet bär sin egen syrereserv kemiskt. Vatten kyler men släcker inte. Rök innehåller litiumfluorid och CO - giftig! Evakuera, stäng dörrar, ring 112. CO₂-pulver och brandsläckningsfiltar hjälper INTE mot litiumbranden.'
+                    },
+                    {
+                        id: 'c9-5-e7',
+                        type: 'multiple-choice',
+                        question: 'Varför är LiFePO4 ett populärt val för portabel amatörradio jämfört med Li-Ion?',
+                        options: [
+                            'LiFePO4 är billigare',
+                            'LiFePO4 har högre energitäthet',
+                            'LiFePO4 har bättre termisk stabilitet, betydligt längre livslängd (2000-5000 cykler) och lägre risk för thermal runaway',
+                            'LiFePO4 är lättare'
+                        ],
+                        correct: 2,
+                        explanation: 'LiFePO4 har säkrare kemi, 2000-5000 laddningscykler (vs 300-500 för Li-Ion), och bättre termisk stabilitet. Visserligen lägre energitäthet men 100Ah LiFePO4 väger bara 12-15 kg vs 30 kg för blybatteri!'
+                    },
+                    {
+                        id: 'c9-5-e8',
+                        type: 'true-false',
+                        question: 'Du kan använda vilken laddare som helst till ett litiumbatteri om spänningen är ungefär rätt.',
+                        correct: false,
+                        explanation: 'FALSKT och farligt! Litiumbatterier kräver exakt rätt laddningsspänning och -profil. Li-Ion: 4,2V/cell. LiFePO4: 3,65V/cell. Fel laddare = överladdning = thermal runaway! Använd ALLTID tillverkarens rekommenderade laddare.'
+                    },
+                    {
+                        id: 'c9-5-e9',
+                        type: 'multiple-choice',
+                        question: 'Vad är brandtriangeln och hur relaterar den till batterisäkerhet?',
+                        options: [
+                            'Det är ett diagram för brand-alarm-system',
+                            'Brand kräver bränsle + syre + tändkälla. Blybatteri: vätgas + luft + gnista = explosion. Litium: bränsle + intern syrereserv + internt fel = okontrollerbar brand',
+                            'Det gäller bara för bensin, inte batterier',
+                            'Det är ett säkerhetsprotokoll för brandkår'
+                        ],
+                        correct: 1,
+                        explanation: 'Brand = bränsle + syre + tändkälla. Blybatteri: vätgas (bränsle) + luft (syre) + gnista (tändkälla) = EXPLOSION. Litium: bränsle och syre finns INNE i batteriet kemiskt - därför kan litiumbranden inte kvävs med CO₂ eller brandfilt!'
+                    },
+                    {
+                        id: 'c9-5-e10',
+                        type: 'multiple-choice',
+                        question: 'Vid vilken laddningsnivå bör du ladda ett litiumbatteri för att undvika djupurladdning?',
+                        options: [
+                            'Vänta tills batteriet är helt tomt för bästa livslängd',
+                            'Ladda när kapaciteten når ca 20%',
+                            'Ladda när kapaciteten når 50%',
+                            'Det spelar ingen roll när du laddar'
+                        ],
+                        correct: 1,
+                        explanation: 'Ladda när kapaciteten når ~20%! Djupurladdning skadar litiumcellerna, ökar risken för intern kortslutning och thermal runaway. För längre förvaring: förvara vid 40-60% laddning, aldrig fulladdat eller tomt.'
+                    }
+                ]
+            }
+        ]
     },
     {
         id: 10,
@@ -6711,7 +7332,776 @@ const certChapters = [
         title: 'Praktisk Radiotrafik',
         slug: 'kapitel-10-praktisk-trafik',
         icon: '🎯',
-        subchapters: []
+        subchapters: [
+            {
+                id: '10.1',
+                title: 'Stationsuppbyggnad',
+                exercises: [
+                    {
+                        id: 'c10-1-e1',
+                        type: 'multiple-choice',
+                        question: 'Vilken matningsspänning (DC) kräver de flesta HF-transceivrar?',
+                        options: [
+                            '5 V',
+                            '13,8 V',
+                            '24 V',
+                            '48 V'
+                        ],
+                        correct: 1,
+                        explanation: 'De flesta transceivrar är konstruerade för 13,8 V DC – samma spänning som ett fulladdat bilbatteri. Det möjliggör enkel portabel drift med bilbatteri eller LiPo-pack.'
+                    },
+                    {
+                        id: 'c10-1-e2',
+                        type: 'multiple-choice',
+                        question: 'En 100W HF-transceiver har slutstegets verkningsgrad 50%. Vilket nätaggregat behövs minimum?',
+                        options: [
+                            '5A – mer än nog',
+                            '10A – precis lagom',
+                            '20A – rätt dimensionering med marginal',
+                            '50A – alltid överdimensionera kraftigt'
+                        ],
+                        correct: 2,
+                        explanation: 'Ineffekt = 100W / 0,5 = 200W. Ström = 200W / 13,8V ≈ 14,5A. Lägg på 30% marginal → välj 20A. Tumregel: 1W RF ≈ 0,2A vid 13,8V.'
+                    },
+                    {
+                        id: 'c10-1-e3',
+                        type: 'multiple-choice',
+                        question: 'Du bygger en halvvågsdipol för 7,1 MHz (40m-bandet). Hur lång ska varje arm vara?',
+                        options: [
+                            'Ca 5 m per arm',
+                            'Ca 10 m per arm',
+                            'Ca 20 m per arm',
+                            'Ca 40 m per arm'
+                        ],
+                        correct: 2,
+                        explanation: 'Armlängd = 143 / f(MHz) = 143 / 7,1 ≈ 20 m per arm. Totalt ca 40 m – därav bandnamnet 40m! Skär lite längre och stäm av med SWR-mätare.'
+                    },
+                    {
+                        id: 'c10-1-e4',
+                        type: 'multiple-choice',
+                        question: 'Vad innebär SWR 2:1 i praktiken?',
+                        options: [
+                            'Perfekt anpassning – 0% reflekterad effekt',
+                            'Acceptabelt – ca 11% reflekterad effekt',
+                            'För högt – ca 44% reflekterad effekt',
+                            'Farligt – 100% reflekterad effekt'
+                        ],
+                        correct: 1,
+                        explanation: 'SWR 2:1 innebär ca 11% reflekterad effekt, vilket är fullt acceptabelt. De flesta transceivrar tål 2:1-3:1. SWR 5:1 = 44%, SWR ∞ = 100% (öppen krets).'
+                    },
+                    {
+                        id: 'c10-1-e5',
+                        type: 'multiple-choice',
+                        question: 'Vilket koaxialkabel ger lägst förlust för en 15m matarledning till en 145 MHz-antenn?',
+                        options: [
+                            'RG-58 – tunnast och billigast',
+                            'RG-213 – bra för HF',
+                            'LMR-400 eller Aircom Plus – lägst förlust på VHF/UHF',
+                            'Öppen linje (ladder-line) – alltid bäst'
+                        ],
+                        correct: 2,
+                        explanation: 'RG-58 har ca 20 dB/100m förlust vid 145 MHz – 15m ger ca 3 dB (halva effekten!). LMR-400 har bara ca 5 dB/100m. Investera i bra kabel på VHF/UHF – det är direkt hörbart.'
+                    },
+                    {
+                        id: 'c10-1-e6',
+                        type: 'multiple-choice',
+                        question: 'Vad är syftet med en 1:1 strömbalun (current balun) vid dipolens matningspunkt?',
+                        options: [
+                            'Förstärker signalen med 3 dBd',
+                            'Matchar impedansen från 50Ω till 75Ω',
+                            'Förhindrar RF-ström på koaxialkabelns yttersida och minskar störningar i shacket',
+                            'Skyddar transceivern mot åsknedslag'
+                        ],
+                        correct: 2,
+                        explanation: 'Utan balun flödar RF på utsidan av koaxen ner till shacket – kabeln "strålar" och för med sig RF-störningar. En strömbalun hindrar detta och gör att dipolarmarna strålar symmetriskt.'
+                    },
+                    {
+                        id: 'c10-1-e7',
+                        type: 'true-false',
+                        question: 'En ATU (antennavstämningsenhet) eliminerar kabeln förluster och gör alla antenner perfekta.',
+                        correct: false,
+                        explanation: 'FALSKT. ATU:n matchar impedansen som transceivern ser, men förluster i kabeln finns kvar. En lång kabel med högt SWR och ATU i shacket ger fortfarande stora kabellförluster. ATU löser ett anpassningsproblem men döljer inte kabelproblem.'
+                    },
+                    {
+                        id: 'c10-1-e8',
+                        type: 'multiple-choice',
+                        question: 'Varför är stjärnjordning (single-point earth) viktigt i ett shack?',
+                        options: [
+                            'Det ger starkare signal på HF',
+                            'Det förhindrar jordloopar som skapar brumstörningar (50Hz) i audiokretsar',
+                            'Det krävs enligt PTS tillstånd',
+                            'Det skyddar mot grannstörningar'
+                        ],
+                        correct: 1,
+                        explanation: 'Flera jordpunkter skapar jordloopar som fungerar som transformatorer och kopplar in 50Hz nätbrum. Alla enheter till EN gemensam jordpunkt (stjärna) bryter dessa loopar och eliminerar brummet.'
+                    },
+                    {
+                        id: 'c10-1-e9',
+                        type: 'multiple-choice',
+                        question: 'Vilken antenntyp ger bäst DX-prestanda per investerad krona för en nybörjare med en trädgård?',
+                        options: [
+                            'Magnetisk loopantenn – kompakt och dyr',
+                            'Yagi med 6 element – maximal förstärkning',
+                            'Halvvågsdipol av tråd – enkel, billig och effektiv',
+                            'Mobilantenn på taket – portabel och smidig'
+                        ],
+                        correct: 2,
+                        explanation: 'En halvvågsdipol av enkel koppartråd kostar nästan ingenting, är enkel att bygga, och presterar utmärkt. En välupphängd 40m-dipol + 100W kan nå hela Europa och ofta DX. Yagi:n är bättre men kostar 20–50x mer.'
+                    },
+                    {
+                        id: 'c10-1-e10',
+                        type: 'multiple-choice',
+                        question: 'Vad rekommenderas för vattentätning av PL-259-kontakter utomhus?',
+                        options: [
+                            'Inget behövs – kontakter är vattentäta',
+                            'Tejpa med vanlig elinstallationstejp',
+                            'Självvulkaniserande tejp – den smälter ihop och bildar ett vattentätt skal',
+                            'Lacka med nagellack'
+                        ],
+                        correct: 2,
+                        explanation: 'Självvulkaniserande tejp (self-amalgamating tape) smälter ihop till ett homogent gummimaterial utan skarvar. Vatten i koaxen orsakar korrosion och ökade förluster. Vanlig elinstallationstejp torkar ur och spricker med tiden – inte tillräckligt.'
+                    }
+                ]
+            },
+            {
+                id: '10.2',
+                title: 'Ditt första QSO',
+                exercises: [
+                    {
+                        id: 'c10-2-e1',
+                        type: 'multiple-choice',
+                        question: 'Vad är det ENKLASTE sättet att göra sitt första HF-QSO?',
+                        options: [
+                            'Ropa CQ på 20m med full effekt',
+                            'Delta i ett pile-up för en DX-station',
+                            'Svara på ett CQ – du följer motpartens tempo och behöver inte hitta ledig frekvens',
+                            'Kör FT8 digitalt direkt'
+                        ],
+                        correct: 2,
+                        explanation: 'Att svara på ett CQ är enklast: motparten styr tempot, du behöver inte hitta en ledig frekvens, och en station som ropar CQ förväntar sig svar. Börja med att svara – ropa CQ sedan när du är bekväm.'
+                    },
+                    {
+                        id: 'c10-2-e2',
+                        type: 'multiple-choice',
+                        question: 'Vad innebär RST-rapporten "59"?',
+                        options: [
+                            'Readability 5, Signal 9 – perfekt läsbar och extremt stark',
+                            'Readability 9, Signal 5 – stark men otydlig',
+                            '59 kHz bandbredd',
+                            '59 watts sändningseffekt'
+                        ],
+                        correct: 0,
+                        explanation: 'R=Readability (1–5), S=Signal Strength (1–9). "59" = R5 (perfekt läsbar) + S9 (extremt stark). SSB-rapporter är alltid RS (två siffror). CW-rapporter är RST (tre siffror, T=Tone 1–9).'
+                    },
+                    {
+                        id: 'c10-2-e3',
+                        type: 'multiple-choice',
+                        question: 'Varför ska du vänta ca 2 sekunder efter att trycka PTT innan du börjar tala?',
+                        options: [
+                            'För att hälsa artigt',
+                            'TX-reläet och slutsteget behöver tid att rampa upp – pratar du direkt klipps de första orden',
+                            'Mottagaren behöver tid att stänga av AGC',
+                            'Det är ett lagkrav'
+                        ],
+                        correct: 1,
+                        explanation: 'TX-relay och slutsteg behöver 10–50ms att rampa upp. Börjar du tala direkt när PTT trycks klipps de första stavelserna bort. Tryck PTT, räkna mentalt "ett-tusen-ett", börja sedan tala.'
+                    },
+                    {
+                        id: 'c10-2-e4',
+                        type: 'true-false',
+                        question: '"Over and out" är ett korrekt sätt att avsluta ett radiosamtal.',
+                        correct: false,
+                        explanation: 'FALSKT. "Over" = jag lyssnar, samtalet fortsätter. "Out" = kontakten avslutad. "Over and out" är en logisk motsägelse och stämmer från Hollywood-film. Säg antingen "Over" (byt) eller "Out/Clear" (avslutar).'
+                    },
+                    {
+                        id: 'c10-2-e5',
+                        type: 'multiple-choice',
+                        question: 'Hur många gånger ska "CQ" ropas i ett standard CQ-anrop?',
+                        options: [
+                            'En gång',
+                            'Tre gånger',
+                            'Fem gånger',
+                            'Så många gånger som möjligt tills någon svarar'
+                        ],
+                        correct: 1,
+                        explanation: 'Standard: CQ CQ CQ, this is [signal] [signal], calling CQ and standing by. Tre CQ är normen – en gång kan missas, fem eller fler är irriterande och tar onödig sändtid.'
+                    },
+                    {
+                        id: 'c10-2-e6',
+                        type: 'multiple-choice',
+                        question: 'En 2m FM-repeater har output på 145,650 MHz. Vilken frekvens sänder DU på?',
+                        options: [
+                            '145,650 MHz – samma som repeatern',
+                            '145,050 MHz – 600 kHz under output',
+                            '146,250 MHz – 600 kHz över output',
+                            '144,650 MHz – 1 MHz under output'
+                        ],
+                        correct: 1,
+                        explanation: '2m-repeatrar använder 600 kHz skift. Du sänder på repeaterens INPUT (600 kHz under output): 145,650 - 0,600 = 145,050 MHz. Transceivern ställer in skiftet automatiskt när du väljer repeaterfrekvensen.'
+                    },
+                    {
+                        id: 'c10-2-e7',
+                        type: 'multiple-choice',
+                        question: 'Vad ingår normalt i ett enkelt HF-QSO utöver anropssignalerna?',
+                        options: [
+                            'Bara anropssignaler – inget mer krävs',
+                            'RST-rapport, namn och QTH (ort)',
+                            'Licensklass, effekt och antenntyp',
+                            'DXCC-nummer och loggboksnummer'
+                        ],
+                        correct: 1,
+                        explanation: 'Ett standard-QSO inkluderar: RST-rapport (signalkvalitet), namn och QTH (ort). Mer erfarna utbyter gärna även utrustningsdetaljer. I tävlingar reduceras utbytet till rapport + löpnummer/zon.'
+                    },
+                    {
+                        id: 'c10-2-e8',
+                        type: 'multiple-choice',
+                        question: 'Varför ska du ALDRIG säga "Break break" för att bryta in i ett pågående QSO i europeisk amatörradiotrafik?',
+                        options: [
+                            'Det är bara gammalmodig CB-jargong utan faktisk innebörd',
+                            'I europeisk amatörradiotradition signalerar "Break break" nöd- eller prioritetstrafik',
+                            'Det stör repeaterns CTCSS-ton',
+                            'Det är förbjudet enligt bandplanen'
+                        ],
+                        correct: 1,
+                        explanation: '"Break break" är i europeisk amatörradio reserverat för nöd eller hög prioritet. Vill du bryta in vid ett pågående QSO: vänta på en paus och säg bara din anropssignal. "Break" från CB-radio har en annan kultur – blanda inte ihop dem.'
+                    },
+                    {
+                        id: 'c10-2-e9',
+                        type: 'multiple-choice',
+                        question: 'Vad är QRZ?',
+                        options: [
+                            'Q-kod: Vem ropade mig? / Vem är där?',
+                            'Q-kod: Frekvensen är ledig',
+                            'Q-kod: Jag avslutar kontakten',
+                            'Q-kod: Byt till en annan frekvens'
+                        ],
+                        correct: 0,
+                        explanation: 'QRZ = "Vem ropade mig?" eller "Vem är där?". Används av den svarade stationen för att identifiera vem som anropade. Används ALDRIG av den som ropar CQ. QRZ.com är en webbdatabas för anropssignaler, uppkallad efter Q-koden.'
+                    },
+                    {
+                        id: 'c10-2-e10',
+                        type: 'true-false',
+                        question: 'Det är tillåtet att börja sända på en frekvens direkt om du inte hör någon trafik där.',
+                        correct: false,
+                        explanation: 'FALSKT. Du kanske bara hör halva ett QSO – den andra stationen kan vara utom räckhåll för dig men hörs perfekt av motparten. Lyssna alltid noga i minst 15 sekunder och säg "QRL?" innan du sänder.'
+                    }
+                ]
+            },
+            {
+                id: '10.3',
+                title: 'DX och tävlingar',
+                exercises: [
+                    {
+                        id: 'c10-3-e1',
+                        type: 'multiple-choice',
+                        question: 'Vad är "grålinjen" (grey line) och varför är den viktig för DX?',
+                        options: [
+                            'En frekvensplan för grå kanaler utan licenskrav',
+                            'Gränsen dag/natt – D-lagret försvinner vid soluppgång/nedgång vilket ger utmärkt HF-propagation längs linjen',
+                            'En antenntyp för DX optimerad för låg vinkel',
+                            'Gränsen för DX (>3000 km från Sverige)'
+                        ],
+                        correct: 1,
+                        explanation: 'Grålinjen (terminator) är gränsen dag/natt. D-lagret, som absorberar HF-signaler, försvinner vid soluppgång/nedgång. F-lagret är fortfarande aktivt. Signaler längs linjen kan färdas extremt långt med låg dämpning – ibland bara under några minuter!'
+                    },
+                    {
+                        id: 'c10-3-e2',
+                        type: 'multiple-choice',
+                        question: 'En DX-spot lyder "VK9DX 14025.0 CW QSX UP5". Vad ska du ställa in?',
+                        options: [
+                            'Lyssna på 14.025, sänder på 14.025 – enkelt',
+                            'Aktivera split: lyssna 14.025, sänder 14.030 (5 kHz upp)',
+                            'Sänder på 14.020 (5 kHz ner)',
+                            'Byt till FM och sänder på 145.025'
+                        ],
+                        correct: 1,
+                        explanation: 'QSX UP5 = lyssnar 5 kHz uppåt. DX-stationen sänder på 14.025 MHz men lyssnar på 14.030 MHz. Aktivera split i transceivern: VFO-A = 14.025 (lyssna), VFO-B = 14.030 (sänder). Att sända på DX:ens TX-frekvens är ett allvarligt etikettsbrott.'
+                    },
+                    {
+                        id: 'c10-3-e3',
+                        type: 'multiple-choice',
+                        question: 'Vilken taktik är rätt i en pile-up?',
+                        options: [
+                            'Ropa din signal upprepade gånger tills DX-stationen hör dig',
+                            'Lyssna ut DX-stationens mönster, ropa din signal EN gång tydligt vid rätt tillfälle, lyssna sedan',
+                            'Öka effekten till max och ropa kontinuerligt',
+                            'Säg bara de tre sista bokstäverna i signalen – sparar tid'
+                        ],
+                        correct: 1,
+                        explanation: 'Rätt pile-up-teknik: Lyssna noga, identifiera DX:ens mönster, ropa din fullständiga signal EN gång tydligt vid rätt tillfälle, lyssna sedan om DX hörde dig. Att ropa upprepat blockerar frekvensen och irriterar alla – det hjälper inte.'
+                    },
+                    {
+                        id: 'c10-3-e4',
+                        type: 'true-false',
+                        question: 'Du kan säga bara de sista tre bokstäverna i din anropssignal i en pile-up om det går snabbare.',
+                        correct: false,
+                        explanation: 'FALSKT som allmän regel. Säg alltid din fullständiga signal (t.ex. SM5XYZ, inte bara XYZ). Undantag: om DX-stationen explicit ber om "last three letters only" – men det är DX-stationens beslut, inte ditt.'
+                    },
+                    {
+                        id: 'c10-3-e5',
+                        type: 'multiple-choice',
+                        question: 'Vilket är det mest populära DX-bandet som är öppet i stort sett dygnet runt?',
+                        options: [
+                            '80m (3,5 MHz) – bäst natt',
+                            '20m (14 MHz) – öppet mot världen dagtid, ofta kvällstid',
+                            '2m (144 MHz) – VHF DX',
+                            '70cm (432 MHz) – UHF DX'
+                        ],
+                        correct: 1,
+                        explanation: '20m-bandet (14 MHz) är det klassiska DX-bandet, ofta öppet till någon del av världen hela dygnet. Vid solmaximum (2024–2026) är även 10m och 15m utmärkta, men 20m är den konstanta favoriten.'
+                    },
+                    {
+                        id: 'c10-3-e6',
+                        type: 'multiple-choice',
+                        question: 'Vad är S&P (Search and Pounce) i en tävling?',
+                        options: [
+                            'Att sända med hög effekt och bred bandbredd',
+                            'Att söka längs bandet och svara på andras CQ-anrop, istället för att ropa CQ själv',
+                            'En speciell antennkonfiguration för tävling',
+                            'Att använda spottar från DX Cluster'
+                        ],
+                        correct: 1,
+                        explanation: 'S&P = Search and Pounce. Du "jagar" längs bandet och svarar på stationer som ropar CQ, istället för att själv stå på en frekvens och ropa CQ (Run). S&P är nybörjarvänligare i tävlingar – du styr inte tempot.'
+                    },
+                    {
+                        id: 'c10-3-e7',
+                        type: 'multiple-choice',
+                        question: 'Vilken tävling rekommenderas som nybörjarens första tävling i Sverige?',
+                        options: [
+                            'CQ WW DX – världens största, bäst att börja stort',
+                            'SM-veckan – svenska, vänlig atmosfär och på svenska',
+                            'ARRL DX – mot USA, bra propagation',
+                            'WAE – Worked All Europe, lättast att nå stationer'
+                        ],
+                        correct: 1,
+                        explanation: 'SM-veckan (Swedish Activity Contest) är perfekt för nybörjare: på svenska, lokal trafik, vänlig atmosfär och inte lika hårt tävlingstryck som CQ WW. CQ WW är kul men kan vara överväldigande för en nybörjare.'
+                    },
+                    {
+                        id: 'c10-3-e8',
+                        type: 'multiple-choice',
+                        question: 'Vad är ett typiskt tävlingsutbyte (contest exchange) i ett SSB-contest?',
+                        options: [
+                            'Namn, QTH, utrustning och antennhöjd',
+                            'RST-rapport + löpnummer eller zon/distrikt',
+                            'Bara anropssignal – ingen annan info',
+                            'DXCC-nummer och Maidenhead-lokator'
+                        ],
+                        correct: 1,
+                        explanation: 'Tävlingsutbytet är reducerat till minimum för snabbhet: RST-rapport (ofta 59) + löpnummer (t.ex. 001, 002...) eller CQ-zon. Hela QSO:t ska ta 15–30 sekunder. I DX-tävlingar är zonen viktig för poängberäkning.'
+                    },
+                    {
+                        id: 'c10-3-e9',
+                        type: 'true-false',
+                        question: 'Det är acceptabelt att sända på DX-stationens TX-frekvens om du hör en lång paus i pile-upen.',
+                        correct: false,
+                        explanation: 'ALDRIG. Att sända på DX-stationens TX-frekvens i en split pile-up är ett allvarligt etikettsbrott. DX-stationen sänder där – du täcker dess sändning för alla som lyssnar. Sänder alltid på DX:ens RX-frekvens (UP x).'
+                    },
+                    {
+                        id: 'c10-3-e10',
+                        type: 'multiple-choice',
+                        question: 'Vad är ett DX Cluster?',
+                        options: [
+                            'En grupp av DX-stationer som kör portabel från samma plats',
+                            'Ett globalt nätverk där amatörer delar spottar om aktiva DX-stationer i realtid',
+                            'En antennkonfig med flera element för DX',
+                            'En databas med historiska DX-peditioner'
+                        ],
+                        correct: 1,
+                        explanation: 'DX Cluster är ett globalt realtidsnätverk (dxsummit.fi, dxwatch.com) där amatörer "spottar" DX-stationer de hört – med frekvens, mode och tid. Du kan se direkt om en sällsynt station är aktiv just nu och på vilken frekvens.'
+                    }
+                ]
+            },
+            {
+                id: '10.4',
+                title: 'Diplom och utmärkelser',
+                exercises: [
+                    {
+                        id: 'c10-4-e1',
+                        type: 'multiple-choice',
+                        question: 'Hur många bekräftade DXCC-entiteter krävs för grundläggande DXCC-diplom?',
+                        options: [
+                            '50 entiteter',
+                            '100 entiteter',
+                            '200 entiteter',
+                            'Alla ~340 entiteter'
+                        ],
+                        correct: 1,
+                        explanation: 'Grundläggande DXCC (DX Century Club) kräver 100 bekräftade entiteter av totalt ~340 möjliga. Högre nivåer finns: 150, 200, 250 entiteter och slutligen Honor Roll (alla utom de 9 svåraste som är praktiskt omöjliga).'
+                    },
+                    {
+                        id: 'c10-4-e2',
+                        type: 'multiple-choice',
+                        question: 'Hur många CQ-zoner finns totalt och vilken zon tillhör Sverige?',
+                        options: [
+                            '20 zoner, Sverige är zon 10',
+                            '40 zoner, Sverige är zon 18',
+                            '60 zoner, Sverige är zon 25',
+                            '100 zoner, Sverige är zon 44'
+                        ],
+                        correct: 1,
+                        explanation: 'Det finns 40 CQ-zoner som täcker hela världen. Sverige (och Skandinavien) befinner sig i CQ-zon 18. WAZ-diplomet (Worked All Zones) kräver bekräftade kontakter med alla 40 zoner.'
+                    },
+                    {
+                        id: 'c10-4-e3',
+                        type: 'multiple-choice',
+                        question: 'Hur många QSO:n krävs minimum för en giltig SOTA-aktivering?',
+                        options: [
+                            '1 QSO',
+                            '4 QSO:n',
+                            '10 QSO:n',
+                            '25 QSO:n'
+                        ],
+                        correct: 1,
+                        explanation: 'SOTA (Summits On The Air) kräver minimum 4 giltiga QSO:n från bergstoppen för att aktiveraren ska få sina poäng. Jämför med POTA (Parks On The Air) som kräver 10 QSO:n per park.'
+                    },
+                    {
+                        id: 'c10-4-e4',
+                        type: 'multiple-choice',
+                        question: 'Vad är LoTW (Logbook of The World)?',
+                        options: [
+                            'En webbplats för att köpa radioutrustning online',
+                            'ARRLs system för digital QSL-bekräftelse – standard för DXCC och många diplom',
+                            'Ett program för att planera DX-expeditioner',
+                            'En databas med bandplaner för alla länder'
+                        ],
+                        correct: 1,
+                        explanation: 'LoTW drivs av ARRL och låter amatörer ladda upp loggar digitalt. Systemet matchar automatiskt QSO:n från båda stationerna och skapar digitala bekräftelser giltiga för DXCC, WAS, WAZ och fler. Registrera dig direkt vid licensutfärdandet!'
+                    },
+                    {
+                        id: 'c10-4-e5',
+                        type: 'multiple-choice',
+                        question: 'Vad är skillnaden mellan en SOTA-aktiverare och en SOTA-jägare?',
+                        options: [
+                            'Aktiveraren äger utrustningen, jägaren lånar den',
+                            'Aktiveraren tar radion till bergstoppen och sänder därifrån; jägaren arbetar aktiveraren hemifrån',
+                            'Det är bara olika ord för samma sak',
+                            'Aktiveraren kör CW, jägaren kör SSB'
+                        ],
+                        correct: 1,
+                        explanation: 'I SOTA är aktiveraren den som tar med portabel utrustning upp till bergstoppen och aktiverar den (minst 4 QSO:n). Jägaren är den som sitter hemma och arbetar aktiverarna. Båda får poäng – aktiveraren mer.'
+                    },
+                    {
+                        id: 'c10-4-e6',
+                        type: 'multiple-choice',
+                        question: 'Vilket diplom kräver bekräftade kontakter med alla 50 amerikanska delstater?',
+                        options: [
+                            'DXCC – DX Century Club',
+                            'WAZ – Worked All Zones',
+                            'WAS – Worked All States',
+                            'IOTA – Islands On The Air'
+                        ],
+                        correct: 2,
+                        explanation: 'WAS (Worked All States) kräver bekräftade kontakter med alla 50 amerikanska delstater. Utfärdas av ARRL. Kan göras på ett enda band/mode (t.ex. CW WAS, 40m WAS) eller Mixed (alla band/modes kombinerat).'
+                    },
+                    {
+                        id: 'c10-4-e7',
+                        type: 'multiple-choice',
+                        question: 'Vad är IOTA och vad innebär programmet?',
+                        options: [
+                            'International Organization for Technical Amateurs',
+                            'Islands On The Air – diplomprogram för kontakter med och aktivering av öar världen över',
+                            'Integrated Operations and Transmission Association',
+                            'Index Of Transceiver Achievements'
+                        ],
+                        correct: 1,
+                        explanation: 'IOTA (Islands On The Air) drivs av RSGB och är ett av de mest populära diplomprogram. Det finns över 1200 registrerade ögrupper. Du kan jaga öar hemifrån eller aktivera öar portabelt. Grunddiplom kräver 100 bekräftade ögrupper.'
+                    },
+                    {
+                        id: 'c10-4-e8',
+                        type: 'true-false',
+                        question: 'eQSL.cc-bekräftelser är giltiga för DXCC-diplomet från ARRL.',
+                        correct: false,
+                        explanation: 'FALSKT. DXCC accepterar LoTW (ARRLs eget system) och pappers-QSL-kort. eQSL.cc har egna diplom på sin plattform men är inte godkänt av ARRL för DXCC. Kontrollera alltid vilket QSL-system ett specifikt diplom accepterar.'
+                    },
+                    {
+                        id: 'c10-4-e9',
+                        type: 'multiple-choice',
+                        question: 'Hur många QSO:n krävs för en giltig POTA-aktivering (Parks On The Air)?',
+                        options: [
+                            '4 QSO:n – samma som SOTA',
+                            '10 QSO:n',
+                            '25 QSO:n',
+                            '100 QSO:n'
+                        ],
+                        correct: 1,
+                        explanation: 'POTA (Parks On The Air) kräver minimum 10 giltiga QSO:n från parken/naturreservatet. Jämför med SOTA som kräver 4 QSO:n. POTA har inga höjdkrav – parker, naturreservat och skyddade områden gäller.'
+                    },
+                    {
+                        id: 'c10-4-e10',
+                        type: 'multiple-choice',
+                        question: 'Vad är QSL-byrån och vilken funktion fyller den?',
+                        options: [
+                            'En byrå som utfärdar licenser',
+                            'En tjänst som samlar ihop och vidarebefordrar pappersbaserade QSL-kort mellan amatörer via deras nationella organisation',
+                            'En digital databas för antenndesign',
+                            'En service som säljer logbook-programvara'
+                        ],
+                        correct: 1,
+                        explanation: 'QSL-byrån (bureau) hanterar pappers-QSL-kort. Du skickar dina utgående kort till din nationella organisations byrå; de sorterar och skickar vidare till rätt land. SSA i Sverige sköter utdelning av inkommande kort till svenska amatörer. Billigare än direktpost men kan ta månader.'
+                    }
+                ]
+            },
+            {
+                id: '10.5',
+                title: 'Aktiviteter och evenemang',
+                exercises: [
+                    {
+                        id: 'c10-5-e1',
+                        type: 'multiple-choice',
+                        question: 'Vad är APRS och på vilken frekvens används det i Sverige?',
+                        options: [
+                            'Amateur Propagation Reporting System, 14.100 MHz',
+                            'Automatic Packet Reporting System – GPS-positioner och meddelanden via radio, 144,800 MHz på 2m',
+                            'Advanced Phone Radio Service, 145,500 MHz',
+                            'Antenna Position Reporting System, 432,500 MHz'
+                        ],
+                        correct: 1,
+                        explanation: 'APRS (Automatic Packet Reporting System) sänder GPS-position, väderdata och korta meddelanden via paketradio. Standard frekvens i Europa är 144,800 MHz på 2m-bandet. Karta: aprs.fi.'
+                    },
+                    {
+                        id: 'c10-5-e2',
+                        type: 'multiple-choice',
+                        question: 'Vad är JOTA och när arrangeras det?',
+                        options: [
+                            'Japanese On The Air – japanska amatörtävlingen i november',
+                            'Jamboree On The Air – scouternas radioaktivitet tredje helgen i oktober',
+                            'Joint Operations and Training Association – nödövning i maj',
+                            'Jamboree Of Technical Amateurs – teknikmässan i Stockholm'
+                        ],
+                        correct: 1,
+                        explanation: 'JOTA (Jamboree On The Air) arrangeras tredje helgen i oktober varje år. Radioamatörer ställer upp med stationer för lokala scoutkårer som kommunicerar med scouter världen runt. Ett utmärkt sätt att visa unga människor amatörradio!'
+                    },
+                    {
+                        id: 'c10-5-e3',
+                        type: 'multiple-choice',
+                        question: 'Vad är NAC (Nordic Activity Contest) och hur ofta hålls det?',
+                        options: [
+                            'En stor nordisk DX-tävling en gång om året i september',
+                            'En VHF/UHF-aktivitetstävling som hålls varje tisdagskväll och byter band varje vecka',
+                            'En CW-tävling för nordiska länder en gång i månaden',
+                            'En FM-repeatertävling kvartalsvis'
+                        ],
+                        correct: 1,
+                        explanation: 'NAC (Nordic Activity Contest) är en 3-timmars VHF/UHF-aktivitetstävling varje tisdagskväll med roterande band (2m, 70cm, 23cm etc.). Perfekt för att träna VHF-trafik och bygga kontakter i Norden. Arrangeras av NRAU.'
+                    },
+                    {
+                        id: 'c10-5-e4',
+                        type: 'multiple-choice',
+                        question: 'Varför kräver FT8 att datorklockan är synkroniserad inom 1 sekund?',
+                        options: [
+                            'Loggen måste ha rätt datum',
+                            'FT8 arbetar med exakta 15-sekunders globala cykler – är klockan fel missar stationerna varandras sändningsperioder',
+                            'Det är ett PTS-krav för digital sändning',
+                            'Annars störs GPS-systemet'
+                        ],
+                        correct: 1,
+                        explanation: 'FT8 delar upp tiden i 15-sekunders perioder som alla stationer världen över måste följa exakt. En felaktig klocka på 2 sekunder innebär att du sänder mitt i motpartens lyssnarperiod – ingen hör dig. Synkronisera med NTP/internet tid.'
+                    },
+                    {
+                        id: 'c10-5-e5',
+                        type: 'multiple-choice',
+                        question: 'Vad är EME (Moonbounce) inom amatörradio?',
+                        options: [
+                            'En förkortning för "Extreme Mobile Equipment"',
+                            'Kommunikation via reflektion mot månen – signaler skickas till och studsar tillbaka',
+                            'En digital mode för VHF-trafik',
+                            'Extra Maximum Effekt – sändning med maximal tillåten effekt'
+                        ],
+                        correct: 1,
+                        explanation: 'EME (Earth-Moon-Earth, "Moonbounce") innebär att signaler skickas till månen och reflekteras tillbaka till en annan station på jorden. Kräver stora antenner och/eller hög effekt, men moderna digitala modes (JT65, Q65) har gjort det möjligt med rimlig utrustning.'
+                    },
+                    {
+                        id: 'c10-5-e6',
+                        type: 'multiple-choice',
+                        question: 'Vad är QRP inom amatörradio?',
+                        options: [
+                            'Quick Response Protocol – digitalt dataprotokoll',
+                            'Sändning med låg effekt, konventionellt max 5W för HF',
+                            'En antenntyp för korta avstånd',
+                            'Quality Radio Practice – god radiopraxis'
+                        ],
+                        correct: 1,
+                        explanation: 'QRP betyder låg effekt. Konventionell definition: max 5W på HF. QRP-entusiaster utmanar sig att göra så långa kontakter som möjligt med minst möjliga effekt. Med moderna digitala modes (FT8) kan man nå hela världen med <1W!'
+                    },
+                    {
+                        id: 'c10-5-e7',
+                        type: 'multiple-choice',
+                        question: 'Vad är WSPR och vad är det bra för?',
+                        options: [
+                            'Wide Signal Power Radio – hög effekt DX',
+                            'Weak Signal Propagation Reporter – sänder automatiska mikro-fyrar för att studera jonosfärs-propagation globalt',
+                            'Wireless Simplex Phone Radio – enkel FM-kommunikation',
+                            'World Standard for Portable Radio – certifieringssystem'
+                        ],
+                        correct: 1,
+                        explanation: 'WSPR (uttalas "whisper") sänder automatiska smalsignalsfyrar på milliwatt-nivå. Mottagare världen över avkodar och rapporterar på wsprnet.org. Perfekt för att studera propagation – se var i världen din signal hörs utan att störa annan trafik.'
+                    },
+                    {
+                        id: 'c10-5-e8',
+                        type: 'true-false',
+                        question: 'Satelliter (OSCAR) för amatörradio kräver alltid dyra specialantenner och professionell utrustning.',
+                        correct: false,
+                        explanation: 'FALSKT. Många amatörradiosatelliter i låg omloppsbana (LEO) kan arbetas med en enkel handhållen 5W VHF/UHF-radio och en handhållen riktantenn! Exempelvis AO-91 och AO-92 kan nås med Baofeng + billig Yagi. Fönstren är korta (10–15 min) men tillräckliga.'
+                    },
+                    {
+                        id: 'c10-5-e9',
+                        type: 'multiple-choice',
+                        question: 'Vad är Meteor Scatter (MS) inom VHF-trafik?',
+                        options: [
+                            'Kommunikation via reflektion mot rymdfarkoster',
+                            'Kommunikation via joniserade spår som meteorer lämnar i atmosfären – möjliggör VHF-DX på hundratals till tusentals km',
+                            'En tävling om att hitta meteoritstationer',
+                            'En typ av brusreducering för VHF-mottagare'
+                        ],
+                        correct: 1,
+                        explanation: 'Meteorer som bränner upp i atmosfären lämnar joniserade spår som reflekterar VHF-signaler i bråkdels sekunder till sekunder. Med digitala modes (MSK144 i WSJT-X) kan man kommunicera via dessa spår. Stora meteorregn (Perseider, Leonider) ger flest möjligheter.'
+                    },
+                    {
+                        id: 'c10-5-e10',
+                        type: 'multiple-choice',
+                        question: 'Vilken frekvens används för APRS i Europa?',
+                        options: [
+                            '144,390 MHz – nordamerikansk standard, används ibland',
+                            '144,800 MHz – europeisk APRS-standard',
+                            '145,500 MHz – anropsfrekvens 2m',
+                            '433,500 MHz – UHF APRS'
+                        ],
+                        correct: 1,
+                        explanation: '144,800 MHz är den europeiska APRS-standardfrekvensen på 2m-bandet. Nordamerika använder 144,390 MHz. Det är viktigt att ställa in rätt frekvens för din region för att synas på aprs.fi och nå lokala iGates.'
+                    }
+                ]
+            },
+            {
+                id: '10.6',
+                title: 'Resurser och fortsatt lärande',
+                exercises: [
+                    {
+                        id: 'c10-6-e1',
+                        type: 'multiple-choice',
+                        question: 'Vad heter den svenska riksorganisationen för radioamatörer?',
+                        options: [
+                            'ARRL – American Radio Relay League',
+                            'SSA – Sveriges Sändareamatörer',
+                            'IARU – International Amateur Radio Union',
+                            'PTS – Post- och telestyrelsen'
+                        ],
+                        correct: 1,
+                        explanation: 'SSA (Sveriges Sändareamatörer) är den svenska riksorganisationen med hemsida ssa.se. SSA representerar svenska amatörer i IARU, ger ut tidningen QTC och samordnar klubbverksamhet och kurser.'
+                    },
+                    {
+                        id: 'c10-6-e2',
+                        type: 'multiple-choice',
+                        question: 'Vilken webbplats används för att slå upp information om en okänd anropssignal?',
+                        options: [
+                            'ssa.se – SSA:s register',
+                            'qrz.com – global databas med anropssignaler, QTH och stationsfoto',
+                            'dxsummit.fi – DX Cluster',
+                            'pskreporter.info – propagationsdata'
+                        ],
+                        correct: 1,
+                        explanation: 'QRZ.com är den globala standarden för att slå upp anropssignaler. Du hittar namn, QTH, bild på stationen och antennerna, och ofta en kort presentation. Många amatörer loggar också sina QSO:n där.'
+                    },
+                    {
+                        id: 'c10-6-e3',
+                        type: 'multiple-choice',
+                        question: 'Vilket program används för FT8 och andra weak-signal digitala modes?',
+                        options: [
+                            'Log4OM',
+                            'N1MM+',
+                            'WSJT-X',
+                            'Fldigi'
+                        ],
+                        correct: 2,
+                        explanation: 'WSJT-X (Weak Signal Joe Taylor – uppkallat efter uppfinnaren K1JT) är standardprogrammet för FT8, FT4, WSPR, JT65, MSK144 och fler modes. Gratis för alla plattformar.'
+                    },
+                    {
+                        id: 'c10-6-e4',
+                        type: 'multiple-choice',
+                        question: 'Vilken webbplats visar i realtid var i världen din FT8/PSK31-signal hörs?',
+                        options: [
+                            'dxsummit.fi',
+                            'qrz.com',
+                            'pskreporter.info',
+                            'sota.org.uk'
+                        ],
+                        correct: 2,
+                        explanation: 'PSK Reporter (pskreporter.info) samlar automatiska rapporter från mottagarstationer världen över och visar på en karta var din signal avkodats. Utmärkt för att kontrollera om din antenn och propagation fungerar utan att störa med QSO-trafik.'
+                    },
+                    {
+                        id: 'c10-6-e5',
+                        type: 'multiple-choice',
+                        question: 'Vad är IARU och vilken roll fyller organisationen?',
+                        options: [
+                            'En tillverkare av amatörradioutrustning',
+                            'Internationella amatörradiounionen – samlar nationella organisationer och representerar amatörer mot ITU i frekvensförhandlingar',
+                            'En certifieringsorganisation för radiolicenser',
+                            'En ideell organisation för DX-expeditioner'
+                        ],
+                        correct: 1,
+                        explanation: 'IARU (International Amateur Radio Union) samlar 150+ nationella amatörorganisationer (SSA för Sverige). IARU representerar amatörradio gentemot ITU (FN:s telekomorganisation) och förhandlar om bevarandet av amatörfrekvenser globalt.'
+                    },
+                    {
+                        id: 'c10-6-e6',
+                        type: 'multiple-choice',
+                        question: 'Vilket program rekommenderas specifikt för radiotävlingar?',
+                        options: [
+                            'Log4OM – bäst för tävling',
+                            'WSJT-X – tävlingslogg',
+                            'N1MM+ – standard för tävlingsloggning med stöd för 1000+ tävlingar',
+                            'Fldigi – tävlingsoptimerat'
+                        ],
+                        correct: 2,
+                        explanation: 'N1MM+ är de facto-standarden för tävlingsloggning. Det stöder över 1000 tävlingar med rätt utbyte och poängberäkning, har snabbtangenter för effektiv drift och genererar Cabrillo-filer för inlämning. Gratis.'
+                    },
+                    {
+                        id: 'c10-6-e7',
+                        type: 'multiple-choice',
+                        question: 'Vad kan du göra med en billig RTL-SDR-dongel (ca 200–400 kr) och programmet SDR#?',
+                        options: [
+                            'Sända med upp till 5W på alla amatörband',
+                            'Lyssna på allt från AM och kortvåg till flygradio, DAB+ och mycket mer som passiv SDR-mottagare',
+                            'Koppla upp till DX Cluster automatiskt',
+                            'Göra QSO:n digitalt via internet'
+                        ],
+                        correct: 1,
+                        explanation: 'En RTL-SDR-dongel (ursprungligen för digital-TV-mottagning) kombinerat med SDR# gör datorn till en bredbandig radiomottagare. Du kan lyssna på AM, FM, kortvåg, flygradio (ADS-B), sjöradio, amatörband och mycket mer – ett utmärkt sätt att lära sig om radiopropagation.'
+                    },
+                    {
+                        id: 'c10-6-e8',
+                        type: 'true-false',
+                        question: 'Gå med i en lokal amatörradioklubbb ger tillgång till klubbstationen och möjlighet att låna utrustning innan köp.',
+                        correct: true,
+                        explanation: 'SANT. En lokal klubb ger tillgång till klubbstationen (ofta med stor antennpark), möjlighet att låna utrustning och pröva olika radiotyper, lärande från erfarna amatörer (Elmers) och gemensamma aktiviteter som Field Day och JOTA. Hitta din klubb på ssa.se/klubbar.'
+                    },
+                    {
+                        id: 'c10-6-e9',
+                        type: 'multiple-choice',
+                        question: 'Vad är en "Elmer" inom amatörradio?',
+                        options: [
+                            'En speciell antenntyp för nybörjare',
+                            'En erfaren amatör som fungerar som mentor och vägleder nya licensinnehavare',
+                            'Ett program för elektronikbygge',
+                            'En Q-kod för "frekvensen är ledig"'
+                        ],
+                        correct: 1,
+                        explanation: '"Elmer" är amatörradiojargong för en erfaren mentor som hjälper nybörjare. Termen används framförallt i nordamerikansk tradition men förstås globalt. Att ha en Elmer snabbar upp inlärningen enormt – sök upp en i din lokala klubb!'
+                    },
+                    {
+                        id: 'c10-6-e10',
+                        type: 'multiple-choice',
+                        question: 'Vilken webbplats ger VOACAP-baserade propagationsprognoser och visar vilka band som öppnar mot vilka riktningar?',
+                        options: [
+                            'qrz.com/propagation',
+                            'voacap.com – avancerade HF-propagationsprognoser baserade på solfläcksaktivitet',
+                            'dxsummit.fi/forecast',
+                            'ssa.se/propagation'
+                        ],
+                        correct: 1,
+                        explanation: 'VOACAP Online (voacap.com) ger avancerade HF-propagationsberäkningar baserade på aktuell solfläcksaktivitet (SSN), tid på dygnet och säsong. Ange ditt QTH och destinationen – du får en karta och diagram över vilka band och tider som är bäst.'
+                    }
+                ]
+            }
+        ]
     }
 ];
 

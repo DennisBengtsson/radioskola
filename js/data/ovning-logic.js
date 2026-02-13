@@ -41,6 +41,7 @@ let initialTouchPos = { x: 0, y: 0 };
 document.addEventListener('DOMContentLoaded', function() {
     loadChapterOptions();
     setupEventListeners();
+    checkUrlParams();
 });
 
 function setupEventListeners() {
@@ -53,7 +54,30 @@ function setupEventListeners() {
         }
     });
 }
-
+function checkUrlParams() {
+    const params = new URLSearchParams(window.location.search);
+    const chapterId = params.get('chapter');
+    
+    if (!chapterId) return;
+    
+    const chapterIdNum = parseInt(chapterId);
+    if (isNaN(chapterIdNum)) return;
+    
+    // Sätt rätt värde i dropdown
+    const select = document.getElementById('chapterSelect');
+    select.value = chapterIdNum;
+    
+    // Kör selectChapter direkt – visar delkapitlen automatiskt
+    selectChapter(chapterIdNum);
+    
+    // Scrolla förbi dropdown till delkapitlen
+    setTimeout(() => {
+        const stepSubchapter = document.getElementById('stepSubchapter');
+        if (stepSubchapter) {
+            stepSubchapter.scrollIntoView({ behavior: 'smooth' });
+        }
+    }, 100);
+}
 // ============================================
 // STEG 1: LADDA KAPITEL
 // ============================================
@@ -163,7 +187,6 @@ function startSubchapter(subchapterId) {
     renderProgressDots();
     showQuestion();
     
-    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 // ============================================
@@ -1014,6 +1037,33 @@ function startFeedbackTimer(seconds) {
             feedbackTimerInterval = null;
             // Gå automatiskt till nästa efter 10 sekunder
             nextQuestion();
+            function nextQuestion() {
+    if (feedbackTimerInterval) {
+        clearInterval(feedbackTimerInterval);
+        feedbackTimerInterval = null;
+    }
+    
+    draggedItem = null;
+    selectedForSwap = null;
+    touchCurrentItem = null;
+    isTouchDragging = false;
+    if (touchClone) {
+        touchClone.remove();
+        touchClone = null;
+    }
+    
+    currentQuestionIndex++;
+    showQuestion();
+    
+    // LÄGG TILL: scrolla till frågekortet
+    setTimeout(() => {
+        const container = document.getElementById('questionContainer');
+        if (container) {
+            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+    }, 50);
+}
+            
         }
     }, 1000);
 }
@@ -1113,7 +1163,9 @@ function showResults() {
     }
     
     // Scrolla till toppen för att se resultatet
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+        document.getElementById('stepResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 50);
 }
 
 function getRecommendation(percentage) {

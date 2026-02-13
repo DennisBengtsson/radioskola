@@ -1139,3 +1139,1228 @@
         </details>
     </div>
 </div>
+<!-- ============================================ -->
+<!-- SEKTION 9.3: RF-STRÅLNING OCH HÄLSA -->
+<!-- ============================================ -->
+
+<div class="content-section" id="rf-strålning">
+    <h2>9.3 RF-strålning och Hälsa</h2>
+    
+    <h3>Vad är RF-strålning egentligen?</h3>
+    <p>RF-strålning (radiofrekvensstrålning) är elektromagnetisk strålning i frekvensområdet 3 kHz till 300 GHz. Det är <strong>icke-joniserande strålning</strong> - det betyder att den INTE kan slå sönder DNA som röntgenstrålning kan. Men vid höga effektnivåer kan den värma upp kroppsvävnad på ett skadligt sätt!</p>
+    
+    <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+        <strong>💡 Mikrovågsugns-analogin:</strong>
+        <br><br>
+        En mikrovågsugn och din sändare använder samma fysikaliska princip:
+        <br><br>
+        <strong>Mikrovågsugnen:</strong> 800-1200W vid 2,45 GHz, värmer mat på sekunder
+        <br><strong>Din sändare (100W HF):</strong> 100W vid 14 MHz, kan värma vävnad vid nära kontakt
+        <br><br>
+        Skillnaden? Mikrovågsugnen är designad för att värma mat effektivt och koncentrerat. Din antenn sprider energin över en stor yta och minskar snabbt med avståndet.
+        <br><br>
+        <em>💡 Men ta heed: precis som du inte stoppar in handen i mikrovågsugnen, ska du inte röra antennen under sändning!</em>
+    </div>
+    
+    <h3>Hur påverkar RF-strålning kroppen?</h3>
+    
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">🔬 BIOLOGISKA EFFEKTER AV RF-STRÅLNING</h4>
+        
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Effekt</th>
+                    <th style="width: 35%;">Vad händer</th>
+                    <th style="width: 40%;">När det sker</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #fef3c7;">
+                    <td><strong>Uppvärmning (termisk effekt)</strong></td>
+                    <td>RF-energi absorberas i kroppen och omvandlas till värme. Precis som i en mikrovågsugn.</td>
+                    <td>Vid höga effektnivåer nära antennen. Primärrisken för amatörradio.</td>
+                </tr>
+                <tr style="background: #dbeafe;">
+                    <td><strong>Inducerade strömmar</strong></td>
+                    <td>Vid låga frekvenser (under 10 MHz) kan elektriska strömmar induceras i kroppen.</td>
+                    <td>Vid höga fältstyrkor på HF-banden. Kan störa muskler och nerver.</td>
+                </tr>
+                <tr style="background: #d1fae5;">
+                    <td><strong>Ögonlinsen - extra känslig!</strong></td>
+                    <td>Ögonlinsen saknar blodcirkulation för att kylas. RF-uppvärmning kan ge grå starr.</td>
+                    <td>Upprepad exponering för höga mikrovågsnivåer (GHz-frekvenser).</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+            <strong style="color: #92400e;">💡 Viktigt att veta:</strong>
+            <br><br>
+            Vid de effektnivåer och avstånd som normalt används vid amatörradio är risken <strong>liten om man följer säkerhetsreglerna</strong>. Faran uppstår främst:
+            <br>• Vid direkt kontakt med antennen under sändning
+            <br>• Om antennen är placerad på nära håll (under 1-2 meter)
+            <br>• Vid mycket höga effekter (500W+) med riktantenner mot vistelseplatser
+        </div>
+    </div>
+    
+    <h3>📉 Inversa kvadratlagen - Avstånd är ditt bästa skydd!</h3>
+    
+    <p>Den viktigaste fysikaliska lagen för RF-säkerhet är hur fältstyrkan minskar med avstånd:</p>
+    
+    <div class="formula-box" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); color: white;">
+        <strong>Inversa kvadratlagen:</strong>
+        <br><br>
+        Fältstyrkan E minskar med kvadraten på avståndet:
+        <br><br>
+        <strong>E₂ = E₁ × (r₁ / r₂)²</strong>
+        <br><br>
+        E₁ = fältstyrka på avstånd r₁
+        <br>E₂ = fältstyrka på avstånd r₂
+        <br><br>
+        <strong>Enkelt uttryckt: Dubbelt avstånd = ¼ av fältstyrkan!</strong>
+    </div>
+    
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">📊 FÄLTSTYRKA VS AVSTÅND - VISUELL BILD</h4>
+        
+        <div style="text-align: center; margin: 1.5rem 0;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 350" style="max-width: 800px; width: 100%;">
+                <style>
+                    .antenna-body { fill: #dc2626; stroke: #991b1b; stroke-width: 2; }
+                    .wave { stroke: #3b82f6; stroke-width: 2; fill: none; }
+                    .label { font-family: Arial, sans-serif; font-size: 13px; fill: #1f2937; font-weight: bold; }
+                    .sublabel { font-family: Arial, sans-serif; font-size: 11px; fill: #6b7280; }
+                    .danger { fill: #fee2e2; stroke: #dc2626; stroke-width: 2; }
+                    .caution { fill: #fef3c7; stroke: #f59e0b; stroke-width: 2; }
+                    .safe { fill: #d1fae5; stroke: #059669; stroke-width: 2; }
+                    .axis { stroke: #1f2937; stroke-width: 2; }
+                </style>
+                
+                <!-- Antenn -->
+                <rect class="antenna-body" x="30" y="100" width="20" height="150" rx="3"/>
+                <polygon points="40,80 30,100 50,100" fill="#dc2626"/>
+                <text class="label" x="40" y="275" text-anchor="middle" fill="#dc2626">📡</text>
+                <text class="sublabel" x="40" y="295" text-anchor="middle">100W sändare</text>
+                
+                <!-- Farozoner -->
+                <rect class="danger" x="60" y="100" width="80" height="150" opacity="0.6"/>
+                <text class="label" x="100" y="170" text-anchor="middle" fill="#dc2626">🔴</text>
+                <text class="label" x="100" y="185" text-anchor="middle" fill="#dc2626" font-size="11">FARA</text>
+                <text class="sublabel" x="100" y="200" text-anchor="middle">0-1m</text>
+                <text class="sublabel" x="100" y="215" text-anchor="middle">100% fältstyrka</text>
+                
+                <rect class="caution" x="140" y="110" width="100" height="130" opacity="0.6"/>
+                <text class="label" x="190" y="168" text-anchor="middle" fill="#92400e">🟡</text>
+                <text class="label" x="190" y="183" text-anchor="middle" fill="#92400e" font-size="11">FÖRSIKTIG</text>
+                <text class="sublabel" x="190" y="198" text-anchor="middle">1-2m</text>
+                <text class="sublabel" x="190" y="213" text-anchor="middle">25% fältstyrka</text>
+                
+                <rect class="safe" x="240" y="120" width="120" height="110" opacity="0.6"/>
+                <text class="label" x="300" y="170" text-anchor="middle" fill="#065f46">🟢</text>
+                <text class="label" x="300" y="185" text-anchor="middle" fill="#065f46" font-size="11">OK</text>
+                <text class="sublabel" x="300" y="200" text-anchor="middle">2-4m</text>
+                <text class="sublabel" x="300" y="215" text-anchor="middle">6% fältstyrka</text>
+                
+                <rect class="safe" x="360" y="130" width="160" height="90" opacity="0.4"/>
+                <text class="label" x="440" y="170" text-anchor="middle" fill="#065f46">✅ SÄKERT</text>
+                <text class="sublabel" x="440" y="188" text-anchor="middle">4m+</text>
+                <text class="sublabel" x="440" y="203" text-anchor="middle">&lt;2% fältstyrka</text>
+                
+                <!-- Kurva som visar minskning -->
+                <path d="M 60,100 Q 140,130 240,150 T 520,175" stroke="#dc2626" stroke-width="3" fill="none" stroke-dasharray="8,4"/>
+                
+                <!-- Axel -->
+                <line class="axis" x1="50" y1="260" x2="700" y2="260"/>
+                <text class="label" x="375" y="290" text-anchor="middle">Avstånd från antennen →</text>
+                
+                <!-- Pil som visar trend -->
+                <text class="label" x="400" y="135" fill="#3b82f6" font-size="12">Fältstyrkan minskar snabbt ↘</text>
+            </svg>
+        </div>
+        
+        <div style="margin-top: 1rem; padding: 1rem; background: white; border-radius: 8px;">
+            <strong style="color: #1e40af;">📊 FÄLTSTYRKA VID OLIKA AVSTÅND (100W, dipol):</strong>
+            <br><br>
+            <table style="width: 100%;">
+                <tr style="background: #fee2e2;">
+                    <td style="padding: 0.5rem;"><strong>0,5 meter:</strong></td>
+                    <td style="padding: 0.5rem;">~100% - <strong style="color: #dc2626;">FARA!</strong></td>
+                    <td style="padding: 0.5rem;">RF-brännskador möjliga vid beröring</td>
+                </tr>
+                <tr style="background: #fef3c7;">
+                    <td style="padding: 0.5rem;"><strong>1 meter:</strong></td>
+                    <td style="padding: 0.5rem;">~25% - <strong style="color: #92400e;">FÖRSIKTIG</strong></td>
+                    <td style="padding: 0.5rem;">Kan vara nära gränsvärdet</td>
+                </tr>
+                <tr style="background: #d1fae5;">
+                    <td style="padding: 0.5rem;"><strong>2 meter:</strong></td>
+                    <td style="padding: 0.5rem;">~6% - <strong style="color: #065f46;">OK för de flesta fall</strong></td>
+                    <td style="padding: 0.5rem;">Under gränsvärdet för 100W/dipol</td>
+                </tr>
+                <tr style="background: #d1fae5;">
+                    <td style="padding: 0.5rem;"><strong>4 meter:</strong></td>
+                    <td style="padding: 0.5rem;">~1,5% - <strong style="color: #065f46;">SÄKERT</strong></td>
+                    <td style="padding: 0.5rem;">Långt under alla gränsvärden</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+    <div class="example-box" style="border-left: 4px solid #3b82f6;">
+        <strong>📻 Exempel 1 - Inversa kvadratlagen:</strong> Din dipol är 1 meter från fönstret. Fältstyrkan vid 1 meter är 60 V/m (nära gränsvärdet). Hur nära är du gränsvärdet om du ökar avståndet till 3 meter?
+        <br><br>
+        <strong>Givna värden:</strong>
+        <br>• E₁ = 60 V/m vid r₁ = 1 m
+        <br>• r₂ = 3 m (nytt avstånd)
+        <br><br>
+        <strong>Beräkning:</strong>
+        <br>E₂ = E₁ × (r₁ / r₂)²
+        <br>E₂ = 60 × (1/3)²
+        <br>E₂ = 60 × (1/9)
+        <br>E₂ = <strong>6,7 V/m</strong>
+        <br><br>
+        <strong>Jämförelse med gränsvärde (28-61 V/m):</strong>
+        <br>6,7 V/m är långt under gränsvärdet ✓
+        <br><br>
+        <em>🎯 Tre gånger avstånd = nio gånger lägre fältstyrka! Avstånd är ditt bästa skydd!</em>
+    </div>
+    
+    <h3>📋 Gränsvärden - Vad är tillåtet?</h3>
+    
+    <p>Strålsäkerhetsmyndigheten (SSM) och den internationella organisationen ICNIRP anger gränsvärden som skyddar mot kända hälsoeffekter:</p>
+    
+    <div style="background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border: 3px solid #059669; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #065f46;">📊 ICNIRP-GRÄNSVÄRDEN FÖR ALLMÄNHETEN</h4>
+        
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Frekvensområde</th>
+                    <th style="width: 25%;">E-fältsgräns (V/m)</th>
+                    <th style="width: 25%;">Effekttäthet (W/m²)</th>
+                    <th style="width: 25%;">Amatörband</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>3-30 MHz (HF)</strong></td>
+                    <td>27-61 V/m</td>
+                    <td>2-10 W/m²</td>
+                    <td>160m, 80m, 40m, 20m, 15m, 10m</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>30-400 MHz (VHF)</strong></td>
+                    <td>28 V/m</td>
+                    <td>2 W/m²</td>
+                    <td>6m, 4m, 2m, 70cm</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>400-2000 MHz (UHF)</strong></td>
+                    <td>28-61 V/m</td>
+                    <td>2-10 W/m²</td>
+                    <td>23cm, 13cm</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>2-300 GHz (SHF)</strong></td>
+                    <td>61 V/m</td>
+                    <td>10 W/m²</td>
+                    <td>Mikrovåg/satellit</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+            <strong style="color: #065f46;">💡 Vad betyder dessa siffror?</strong>
+            <br><br>
+            <strong>28 V/m på VHF (30-400 MHz):</strong>
+            <br>• Detta är gränsvärdet för VHF-banden (2m och 70cm) där de flesta nybörjare börjar
+            <br>• Med 25W och en omni-antenn på 2m-bandet klarar du detta enkelt på 1-2 meters avstånd
+            <br><br>
+            <strong>Säkerhetsfaktorerna i gränsvärdena:</strong>
+            <br>• Gränsvärdena är satta med <strong>50 gångers säkerhetsmarginal</strong> under nivåer som ger påvisbar uppvärmning
+            <br>• Du kan alltså vara nära gränsen utan omedelbar risk
+            <br>• Men det är god sed att hålla sig under gränsen!
+        </div>
+    </div>
+<h3>📊 SAR - Specific Absorption Rate</h3>
+    
+    <p>SAR (Specific Absorption Rate) är det vetenskapliga måttet på hur mycket RF-energi som faktiskt absorberas i kroppsvävnad. Det uttrycks i <strong>watt per kilogram (W/kg)</strong> och används för att sätta gränsvärden som skyddar mot uppvärmning av kroppsvävnad.</p>
+    
+    <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+        <strong>💡 Vad SAR egentligen mäter:</strong>
+        <br><br>
+        Tänk dig att du håller en mobiltelefon mot örat. RF-energin från antennen absorberas i huvudets vävnad och omvandlas till värme - precis som i en mikrovågsugn, fast i mycket liten skala.
+        <br><br>
+        <strong>SAR mäter hur snabbt den uppvärmningen sker:</strong>
+        <br>• 2 W/kg = 2 watt värms upp per kilogram vävnad
+        <br>• Ju lägre SAR, desto mindre uppvärmning
+        <br>• SAR varierar beroende på avstånd, effekt och frekvens
+    </div>
+    
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">📋 SAR-GRÄNSVÄRDEN I EU</h4>
+        
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 35%;">Situation</th>
+                    <th style="width: 30%;">SAR-gräns (EU/ICNIRP)</th>
+                    <th style="width: 35%;">Exempel</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>Kropp och huvud (allmänheten)</strong></td>
+                    <td>2 W/kg (per 10g vävnad)</td>
+                    <td>Mobiltelefon mot örat, handhållen radio</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>Händer, handleder, fötter</strong></td>
+                    <td>4 W/kg (per 10g vävnad)</td>
+                    <td>Hålla i antenn, bärbar utrustning</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>Yrkesmässig exponering</strong></td>
+                    <td>10 W/kg (huvud/kropp)</td>
+                    <td>Professionell radioanvändning med kontroll</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 1.5rem; padding: 1rem; background: white; border-radius: 8px;">
+            <strong style="color: #1e40af;">💡 SAR och amatörradio:</strong>
+            <br><br>
+            SAR-begreppet är mest känt från mobiltelefoner, men gäller även amatörradio:
+            <br><br>
+            <strong>Handhållen VHF/UHF-radio (handie):</strong>
+            <br>• Antennen är nära kroppen - SAR är relevant!
+            <br>• Använd extern antenn när möjligt för lägre SAR
+            <br>• Håll handien bort från kroppen under sändning
+            <br><br>
+            <strong>Fast HF-station med dipol:</strong>
+            <br>• Antennen är långt från kroppen - SAR är lågt
+            <br>• Fältstyrka och avstånd (inversa kvadratlagen) är mer relevant här
+            <br><br>
+            <em>🎯 SAR och fältstyrkegränsvärden (ICNIRP) kompletterar varandra - SAR för nära antenner, fältstyrka för längre avstånd.</em>
+        </div>
+    </div>
+        
+    <h3>🔥 RF-brännskador - En speciell risk!</h3>
+    
+    <p>RF-brännskador skiljer sig från vanliga brännskador och underskattas ofta:</p>
+    
+    <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #991b1b;">🔥 RF-BRÄNNSKADOR - VARFÖR DE ÄR FARLIGA</h4>
+        
+        <table style="width: 100%; margin-top: 1rem; background: white; border-radius: 8px;">
+            <tr>
+                <td style="padding: 1rem; border-right: 2px solid #dc2626;">
+                    <strong style="color: #991b1b;">VARFÖR DE ÄR ANNORLUNDA:</strong>
+                    <br><br>
+                    <strong>1. Värmer inifrån ut:</strong>
+                    <br>• RF-energi absorberas på djupet av vävnaden
+                    <br>• Huden kan kännas sval medan djupare vävnad är skadad
+                    <br>• Du märker inte skadan förrän det är för sent!
+                    <br><br>
+                    <strong>2. Smärta fördröjd:</strong>
+                    <br>• Kan ta timmar innan smärtan kommer
+                    <br>• Ger falsk trygghet!
+                    <br><br>
+                    <strong>3. Djupa skador:</strong>
+                    <br>• Muskel och senor kan skadas
+                    <br>• Läker långsamt
+                    <br>• Kan ge permanenta skador
+                </td>
+                <td style="padding: 1rem;">
+                    <strong style="color: #991b1b;">RISKFAKTORER:</strong>
+                    <br><br>
+                    <strong>Farligast på HF (3-30 MHz):</strong>
+                    <br>• Kroppen har låg impedans på HF
+                    <br>• Stor ström induceras vid beröring
+                    <br>• Redan 10-50W kan ge brännskador!
+                    <br><br>
+                    <strong>Fara vid:</strong>
+                    <br>• Direkt beröring av antennelement
+                    <br>• Röra vid oisolerad matarledning
+                    <br>• Stå nära slutsteg utan hölje
+                    <br>• Reparation under sändning
+                    <br><br>
+                    <strong>Minst farligt (relativt):</strong>
+                    <br>• Mikrowave (absorberas i huden)
+                    <br>• Lång avstånd till antenn
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <div class="info-box warning" style="background: #fee2e2; border-left: 4px solid #dc2626;">
+        <strong>⚠️ ABSOLUT REGEL:</strong>
+        <br><br>
+        <h4 style="margin-top: 0.5rem;">Rör ALDRIG antennelement, oisolerad matarledning eller slutsteg under sändning!</h4>
+        <br>
+        Stäng ALLTID av sändaren och vänta minst 30 sekunder innan du rör antennsystemet. Varför 30 sekunder? Vissa sändare har "QRP"-läge som fortfarande sänder svagt, och slutsteg kan ha eftersläpning.
+    </div>
+    
+    <h3>📏 Beräkna säkert avstånd</h3>
+    
+    <p>Det finns en praktisk metod för att uppskatta om din installation är säker. Flera faktorer spelar in:</p>
+    
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Faktor</th>
+                <th style="width: 35%;">Effekt på fältstyrkan</th>
+                <th style="width: 40%;">Praktisk betydelse</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: #fef3c7;">
+                <td><strong>Sändareffekt (W)</strong></td>
+                <td>Fältstyrka ∝ √Effekt. Dubbel effekt = 1,4x mer fältstyrka</td>
+                <td>100W → 400W: Dubbla fältstyrkan. Kräver dubbelt avstånd.</td>
+            </tr>
+            <tr style="background: #dbeafe;">
+                <td><strong>Antennvinst (dBi)</strong></td>
+                <td>Riktantenner koncentrerar energin i en riktning</td>
+                <td>En 3-elements yagi (8 dBi) ger 6x mer fältstyrka i frontrikttningen vs en dipol!</td>
+            </tr>
+            <tr style="background: #fce7f3;">
+                <td><strong>Matarledningsförluster</strong></td>
+                <td>Kabeln tar en del av effekten</td>
+                <td>20m RG-58 på 14 MHz: ~2 dB förlust = 37% av effekten försvinner i kabeln</td>
+            </tr>
+            <tr style="background: #d1fae5;">
+                <td><strong>Duty cycle</strong></td>
+                <td>Hur stor del av tiden du faktiskt sänder</td>
+                <td>SSB-tal: ~20-50%. CW: ~40%. FM konstant ton: 100%. Lägre duty cycle = lägre genomsnittlig exponering</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="example-box" style="border-left: 4px solid #059669;">
+        <strong>📻 Exempel 2 - Uppskatta säkert avstånd:</strong> Du har en 100W sändare, 3-elements yagi med 8 dBi vinst, och kör SSB (duty cycle ~30%). Hur mycket ökar exponeringen jämfört med 100W och en dipol?
+        <br><br>
+        <strong>Effektiv isotropisk utstrålad effekt (EIRP):</strong>
+        <br>• 100W sändareffekt
+        <br>• 8 dBi antennvinst = 6,3x förstärkning
+        <br>• EIRP = 100W × 6,3 = <strong>630W EIRP</strong>
+        <br><br>
+        <strong>Jämförelse med 100W dipol:</strong>
+        <br>• Dipol: 100W × 2,15 dBi = 164W EIRP (dipolen har 2,15 dBi)
+        <br>• Yagi: 630W EIRP
+        <br>• Skillnad: 630/164 ≈ <strong>3,8 gånger mer</strong>
+        <br><br>
+        <strong>Erforderligt avstånd ökar med:</strong>
+        <br>√3,8 ≈ 2 gånger längre avstånd!
+        <br><br>
+        <strong>Med duty cycle-korrektion (30%):</strong>
+        <br>• Effektivt behöver du √(0,30) × 2 = ~1,1 gånger mer avstånd
+        <br><br>
+        <em>🎯 Tumregel: Med yagi och 100W - håll dubbelt avstånd jämfört med dipol och 100W!</em>
+    </div>
+    
+    <div class="example-box" style="border-left: 4px solid #059669;">
+        <strong>📻 Exempel 3 - Tumregler för säkert avstånd (HF):</strong>
+        <br><br>
+        <table style="width: 100%; background: white; border-radius: 8px;">
+            <tr style="background: #d1fae5;">
+                <td style="padding: 0.5rem;"><strong>10W + dipol</strong></td>
+                <td style="padding: 0.5rem;">≥ 0,5 m</td>
+                <td style="padding: 0.5rem;">QRP - relativt ofarligt</td>
+            </tr>
+            <tr style="background: #fef3c7;">
+                <td style="padding: 0.5rem;"><strong>100W + dipol</strong></td>
+                <td style="padding: 0.5rem;">≥ 1-2 m</td>
+                <td style="padding: 0.5rem;">Standard HF-station</td>
+            </tr>
+            <tr style="background: #fed7aa;">
+                <td style="padding: 0.5rem;"><strong>100W + yagi</strong></td>
+                <td style="padding: 0.5rem;">≥ 3-5 m i frontrikttningen</td>
+                <td style="padding: 0.5rem;">Riktad energi!</td>
+            </tr>
+            <tr style="background: #fecaca;">
+                <td style="padding: 0.5rem;"><strong>1000W + yagi</strong></td>
+                <td style="padding: 0.5rem;">≥ 10-15 m</td>
+                <td style="padding: 0.5rem;">Legal max (1500W i USA, 400W i Sverige)</td>
+            </tr>
+        </table>
+        <br>
+        <em>🎯 Dessa är uppskattningar - använd SSA:s beräkningsguide för din specifika installation!</em>
+    </div>
+    
+    <h3>🛡️ Praktiska säkerhetsåtgärder</h3>
+    
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">✅ ÅTGÄRDER FÖR SÄKER RF-MILJÖ</h4>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+            <h4 style="color: #1e40af; margin-top: 0;">🏠 Antennplacering:</h4>
+            <ul>
+                <li><strong>Placera antenner högt</strong> - Ju högre antenn, desto mer avstånd till marknivå</li>
+                <li><strong>Undvik att rikta antenner mot grannhus</strong> på nära håll</li>
+                <li><strong>Dipol på HF:</strong> Gärna 8-10 meter över mark - då är exponering på marknivå minimal</li>
+                <li><strong>Yagi:</strong> Peka inte mot närstående bostäder under sändning</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #1e40af;">📡 Under sändning:</h4>
+            <ul>
+                <li><strong>Stäng alltid av sändaren</strong> innan du rör antennsystemet</li>
+                <li><strong>Varna familj och gäster</strong> om RF-zoner kring din antenn</li>
+                <li><strong>Begränsa sändningstid</strong> vid underdimensionerade antennsystem</li>
+                <li><strong>Välj rätt effekt</strong> - Använd minsta möjliga effekt för att nå din kontakt</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #1e40af;">🔍 Kontroll:</h4>
+            <ul>
+                <li><strong>Beräkna säkra avstånd</strong> med SSA:s eller PTS verktyg</li>
+                <li><strong>RF-mätare</strong> kan mäta faktisk fältstyrka i din miljö</li>
+                <li><strong>Informera grannar</strong> om din amatörradiostation (god sed och bygger goodwill!)</li>
+            </ul>
+        </div>
+    </div>
+    
+    <h3>✅ Snabbtest - RF-strålning</h3>
+    
+    <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+        <strong>✅ Kan du svara på dessa?</strong>
+        <ul style="margin-top: 0.5rem;">
+            <li>Vad är skillnaden mellan joniserande och icke-joniserande strålning?</li>
+            <li>Vad händer om du fördubblar avståndet till antennen?</li>
+            <li>Varför är RF-brännskador särskilt farliga på HF-banden?</li>
+            <li>Vad är "duty cycle" och varför spelar det roll för RF-exponering?</li>
+            <li>Varför kräver en yagi-antenn större säkerhetsavstånd än en dipol vid samma effekt?</li>
+        </ul>
+        <details style="margin-top: 0.5rem;">
+            <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+            <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                <strong>Svar:</strong>
+                <br>• Joniserande strålning (röntgen, gamma) kan slå sönder DNA och atomer. Icke-joniserande strålning (RF) kan värma vävnad men kan inte direkt skada DNA på samma sätt.
+                <br>• Fältstyrkan minskar med kvadraten på avståndet. Dubbelt avstånd ger 1/4 av fältstyrkan (inversa kvadratlagen)!
+                <br>• På HF har kroppen låg impedans, vilket innebär att stor ström kan induceras vid beröring. RF-brännskador värmer dessutom inifrån ut och ger fördröjd smärta.
+                <br>• Duty cycle är hur stor del av tiden man faktiskt sänder. Lägre duty cycle (t.ex. SSB-tal ~30%) ger lägre genomsnittlig exponering än t.ex. konstant FM-ton (100%).
+                <br>• En yagi koncentrerar energin i en riktning (antennvinst), vilket ger betydligt högre fältstyrka framför antennen jämfört med en dipol som sprider energin mer jämnt.
+            </div>
+        </details>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SEKTION 9.4: ÅSKSKYDD -->
+<!-- ============================================ -->
+
+<div class="content-section" id="blixskydd">
+    <h2>9.4 Åskskydd</h2>
+    
+    <h3>Varför är antenner och åska en farlig kombination?</h3>
+    <p>Antenner och master är konstruerade för att samla och leda RF-energi. Tyvärr gör de också ett utmärkt jobb med att samla och leda <strong>blixtar</strong>! En hög metallmast på ett öppet ställe är precis vad en blixt "letar efter".</p>
+    
+    <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+        <strong>💡 Blixtens energi - en häpnadsväckande jämförelse:</strong>
+        <br><br>
+        En typisk blixt innehåller enorma mängder energi:
+        <br><br>
+        <strong>Blixtens data:</strong>
+        <br>• Spänning: 100-300 miljoner Volt!
+        <br>• Ström: 10 000 - 100 000 Ampere!
+        <br>• Varaktighet: 0,1-0,5 sekunder
+        <br>• Energi: ~250 kWh (en hel dags hushållsel!)
+        <br><br>
+        <strong>Jämförelse:</strong>
+        <br>• Din 100W sändare på ett år: ~876 kWh
+        <br>• En blixt: ~250 kWh på en bråkdels sekund
+        <br><br>
+        <em>💡 Det finns inget elektroniskt överspänningsskydd som kan absorbera detta! Det enda riktiga skyddet är att koppla bort antennen.</em>
+    </div>
+    
+    <h3>⚡ Vad händer vid en blixtnedslag?</h3>
+    
+    <div style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border: 3px solid #4338ca; border-radius: 12px; padding: 1.5rem; margin: 2rem 0; color: white;">
+        <h4 style="margin-top: 0; color: #c7d2fe;">⚡ TVÅ TYPER AV BLIXTHOT</h4>
+        
+        <table style="width: 100%; margin-top: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px;">
+            <tr>
+                <td style="padding: 1rem; border-right: 2px solid rgba(255,255,255,0.2); color: white;">
+                    <strong style="color: #fbbf24;">1. DIREKTTRÄFF</strong>
+                    <br><br>
+                    Blixten slår direkt i antennen/masten:
+                    <br><br>
+                    • Enorma strömmar (10-100 kA) leds ner till stationen
+                    <br>• Allt elektronik förstörs omedelbart
+                    <br>• Brand möjlig
+                    <br>• Livsfarligt om du är i närheten
+                    <br><br>
+                    <strong>Skydd:</strong> Fysisk bortkoppling + jordning
+                </td>
+                <td style="padding: 1rem; color: white;">
+                    <strong style="color: #fbbf24;">2. NÄRHETSEFFEKTER</strong>
+                    <br><br>
+                    Blixt slår ner i närheten (upp till 1-2 km!):
+                    <br><br>
+                    • Elektromagnetisk puls (EMP) inducerar spänningar
+                    <br>• Antennen fungerar som mottagare av pulsen
+                    <br>• Spänningstoppar skickas in i utrustningen
+                    <br>• Känsliga halvledare bränns ut (transistorer, IC)
+                    <br>• Kostar tusentals kronor i reparation
+                    <br><br>
+                    <strong>Skydd:</strong> Överspänningsskydd
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <h3>🔌 Statisk elektricitet - Det vardagliga problemet</h3>
+    
+    <p>Även utan blixt kan antenner ladda upp statisk elektricitet - och det kan skada känslig utrustning!</p>
+    
+    <div class="example-box" style="border-left: 4px solid #f59e0b;">
+        <strong>🔧 Exempel 1 - Statisk uppladdning:</strong> Hur laddas en antenn upp statiskt?
+        <br><br>
+        <strong>Mekanismen:</strong>
+        <br>• Vind transporterar elektriskt laddade partiklar (damm, vattendropplar)
+        <br>• Dessa träffar antennen och lämnar sin laddning
+        <br>• Antennen saknar väg för laddningen att rinna bort (isolerad via koax)
+        <br>• Laddning byggs upp - som en kondensator!
+        <br><br>
+        <strong>Konsekvenser:</strong>
+        <br>• Knappt märkbar: ett svagt brus vid sändaren
+        <br>• Tydlig: stötar vid beröring av antennen
+        <br>• Allvarlig: Laddningsgenomslag (ESD) skadar ingångstransistorerna i mottagaren
+        <br><br>
+        <strong>Åtgärd:</strong>
+        <br>• Jorda antennen via en resistor ca 1 MΩ - ger laddningen en väg bort
+        <br>• Eller via en drosselspole - fungerar på DC men blockerar RF
+        <br><br>
+        <em>🎯 Låg kostnad, stor nytta - alltid värt att installera!</em>
+    </div>
+    
+    <h3>🛡️ Åskskyddsåtgärder - Lager på lager</h3>
+    
+    <p>Bra åskskydd byggs i flera lager - ju fler, desto bättre!</p>
+    
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">🔷 ÅSKSKYDD - LAGER FÖR LAGER</h4>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+            <h4 style="color: #1e40af; margin-top: 0;">1️⃣ LAGER: Jordning av mastfoten</h4>
+            <p>Grundläggande - ger blixten en kontrollerad väg till jord</p>
+            <ul>
+                <li><strong>Jordspett:</strong> Minst 1,5 meter lång kopparstav neddriven i marken vid mastens fot</li>
+                <li><strong>Jordledare:</strong> Minst 16 mm² koppar (kabel eller platta) - tjockare är bättre!</li>
+                <li><strong>Kortaste möjliga väg:</strong> Inga "onödiga" böjar och kringelkrokar - blixten vill gå rakt!</li>
+                <li><strong>Anslut alla metalldelar:</strong> Mast, staglinor, kapplåda - allt till samma jordsystem</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #1e40af;">2️⃣ LAGER: Gasurladdningsrör / Gnistgap</h4>
+            <p>Ger överspänning en väg bort INNAN den når mottagaren</p>
+            <ul>
+                <li>Placeras i koaxialkabeln vid husinföringen (utanför huset!)</li>
+                <li>Gnistgap: Enkelt och billigt, löser ut vid ~300-500V</li>
+                <li>Gasurladdningsrör (GDT): Mer precist, snabbare respons</li>
+                <li><strong>Jordas till samma jordsystem som masten!</strong></li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #1e40af;">3️⃣ LAGER: Överspänningsskydd för koaxialkabel</h4>
+            <p>Kommersiella enhetar med snabba halvledare (MOV, TVS-dioder)</p>
+            <ul>
+                <li>Placeras inomhus nära utrustningen</li>
+                <li>Kompletterar gasurladdningsröret</li>
+                <li>Populära märken: Polyphaser, Huber+Suhner, ICE</li>
+                <li>Kostnad: 500-3000 kr - billigt mot kostnaden för ny utrustning!</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #1e40af;">4️⃣ LAGER: Nätöverspänningsskydd</h4>
+            <p>Skyddar mot spännigspikar som kommer via elnätet</p>
+            <ul>
+                <li>En kraftig blixt i närheten inducerar spänningar i hela elnätet</li>
+                <li>Överspänningsskydd (grenuttag med skydd) fångar upp dessa</li>
+                <li>Välj ett med EN 61643-standard</li>
+                <li>Byt ut dem med 5-10 år (de "åldras" när de absorberat spänningstoppar)</li>
+            </ul>
+            <br>
+            
+            <h4 style="color: #059669;">5️⃣ LAGER: Bortkoppling vid åska (det enda säkra!)</h4>
+            <div style="background: #d1fae5; padding: 1rem; border-radius: 8px; border-left: 4px solid #059669;">
+                <strong>🎯 DET ENDA GARANTERADE SKYDDET!</strong>
+                <br><br>
+                Koppla bort och jorda antennledningarna fysiskt vid åska:
+                <br><br>
+                <strong>1. Dra ur antennkablarna</strong> från transceivern
+                <br><strong>2. Jorda antennledningarnas centerkontakt</strong> till skyddsjord
+                <br><strong>3. Dra ur nätkabeln</strong> (skyddar mot nätstörningar)
+                <br><strong>4. Gå bort från utrustningen</strong> under åskvädret
+                <br><br>
+                <strong>Varför fungerar inte elektroniska skydd ensamma?</strong>
+                <br>En direktträff har 10-100 kA ström. Elektroniska skydd klarar kanske 20-60 kA i bästa fall - och det är bara under en microsekund. En blixt varar längre. Svaret: Ingen elektronik klarar en verklig direktträff.
+            </div>
+        </div>
+    </div>
+    
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">📊 JÄMFÖRELSE AV ÅSKSKYDDSÅTGÄRDER</h4>
+        
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Åtgärd</th>
+                    <th style="width: 15%;">Kostnad</th>
+                    <th style="width: 20%;">Skydd mot direktträff</th>
+                    <th style="width: 20%;">Skydd mot närhetseffekter</th>
+                    <th style="width: 20%;">Skydd mot statisk</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #d1fae5;">
+                    <td><strong>Jordning av mast</strong></td>
+                    <td>200-500 kr</td>
+                    <td>⭐⭐⭐ Bra</td>
+                    <td>⭐ Liten</td>
+                    <td>⭐⭐ OK</td>
+                </tr>
+                <tr style="background: #dbeafe;">
+                    <td><strong>Gnistgap/GDT</strong></td>
+                    <td>100-500 kr</td>
+                    <td>⭐⭐ Viss</td>
+                    <td>⭐⭐⭐ Bra</td>
+                    <td>⭐⭐ OK</td>
+                </tr>
+                <tr style="background: #fef3c7;">
+                    <td><strong>Koax-överspänningsskydd</strong></td>
+                    <td>500-3000 kr</td>
+                    <td>⭐ Liten</td>
+                    <td>⭐⭐⭐ Bra</td>
+                    <td>⭐⭐⭐ Bra</td>
+                </tr>
+                <tr style="background: #fce7f3;">
+                    <td><strong>Nätöverspänningsskydd</strong></td>
+                    <td>200-1000 kr</td>
+                    <td>❌ Inget</td>
+                    <td>⭐⭐ OK</td>
+                    <td>❌ Inget</td>
+                </tr>
+                <tr style="background: #d1fae5;">
+                    <td><strong>Bortkoppling vid åska</strong></td>
+                    <td>Gratis!</td>
+                    <td>⭐⭐⭐⭐⭐ Perfekt</td>
+                    <td>⭐⭐⭐⭐⭐ Perfekt</td>
+                    <td>⭐⭐⭐ Bra</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="example-box" style="border-left: 4px solid #3b82f6;">
+        <strong>🔧 Exempel 2 - Jordledningens dimensionering:</strong> Varför måste jordledaren vara minst 16 mm² koppar och gå rakt till jordspettet?
+        <br><br>
+        <strong>En blixt har 30 000 Ampere ström. Hur beter sig olika ledare?</strong>
+        <br><br>
+        <strong>Jordledare 1,5 mm² (typisk elkabel):</strong>
+        <br>• Strömtäthet: 30 000A / 0,0000015 m² = 20 miljarder A/m²
+        <br>• Ledaren ÅNGas omedelbart! Orsakar brand!
+        <br><br>
+        <strong>Jordledare 16 mm² (minimum rekommenderat):</strong>
+        <br>• Strömtäthet: 30 000A / 0,000016 m² = 1,9 miljarder A/m²
+        <br>• Klarar kortvarig blixtström, men hett!
+        <br><br>
+        <strong>Jordledare 50 mm²+ (professionell installation):</strong>
+        <br>• Klarar blixtströmmen väl
+        <br>• Ingen brandisk
+        <br><br>
+        <strong>Varför rak ledare?</strong>
+        <br>Böjar i ledaren skapar induktans. En blixt är extremt snabb (mikrosekunder) - induktansen skapar spänningspikar precis i böjarna! En rak ledare har minimal induktans.
+        <br><br>
+        <em>🎯 Principen: Kortast möjlig, tjockast möjlig, rakast möjlig!</em>
+    </div>
+    
+    <h3>⛈️ Åskvarning - Känn igen riskerna</h3>
+    
+    <div class="info-box important" style="background: #fef3c7; border-left: 4px solid #f59e0b;">
+        <strong>⚠️ NÄR SKA DU KOPPLA BORT?</strong>
+        <br><br>
+        <strong>Koppla bort omedelbart om:</strong>
+        <br>• Åskvarning utfärdad i ditt område
+        <br>• Du ser blixt eller hör åska (oavsett hur långt bort!)
+        <br>• Antennen börjar "brusa" eller bete sig konstigt (statisk uppladdning!)
+        <br>• Håret reser sig (starka elektriska fält - tag skydd OMEDELBART!)
+        <br><br>
+        <strong>Tumregel: 30/30-regeln</strong>
+        <br>• Koppla bort om det är under 30 sekunder mellan blixt och åska (under 10 km!)
+        <br>• Vänta 30 minuter EFTER sista åskan innan du kopplar in igen
+        <br><br>
+        <strong>Kontrollera väder proaktivt:</strong>
+        <br>• SMHI:s webbplats eller app
+        <br>• Blixtkarta: lightningmaps.org (visar realtids-blixtar!)
+        <br>• Var inte lat - koppla bort i god tid!
+    </div>
+    
+    <h3>✅ Snabbtest - Åskskydd</h3>
+    
+    <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+        <strong>✅ Kan du svara på dessa?</strong>
+        <ul style="margin-top: 0.5rem;">
+            <li>Varför klarar inget elektroniskt skydd en direkt blixtnedslag?</li>
+            <li>Vad är skillnaden mellan direktträff och närhetseffekter?</li>
+            <li>Varför ska jordledaren gå rakt (utan böjar) till jordspettet?</li>
+            <li>Vad är minsta rekommenderade tvärsnittet på jordledaren?</li>
+            <li>Varför kan det vara farligt att vara nära antennsystemet trots att det inte är direktträff?</li>
+        </ul>
+        <details style="margin-top: 0.5rem;">
+            <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+            <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                <strong>Svar:</strong>
+                <br>• En blixt har 10-100 kA ström och varar längre än vad elektroniska komponenter klarar. Energimängden är helt enkelt för stor för att absorberas elektroniskt.
+                <br>• Direktträff: Blixten slår fysiskt i antennen/masten och leder enorma strömmar direkt till stationen. Närhetseffekter: Blixt i närheten skapar en elektromagnetisk puls (EMP) som inducerar spänningstoppar i antennen.
+                <br>• Böjar skapar induktans. Blixten är extremt snabb, och induktansen skapar spänningspikar i böjarna. Rak ledare = minimal induktans = smidigare avledning.
+                <br>• Minst 16 mm² koppar. Hellre tjockare - 25-50 mm² är bättre.
+                <br>• Statisk elektrisk uppladdning och indukerade spänningar kan skapa farliga spänningsgradienter i marken och på antennsystemet, även utan direktträff.
+            </div>
+        </details>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SEKTION 9.5: BATTERIER -->
+<!-- ============================================ -->
+
+<div class="content-section" id="batterier">
+    <h2>9.5 Batterier</h2>
+    
+    <h3>Varför behöver batterier uppmärksamhet?</h3>
+    <p>Batterier verkar ofarliga - de är ju inte ens anslutna till elnätet! Men batterier kan lagra enorma mängder energi och vid fel kan de orsaka brand, explosion och frätskador. Amatörradiooperatörer använder ofta stora batterier för portabel drift och nöddrift.</p>
+    
+    <div class="info-box tip" style="background: #fff7ed; border-left: 4px solid #f59e0b;">
+        <strong>💡 Eldens tre krav - Brandtriangeln:</strong>
+        <br><br>
+        Brand kräver tre saker:
+        <br><br>
+        <strong>🔥 Bränsle + 💨 Syre + ⚡ Tändkälla = BRAND</strong>
+        <br><br>
+        <strong>Blybatteri:</strong>
+        <br>• Bränsle: Vätgas (H₂) som bildas vid laddning
+        <br>• Syre: Finns alltid i luften
+        <br>• Tändkälla: En liten gnista räcker (kortslutning, statisk urladdning)
+        <br>• Resultat: EXPLOSION!
+        <br><br>
+        <strong>Litiumbatteri:</strong>
+        <br>• Bränsle: Litium och elektrolyt (brandfarliga!)
+        <br>• Syre: Kan komma från kemisk reaktion inne i batteriet
+        <br>• Tändkälla: Internt kortslutning vid mekanisk skada
+        <br>• Resultat: BRAND som inte kan släckas med vanliga medel!
+    </div>
+    
+    <h3>🔋 Blybatterier - Den klassiska kraftkällan</h3>
+    
+    <p>Blybatterier (bly-syra-batterier) är vanliga för stationär och portabel amatörradio. De är robusta och pålitliga - men har sina faror!</p>
+    
+    <div style="background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border: 3px solid #f59e0b; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #92400e;">⚠️ BLYBATTERI - RISKER OCH ÅTGÄRDER</h4>
+        
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Risk</th>
+                    <th style="width: 35%;">Varför det händer</th>
+                    <th style="width: 40%;">Förebyggande åtgärd</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: #fee2e2;">
+                    <td><strong>Vätgasexplosion</strong></td>
+                    <td>Vid laddning sönderdelas vatten i elektrolyten (H₂O → H₂ + ½O₂). Vätgas är explosiv!</td>
+                    <td><strong>Ladda i ventilerat utrymme!</strong> En gnista eller cigarett nära kan antända. Öppna garage eller utomhus.</td>
+                </tr>
+                <tr style="background: #fef3c7;">
+                    <td><strong>Frätande syra</strong></td>
+                    <td>Elektrolyten är utspädd svavelsyra (H₂SO₄). Frätande och skadlig för hud och ögon.</td>
+                    <td><strong>Skyddsglasögon ALLTID!</strong> Handskar. Ha natriumbikarbonat nära för att neutralisera spill.</td>
+                </tr>
+                <tr style="background: #fecaca;">
+                    <td><strong>Kortslutningsbrand</strong></td>
+                    <td>Bly-batteri kan ge 500-1000+ ampere kortslutningsström! Kablar smälter, gnistor, brand.</td>
+                    <td>Säkra plusledaren direkt vid batteriet. Ta av metallringar och armband! Använd isolerade verktyg.</td>
+                </tr>
+                <tr style="background: #fee2e2;">
+                    <td><strong>Gasbildning vid fel</strong></td>
+                    <td>Överladdning eller internt fel kan ge kraftig gasbildning och batteriexplosion</td>
+                    <td>Använd rätt laddare med temperaturstyrd laddning. Övervaka vid laddning.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="example-box" style="border-left: 4px solid #f59e0b;">
+        <strong>⚡ Exempel 1 - Kortslutningsström i blybatteri:</strong> Du råkar lägga en skiftnyckel tvärs över ett 100 Ah bilbatteri (12V). Hur stor ström flödar?
+        <br><br>
+        <strong>Bilbatteriers kortslutningsström:</strong>
+        <br>• Inre resistans: ~5-15 mΩ (milliohm!)
+        <br>• Med 12V och 10 mΩ inre resistans:
+        <br>• I = U/R = 12V / 0,010 Ω = <strong>1200 Ampere!</strong>
+        <br><br>
+        <strong>Vad händer:</strong>
+        <br>• Skiftnyckeln glöder och smälter inom sekunder
+        <br>• Enorma gnistor
+        <br>• Batteri kan explodera om vätgas finns
+        <br>• Svåra brännskador på händer och ansikte
+        <br><br>
+        <strong>Förebyggande:</strong>
+        <br>• TA AV armband, klocka och ringar innan du arbetar nära batterier
+        <br>• Anslut alltid säkring direkt vid pluspolen
+        <br>• Använd isolerade verktyg
+        <br><br>
+        <em>🎯 1200A är lika mycket som 10 elektriska spis-ångpannor kopplade parallellt!</em>
+    </div>
+    
+    <h3>🔌 Rätt anslutningsordning - Viktigt!</h3>
+    
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">🔷 ANSLUTNING OCH BORTKOPPLING AV BLYBATTERI</h4>
+        
+        <table style="width: 100%; margin-top: 1rem; background: white; border-radius: 8px;">
+            <tr>
+                <td style="padding: 1rem; border-right: 2px solid #3b82f6;">
+                    <strong style="color: #1e40af;">VID ANSLUTNING (montering):</strong>
+                    <br><br>
+                    <strong>1. PLUS (+) FÖRST</strong>
+                    <br>• Anslut den röda kabeln till pluspolen
+                    <br>• Risk: Om skruvmejseln råkar nudda karossen - ingen gnista! (Plus är isolerat från karossen)
+                    <br><br>
+                    <strong>2. MINUS (-) SIST</strong>
+                    <br>• Anslut den svarta kabeln till minuspolen / karossen
+                    <br>• Nu är kretsen sluten - om det gnistrar är det här, bort från batteriet
+                    <br><br>
+                    <em>Minnesregel: "Plus börjar, Minus slutar"</em>
+                </td>
+                <td style="padding: 1rem;">
+                    <strong style="color: #1e40af;">VID BORTKOPPLING (demontering):</strong>
+                    <br><br>
+                    <strong>1. MINUS (-) FÖRST</strong>
+                    <br>• Koppla loss den svarta kabeln
+                    <br>• Nu är kretsen bruten - säkert att arbeta!
+                    <br><br>
+                    <strong>2. PLUS (+) SIST</strong>
+                    <br>• Koppla loss den röda kabeln
+                    <br>• Nu kan du arbeta säkert med pluspolen
+                    <br><br>
+                    <em>Minnesregel: "Minus avgår, Plus avslutar"</em>
+                    <br><br>
+                    <strong>Varför denna ordning?</strong>
+                    <br>Om du kopplar loss plus FÖRST och nuddar karossen med det lösa pluset = kortslutning!
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <h3>🔥 Litiumbatterier - Moderna och kraftfulla men kräver respekt</h3>
+    
+    <p>Litiumbaserade batterier (Li-Ion, LiPo, LiFePO4) är populära för portabel drift - de är lätta och energitäta. Men de kan vara farliga om de hanteras fel!</p>
+    
+    <div style="background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); border: 3px solid #dc2626; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #991b1b;">🔥 LITIUMBATTERIER - THERMAL RUNAWAY</h4>
+        
+        <div style="background: white; padding: 1.5rem; border-radius: 8px; margin-top: 1rem;">
+            <h4 style="color: #991b1b; margin-top: 0;">Vad är "Thermal Runaway"?</h4>
+            <p>Det farligaste som kan hända med ett litiumbatteri:</p>
+            
+            <div style="text-align: center; margin: 1.5rem 0;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" style="max-width: 800px; width: 100%;">
+                    <style>
+                        .box { fill: #fee2e2; stroke: #dc2626; stroke-width: 2; rx: 5; }
+                        .arrow-r { stroke: #dc2626; stroke-width: 3; fill: none; marker-end: url(#redarrow); }
+                        .label { font-family: Arial, sans-serif; font-size: 12px; fill: #991b1b; font-weight: bold; }
+                    </style>
+                    <defs>
+                        <marker id="redarrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                            <polygon points="0 0, 10 3, 0 6" fill="#dc2626"/>
+                        </marker>
+                    </defs>
+                    
+                    <rect x="10" y="70" width="130" height="60" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="5"/>
+                    <text class="label" x="75" y="97" text-anchor="middle">Skada / fel</text>
+                    <text class="label" x="75" y="113" text-anchor="middle">på batteri</text>
+                    
+                    <line class="arrow-r" x1="140" y1="100" x2="175" y2="100"/>
+                    
+                    <rect x="175" y="70" width="130" height="60" fill="#fecaca" stroke="#dc2626" stroke-width="2" rx="5"/>
+                    <text class="label" x="240" y="97" text-anchor="middle">Temperaturen</text>
+                    <text class="label" x="240" y="113" text-anchor="middle">stiger</text>
+                    
+                    <line class="arrow-r" x1="305" y1="100" x2="340" y2="100"/>
+                    
+                    <rect x="340" y="70" width="130" height="60" fill="#fecaca" stroke="#dc2626" stroke-width="2" rx="5"/>
+                    <text class="label" x="405" y="97" text-anchor="middle">Kemisk reaktion</text>
+                    <text class="label" x="405" y="113" text-anchor="middle">accelererar</text>
+                    
+                    <line class="arrow-r" x1="470" y1="100" x2="505" y2="100"/>
+                    
+                    <rect x="505" y="70" width="130" height="60" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="5"/>
+                    <text class="label" x="570" y="97" text-anchor="middle">Mer värme</text>
+                    <text class="label" x="570" y="113" text-anchor="middle">genereras</text>
+                    
+                    <line class="arrow-r" x1="635" y1="100" x2="670" y2="100"/>
+                    
+                    <rect x="670" y="60" width="120" height="80" fill="#991b1b" stroke="#7f1d1d" stroke-width="2" rx="5"/>
+                    <text x="730" y="95" text-anchor="middle" fill="white" font-size="13" font-weight="bold">BRAND /</text>
+                    <text x="730" y="113" text-anchor="middle" fill="white" font-size="13" font-weight="bold">EXPLOSION!</text>
+                    
+                    <!-- Pil tillbaka (ond cirkel) -->
+                    <path d="M 505,70 Q 505,20 340,20 Q 175,20 175,70" stroke="#dc2626" stroke-width="2" fill="none" stroke-dasharray="5,5" marker-end="url(#redarrow)"/>
+                    <text x="340" y="15" text-anchor="middle" fill="#dc2626" font-size="11" font-weight="bold">Ond cirkel - kan inte stoppas!</text>
+                </svg>
+            </div>
+            
+            <strong>Vad utlöser thermal runaway?</strong>
+            <ul>
+                <li><strong>Mekanisk skada:</strong> Slag, punktering, klämning av batteriet</li>
+                <li><strong>Överladdning:</strong> Fel laddare som ger för hög spänning</li>
+                <li><strong>Överhettning:</strong> Lämna i het bil, nära värmekälla</li>
+                <li><strong>Intern kortslutning:</strong> Fabrikationsfel, ålder, djupurladdning</li>
+                <li><strong>Felaktigt cellbalansering:</strong> En cell overchargas medan andra är normala</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div style="background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%); border: 3px solid #3b82f6; border-radius: 12px; padding: 1.5rem; margin: 2rem 0;">
+        <h4 style="margin-top: 0; color: #1e40af;">✅ SÄKER HANTERING AV LITIUMBATTERIER</h4>
+        
+        <table class="content-table" style="margin-top: 1rem;">
+            <thead>
+                <tr>
+                    <th style="width: 25%;">Regel</th>
+                    <th style="width: 35%;">Varför</th>
+                    <th style="width: 40%;">Praktisk tillämpning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: white;">
+                    <td><strong>Rätt laddare ALLTID</strong></td>
+                    <td>Fel spänning = överladdning = thermal runaway</td>
+                    <td>Använd bara tillverkarens rekommenderade laddare. Li-Ion: 4,2V/cell, LiFePO4: 3,65V/cell</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>Övervaka vid laddning</strong></td>
+                    <td>Om thermal runaway börjar måste du agera snabbt</td>
+                    <td>Ladda inte oövervakat. Ladda i metallbox om möjligt. Aldrig ladda liggande på brännbara ytor.</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>Inspektera batteriet</strong></td>
+                    <td>Skadade batterier har ökad risk för internt fel</td>
+                    <td>Byt ut batterier som är uppsvullna, skadade, eller har utsatts för slag. Förvara inte inomhus!</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>Rätt temperatur</strong></td>
+                    <td>Värme accelererar kemisk nedbrytning</td>
+                    <td>Förvara 15-25°C. Aldrig i varm bil (70°C+). Ladda vid 5-45°C.</td>
+                </tr>
+                <tr style="background: white;">
+                    <td><strong>Djupurladdning undviks</strong></td>
+                    <td>Djupurladdning skadar cellerna och ökar felrisken</td>
+                    <td>Ladda när kapaciteten når 20%. Förvara vid 40-60% laddning för längre förvaring.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="info-box warning" style="background: #fee2e2; border-left: 4px solid #dc2626;">
+        <strong>🔥 OM ETT LITIUMBATTERI BÖRJAR BRINNA:</strong>
+        <br><br>
+        <h4 style="margin-top: 0.5rem;">Litiumbranden kan INTE släckas konventionellt!</h4>
+        <br>
+        <strong>1. Bär ut batteriet OM DET ÄR SÄKERT ATT GÖRA DET:</strong>
+        <br>• Använd tång, eldfast material, isolerade handskar
+        <br>• Lägg i metallhink med sand eller vatten (vatten för att kyla - INTE för att släcka)
+        <br>• Ställ utomhus på obrännbart underlag
+        <br><br>
+        <strong>2. Om du INTE kan flytta det:</strong>
+        <br>• Evakuera utrymmet! Röken är GIFTIG!
+        <br>• Stäng dörren (minskar syretillförseln)
+        <br>• Ring 112
+        <br><br>
+        <strong>3. Kyla med vatten:</strong>
+        <br>• Stora mängder vatten kyler batteriet
+        <br>• Minskar risken för thermal runaway att sprida sig
+        <br>• Slutar INTE branden - men hindrar den från att eskalera
+        <br><br>
+        <strong>4. Rök:</strong>
+        <br>• Rök från litiumbatteri innehåller litiumfluorid, kolmonoxid och andra giftiga ämnen
+        <br>• Andningsapparat krävs för brandmän
+        <br>• DU: Evakuera och andas inte röken!
+    </div>
+    
+    <h3>⚡ LiFePO4 - Det säkrare alternativet</h3>
+    
+    <p>Litiumjärnfosfat (LiFePO4) är ett populärt val för amatörradio och är säkrare än vanliga litiumbatterier:</p>
+    
+    <table class="content-table">
+        <thead>
+            <tr>
+                <th style="width: 25%;">Egenskap</th>
+                <th style="width: 25%;">Li-Ion / LiPo</th>
+                <th style="width: 25%;">LiFePO4</th>
+                <th style="width: 25%;">Blybatteri</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="background: #fef3c7;">
+                <td><strong>Termisk stabilitet</strong></td>
+                <td>Låg - thermal runaway möjlig</td>
+                <td><strong>Hög - säkrare kemi</strong></td>
+                <td>Medium - vätgas vid laddning</td>
+            </tr>
+            <tr style="background: #dbeafe;">
+                <td><strong>Energitäthet</strong></td>
+                <td>Hög (150-200 Wh/kg)</td>
+                <td>Medium (90-120 Wh/kg)</td>
+                <td>Låg (30-50 Wh/kg)</td>
+            </tr>
+            <tr style="background: #d1fae5;">
+                <td><strong>Livslängd</strong></td>
+                <td>300-500 cykler</td>
+                <td><strong>2000-5000 cykler!</strong></td>
+                <td>200-500 cykler</td>
+            </tr>
+            <tr style="background: #fce7f3;">
+                <td><strong>Vikt</strong></td>
+                <td>Lätt</td>
+                <td>Lätt</td>
+                <td>Tungt!</td>
+            </tr>
+            <tr style="background: #ede9fe;">
+                <td><strong>Kostnad</strong></td>
+                <td>Medium</td>
+                <td>Hög initialt, billigt per cykel</td>
+                <td>Billigast initialt</td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div class="info-box important" style="background: #d1fae5; border-left: 4px solid #059669;">
+        <strong>🎯 Bra val för amatörradio:</strong>
+        <br><br>
+        <strong>Portabel drift och nöddrift:</strong>
+        <br>• LiFePO4 är utmärkt - bra balans mellan säkerhet, vikt och kapacitet
+        <br>• 100Ah LiFePO4 = bara 12-15 kg vs 30 kg för blybatteri!
+        <br><br>
+        <strong>Stationär backup:</strong>
+        <br>• AGM-blybatteri (ventilreglerat) - säkrare än öppet blybatteri
+        <br>• Ingen vätgasutveckling vid normal drift
+        <br>• Behöver ventilerat utrymme vid laddning
+    </div>
+    
+    <h3>✅ Snabbtest - Batterier</h3>
+    
+    <div class="info-box" style="background: #f0f9ff; border-left: 4px solid #0ea5e9;">
+        <strong>✅ Kan du svara på dessa?</strong>
+        <ul style="margin-top: 0.5rem;">
+            <li>Varför måste blybatterier laddas i ventilerat utrymme?</li>
+            <li>I vilken ordning ansluter du kablarna till ett blybatteri?</li>
+            <li>Vad är "thermal runaway" och vad utlöser det?</li>
+            <li>Varför ska du ta av armband och klocka när du arbetar med batterier?</li>
+            <li>Vad gör du om ett litiumbatteri börjar brinna?</li>
+        </ul>
+        <details style="margin-top: 0.5rem;">
+            <summary style="cursor: pointer; color: #0ea5e9; font-weight: bold;">📖 Visa svar</summary>
+            <div style="margin-top: 0.5rem; padding: 1rem; background: white; border-radius: 6px;">
+                <strong>Svar:</strong>
+                <br>• Vid laddning sönderdelas vatten i elektrolyten och frigör vätgas (H₂) som är explosiv. En liten gnista räcker för att antända vätgas-luftblandningen.
+                <br>• Plus (+) FÖRST, sedan Minus (-). Vid bortkoppling: Minus FÖRST, sedan Plus.
+                <br>• Thermal runaway är en okontrollerbar kedjerektion där batteriet hettas upp, vilket ökar den kemiska reaktionshastigheten, som ger mer värme, i en ond cirkel som slutar i brand eller explosion. Utlöses av mekanisk skada, överladdning, överhettning eller internt fel.
+                <br>• Metallarmband och klockor kan kortsluta batteriet om de nuddar en pol och karossen/minuspolen. 1000+ ampere kortslutningsström smälter metalldelen och kan ge svåra brännskador.
+                <br>• Bär ut batteriet OM det är säkert, lägg i metallhink med sand/vatten utomhus. Annars: evakuera, stäng dörren, ring 112. Andas inte röken - den är giftig!
+            </div>
+        </details>
+    </div>
+</div>
+
+<!-- ============================================ -->
+<!-- SAMMANFATTNING KAPITEL 9 -->
+<!-- ============================================ -->
+
+<div class="content-section summary">
+    <h2>📝 Sammanfattning Kapitel 9 - Säkerhet</h2>
+    
+    <div class="key-points">
+        <h3>🎯 Viktigast att komma ihåg:</h3>
+        <br>
+        
+        <strong>9.1 ELSÄKERHET:</strong>
+        <br>• Det är STRÖMMEN som dödar, inte spänningen - men spänning driver ström!
+        <br>• 50V är gränsen - ovan detta betraktas spänning som livsfarlig
+        <br>• 10-15 mA → Muskelkramp (kan inte släppa). 50-100 mA → hjärtflimmer
+        <br>• Kondensatorer behåller laddning länge - vänta och mät!
+        <br>• En hand i fickan vid mätning (förhindrar ström hand-till-hand)
+        <br>• Skyddsjord ≠ RF-jord (olika funktioner, båda behövs)
+        <br>• Vid elolycka: Bryt strömmen FÖRST, rör inte offer, ring 112
+        <br><br>
+        
+        <strong>9.2 ANTENNSÄKERHET:</strong>
+        <br>• Säkerhetssele + hjälm = obligatorisk vid arbete över 2 meters höjd
+        <br>• Arbeta ALDRIG ensam vid höjdarbete eller farliga spänningar
+        <br>• Beräkna fallzon - masten får inte kunna nå kraftledning om den faller!
+        <br>• Om antenn faller på kraftledning: RÖR INGENTING, ring 112
+        <br>• Kontrollera stag och fästen 2 gånger per år
+        <br><br>
+        
+        <strong>9.3 RF-STRÅLNING:</strong>
+        <br>• Avstånd är bästa skyddet - dubbelt avstånd = fjärdedel av fältstyrkan!
+        <br>• Rör ALDRIG antennelement under sändning - RF-brännskador värmer inifrån
+        <br>• Yagi kräver mer avstånd än dipol (koncentrerad energi)
+        <br>• Placera antenner högt och bort från vistelseplatser
+        <br><br>
+        
+        <strong>9.4 ÅSKSKYDD:</strong>
+        <br>• Jordfäst masten + jordspett + tjock rak jordledare (min 16 mm²)
+        <br>• Gnistgap/GDT vid husinföringen + överspänningsskydd
+        <br>• Inget elektroniskt skydd klarar en direktträff - koppla bort fysiskt!
+        <br>• Koppla bort vid åska: Antennkablar ur + jorda + nätkabel ur
+        <br><br>
+        
+        <strong>9.5 BATTERIER:</strong>
+        <br>• Blybatteri: Ladda i ventilerat utrymme (vätgasexplosionsrisk!)
+        <br>• Anslut: Plus först, Minus sist. Koppla loss: Minus först, Plus sist
+        <br>• Ta alltid av armband och klocka vid batteriarbete
+        <br>• Litiumbatteri: Rätt laddare, övervaka, inspektera för skador
+        <br>• LiPo-brand: Evakuera, kyla med vatten, ring 112 - röken är giftig!
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="chapter-navigation">
+    <a href="kapitel-8-trafikmetoder.html" class="nav-button prev">
+        <span class="arrow">←</span>
+        <span class="label">Kapitel 8: Trafikmetoder</span>
+    </a>
+    <a href="../test/ovning.html?chapter=9" class="nav-button practice">
+        <span class="icon">📝</span>
+        <span class="label">Öva på kapitel 9</span>
+    </a>
+    <a href="kapitel-10-praktisk-trafik.html" class="nav-button next">
+        <span class="label">Kapitel 10: Praktisk trafik</span>
+        <span class="arrow">→</span>
+    </a>
+</div>
+
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Radioamatör Utbildning. Baserat på SSA:s utbildningsmaterial.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof ProgressTracker !== 'undefined') {
+                const progress = ProgressTracker.getChapterProgress(9);
+                document.getElementById('chapterProgress').textContent = `📊 ${progress}% genomfört`;
+            }
+        });
+    </script>
+</body>
+</html>
